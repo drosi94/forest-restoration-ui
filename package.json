@@ -1,0 +1,40 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{css,md,json,graphql}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "prepare": "husky install",
+    "clean": "lerna run clean && lerna clean --yes",
+    "format": "lerna run format",
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "start": "lerna run start --parallel",
+    "start:pwa": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/pwa --stream dev",
+    "build:pwa": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/pwa --stream build",
+    "run:build:pwa": "lerna run start --scope @forest-restoration/pwa",
+    "start:ui": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/ui --stream storybook",
+    "build:ui": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/ui --stream build-storybook",
+    "run:build:ui": "lerna run start --scope @forest-restoration/ui"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
