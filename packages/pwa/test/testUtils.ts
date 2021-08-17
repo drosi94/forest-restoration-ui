@@ -12,3 +12,7 @@ const customRender = (ui, options = {}) => render(ui, { wrapper: Providers, ...o
 export * from '@testing-library/react'
 
 export { customRender as render }
+
+jest.mock('react-i18next', () => ({
+  useTranslation: () => ({t: key => key})
+}));
