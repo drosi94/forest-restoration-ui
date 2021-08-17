@@ -17,3 +17,4 @@ jobs:
           vercel-args: '--dev'
           vercel-org-id: ${{ secrets.ORGID}}
           vercel-project-id: ${{ secrets.PROJECTID}}
+
