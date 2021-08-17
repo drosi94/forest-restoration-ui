@@ -1,4 +1,4 @@
-# APP_NAME:TITLE
+# MONOREPO_NAME:TITLE
 
 👉👉👉 How to write my PR title? 👈👈👈
 
