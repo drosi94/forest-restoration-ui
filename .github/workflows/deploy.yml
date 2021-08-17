@@ -9,7 +9,7 @@ jobs:
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
-          vercel-args: '--dev'
+          vercel-args: '--prod'
           vercel-org-id: ${{ secrets.ORGID}}
           vercel-project-id: ${{ secrets.PROJECTID}}
 
