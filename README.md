@@ -9,7 +9,6 @@
   - [Run UI storybook](#run-ui-storybook)
   - [Run PWA](#run-pwa)
 
-
 ## About
 
 Find more about the project [here](https://drive.google.com/drive/folders/1WFFxw82sffyXTs-3liRE7-qbZ3dvEKc9?usp=sharing)
@@ -22,6 +21,7 @@ You need to install [node](https://nodejs.org/en/), yarn & lerna
 
   npm install -g yarn lerna
 ```
+
 ## Installation
 
 Install all the packages

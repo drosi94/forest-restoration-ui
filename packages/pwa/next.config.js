@@ -1,8 +1,8 @@
-const withPlugins = require("next-compose-plugins");
-const withTM = require("next-transpile-modules")(["@forest-restoration/shared"]);
-const withPWA = require("next-pwa");
-const withImages = require("next-images");
-const { i18n } = require('./next-i18next.config');
+const withPlugins = require('next-compose-plugins')
+const withTM = require('next-transpile-modules')(['@forest-restoration/shared'])
+const withPWA = require('next-pwa')
+const withImages = require('next-images')
+const { i18n } = require('./next-i18next.config')
 
 module.exports = withPlugins(
   [
@@ -20,11 +20,11 @@ module.exports = withPlugins(
     //     skipWaiting: true,
     //   },
     // }),
-    withImages
+    withImages,
   ],
   {
     reactStrictMode: true,
     images: {},
-    i18n
+    i18n,
   }
-);
+)

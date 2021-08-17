@@ -5,5 +5,5 @@ module.exports = {
   },
   react: {
     useSuspense: false,
-  }
-};
+  },
+}

@@ -1,8 +1,7 @@
 module.exports = {
   presets: [
-    "next/babel",
-     ["@babel/preset-react", {runtime: 'automatic',
-          importSource: '@emotion/react' } ]
+    'next/babel',
+    ['@babel/preset-react', { runtime: 'automatic', importSource: '@emotion/react' }],
   ],
-  plugins: ['macros','@emotion/babel-plugin'],
+  plugins: ['macros', '@emotion/babel-plugin'],
 }
