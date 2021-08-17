@@ -12,7 +12,7 @@ jobs:
           projectName: forest-restoration-ui
       - name: deploy site to vercel
         uses: amondnet/vercel-action@v20
-         with:
+        with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
           vercel-args: '--dev'
           vercel-org-id: ${{ secrets.ORGID}}
