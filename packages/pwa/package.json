@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,17 +19,29 @@
     "next": "11.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.1",
+    "next-pwa": "^5.3.1",
     "next-transpile-modules": "^8.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "typescript": "^4.3.5",
-    "tailwindcss-filters": "3.0.0"
+    "tailwindcss-filters": "3.0.0",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@emotion/babel-plugin": "11.3.0",
+    "babel-plugin-macros": "^3.1.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
-    "@babel/core": "^7.15.0",
-    "@emotion/babel-plugin": "11.3.0",
-    "twin.macro": "2.6.2"
+    "twin.macro": "2.6.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "babel-jest": "^27.0.6",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "jest-watch-typeahead": "^0.6.1",
+    "@types/jest": "^27.0.1",
+    "react-test-renderer": "^17.0.2"
   }
 }
