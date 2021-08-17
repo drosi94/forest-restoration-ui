@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="css-1tt5s1y-Button e11x3fde0"
+    >
+      common:hello
+    </button>
+    <span>
+      home:test
+    </span>
+  </div>
+</DocumentFragment>
+`;

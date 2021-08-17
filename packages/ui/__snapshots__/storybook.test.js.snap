@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Shared/Button Primary 1`] = `
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-1lw2qbr{transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;position:relative;width:16rem;min-width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;padding-top:0.5rem;padding-bottom:0.5rem;padding-left:1rem;padding-right:1rem;border-width:1px;border-color:transparent;font-size:0.875rem;line-height:1.25rem;font-weight:500;border-radius:0.375rem;--tw-text-opacity:1;color:rgba(255, 255, 255, var(--tw-text-opacity));--tw-bg-opacity:1;background-color:rgba(37, 99, 235, var(--tw-bg-opacity));focus:outline-none ring-4 ring-blue-400;cursor:pointer;}.css-1lw2qbr:hover{--tw-bg-opacity:1;background-color:rgba(59, 130, 246, var(--tw-bg-opacity));}.css-1lw2qbr:active{--tw-bg-opacity:1;background-color:rgba(29, 78, 216, var(--tw-bg-opacity));}",
+      }
+    }
+    data-emotion="css 1lw2qbr"
+  />,
+  <button
+    className="css-1lw2qbr"
+  >
+    My button
+  </button>,
+]
+`;
