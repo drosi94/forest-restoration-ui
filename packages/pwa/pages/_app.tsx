@@ -1,3 +1,4 @@
+import { appWithTranslation } from 'next-i18next'
 import { GlobalStyles } from 'twin.macro'
 import 'tailwindcss/tailwind.css'
 
@@ -10,4 +11,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)
