@@ -48,3 +48,27 @@ Run locally the PWA. It will run at [localhost:3000](localhost:3000)
 
   yarn start:pwa
 ```
+
+## Run Tests
+
+Run all the tests
+
+```bash
+
+  yarn test
+```
+
+Run PWA tests
+
+```bash
+
+  yarn workspace @forest-restoration/pwa test
+```
+
+
+Run UI snapshot tests
+
+```bash
+
+  yarn workspace @forest-restoration/ui test
+```
