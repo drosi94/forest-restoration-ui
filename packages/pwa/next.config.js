@@ -23,6 +23,7 @@ module.exports = withPlugins(
     withImages,
   ],
   {
+    pageExtensions: ["page.js", "page.tsx", "page.ts"],
     reactStrictMode: true,
     images: {},
     i18n,
