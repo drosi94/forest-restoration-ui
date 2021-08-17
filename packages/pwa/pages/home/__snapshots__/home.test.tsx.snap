@@ -6,8 +6,11 @@ exports[`Home page matches snapshot 1`] = `
     <button
       class="css-1tt5s1y-Button e11x3fde0"
     >
-      hey
+      common:hello
     </button>
+    <span>
+      home:test
+    </span>
   </div>
 </DocumentFragment>
 `;
