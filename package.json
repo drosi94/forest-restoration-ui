@@ -22,6 +22,8 @@
     "format": "lerna run format",
     "bootstrap": "yarn install; lerna bootstrap;",
     "start": "lerna run start --parallel",
+    "test": "lerna run test --parallel",
+    "test:ci": "lerna run test:ci --parallel",
     "start:pwa": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/pwa --stream dev",
     "build:pwa": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/pwa --stream build",
     "run:build:pwa": "lerna run start --scope @forest-restoration/pwa",
