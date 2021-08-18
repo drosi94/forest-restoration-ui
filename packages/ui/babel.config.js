@@ -10,6 +10,7 @@ module.exports = {
       },
     ],
     '@emotion/babel-preset-css-prop',
+    '@babel/preset-typescript',
   ],
   plugins: ['macros'],
 }

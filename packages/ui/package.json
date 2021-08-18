@@ -59,10 +59,5 @@
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^27.0.4",
     "twin.macro": "2.6.2"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.(ts|tsx|js|jsx)$": "babel-jest"
-    }
   }
 }
