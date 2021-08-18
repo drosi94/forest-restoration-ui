@@ -24,7 +24,6 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@forest-restoration/shared": "0.0.0",
-    "@forest-restoration/config": "0.0.0",
     "@types/react": "^17.0.18",
     "dotenv": "^10.0.0",
     "react": "^17.0.2",

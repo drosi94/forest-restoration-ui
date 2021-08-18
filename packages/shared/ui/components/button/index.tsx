@@ -10,10 +10,10 @@ export const Button = styled.button(tw`
   text-sm leading-5 font-medium
   rounded-md
   text-white
-  bg-blue-600
-  hover:bg-blue-500
-  focus[outline-none ring-4 ring-blue-400]
-  active:bg-blue-700
+  bg-primary-600
+  hover:bg-primary-500
+  focus[outline-none ring-4 ring-primary-400]
+  active:bg-primary-700
   transition duration-150 ease-in-out
   cursor-pointer
 `)
