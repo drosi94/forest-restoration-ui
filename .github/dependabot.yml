@@ -5,22 +5,22 @@
 
 version: 2
 updates:
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
       
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/packages/pwa"
     schedule:
       interval: "daily"
        
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/packages/ui"
     schedule:
       interval: "daily"
          
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/packages/shared"
     schedule:
       interval: "daily"
