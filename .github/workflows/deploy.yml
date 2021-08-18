@@ -1,5 +1,5 @@
 name: deploy forest-restoration to vercel
-on: [push, pull_request]
+on: [pull_request]
 jobs:
   vercel:
     runs-on: ubuntu-latest
