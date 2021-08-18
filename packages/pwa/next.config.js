@@ -21,7 +21,6 @@ module.exports = withPlugins(
     withTM(),
   ],
   {
- 
     pageExtensions: ["page.js", "page.tsx", "page.ts"],
     reactStrictMode: true,
     images: {},
