@@ -33,10 +33,5 @@
   },
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {
-    "autoprefixer": "^10.3.1",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
-  }
+  ]
 }

@@ -21,6 +21,10 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 _{Please write here...}_
 
+If the PR is resolving an issue please include
+
+closes #(Issue ID)
+
 ### 📸 A picture tells a thousand words (if any)
 
 ### Before this PR
