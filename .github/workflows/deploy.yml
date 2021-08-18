@@ -1,0 +1,14 @@
+name: deploy forest-restoration to vercel
+on: [pull_request]
+jobs:
+  vercel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: deploy site to vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} 
+          vercel-org-id: ${{ secrets.ORGID}}
+          vercel-project-id: ${{ secrets.PROJECTID}}
+
