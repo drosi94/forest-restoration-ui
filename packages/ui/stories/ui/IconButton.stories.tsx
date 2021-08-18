@@ -1,20 +1,28 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { Button, ButtonProps } from '@forest-restoration/shared'
+import { IconButton, IconButtonProps } from '@forest-restoration/shared'
 
 export default {
-  title: 'Shared/UI/Button',
-  component: Button,
+  title: 'Shared/UI/IconButton',
+  component: IconButton,
 } as Meta
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />
+const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  children: 'My Button',
-  color: 'primary',
-  variant: 'contained',
+  Icon: () => (
+    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  ),
+  children: 'My Icon here',
 }
 
 export const Secondary = Template.bind({})
@@ -56,7 +64,7 @@ Medium.args = {
 export const Small = Template.bind({})
 Small.args = {
   ...Primary.args,
-  size: 'small',
+  size: 'medium',
 }
 
 export const FullWidth = Template.bind({})

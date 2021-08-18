@@ -1,11 +1,11 @@
 export type LogoProps = {
   height?: number
   width?: number
-  variant?: 'custom' | 'big' | 'medium' | 'small'
+  size?: 'custom' | 'large' | 'medium' | 'small'
   CustomImageComponent?: React.ComponentType<any>
 }
 
-const variantStyling = ({ width, height }) => ({
+const sizeStyling = ({ width, height }) => ({
   custom: { width: `${width}px`, height: `${height}px` },
   big: { width: `256px`, height: `256x` },
   medium: { width: `192px`, height: `192px` },
@@ -15,7 +15,7 @@ const variantStyling = ({ width, height }) => ({
 export const Logo: React.FC<LogoProps> = ({
   height,
   width,
-  variant = 'medium',
+  size = 'medium',
   CustomImageComponent,
 }) => (
   <div>
@@ -23,7 +23,7 @@ export const Logo: React.FC<LogoProps> = ({
       CustomImageComponent
     ) : (
       <img
-        style={variantStyling({ height, width })[variant]}
+        style={sizeStyling({ height, width })[size]}
         src={require('./logo.png')}
         alt="Forest Restoration logo"
       />

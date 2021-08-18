@@ -1,3 +1,4 @@
+import tw, { styled } from 'twin.macro'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
@@ -9,7 +10,6 @@ export default function Home() {
   return (
     <div>
       <Button>{t('common:hello')}</Button>
-
       <span>{t('home:test')}</span>
     </div>
   )

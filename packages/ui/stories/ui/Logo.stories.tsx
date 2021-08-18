@@ -11,26 +11,36 @@ export default {
 const Template: Story<LogoProps> = (args) => <Logo {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = {}
+Primary.args = {
+  size: 'medium',
+  height: 0,
+  width: 0,
+}
 
-export const Big = Template.bind({})
-Big.args = {
-  variant: 'big',
+export const Large = Template.bind({})
+Large.args = {
+  size: 'large',
+  height: 0,
+  width: 0,
 }
 
 export const Medium = Template.bind({})
 Medium.args = {
-  variant: 'medium',
+  size: 'medium',
+  height: 0,
+  width: 0,
 }
 
 export const Small = Template.bind({})
 Small.args = {
-  variant: 'small',
+  size: 'small',
+  height: 0,
+  width: 0,
 }
 
 export const Custom = Template.bind({})
 Custom.args = {
-  variant: 'custom',
+  size: 'custom',
   height: 342,
   width: 342,
 }

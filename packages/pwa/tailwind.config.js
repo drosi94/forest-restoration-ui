@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        primary: colors.emerald,
+        primary: {...colors.emerald, 800: "#147D50"},
         secondary: colors.gray,
         neutral: colors.gray,
         headerText: colors.emerald,
