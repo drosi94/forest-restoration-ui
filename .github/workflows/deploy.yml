@@ -13,7 +13,14 @@ jobs:
         run: yarn install
       - name: Run tests 
         run: yarn test:ci
-      - name: deploy site to vercel
+      - name: deploy storybook to vercel
+        uses: amondnet/vercel-action@v20
+        if: contains(github.event.pull_request.name, 'shared:') || contains(github.event.pull_request.name, 'ui:') || contains(github.event.pull_request.name, 'global:' || contains(github.event.pull_request.name, 'misc:')
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} 
+          vercel-org-id: ${{ secrets.ORGID}}
+          vercel-project-id: ${{ secrets.STORYBOOKPROJECTID}}
+      - name: deploy pwa to vercel
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
