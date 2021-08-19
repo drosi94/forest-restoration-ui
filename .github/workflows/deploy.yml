@@ -15,7 +15,7 @@ jobs:
         run: yarn test:ci
       - name: deploy storybook to vercel
         uses: amondnet/vercel-action@v20
-        if: startsWith(github.event.payload.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.payload.pull_request.title, 'global:') || startsWith(github.event.payload.pull_request.title, 'misc:')
+        if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:') || startsWith(github.event.pull_request.title, 'misc:')
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
           vercel-org-id: ${{ secrets.ORGID}}
