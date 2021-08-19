@@ -1,15 +1,20 @@
+import 'twin.macro'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
-import { Button } from '@forest-restoration/shared'
+import { Button, Typography } from '@forest-restoration/shared'
 
 export default function Home() {
   const { t } = useTranslation(['common', 'home'])
 
   return (
-    <div>
-      <Button>{t('common:hello')}</Button>
-      <span>{t('home:test')}</span>
+    <div tw="h-screen">
+      <div tw="flex justify-center items-center h-full flex-col gap-3">
+        <Button>{t('common:hello')}</Button>
+        <Typography as="h1" variant="heading" tw="text-2xl">
+          {t('home:test')}
+        </Typography>
+      </div>
     </div>
   )
 }
