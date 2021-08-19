@@ -34,7 +34,7 @@ export type ButtonProps = {
 }
 
 const baseStyles = tw`
-relative flex justify-center py-2 px-4 border border-transparent shadow-md text-sm leading-5 font-medium 
+relative flex justify-center py-2 px-4 border border-transparent shadow-md text-base leading-5 font-medium 
 focus[outline-none ring-4 ring-primary-400] transition duration-150
 ease-in-out cursor-pointer
 `
@@ -44,9 +44,9 @@ const colorAndVariantStyles = (color: string, variant: string) => {
     case 'contained':
       return [
         color === 'primary' &&
-          tw`bg-primary-800 hover:bg-primary-500 active:bg-primary-900  text-white`,
+          tw`bg-primary-800 hover:bg-primary-500 active:bg-primary-900  text-textPrimary`,
         color === 'secondary' &&
-          tw`bg-secondary-500 hover:bg-secondary-400 active:bg-secondary-700 text-black`,
+          tw`bg-secondary-500 hover:bg-secondary-400 active:bg-secondary-700 text-textSecondary`,
       ]
     case 'outlined':
       return [
