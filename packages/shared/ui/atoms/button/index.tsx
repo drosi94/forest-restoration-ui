@@ -30,6 +30,8 @@ export type ButtonProps = {
    * Disabled button.
    */
   disabled?: boolean
+  ref?: any
+  onClick?: () => void
   children?: string | React.ReactNode
 }
 
