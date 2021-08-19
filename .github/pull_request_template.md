@@ -4,9 +4,10 @@
 
 1. Set the MONOREPO_NAME:
 
-- For a monorepo spiecific change: `ui`, `pwa`, `shared`, etc...
+- For a package specific change: `ui`, `pwa`, `shared`, etc...
+- For a monorepo configuration change: `misc`
 - For a global change: `global`
-
+- 
 2. Set the `TITLE` to a descriptive headline. For example:
 
 - `pwa:Introduce map library`
