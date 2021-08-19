@@ -8,7 +8,7 @@ export type TypographyProps = {
   /**
    * The variant of the text, if set, overrides font color, font size and font family
    */
-  variant?: 'header' | 'body' | 'body2'
+  variant?: 'heading' | 'body' | 'body2'
   /**
    * The color of the text
    */
@@ -49,7 +49,7 @@ export type TypographyProps = {
 }
 
 const variantStyles = {
-  header: [tw`font-notoSerif text-primary-400 text-xl`],
+  heading: [tw`font-notoSerif text-primary-400 text-xl`],
   body: [tw`font-sans text-base text-textPrimary`],
   body2: [tw`font-sans text-lg text-textPrimary`],
 }
@@ -59,7 +59,7 @@ const fontSizeStyles = {
   medium: [tw`text-base`],
   large: [tw`text-lg`],
   xlarge: [tw`text-xl`],
-  xxlarge: [tw`text-xl`],
+  xxlarge: [tw`text-2xl`],
 }
 
 const fontFamilyStyles = {

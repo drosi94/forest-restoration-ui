@@ -16,11 +16,11 @@ Primary.args = {
   variant: 'body',
 }
 
-export const Header = Template.bind({})
-Header.args = {
-  children: 'My Header',
+export const Heading = Template.bind({})
+Heading.args = {
+  children: 'My Heading',
   as: 'h2',
-  variant: 'header',
+  variant: 'heading',
 }
 
 export const Body = Template.bind({})
