@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
+<button
+  aria-expanded={false}
+  className="css-1ulw4zu-Accordion"
+  id="headlessui-disclosure-button-6"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <h2
+    className="css-gxuocn-Typography-Accordion e1eqcpp10"
+  >
+    Do you know forest restoration app?
+  </h2>
+  <svg
+    className="css-tcqes-Accordion"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clipRule="evenodd"
+      d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+      fillRule="evenodd"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
+<button
+  aria-expanded={false}
+  className="css-1ulw4zu-Accordion"
+  id="headlessui-disclosure-button-undefined"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <h2
+    className="css-gxuocn-Typography-Accordion e1eqcpp10"
+  >
+    Do you know forest restoration app?
+  </h2>
+  <svg
+    className="css-tcqes-Accordion"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clipRule="evenodd"
+      d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+      fillRule="evenodd"
+    />
+  </svg>
+</button>
+`;
+
 exports[`Storyshots Shared/UI/Button Contained 1`] = `
 <button
   className="css-z3eb22-Button e1p27jrl0"
