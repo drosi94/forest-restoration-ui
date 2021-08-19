@@ -545,11 +545,11 @@ exports[`Storyshots Shared/UI/Typography Bold 1`] = `
 </span>
 `;
 
-exports[`Storyshots Shared/UI/Typography Header 1`] = `
+exports[`Storyshots Shared/UI/Typography Heading 1`] = `
 <h2
   className="css-13xwp29-Typography e1eqcpp10"
 >
-  My Header
+  My Heading
 </h2>
 `;
 
