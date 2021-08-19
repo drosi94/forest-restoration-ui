@@ -4,7 +4,7 @@ exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
 <button
   aria-expanded={false}
   className="css-1ulw4zu-Accordion"
-  id="headlessui-disclosure-button-6"
+  id="headlessui-disclosure-button-3"
   onClick={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
