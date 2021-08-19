@@ -37,6 +37,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "postcss": "^8.3.6",
+    "react-use": "^17.2.4",
     "tailwindcss": "^2.2.7"
   }
 }
