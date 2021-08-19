@@ -27,9 +27,10 @@ exports[`Home page matches snapshot 1`] = `
         class="css-163aj9c-Home"
       >
         <button
-          aria-expanded="false"
+          aria-controls="headlessui-disclosure-panel-3"
+          aria-expanded="true"
           class="css-1ulw4zu-Accordion"
-          id="headlessui-disclosure-button-1"
+          id="headlessui-disclosure-button-2"
           type="button"
         >
           <h2
@@ -38,7 +39,7 @@ exports[`Home page matches snapshot 1`] = `
             Hello there
           </h2>
           <svg
-            class="css-tcqes-Accordion"
+            class="css-a9yvwz-Accordion"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +51,21 @@ exports[`Home page matches snapshot 1`] = `
             />
           </svg>
         </button>
+        <div
+          class="css-f2c29w-StyledTransition ee565ly0 enter enterFrom"
+        >
+          <div
+            class="css-1wxax1a-Accordion"
+            id="headlessui-disclosure-panel-3"
+          >
+            <span
+              class="css-1jd1m0r-Typography e1eqcpp10"
+              font-weight="bold"
+            >
+              Oh hey there
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

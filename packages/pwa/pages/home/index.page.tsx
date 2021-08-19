@@ -27,8 +27,10 @@ export default function Home() {
         </Modal>
 
         <div tw="w-96 max-w-xs">
-          <Accordion title="Hello there" tw="w-2">
-            Oh hey here
+          <Accordion title="Hello there" tw="w-2" isOpened>
+            <Typography variant="body2" fontWeight="bold">
+              Oh hey there
+            </Typography>
           </Accordion>
         </div>
       </div>

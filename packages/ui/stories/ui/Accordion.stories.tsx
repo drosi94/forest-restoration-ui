@@ -21,6 +21,9 @@ Opened.args = {
   ...Primary.args,
   isOpened: true,
 }
+Opened.parameters = {
+  storyshots: { disable: true },
+}
 
 export const CustomComponent = Template.bind({})
 CustomComponent.args = {
