@@ -2,15 +2,23 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    <button
-      class="css-1uj1qrl-Button e1p27jrl0"
+  <div
+    class="css-1pcxayg-Home"
+  >
+    <div
+      class="css-164z9z8-Home"
     >
-      common:hello
-    </button>
-    <span>
-      home:test
-    </span>
+      <button
+        class="css-wcz1jq-Button e1p27jrl0"
+      >
+        common:hello
+      </button>
+      <h1
+        class="css-nhbcyc-Typography-Home e1eqcpp10"
+      >
+        home:test
+      </h1>
+    </div>
   </div>
 </DocumentFragment>
 `;
