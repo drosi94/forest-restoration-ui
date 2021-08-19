@@ -26,6 +26,11 @@ module.exports = {
         white: colors.white,
         black: colors.black,
       },
+      minWidth: {
+        '24': '6rem',
+        '48': '12rem',
+        '72': '24rem',
+      },
     },
   },
   variants: {},

@@ -9,7 +9,7 @@ exports[`Home page matches snapshot 1`] = `
       class="css-164z9z8-Home"
     >
       <button
-        class="css-wcz1jq-Button e1p27jrl0"
+        class="css-z3eb22-Button e1p27jrl0"
       >
         common:hello
       </button>
@@ -18,6 +18,11 @@ exports[`Home page matches snapshot 1`] = `
       >
         home:test
       </h1>
+      <button
+        class="css-z3eb22-Button e1p27jrl0"
+      >
+        open
+      </button>
     </div>
   </div>
 </DocumentFragment>
