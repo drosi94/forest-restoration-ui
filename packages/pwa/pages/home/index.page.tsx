@@ -2,7 +2,7 @@ import tw from 'twin.macro'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
-import { Button, Typography, Modal } from '@forest-restoration/shared'
+import { Button, Typography, Modal, Accordion } from '@forest-restoration/shared'
 import { useState } from 'react'
 
 export default function Home() {
@@ -25,6 +25,14 @@ export default function Home() {
         >
           <span>fef</span>
         </Modal>
+
+        <div tw="w-96 max-w-xs">
+          <Accordion title="Hello there" tw="w-2" isOpened>
+            <Typography variant="body2" fontWeight="bold">
+              Oh hey there
+            </Typography>
+          </Accordion>
+        </div>
       </div>
     </div>
   )

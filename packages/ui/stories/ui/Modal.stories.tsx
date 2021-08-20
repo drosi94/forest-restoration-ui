@@ -55,9 +55,9 @@ export const CustomFooter = Template.bind({})
 CustomFooter.args = {
   ...Primary.args,
   Footer: (
-    <div className="flex gap-2">
-      <Button variant="outlined">Submit</Button>
-      <Button color="secondary">Cancel</Button>
+    <div className="flex gap-2 mt-2">
+      <button>Test1</button>
+      <button>Test2</button>
     </div>
   ),
 }
