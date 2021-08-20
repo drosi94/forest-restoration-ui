@@ -121,6 +121,200 @@ exports[`Storyshots Shared/UI/Button Text 1`] = `
 </button>
 `;
 
+exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
+<div
+  className="css-19ategs-Input"
+>
+  <input
+    className="css-zmifbl-Input"
+    id="test"
+    placeholder=" "
+    type="date"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
+<div
+  className="css-19ategs-Input"
+>
+  <input
+    className="css-zmifbl-Input"
+    id="test"
+    placeholder=" "
+    type="password"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
+<div
+  className="css-19ategs-Input"
+>
+  <input
+    className="css-zmifbl-Input"
+    id="test"
+    placeholder=" "
+    type="text"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
+<div
+  className="css-19ategs-Input"
+>
+  <input
+    className="css-zmifbl-Input"
+    id="test"
+    placeholder=" "
+    type="time"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
+<div
+  className="css-tttsv7-Input"
+>
+  <input
+    className="css-mmmoh6-Input"
+    id="test"
+    placeholder=" "
+    type="text"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+  <div
+    className="css-1wnuvkr-Input"
+  >
+    <div>
+      A custom error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
+<div
+  className="css-19ategs-Input"
+>
+  <input
+    className="css-zmifbl-Input"
+    id="test"
+    placeholder=" "
+    type="text"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+  <div
+    className="css-1wnuvkr-Input"
+  >
+    <div>
+      A custom hint
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
+<div
+  className="css-tttsv7-Input"
+>
+  <input
+    className="css-mmmoh6-Input"
+    id="test"
+    placeholder=" "
+    type="text"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+  <div
+    className="css-1wnuvkr-Input"
+  >
+    <span
+      className="css-1q0p7yy-Typography-Input e1eqcpp10"
+      fontSize="small"
+    >
+      This is an error
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
+<div
+  className="css-19ategs-Input"
+>
+  <input
+    className="css-zmifbl-Input"
+    id="test"
+    placeholder=" "
+    type="text"
+  />
+  <label
+    className="css-75pfc2-Typography-Input e1eqcpp10"
+    htmlFor="test"
+  >
+    Label
+     
+  </label>
+  <div
+    className="css-1wnuvkr-Input"
+  >
+    <span
+      className="css-19hly3h-Typography e1eqcpp10"
+      fontSize="small"
+    >
+      A useful hint to help you out
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 <button
   className="css-z3eb22-Button e1p27jrl0"
