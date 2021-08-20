@@ -45,6 +45,7 @@ export type TypographyProps = {
     | '700'
     | '800'
     | '900'
+  htmlFor?: string
   css?: any
   children?: string | React.ReactNode
 }
