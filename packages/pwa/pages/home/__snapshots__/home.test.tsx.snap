@@ -23,6 +23,50 @@ exports[`Home page matches snapshot 1`] = `
       >
         open
       </button>
+      <div
+        class="css-163aj9c-Home"
+      >
+        <button
+          aria-controls="headlessui-disclosure-panel-3"
+          aria-expanded="true"
+          class="css-1ulw4zu-Accordion"
+          id="headlessui-disclosure-button-2"
+          type="button"
+        >
+          <h2
+            class="css-gxuocn-Typography-Accordion e1eqcpp10"
+          >
+            Hello there
+          </h2>
+          <svg
+            class="css-a9yvwz-Accordion"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <div
+          class="css-f2c29w-StyledTransition ee565ly0 enter enterFrom"
+        >
+          <div
+            class="css-1wxax1a-Accordion"
+            id="headlessui-disclosure-panel-3"
+          >
+            <span
+              class="css-1jd1m0r-Typography e1eqcpp10"
+              font-weight="bold"
+            >
+              Oh hey there
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>
