@@ -26,7 +26,7 @@ export type InputProps = {
   /**
    * The value of the input
    */
-  value?: any
+  value?: string
   /**
    * The error if exists
    */
