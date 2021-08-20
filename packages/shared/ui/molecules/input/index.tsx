@@ -3,18 +3,57 @@ import tw, { theme } from 'twin.macro'
 import { Typography } from '../../atoms'
 
 export type InputProps = {
+  /**
+   * The id of the input
+   */
   id: string
+  /**
+   * The id of the input
+   */
   type?: string
+  /**
+   * The name of the input
+   */
   name: string
+  /**
+   * The label of the input
+   */
   label: string
+  /**
+   * Is required to be filled
+   */
   required?: boolean
+  /**
+   * The value of the input
+   */
   value?: any
+  /**
+   * The error if exists
+   */
   error?: string | React.ReactNode
+  /**
+   * The hint text
+   */
   hint?: string | React.ReactNode
+  /**
+   * Callback on every input change
+   */
   onChange?: (value: any) => void
+  /**
+   * Override styles of the container inpt
+   */
   overrideContainerStyles?: any
+  /**
+   * Override styles of the input
+   */
   overrideInputStyles?: any
+  /**
+   * Override styles of the hint container
+   */
   overrideHintContainerStyles?: any
+  /**
+   * Override styles of the error container
+   */
   overrideErrorContainerStyles?: any
 }
 
@@ -75,7 +114,7 @@ export const Input: React.FC<InputProps> = ({
         css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
       />
       <Typography as="label" htmlFor={id} tw="absolute duration-300 top-3 left-2 z-auto ">
-        {label} {required && '*'}
+        {label} {required && <Typography tw="text-red-300">*</Typography>}
       </Typography>
       {hint && (
         <div css={[tw`mt-0.5`, overrideHintContainerStyles]}>
