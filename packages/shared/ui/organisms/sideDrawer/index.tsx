@@ -1,6 +1,5 @@
 import tw from 'twin.macro'
 import React from 'react'
-import { useMedia } from 'react-use'
 import { Dialog } from '@headlessui/react'
 import { StyledTransition } from './transition'
 import { Title } from '../modal/title'
@@ -31,8 +30,8 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
   overrideDescriptionStyles,
   children = DefaultChildren,
 }) => {
-  const isSmallDevice = useMedia('(max-width: 1080px)')
   return (
+    // todo issue #48
     // <StyledTransition
     //   show={isOpen}
     //   side={side}
