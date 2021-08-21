@@ -829,6 +829,28 @@ exports[`Storyshots Shared/UI/Modal With Content 1`] = `
 </div>
 `;
 
+exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
+<div>
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    open
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
+<div>
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    open
+  </button>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Typography Body 1`] = `
 <span
   className="css-1xfeocz-Typography e1eqcpp10"
