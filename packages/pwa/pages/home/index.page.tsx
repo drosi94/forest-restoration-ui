@@ -2,7 +2,14 @@ import tw from 'twin.macro'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { toast } from 'react-hot-toast'
-import { Button, Typography, Modal, Accordion } from '@forest-restoration/shared'
+import {
+  Button,
+  Typography,
+  Modal,
+  Accordion,
+  BaseCard,
+  TitledCard,
+} from '@forest-restoration/shared'
 import { useState } from 'react'
 
 export default function Home() {
@@ -10,7 +17,7 @@ export default function Home() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div tw="h-screen">
+    <div tw="h-full py-8">
       <div tw="flex justify-center items-center h-full flex-col gap-3">
         <Button>{t('common:hello')}</Button>
         <Typography as="h1" variant="heading" tw="text-2xl">
@@ -35,6 +42,37 @@ export default function Home() {
         </div>
 
         <Button onClick={() => toast.success('Here is a toast')}>Show toast</Button>
+
+        <BaseCard>
+          <Accordion title="Hello there" tw="w-2" isOpened>
+            <Typography variant="body2" fontWeight="bold">
+              Oh hey there
+            </Typography>
+          </Accordion>
+        </BaseCard>
+
+        <TitledCard title="Lorem Ipsum Title">
+          <Typography variant="body2">
+            Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum
+            congue leo eget malesuada. Proin eget tortor risus. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis
+            quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien
+            massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie
+            malesuada. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci
+            porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada
+            feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+            Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt
+            nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+            Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec
+            sollicitudin molestie malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
+            ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula
+            elementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementum
+            sed sit amet dui.
+          </Typography>
+        </TitledCard>
       </div>
     </div>
   )

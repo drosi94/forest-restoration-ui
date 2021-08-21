@@ -181,6 +181,40 @@ exports[`Storyshots Shared/UI/Button Text 1`] = `
 </button>
 `;
 
+exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
+<div
+  className="css-4oanin-BaseCard eck2yil0"
+>
+  <div>
+    Hello here
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Card/TitledCard Primary 1`] = `
+<div
+  className="css-4oanin-BaseCard eck2yil0"
+  color="bgSecondary"
+>
+  <div
+    className="css-12qcvlk-TitledCard"
+  >
+    <h2
+      className="css-13xwp29-Typography e1eqcpp10"
+    >
+      Card
+    </h2>
+  </div>
+  <div
+    className="css-7mpaxq-TitledCard"
+  >
+    <div>
+      Hello here
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
 <div
   className="css-19ategs-Input"
