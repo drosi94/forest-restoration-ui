@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-
+import { toast } from 'react-hot-toast'
 import { Button, Typography, Modal, Accordion } from '@forest-restoration/shared'
 import { useState } from 'react'
 
@@ -33,6 +33,8 @@ export default function Home() {
             </Typography>
           </Accordion>
         </div>
+
+        <Button onClick={() => toast.success('Here is a toast')}>Show toast</Button>
       </div>
     </div>
   )

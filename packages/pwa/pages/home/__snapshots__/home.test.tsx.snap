@@ -67,6 +67,11 @@ exports[`Home page matches snapshot 1`] = `
           </div>
         </div>
       </div>
+      <button
+        class="css-z3eb22-Button e1p27jrl0"
+      >
+        Show toast
+      </button>
     </div>
   </div>
 </DocumentFragment>
