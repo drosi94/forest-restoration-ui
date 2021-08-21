@@ -851,6 +851,162 @@ exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
 </div>
 `;
 
+exports[`Storyshots Shared/UI/Toast Custom 1`] = `
+Array [
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    Show Toast
+  </button>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Toast Custom JSX 1`] = `
+Array [
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    Show Toast
+  </button>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Toast Error 1`] = `
+Array [
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    Show Toast
+  </button>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Toast Loading 1`] = `
+Array [
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    Show Toast
+  </button>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Toast Primary 1`] = `
+Array [
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    Show Toast
+  </button>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Toast Success 1`] = `
+Array [
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "bottom": 16,
+        "left": 16,
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <button
+    className="css-z3eb22-Button e1p27jrl0"
+    onClick={[Function]}
+  >
+    Show Toast
+  </button>,
+]
+`;
+
 exports[`Storyshots Shared/UI/Typography Body 1`] = `
 <span
   className="css-1xfeocz-Typography e1eqcpp10"
