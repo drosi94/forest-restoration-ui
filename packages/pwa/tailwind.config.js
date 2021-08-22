@@ -22,7 +22,7 @@ module.exports = {
         textSecondary: colors.black,
         danger: colors.red[800],
         bgPrimary: "#696969",
-        bgModal: "#484848",
+        bgSecondary: "#484848",
         white: colors.white,
         black: colors.black,
       },
@@ -34,7 +34,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('tailwindcss-filters'), require('@tailwindcss/typography')],
+  plugins: [require('tailwindcss-filters'), require('@tailwindcss/typography'), require('tailwindcss-hyphens')],
   xwind: {
     mode: 'objectstyles',
   },

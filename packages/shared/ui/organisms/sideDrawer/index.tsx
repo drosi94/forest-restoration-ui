@@ -16,7 +16,7 @@ const DefaultChildren = ''
 
 const modalBaseStyles = tw`z-10 overflow-auto text-white`
 const modalPositionStyles = tw`fixed top-0 w-96 h-screen transform ease-in-out transition-all duration-300`
-const modalBackgroundStyles = tw`bg-bgModal shadow-xl`
+const modalBackgroundStyles = tw`bg-bgSecondary shadow-xl`
 
 export const SideDrawer: React.FC<SideDrawerProps> = ({
   isOpen = false,
