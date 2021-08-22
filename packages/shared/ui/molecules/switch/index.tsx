@@ -61,6 +61,8 @@ export type SwitchProps = {
   overrideErrorContainerStyles?: any
 }
 
+const noop = () => {}
+
 const getColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
@@ -105,7 +107,7 @@ export const Switch: React.FC<SwitchProps> = ({
   labelPosition = 'left',
   checked,
   disabled,
-  onChange,
+  onChange = noop,
   caretColor = 'textPrimary',
   checkedColor = 'primary',
   notCheckedColor = 'secondary',

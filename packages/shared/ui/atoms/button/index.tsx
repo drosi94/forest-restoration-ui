@@ -37,7 +37,7 @@ export type ButtonProps = {
 
 const baseStyles = tw`
 relative flex justify-center py-2 px-4 border border-transparent shadow-md text-base leading-5 font-medium 
-focus:outline-none focus:ring focus:ring-primary-900  transition duration-150
+focus:outline-none focus:ring focus:ring-offset-2 focus:ring-primary-900  transition duration-150
 ease-in-out cursor-pointer
 `
 

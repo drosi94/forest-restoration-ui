@@ -9,12 +9,14 @@ import {
   Accordion,
   BaseCard,
   TitledCard,
+  Switch,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
 
 export default function Home() {
   const { t } = useTranslation(['common', 'home'])
   const [open, setOpen] = useState(false)
+  const [checked, setChecked] = useState(false)
 
   return (
     <div tw="h-full py-8">
@@ -73,6 +75,13 @@ export default function Home() {
             sed sit amet dui.
           </Typography>
         </TitledCard>
+
+        <Switch
+          label="My Switch"
+          labelPosition="top"
+          checked={checked}
+          onChange={() => setChecked((v) => !v)}
+        />
       </div>
     </div>
   )
