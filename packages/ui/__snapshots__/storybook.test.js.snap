@@ -3,7 +3,7 @@
 exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
 <button
   aria-expanded={false}
-  className="css-1ulw4zu-Accordion"
+  className="css-h2soi5-Accordion"
   id="headlessui-disclosure-button-3"
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -33,7 +33,7 @@ exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
 exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
 <button
   aria-expanded={false}
-  className="css-1ulw4zu-Accordion"
+  className="css-h2soi5-Accordion"
   id="headlessui-disclosure-button-undefined"
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -62,7 +62,7 @@ exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Contained 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -71,7 +71,7 @@ exports[`Storyshots Shared/UI/Button Contained 1`] = `
 
 exports[`Storyshots Shared/UI/Button Disabled 1`] = `
 <button
-  className="css-i2hzkz-Button e1p27jrl0"
+  className="css-1spcpzm-Button e1p27jrl0"
   color="primary"
   disabled={true}
 >
@@ -81,7 +81,7 @@ exports[`Storyshots Shared/UI/Button Disabled 1`] = `
 
 exports[`Storyshots Shared/UI/Button Full Width 1`] = `
 <button
-  className="css-1ls9mlc-Button e1p27jrl0"
+  className="css-14vwuej-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -90,7 +90,7 @@ exports[`Storyshots Shared/UI/Button Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/Button Large 1`] = `
 <button
-  className="css-qkrtw4-Button e1p27jrl0"
+  className="css-15wiyrp-Button e1p27jrl0"
   color="primary"
   size="large"
 >
@@ -100,7 +100,7 @@ exports[`Storyshots Shared/UI/Button Large 1`] = `
 
 exports[`Storyshots Shared/UI/Button Link 1`] = `
 <a
-  className="css-q2egin-Button e1p27jrl0"
+  className="css-70sqgc-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -109,7 +109,7 @@ exports[`Storyshots Shared/UI/Button Link 1`] = `
 
 exports[`Storyshots Shared/UI/Button Medium 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
   color="primary"
   size="medium"
 >
@@ -119,7 +119,7 @@ exports[`Storyshots Shared/UI/Button Medium 1`] = `
 
 exports[`Storyshots Shared/UI/Button No Shadow 1`] = `
 <button
-  className="css-1pyuuik-Button e1p27jrl0"
+  className="css-jccqdr-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -128,7 +128,7 @@ exports[`Storyshots Shared/UI/Button No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/Button Outlined 1`] = `
 <button
-  className="css-ism8a2-Button e1p27jrl0"
+  className="css-3ql8e7-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -137,7 +137,7 @@ exports[`Storyshots Shared/UI/Button Outlined 1`] = `
 
 exports[`Storyshots Shared/UI/Button Primary 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -146,7 +146,7 @@ exports[`Storyshots Shared/UI/Button Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Rounded 1`] = `
 <button
-  className="css-pcflrz-Button e1p27jrl0"
+  className="css-1j7bi6p-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -155,7 +155,7 @@ exports[`Storyshots Shared/UI/Button Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/Button Secondary 1`] = `
 <button
-  className="css-1b1ylwq-Button e1p27jrl0"
+  className="css-10ji96a-Button e1p27jrl0"
   color="secondary"
 >
   My Button
@@ -164,7 +164,7 @@ exports[`Storyshots Shared/UI/Button Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Small 1`] = `
 <button
-  className="css-1qyccv0-Button e1p27jrl0"
+  className="css-gpj9d3-Button e1p27jrl0"
   color="primary"
   size="small"
 >
@@ -174,7 +174,7 @@ exports[`Storyshots Shared/UI/Button Small 1`] = `
 
 exports[`Storyshots Shared/UI/Button Text 1`] = `
 <button
-  className="css-vjrho2-Button e1p27jrl0"
+  className="css-h5zwan-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -354,7 +354,7 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
      
   </label>
   <div
-    className="css-1wnuvkr-Input"
+    className="css-safnee-Error"
   >
     <div>
       A custom error
@@ -381,7 +381,7 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
      
   </label>
   <div
-    className="css-1wnuvkr-Input"
+    className="css-1y0sv9c-Hint"
   >
     <div>
       A custom hint
@@ -408,10 +408,10 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
      
   </label>
   <div
-    className="css-1wnuvkr-Input"
+    className="css-safnee-Error"
   >
     <span
-      className="css-1q0p7yy-Typography-Input e1eqcpp10"
+      className="css-8e1tv0-Typography-Error e1eqcpp10"
       fontSize="small"
     >
       This is an error
@@ -438,7 +438,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
      
   </label>
   <div
-    className="css-1wnuvkr-Input"
+    className="css-1y0sv9c-Hint"
   >
     <span
       className="css-19hly3h-Typography e1eqcpp10"
@@ -450,9 +450,370 @@ exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
 </div>
 `;
 
+exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
+<div
+  className="css-1halu6f-Switch"
+>
+  <button
+    aria-checked={true}
+    aria-labelledby="headlessui-label-14"
+    className="css-1tiw86o-Switch"
+    id="headlessui-switch-13"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-1m6lgjs-Switch"
+    />
+  </button>
+  <span
+    className="css-1xggxmq-Typography-Label e1eqcpp10"
+    id="headlessui-label-14"
+    onClick={[Function]}
+  >
+    Switch
+  </span>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
+<div
+  className="css-gxbv2c-Switch"
+>
+  <span
+    className="css-15v5hy3-Typography-Label e1eqcpp10"
+    id="headlessui-label-19"
+    onClick={[Function]}
+  >
+    Switch
+  </span>
+  <button
+    aria-checked={true}
+    aria-labelledby="headlessui-label-19"
+    className="css-1g1l4v0-Switch"
+    id="headlessui-switch-20"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-1k4uabd-Switch"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
+<div
+  className="css-1dgmue2-Switch"
+>
+  <button
+    aria-checked={true}
+    className="css-1tiw86o-Switch"
+    id="headlessui-switch-15"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-1m6lgjs-Switch"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
+<div
+  className="css-gxbv2c-Switch"
+>
+  <span
+    className="css-1xggxmq-Typography-Label e1eqcpp10"
+    id="headlessui-label-17"
+    onClick={[Function]}
+  >
+    Switch
+  </span>
+  <button
+    aria-checked={false}
+    aria-labelledby="headlessui-label-17"
+    className="css-5y9lu-Switch"
+    id="headlessui-switch-18"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-lmfnk8-Switch"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
+<div
+  className="css-gxbv2c-Switch"
+>
+  <span
+    className="css-1xggxmq-Typography-Label e1eqcpp10"
+    id="headlessui-label-7"
+    onClick={[Function]}
+  >
+    Switch
+  </span>
+  <button
+    aria-checked={true}
+    aria-labelledby="headlessui-label-7"
+    className="css-1tiw86o-Switch"
+    id="headlessui-switch-8"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-1m6lgjs-Switch"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
+<div
+  className="css-gxbv2c-Switch"
+>
+  <button
+    aria-checked={true}
+    aria-labelledby="headlessui-label-10"
+    className="css-1tiw86o-Switch"
+    id="headlessui-switch-9"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-1m6lgjs-Switch"
+    />
+  </button>
+  <span
+    className="css-1xggxmq-Typography-Label e1eqcpp10"
+    id="headlessui-label-10"
+    onClick={[Function]}
+  >
+    Switch
+  </span>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
+<div
+  className="css-1halu6f-Switch"
+>
+  <span
+    className="css-1xggxmq-Typography-Label e1eqcpp10"
+    id="headlessui-label-11"
+    onClick={[Function]}
+  >
+    Switch
+  </span>
+  <button
+    aria-checked={true}
+    aria-labelledby="headlessui-label-11"
+    className="css-1tiw86o-Switch"
+    id="headlessui-switch-12"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    tabIndex={0}
+  >
+    <label
+      className="css-so2e4e-Switch"
+    >
+      Switch
+    </label>
+    <span
+      className="css-1m6lgjs-Switch"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
+<div
+  className="flex flex-row gap-2"
+>
+  <span
+    className="css-1vlagpw-Typography e1eqcpp10"
+  >
+    Left
+  </span>
+  <div
+    className="css-1dgmue2-Switch"
+  >
+    <button
+      className="css-5y9lu-Switch"
+      id="headlessui-switch-16"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      role="switch"
+      tabIndex={0}
+    >
+      <label
+        className="css-so2e4e-Switch"
+      >
+        Label
+      </label>
+      <span
+        className="css-lmfnk8-Switch"
+      />
+    </button>
+  </div>
+  <span
+    className="css-1vlagpw-Typography e1eqcpp10"
+  >
+    Right
+  </span>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch With Error 1`] = `
+Array [
+  <div
+    className="css-gxbv2c-Switch"
+  >
+    <span
+      className="css-1xggxmq-Typography-Label e1eqcpp10"
+      id="headlessui-label-23"
+      onClick={[Function]}
+    >
+      Switch
+    </span>
+    <button
+      aria-checked={true}
+      aria-labelledby="headlessui-label-23"
+      className="css-kqmpa8-Switch"
+      id="headlessui-switch-24"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      role="switch"
+      tabIndex={0}
+    >
+      <label
+        className="css-so2e4e-Switch"
+      >
+        Switch
+      </label>
+      <span
+        className="css-1m6lgjs-Switch"
+      />
+    </button>
+  </div>,
+  <div
+    className="css-safnee-Error"
+  >
+    <span
+      className="css-8e1tv0-Typography-Error e1eqcpp10"
+      fontSize="small"
+    >
+      This is an error
+    </span>
+  </div>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Form/Switch With Hint 1`] = `
+Array [
+  <div
+    className="css-gxbv2c-Switch"
+  >
+    <span
+      className="css-1xggxmq-Typography-Label e1eqcpp10"
+      id="headlessui-label-21"
+      onClick={[Function]}
+    >
+      Switch
+    </span>
+    <button
+      aria-checked={true}
+      aria-labelledby="headlessui-label-21"
+      className="css-1tiw86o-Switch"
+      id="headlessui-switch-22"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      role="switch"
+      tabIndex={0}
+    >
+      <label
+        className="css-so2e4e-Switch"
+      >
+        Switch
+      </label>
+      <span
+        className="css-1m6lgjs-Switch"
+      />
+    </button>
+  </div>,
+  <div
+    className="css-1y0sv9c-Hint"
+  >
+    <span
+      className="css-19hly3h-Typography e1eqcpp10"
+      fontSize="small"
+    >
+      A useful hint here
+    </span>
+  </div>,
+]
+`;
+
 exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -477,7 +838,7 @@ exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Disabled 1`] = `
 <button
-  className="css-i2hzkz-Button e1p27jrl0"
+  className="css-1spcpzm-Button e1p27jrl0"
   disabled={true}
 >
   <span
@@ -503,7 +864,7 @@ exports[`Storyshots Shared/UI/IconButton Disabled 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Full Width 1`] = `
 <button
-  className="css-1ls9mlc-Button e1p27jrl0"
+  className="css-14vwuej-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -528,7 +889,7 @@ exports[`Storyshots Shared/UI/IconButton Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Large 1`] = `
 <button
-  className="css-qkrtw4-Button e1p27jrl0"
+  className="css-15wiyrp-Button e1p27jrl0"
   size="large"
 >
   <span
@@ -554,7 +915,7 @@ exports[`Storyshots Shared/UI/IconButton Large 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Link 1`] = `
 <a
-  className="css-q2egin-Button e1p27jrl0"
+  className="css-70sqgc-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -579,7 +940,7 @@ exports[`Storyshots Shared/UI/IconButton Link 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Medium 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
   size="medium"
 >
   <span
@@ -605,7 +966,7 @@ exports[`Storyshots Shared/UI/IconButton Medium 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 <button
-  className="css-1pyuuik-Button e1p27jrl0"
+  className="css-jccqdr-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -630,7 +991,7 @@ exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 <button
-  className="css-ism8a2-Button e1p27jrl0"
+  className="css-3ql8e7-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -655,7 +1016,7 @@ exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Primary 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -680,7 +1041,7 @@ exports[`Storyshots Shared/UI/IconButton Primary 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Rounded 1`] = `
 <button
-  className="css-pcflrz-Button e1p27jrl0"
+  className="css-1j7bi6p-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -705,7 +1066,7 @@ exports[`Storyshots Shared/UI/IconButton Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Secondary 1`] = `
 <button
-  className="css-1b1ylwq-Button e1p27jrl0"
+  className="css-10ji96a-Button e1p27jrl0"
   color="secondary"
 >
   <span
@@ -731,7 +1092,7 @@ exports[`Storyshots Shared/UI/IconButton Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Small 1`] = `
 <button
-  className="css-z3eb22-Button e1p27jrl0"
+  className="css-1xxozgk-Button e1p27jrl0"
   size="medium"
 >
   <span
@@ -757,7 +1118,7 @@ exports[`Storyshots Shared/UI/IconButton Small 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Text 1`] = `
 <button
-  className="css-vjrho2-Button e1p27jrl0"
+  className="css-h5zwan-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -852,7 +1213,7 @@ exports[`Storyshots Shared/UI/Logo Small 1`] = `
 exports[`Storyshots Shared/UI/Modal Custom Footer 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -863,7 +1224,7 @@ exports[`Storyshots Shared/UI/Modal Custom Footer 1`] = `
 exports[`Storyshots Shared/UI/Modal Full Screen 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -874,7 +1235,7 @@ exports[`Storyshots Shared/UI/Modal Full Screen 1`] = `
 exports[`Storyshots Shared/UI/Modal Full Width 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -885,7 +1246,7 @@ exports[`Storyshots Shared/UI/Modal Full Width 1`] = `
 exports[`Storyshots Shared/UI/Modal Primary 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -896,7 +1257,7 @@ exports[`Storyshots Shared/UI/Modal Primary 1`] = `
 exports[`Storyshots Shared/UI/Modal With Content 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -907,7 +1268,7 @@ exports[`Storyshots Shared/UI/Modal With Content 1`] = `
 exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -918,7 +1279,7 @@ exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
 exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
 <div>
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     open
@@ -944,7 +1305,7 @@ Array [
     }
   />,
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -970,7 +1331,7 @@ Array [
     }
   />,
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -996,7 +1357,7 @@ Array [
     }
   />,
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1022,7 +1383,7 @@ Array [
     }
   />,
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1048,7 +1409,7 @@ Array [
     }
   />,
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1074,7 +1435,7 @@ Array [
     }
   />,
   <button
-    className="css-z3eb22-Button e1p27jrl0"
+    className="css-1xxozgk-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast

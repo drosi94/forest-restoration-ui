@@ -31,7 +31,7 @@ export type AccordionProps = {
 
 const accordionButtonBaseStyles = tw`flex justify-between w-full px-4 py-2 text-sm font-medium 
 text-left  bg-primary-100 rounded-lg hover:bg-primary-200 focus:outline-none
-focus-visible:ring focus-visible:ring-primary-900 focus-visible:ring-opacity-75`
+focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-900`
 
 export const Accordion: React.FC<AccordionProps> = ({
   isOpened,

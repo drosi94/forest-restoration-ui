@@ -21,6 +21,7 @@ module.exports = {
         textPrimary: colors.white,
         textSecondary: colors.black,
         danger: colors.red[800],
+        error: colors.red,
         bgPrimary: "#696969",
         bgSecondary: "#484848",
         white: colors.white,

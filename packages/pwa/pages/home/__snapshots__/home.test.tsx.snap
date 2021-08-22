@@ -9,7 +9,7 @@ exports[`Home page matches snapshot 1`] = `
       class="css-164z9z8-Home"
     >
       <button
-        class="css-z3eb22-Button e1p27jrl0"
+        class="css-1xxozgk-Button e1p27jrl0"
       >
         common:hello
       </button>
@@ -19,7 +19,7 @@ exports[`Home page matches snapshot 1`] = `
         home:test
       </h1>
       <button
-        class="css-z3eb22-Button e1p27jrl0"
+        class="css-1xxozgk-Button e1p27jrl0"
       >
         open
       </button>
@@ -29,7 +29,7 @@ exports[`Home page matches snapshot 1`] = `
         <button
           aria-controls="headlessui-disclosure-panel-3"
           aria-expanded="true"
-          class="css-1ulw4zu-Accordion"
+          class="css-h2soi5-Accordion"
           id="headlessui-disclosure-button-2"
           type="button"
         >
@@ -68,7 +68,7 @@ exports[`Home page matches snapshot 1`] = `
         </div>
       </div>
       <button
-        class="css-z3eb22-Button e1p27jrl0"
+        class="css-1xxozgk-Button e1p27jrl0"
       >
         Show toast
       </button>
@@ -78,7 +78,7 @@ exports[`Home page matches snapshot 1`] = `
         <button
           aria-controls="headlessui-disclosure-panel-6"
           aria-expanded="true"
-          class="css-1ulw4zu-Accordion"
+          class="css-h2soi5-Accordion"
           id="headlessui-disclosure-button-5"
           type="button"
         >
@@ -138,6 +138,33 @@ exports[`Home page matches snapshot 1`] = `
             Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementum sed sit amet dui.
           </span>
         </div>
+      </div>
+      <div
+        class="css-1halu6f-Switch"
+      >
+        <span
+          class="css-1xggxmq-Typography-Label e1eqcpp10"
+          id="headlessui-label-7"
+        >
+          My Switch
+        </span>
+        <button
+          aria-checked="false"
+          aria-labelledby="headlessui-label-7"
+          class="css-5y9lu-Switch"
+          id="headlessui-switch-8"
+          role="switch"
+          tabindex="0"
+        >
+          <label
+            class="css-so2e4e-Switch"
+          >
+            My Switch
+          </label>
+          <span
+            class="css-lmfnk8-Switch"
+          />
+        </button>
       </div>
     </div>
   </div>
