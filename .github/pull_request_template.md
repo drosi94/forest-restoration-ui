@@ -1,4 +1,4 @@
-# MONOREPO_NAME:TITLE
+# PACKAGE_NAME:TITLE
 
 👉👉👉 How to write my PR title? 👈👈👈
 
@@ -12,7 +12,7 @@
 
 - `pwa:Introduce map library`
 
-3. Copy the MONOREPO_NAME:TITLE to the pull request Github title field ⬆️⬆️⬆️
+3. Copy the PACKAGE_NAME:TITLE to the pull request Github title field ⬆️⬆️⬆️
 
 ✂️  Please delete this section before submitting your PR. ✂️
 
