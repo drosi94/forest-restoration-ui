@@ -181,9 +181,50 @@ exports[`Storyshots Shared/UI/Button Text 1`] = `
 </button>
 `;
 
+exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
+<div
+  className="css-gitq5l-BaseCard eck2yil0"
+>
+  <div>
+    Hello here
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
+<div
+  className="css-cfu4k3-BaseCard eck2yil0"
+>
+  <div>
+    Hello here
+  </div>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 <div
   className="css-4oanin-BaseCard eck2yil0"
+>
+  <div>
+    Hello here
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
+<div
+  className="css-1fwyafo-BaseCard eck2yil0"
+  color="bgPrimary"
+>
+  <div>
+    Hello here
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
+<div
+  className="css-jqlmnb-BaseCard eck2yil0"
 >
   <div>
     Hello here
