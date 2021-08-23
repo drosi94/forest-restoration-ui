@@ -189,7 +189,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 >
   <button
     aria-expanded={false}
-    className="css-13mn6mg-AccordionCard"
+    className="css-7xsqe2-AccordionCard"
     id="headlessui-disclosure-button-13"
     onClick={[Function]}
     onKeyDown={[Function]}
