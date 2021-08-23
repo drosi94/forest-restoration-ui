@@ -17,6 +17,7 @@ import {
   Popover,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
+import { ToggleTheme } from '../../shared/components/toggleTheme'
 
 const options = [
   { label: 'Test1', value: 'test1' },
@@ -33,6 +34,8 @@ export default function Home() {
   return (
     <div tw="h-full py-8">
       <div tw="flex justify-center items-center h-full flex-col gap-3">
+        <ToggleTheme />
+
         <Button>{t('common:hello')}</Button>
         <Typography as="h1" variant="heading" tw="text-2xl">
           {t('home:test')}

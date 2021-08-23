@@ -1,12 +1,20 @@
 require('tailwindcss/tailwind.css')
+import { themes } from '@storybook/theming'
+import '../../pwa/theme.css'
 
-const parameters = {
+export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  darkMode: {
+    // Override the default dark theme
+    dark: { ...themes.dark },
+    // Override the default light theme
+    light: { ...themes.normal },
   },
   backgrounds: {
     default: 'primary',
@@ -35,4 +43,8 @@ const parameters = {
   },
 }
 
-module.exports = { parameters }
+export const decorators = [
+  (Story) => {
+    return <Story />
+  },
+]

@@ -27,10 +27,10 @@
     "start": "lerna run start --parallel",
     "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci --parallel",
-    "start:pwa": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/pwa --stream dev",
+    "start:pwa": "lerna run dev --scope @forest-restoration/pwa --stream",
     "build:pwa": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/pwa --stream build",
-    "run:build:pwa": "lerna run start --scope @forest-restoration/pwa",
-    "start:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream storybook",
+    "run:build:pwa": "lerna run start --scope @forest-restoration/pwa --stream",
+    "start:ui": "lerna run storybook --scope @forest-restoration/ui --stream",
     "build:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui"
   },
