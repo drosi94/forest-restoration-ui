@@ -13,6 +13,7 @@ import {
   Input,
   Select,
   Pill,
+  Popover,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
 
@@ -105,6 +106,9 @@ export default function Home() {
           />
         </div>
 
+        <Popover label="Here Popover" placement="bottom-start">
+          <div>hey</div>
+        </Popover>
         <div tw="w-full mb-20">
           <Select
             id="select"
