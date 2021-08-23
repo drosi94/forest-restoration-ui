@@ -35,11 +35,15 @@ export const Pill: React.FC<PillProps> = ({
           </span>
         </span>
       )}
-      <Typography
-        css={[tw`max-w-full flex-initial text-xs`, getTextColorStyles(textColor as Color)]}
-      >
-        {children}
-      </Typography>
+      {typeof children === 'string' ? (
+        <Typography
+          css={[tw`max-w-full flex-initial text-xs`, getTextColorStyles(textColor as Color)]}
+        >
+          {children}
+        </Typography>
+      ) : (
+        children
+      )}
       {onClose && (
         <div css={[tw`ml-2`, getTextColorStyles(textColor as Color)]}>
           <CloseButton onClick={onClose} width={14} />

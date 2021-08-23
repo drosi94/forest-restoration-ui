@@ -12,6 +12,7 @@ import {
   Switch,
   Input,
   Select,
+  Pill,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
 
@@ -116,6 +117,7 @@ export default function Home() {
             shouldResetOption
           />
         </div>
+        <Pill>Here I am</Pill>
       </div>
     </div>
   )

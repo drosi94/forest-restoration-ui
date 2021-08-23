@@ -28,3 +28,9 @@ WithIcon.args = {
   ...Primary.args,
   icon: <BellIcon width={12} />,
 }
+
+export const CustomChildren = Template.bind({})
+CustomChildren.args = {
+  ...Primary.args,
+  children: <button className="border-2 border-secondary-400">I am a button</button>,
+}
