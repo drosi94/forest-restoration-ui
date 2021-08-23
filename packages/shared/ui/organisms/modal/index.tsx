@@ -2,11 +2,10 @@ import React from 'react'
 import tw from 'twin.macro'
 import { useMedia } from 'react-use'
 import { Dialog } from '@headlessui/react'
-import { Button } from '../../atoms'
+import { Button, CloseButton } from '../../atoms'
 import { StyledTransition } from './transition'
 import { Title } from './title'
 import { Description } from './description'
-import { CloseButton } from './closeButton'
 
 export type ModalProps = {
   /**
@@ -118,7 +117,9 @@ export const Modal: React.FC<ModalProps> = ({
               overrideDialogBaseStyles,
             ]}
           >
-            <CloseButton onClick={handleClose} />
+            <div tw="p-2">
+              <CloseButton onClick={handleClose} />
+            </div>
             <div tw="px-10 py-4">
               <Dialog.Title
                 as={Title}
