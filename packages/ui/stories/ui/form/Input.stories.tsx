@@ -15,12 +15,22 @@ Primary.args = {
   id: 'test',
   label: 'Label',
   type: 'text',
+  defaultValue: '',
 }
 
 export const Password = Template.bind({})
 Password.args = {
   ...Primary.args,
   type: 'password',
+}
+
+export const Multiline = Template.bind({})
+Multiline.args = {
+  ...Primary.args,
+  multiline: true,
+}
+Multiline.parameters = {
+  storyshots: { disable: true },
 }
 
 export const Date = Template.bind({})

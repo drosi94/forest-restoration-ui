@@ -10,6 +10,7 @@ import {
   BaseCard,
   TitledCard,
   Switch,
+  Input,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
 
@@ -17,6 +18,7 @@ export default function Home() {
   const { t } = useTranslation(['common', 'home'])
   const [open, setOpen] = useState(false)
   const [checked, setChecked] = useState(false)
+  const [textValue, setTextValue] = useState('')
 
   return (
     <div tw="h-full py-8">
@@ -82,6 +84,18 @@ export default function Home() {
           checked={checked}
           onChange={() => setChecked((v) => !v)}
         />
+
+        <div>
+          <Input
+            label="My text"
+            value={textValue}
+            onChange={(e) => setTextValue(e.target.value)}
+            id="text"
+            name="text"
+            multiline
+            minRows={20}
+          />
+        </div>
       </div>
     </div>
   )

@@ -166,6 +166,24 @@ exports[`Home page matches snapshot 1`] = `
           />
         </button>
       </div>
+      <div>
+        <div
+          class="css-18px25j-Input"
+        >
+          <textarea
+            class="css-tzjf50-getComponent"
+            id="text"
+            name="text"
+            placeholder=" "
+          />
+          <label
+            class="css-75pfc2-Typography-Input e1eqcpp10"
+            for="text"
+          >
+            My text 
+          </label>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>
