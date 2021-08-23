@@ -1484,6 +1484,30 @@ exports[`Storyshots Shared/UI/IconButton Text 1`] = `
 </button>
 `;
 
+exports[`Storyshots Shared/UI/Loaders/LinearIndicator Primary 1`] = `
+<div
+  className="css-199uqow-LinearIndicator"
+>
+  <div
+    className="css-1j3bg6v-Component"
+  >
+    <div
+      className="shim css-p8h9f7-LinearIndicator"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Loaders/Spinner Primary 1`] = `
+<div
+  className="css-nc1i2i-Spinner"
+>
+  <div
+    className="css-7cvwhs-Spinner"
+  />
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Logo Custom 1`] = `
 <div>
   <img
