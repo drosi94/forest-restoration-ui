@@ -1562,6 +1562,18 @@ exports[`Storyshots Shared/UI/Modal With Content 1`] = `
 </div>
 `;
 
+exports[`Storyshots Shared/UI/Pill Custom Children 1`] = `
+<span
+  className="css-1pm2g0b-Pill"
+>
+  <button
+    className="border-2 border-secondary-400"
+  >
+    I am a button
+  </button>
+</span>
+`;
+
 exports[`Storyshots Shared/UI/Pill Primary 1`] = `
 <span
   className="css-1pm2g0b-Pill"
