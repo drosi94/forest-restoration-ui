@@ -1649,6 +1649,7 @@ exports[`Storyshots Shared/UI/Pill With Icon 1`] = `
     Hello
   </span>
 </span>
+`;
 
 exports[`Storyshots Shared/UI/Popover Primary 1`] = `
 <div
