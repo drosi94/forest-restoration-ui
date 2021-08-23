@@ -63,7 +63,7 @@ export type SelectProps = {
    */
   onChange?: (value: any) => void
   /**
-   * Override styles of the container inpt
+   * Override styles of the container input
    */
   overrideContainerStyles?: any
   /**
@@ -94,7 +94,6 @@ export const Select: React.FC<SelectProps> = ({
   placeholder = 'Select a value',
   value,
   onChange,
-  defaultValue,
   shouldResetOption,
   error,
   hint,
@@ -140,7 +139,7 @@ export const Select: React.FC<SelectProps> = ({
           >
             {shouldResetOption && (
               <Listbox.Option
-                css={[tw`cursor-pointer select-none relative py-2 pl-10 pr-4 text-gray-900`]}
+                css={[tw`cursor-pointer select-none relative py-2 pl-10 pr-4`]}
                 value={null}
               >
                 {({ selected }) => (
