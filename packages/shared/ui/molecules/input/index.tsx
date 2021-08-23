@@ -116,34 +116,33 @@ export const Input: React.FC<InputProps> = ({
   overrideHintContainerStyles,
   overrideErrorContainerStyles,
 }) => {
-  const getComponent = () => {
-    const sharedProps = {
-      id,
-      required,
-      name,
-      placeholder: ' ',
-      value,
-      defaultValue,
-      onChange,
-    }
-    if (!multiline) {
-      return (
-        <input
-          {...sharedProps}
-          type={type}
-          css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
-        />
-      )
-    } else {
-      return (
-        <TextareaAutosize
-          {...sharedProps}
-          minRows={minRows}
-          maxRows={maxRows}
-          css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
-        />
-      )
-    }
+  let Component
+  const sharedProps = {
+    id,
+    required,
+    name,
+    placeholder: ' ',
+    value,
+    defaultValue,
+    onChange,
+  }
+  if (!multiline) {
+    Component = (
+      <input
+        {...sharedProps}
+        type={type}
+        css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
+      />
+    )
+  } else {
+    Component = (
+      <TextareaAutosize
+        {...sharedProps}
+        minRows={minRows}
+        maxRows={maxRows}
+        css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
+      />
+    )
   }
 
   return (
@@ -154,7 +153,7 @@ export const Input: React.FC<InputProps> = ({
         overrideContainerStyles,
       ]}
     >
-      {getComponent()}
+      {Component}
       <Typography as="label" htmlFor={id} tw="absolute duration-300 top-3 left-2 z-auto ">
         {label} {required && <Typography tw="text-red-300">*</Typography>}
       </Typography>

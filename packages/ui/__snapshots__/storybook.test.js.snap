@@ -261,7 +261,7 @@ exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
   className="css-18px25j-Input"
 >
   <input
-    className="css-tzjf50-getComponent"
+    className="css-1wt2cer-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -282,7 +282,7 @@ exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
   className="css-18px25j-Input"
 >
   <input
-    className="css-tzjf50-getComponent"
+    className="css-1wt2cer-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -303,7 +303,7 @@ exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
   className="css-18px25j-Input"
 >
   <input
-    className="css-tzjf50-getComponent"
+    className="css-1wt2cer-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -324,7 +324,7 @@ exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
   className="css-18px25j-Input"
 >
   <input
-    className="css-tzjf50-getComponent"
+    className="css-1wt2cer-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -345,7 +345,7 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
   className="css-u0ps3g-Input"
 >
   <input
-    className="css-30woqi-getComponent"
+    className="css-17v1x3b-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -373,7 +373,7 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
   className="css-18px25j-Input"
 >
   <input
-    className="css-tzjf50-getComponent"
+    className="css-1wt2cer-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -401,7 +401,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
   className="css-u0ps3g-Input"
 >
   <input
-    className="css-30woqi-getComponent"
+    className="css-17v1x3b-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -432,7 +432,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
   className="css-18px25j-Input"
 >
   <input
-    className="css-tzjf50-getComponent"
+    className="css-1wt2cer-Component"
     defaultValue=""
     id="test"
     placeholder=" "
