@@ -2,7 +2,7 @@ export type LogoProps = {
   height?: number
   width?: number
   size?: 'custom' | 'large' | 'medium' | 'small'
-  CustomImageComponent?: React.ComponentType<any>
+  CustomImageComponent?: React.ReactNode
 }
 
 const sizeStyling = ({ width, height }) => ({

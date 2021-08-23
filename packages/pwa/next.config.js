@@ -25,5 +25,12 @@ module.exports = withPlugins(
     reactStrictMode: true,
     images: {},
     i18n,
+    redirects() {
+      return [
+        process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true"
+          ? { source: "/((?!maintenance)(?!_next)(?!static).*)", destination: "/maintenance", permanent: false }
+          : null,
+      ].filter(Boolean);
+    }
   }
 )
