@@ -11,14 +11,21 @@ import {
   TitledCard,
   Switch,
   Input,
+  Select,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
+
+const options = [
+  { label: 'Test1', value: 'test1' },
+  { label: 'Test2', value: 'test2' },
+]
 
 export default function Home() {
   const { t } = useTranslation(['common', 'home'])
   const [open, setOpen] = useState(false)
   const [checked, setChecked] = useState(false)
   const [textValue, setTextValue] = useState('')
+  const [selectValue, setSelectValue] = useState('')
 
   return (
     <div tw="h-full py-8">
@@ -94,6 +101,19 @@ export default function Home() {
             name="text"
             multiline
             minRows={20}
+          />
+        </div>
+
+        <div tw="w-full mb-20">
+          <Select
+            id="select"
+            name="select"
+            label="Select"
+            value={selectValue}
+            options={options}
+            onChange={setSelectValue}
+            noOptionText="No option"
+            shouldResetOption
           />
         </div>
       </div>
