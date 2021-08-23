@@ -27,7 +27,13 @@ const styles = {
 
 export const LinearIndicator: React.FC<LinearIndicatorProps> = ({ color }) => {
   return (
-    <div css={[tw`relative w-full bg-primary-500 rounded-full`]}>
+    <div
+      css={[
+        tw`relative w-full rounded-full`,
+        color == 'primary' && tw`bg-primary-500`,
+        color == 'secondary' && tw`bg-secondary-500`,
+      ]}
+    >
       <div css={styles}>
         <div className="shim" css={[tw`absolute top-0 h-2 rounded-full w-full`]}></div>
       </div>
