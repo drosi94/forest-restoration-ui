@@ -58,7 +58,6 @@
     "jest": "^27.0.6",
     "puppeteer": "^10.2.0",
     "react-test-renderer": "^17.0.2",
-    "ts-jest": "^27.0.4",
-    "twin.macro": "2.7.0"
+    "ts-jest": "^27.0.4"
   }
 }
