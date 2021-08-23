@@ -1,11 +1,10 @@
 import tw from 'twin.macro'
 import React from 'react'
 import { Dialog } from '@headlessui/react'
-import { StyledTransition } from './transition'
 import { Title } from '../modal/title'
 import { Description } from '../modal/description'
-import { CloseButton } from '../modal/closeButton'
 import { ModalProps } from '../modal'
+import { CloseButton } from '../../atoms'
 
 export type SideDrawerProps = ModalProps & {
   side?: 'left' | 'right'
@@ -59,7 +58,9 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
             overrideDialogBaseStyles,
           ]}
         >
-          <CloseButton onClick={handleClose} />
+          <div tw="p-2">
+            <CloseButton onClick={handleClose} />
+          </div>
           <div tw="px-10 py-4">
             <Dialog.Title
               as={Title}

@@ -28,7 +28,7 @@ Install all the packages
 
 ```bash
 
-  yarn bootstrap
+  yarn install
 ```
 
 ## Run UI storybook

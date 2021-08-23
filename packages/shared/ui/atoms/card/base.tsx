@@ -19,9 +19,14 @@ export type BaseCardProps = {
    */
   centered?: boolean
   /**
+   * The onClick handler
+   */
+  onClick?: any
+  /**
    * Override of the base styling
    */
   overrideStyles?: any
+  children?: string | React.ReactNode
 }
 
 const baseStyles = tw`container flex flex-col gap-2 flex-wrap items-start p-4 shadow-lg border-2 leading-relaxed break-words hyphens-auto`
@@ -31,13 +36,27 @@ const colorStyles = (color: string) => [
   color === 'bgPrimary' && tw`bg-bgPrimary border-bgSecondary border-opacity-30 text-textPrimary`,
 ]
 
-export const BaseCard: React.FC<BaseCardProps> = styled.div(
-  ({ color = 'bgSecondary', rounded = true, noShadow, centered = true, overrideStyles }) => [
-    baseStyles,
-    ...colorStyles(color),
-    rounded && tw`rounded-lg`,
-    noShadow && tw`shadow-none`,
-    centered && tw`mx-auto`,
-    overrideStyles,
-  ]
+export const BaseCard: React.FC<BaseCardProps> = ({
+  color = 'bgSecondary',
+  rounded = true,
+  noShadow,
+  centered = true,
+  onClick,
+  overrideStyles,
+  children,
+}) => (
+  <div
+    onClick={onClick}
+    role={onClick ? 'button' : 'presentation'}
+    css={[
+      baseStyles,
+      ...colorStyles(color),
+      rounded && tw`rounded-lg`,
+      noShadow && tw`shadow-none`,
+      centered && tw`mx-auto`,
+      overrideStyles,
+    ]}
+  >
+    {children}
+  </div>
 )
