@@ -27,7 +27,7 @@ module.exports = withPlugins(
     i18n,
     redirects() {
       return [
-        process.env.MAINTENANCE_MODE === "true"
+        process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true"
           ? { source: "/((?!maintenance)(?!_next)(?!static).*)", destination: "/maintenance", permanent: false }
           : null,
       ].filter(Boolean);
