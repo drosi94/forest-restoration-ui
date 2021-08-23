@@ -22,7 +22,7 @@
     "prepare": "husky install",
     "clean": "lerna run clean && lerna clean --yes",
     "format": "lerna run format",
-    "bootstrap": "yarn install; lerna bootstrap;",
+    "bootstrap": "yarn install && lerna bootstrap;",
     "start": "lerna run start --parallel",
     "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci --parallel",
