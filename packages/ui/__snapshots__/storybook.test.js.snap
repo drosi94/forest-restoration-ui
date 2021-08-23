@@ -258,10 +258,11 @@ exports[`Storyshots Shared/UI/Card/TitledCard Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
 <div
-  className="css-19ategs-Input"
+  className="css-18px25j-Input"
 >
   <input
-    className="css-zmifbl-Input"
+    className="css-1wt2cer-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="date"
@@ -278,10 +279,11 @@ exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
 <div
-  className="css-19ategs-Input"
+  className="css-18px25j-Input"
 >
   <input
-    className="css-zmifbl-Input"
+    className="css-1wt2cer-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="password"
@@ -298,10 +300,11 @@ exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
 <div
-  className="css-19ategs-Input"
+  className="css-18px25j-Input"
 >
   <input
-    className="css-zmifbl-Input"
+    className="css-1wt2cer-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="text"
@@ -318,10 +321,11 @@ exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
 <div
-  className="css-19ategs-Input"
+  className="css-18px25j-Input"
 >
   <input
-    className="css-zmifbl-Input"
+    className="css-1wt2cer-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="time"
@@ -338,10 +342,11 @@ exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
 <div
-  className="css-tttsv7-Input"
+  className="css-u0ps3g-Input"
 >
   <input
-    className="css-mmmoh6-Input"
+    className="css-17v1x3b-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="text"
@@ -365,10 +370,11 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
 <div
-  className="css-19ategs-Input"
+  className="css-18px25j-Input"
 >
   <input
-    className="css-zmifbl-Input"
+    className="css-1wt2cer-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="text"
@@ -392,10 +398,11 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
 <div
-  className="css-tttsv7-Input"
+  className="css-u0ps3g-Input"
 >
   <input
-    className="css-mmmoh6-Input"
+    className="css-17v1x3b-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="text"
@@ -422,10 +429,11 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
 <div
-  className="css-19ategs-Input"
+  className="css-18px25j-Input"
 >
   <input
-    className="css-zmifbl-Input"
+    className="css-1wt2cer-Component"
+    defaultValue=""
     id="test"
     placeholder=" "
     type="text"
