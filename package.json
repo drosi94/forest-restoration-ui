@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "husky": "^7.0.1",
     "lerna": "^4.0.0",
     "prettier": "^2.2.0",
@@ -26,11 +27,11 @@
     "start": "lerna run start --parallel",
     "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci --parallel",
-    "start:pwa": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/pwa --stream dev",
-    "build:pwa": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/pwa --stream build",
+    "start:pwa": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/pwa --stream dev",
+    "build:pwa": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/pwa --stream build",
     "run:build:pwa": "lerna run start --scope @forest-restoration/pwa",
-    "start:ui": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/ui --stream storybook",
-    "build:ui": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope @forest-restoration/ui --stream build-storybook",
+    "start:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream storybook",
+    "build:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui"
   },
   "workspaces": [
