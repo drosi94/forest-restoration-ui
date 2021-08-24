@@ -18,6 +18,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     'storybook-dark-mode',
+    'storybook-tailwind-dark-mode',
     {
       name: '@storybook/addon-docs',
       options: {

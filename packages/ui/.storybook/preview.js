@@ -56,25 +56,21 @@ export const parameters = {
 
 export const decorators = [
   (Story) => {
-    const { isDarkMode, setIsDarkMode } = useThemeProvider()
     const darkMode = useDarkMode()
     useEffect(() => {
-      setIsDarkMode(darkMode)
-    }, [darkMode])
-
-    useEffect(() => {
-      if (isDarkMode) {
+      if (darkMode) {
         document.documentElement.classList.remove('light')
         document.documentElement.classList.add('dark')
       } else {
         document.documentElement.classList.remove('dark')
         document.documentElement.classList.add('light')
       }
-    }, [isDarkMode])
-    return (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    )
+    }, [darkMode])
+
+    return <Story />
   },
 ]
+
+export const globalTypes = {
+  darkMode: true,
+}
