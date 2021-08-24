@@ -62,15 +62,15 @@ export const Popover: React.FC<PopoverProps> = ({
             ref={setReferenceElement}
             css={[
               tw`
-                 px-3 py-2  inline-flex items-center hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`,
+                px-3 py-2  inline-flex items-center hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`,
               !open && tw`text-opacity-90`,
             ]}
           >
-            <Typography>{label}</Typography>
+            <Typography css={[tw`dark:text-textPrimary text-textSecondary`]}>{label}</Typography>
             <ChevronDownIcon
               css={[
                 tw`
-              ml-2 h-5 w-5 text-textPrimary group-hover:text-opacity-80 transition ease-in-out duration-150`,
+              ml-2 h-5 w-5 dark:text-textPrimary text-textSecondary group-hover:text-opacity-80 transition ease-in-out duration-150`,
                 !open && tw`text-opacity-70`,
               ]}
               aria-hidden="true"

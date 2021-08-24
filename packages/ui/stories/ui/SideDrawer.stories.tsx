@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useState } from '@storybook/addons'
 import { Story, Meta } from '@storybook/react'
 
 import { Button, SideDrawer, SideDrawerProps } from '@forest-restoration/shared'
@@ -6,18 +7,32 @@ import { Button, SideDrawer, SideDrawerProps } from '@forest-restoration/shared'
 export default {
   title: 'Shared/UI/SideDrawer',
   component: SideDrawer,
+  decorators: [
+    (story: any, props) => {
+      const [open, setOpen] = useState(false)
+
+      return (
+        <>
+          {story({
+            args: {
+              isOpen: open,
+              handleClose: () => setOpen(false),
+              ...props.args,
+            },
+          })}
+          <Button onClick={() => setOpen(true)}>open</Button>
+        </>
+      )
+    },
+  ],
 } as Meta
 
-const Template: Story<SideDrawerProps> = ({ children, ...args }) => {
-  const [open, setOpen] = useState(false)
+const Template: Story<SideDrawerProps> = ({ children, isOpen, handleClose, ...args }) => {
   return (
-    <div>
-      <Button onClick={() => setOpen(true)}>open</Button>
-      <SideDrawer isOpen={open} handleClose={() => setOpen(false)} title="Title" {...args}>
-        <Button onClick={() => setOpen(false)}>close</Button>
-        {children}
-      </SideDrawer>
-    </div>
+    <SideDrawer isOpen={isOpen} handleClose={handleClose} title="Title" {...args}>
+      <Button onClick={handleClose}>close</Button>
+      {children}
+    </SideDrawer>
   )
 }
 

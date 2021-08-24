@@ -7,7 +7,7 @@
     "lerna": "^4.0.0",
     "prettier": "^2.2.0",
     "tailwindcss-hyphens": "^0.1.0",
-    "twin.macro": "2.6.2"
+    "twin.macro": "2.7.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
@@ -27,10 +27,15 @@
     "start": "lerna run start --parallel",
     "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci --parallel",
-    "start:pwa": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/pwa --stream dev",
+    "test:ci:u": "lerna run test:ci:u --parallel",
+    "test:pwa": "lerna run test --scope @forest-restoration/pwa --stream",
+    "test:pwa:u": "lerna run test:u --scope @forest-restoration/pwa --stream",
+    "start:pwa": "lerna run dev --scope @forest-restoration/pwa --stream",
     "build:pwa": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/pwa --stream build",
-    "run:build:pwa": "lerna run start --scope @forest-restoration/pwa",
-    "start:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream storybook",
+    "run:build:pwa": "lerna run start --scope @forest-restoration/pwa --stream",
+    "start:ui": "lerna run storybook --scope @forest-restoration/ui --stream",
+    "test:ui": "lerna run test --scope @forest-restoration/ui --stream",
+    "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
     "build:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui"
   },

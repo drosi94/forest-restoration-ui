@@ -19,6 +19,7 @@ class PWADocument extends Document {
             rel="stylesheet"
           />
           <meta name="theme-color" content="#fff" />
+          <script src="/themeToggle.js" defer />
         </Head>
         <body tw="bg-bgPrimary text-white">
           <Main />

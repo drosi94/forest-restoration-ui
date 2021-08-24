@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useState } from '@storybook/addons'
+
 import { Story, Meta } from '@storybook/react'
 
 import { Button, Modal, ModalProps } from '@forest-restoration/shared'
@@ -6,18 +8,32 @@ import { Button, Modal, ModalProps } from '@forest-restoration/shared'
 export default {
   title: 'Shared/UI/Modal',
   component: Modal,
+  decorators: [
+    (story: any, props) => {
+      const [open, setOpen] = useState(false)
+
+      return (
+        <>
+          {story({
+            args: {
+              isOpen: open,
+              handleClose: () => setOpen(false),
+              ...props.args,
+            },
+          })}
+          <Button onClick={() => setOpen(true)}>open</Button>
+        </>
+      )
+    },
+  ],
 } as Meta
 
-const Template: Story<ModalProps> = ({ children, ...args }) => {
-  const [open, setOpen] = useState(false)
+const Template: Story<ModalProps> = ({ children, isOpen, handleClose, ...args }) => {
   return (
-    <div>
-      <Button onClick={() => setOpen(true)}>open</Button>
-      <Modal isOpen={open} handleClose={() => setOpen(false)} {...args}>
-        <Button onClick={() => setOpen(false)}>close</Button>
-        {children}
-      </Modal>
-    </div>
+    <Modal isOpen={isOpen} handleClose={handleClose} {...args}>
+      <Button onClick={handleClose}>close</Button>
+      {children}
+    </Modal>
   )
 }
 

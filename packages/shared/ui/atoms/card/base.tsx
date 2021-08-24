@@ -47,6 +47,8 @@ export const BaseCard: React.FC<BaseCardProps> = ({
 }) => (
   <div
     onClick={onClick}
+    onKeyDown={onClick}
+    onKeyUp={onClick}
     role={onClick ? 'button' : 'presentation'}
     css={[
       baseStyles,

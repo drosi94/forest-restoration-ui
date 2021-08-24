@@ -51,7 +51,7 @@ export type TypographyProps = {
 }
 
 const variantStyles = {
-  heading: [tw`font-notoSerif text-primary-400 text-xl`],
+  heading: [tw`font-notoSerif dark:text-primary-400 text-primary-900 text-xl`],
   body: [tw`font-sans text-base text-textPrimary`],
   body2: [tw`font-sans text-lg text-textPrimary`],
 }
@@ -98,8 +98,8 @@ export const Typography: React.FC<TypographyProps> = styled.span(
   }) => [
     color === 'textPrimary' && tw`text-textPrimary`,
     color === 'textSecondary' && tw`text-textSecondary`,
-    color === 'primary' && tw`text-primary-500`,
-    color === 'secondary' && tw`text-secondary-500`,
+    color === 'primary' && tw`dark:text-primary-500 text-primary-900`,
+    color === 'secondary' && tw`dark:text-secondary-500 text-secondary-900`,
     ...fontSizeStyles[fontSize],
     ...fontFamilyStyles[fontFamily],
     ...fontWeightStyles[fontWeight],

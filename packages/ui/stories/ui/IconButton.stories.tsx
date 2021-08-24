@@ -13,7 +13,7 @@ const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
   Icon: () => (
-    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
