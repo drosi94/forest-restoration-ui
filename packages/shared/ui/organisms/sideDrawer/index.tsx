@@ -1,5 +1,5 @@
+import React, { useRef } from 'react'
 import tw from 'twin.macro'
-import React from 'react'
 import { Dialog } from '@headlessui/react'
 import { Title } from '../modal/title'
 import { Description } from '../modal/description'
@@ -13,7 +13,7 @@ export type SideDrawerProps = ModalProps & {
 const noop = () => {}
 const DefaultChildren = ''
 
-const modalBaseStyles = tw`z-10 overflow-auto text-white`
+const modalBaseStyles = tw`z-40 overflow-auto text-white`
 const modalPositionStyles = tw`fixed top-0 w-96 h-screen transform ease-in-out transition-all duration-300`
 const modalBackgroundStyles = tw`bg-bgSecondary shadow-xl`
 
@@ -29,6 +29,8 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
   overrideDescriptionStyles,
   children = DefaultChildren,
 }) => {
+  const closeButtonRef = useRef(null)
+
   return (
     // todo issue #48
     // <StyledTransition
@@ -42,7 +44,13 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
     //   leaveTo="leaveTo"
     // >
     /* @ts-ignore   */
-    <Dialog as="aside" open={isOpen} onClose={handleClose} css={[modalBaseStyles]}>
+    <Dialog
+      as="aside"
+      initialFocus={closeButtonRef}
+      open={isOpen}
+      onClose={handleClose}
+      css={[modalBaseStyles]}
+    >
       <div className="flex items-center justify-center min-h-screen">
         <Dialog.Overlay css={[tw`fixed inset-0 bg-white bg-opacity-30`, overrideOverlayStyles]} />
         <div
@@ -59,7 +67,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
           ]}
         >
           <div tw="p-2">
-            <CloseButton onClick={handleClose} />
+            <CloseButton buttonRef={closeButtonRef} onClick={handleClose} />
           </div>
           <div tw="px-10 py-4">
             <Dialog.Title

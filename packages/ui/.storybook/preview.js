@@ -1,9 +1,10 @@
 require('tailwindcss/tailwind.css')
 import { useEffect } from 'react'
+import { addDecorator } from '@storybook/react'
+
 import { themes } from '@storybook/theming'
 import { useDarkMode } from 'storybook-dark-mode'
 import '../../pwa/theme.css'
-import { ThemeProvider, useThemeProvider } from '../../pwa/shared/providers/themeProvider'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -54,22 +55,26 @@ export const parameters = {
   },
 }
 
-export const decorators = [
-  (Story) => {
-    const darkMode = useDarkMode()
-    useEffect(() => {
-      if (darkMode) {
-        document.documentElement.classList.remove('light')
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-        document.documentElement.classList.add('light')
-      }
-    }, [darkMode])
+const ThemeProvider = ({ children }) => {
+  const darkMode = useDarkMode()
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.remove('light')
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.add('light')
+    }
+  }, [darkMode])
 
-    return <Story />
-  },
-]
+  return children
+}
+
+addDecorator((Story) => (
+  <ThemeProvider>
+    <Story />
+  </ThemeProvider>
+))
 
 export const globalTypes = {
   darkMode: true,
