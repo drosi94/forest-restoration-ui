@@ -10,7 +10,7 @@ jobs:
           node-version: '14'
         uses: actions/setup-node@v1
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --network-timeout 1000000
       - name: Run tests 
         run: yarn test:ci:u
       - name: deploy storybook to vercel
