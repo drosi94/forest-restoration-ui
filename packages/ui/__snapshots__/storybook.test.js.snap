@@ -1594,58 +1594,48 @@ exports[`Storyshots Shared/UI/Logo Small 1`] = `
 `;
 
 exports[`Storyshots Shared/UI/Modal Custom Footer 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal Full Screen 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal Full Width 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal Primary 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal With Content 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Pill Custom Children 1`] = `
@@ -1684,14 +1674,13 @@ exports[`Storyshots Shared/UI/Pill With Close 1`] = `
   <div
     className="css-9oelbo-Pill"
   >
-    <div
+    <button
       aria-label="Close Modal"
-      className="css-1hhqd7e-CloseButton"
-      role="button"
+      className="css-5a6dou-CloseButton"
+      onClick={[Function]}
     >
       <svg
         fill="none"
-        onClick={[Function]}
         stroke="currentColor"
         viewBox="0 0 24 24"
         width={14}
@@ -1704,7 +1693,7 @@ exports[`Storyshots Shared/UI/Pill With Close 1`] = `
           strokeWidth={2}
         />
       </svg>
-    </div>
+    </button>
   </div>
 </span>
 `;
@@ -1816,25 +1805,21 @@ exports[`Storyshots Shared/UI/Popover Top 1`] = `
 `;
 
 exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
-<div>
-  <button
-    className="css-1k6r4wa-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Toast Custom 1`] = `
