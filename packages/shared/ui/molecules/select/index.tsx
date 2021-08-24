@@ -4,6 +4,7 @@ import { Fragment } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
 import { Error, Hint, Typography } from '../../atoms'
+import { getItem } from '../../utils'
 
 export type SelectProps = {
   /**
@@ -102,14 +103,6 @@ export const Select: React.FC<SelectProps> = ({
   overrideHintContainerStyles,
   overrideErrorContainerStyles,
 }) => {
-  const getLabel = (item) => {
-    return item
-      ? typeof item === 'string'
-        ? item
-        : item[typeof optionLabelItem === 'function' ? optionLabelItem() : optionLabelItem]
-      : null
-  }
-
   return (
     <Listbox value={value} onChange={onChange}>
       <div css={[tw`relative mt-1`]}>
@@ -120,7 +113,7 @@ export const Select: React.FC<SelectProps> = ({
         </div>
         <Listbox.Button css={[baseSelectContainerStyle, error && tw`bg-red-500`]}>
           <Typography css={[tw`block truncate dark:text-textPrimary text-textSecondary`]}>
-            {getLabel(value) || placeholder}
+            {getItem(value, optionLabelItem) || placeholder}
           </Typography>
           <Typography
             css={[tw`absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none`]}
@@ -173,7 +166,7 @@ export const Select: React.FC<SelectProps> = ({
                 {({ selected }) => (
                   <>
                     <Typography css={[tw`block truncate font-normal`, selected && tw`font-medium`]}>
-                      {getLabel(option) || noOptionText}
+                      {getItem(option, optionLabelItem) || noOptionText}
                     </Typography>
                     {selected ? (
                       <Typography css={[tw`absolute inset-y-0 left-0 flex items-center pl-3`]}>

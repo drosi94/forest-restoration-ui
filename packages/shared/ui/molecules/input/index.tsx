@@ -2,6 +2,7 @@ import React from 'react'
 import tw, { theme } from 'twin.macro'
 import TextareaAutosize from 'react-textarea-autosize'
 import { Typography, Hint, Error } from '../../atoms'
+import { mergeRefs } from '../../utils'
 
 export type InputProps = {
   /**
@@ -97,68 +98,80 @@ const baseInputStyle = tw`p-3 block w-full px-1 mt-0 bg-transparent border-0 bor
 focus:outline-none focus:ring-0 focus:border-primary-400 border-gray-200
 `
 
-export const Input: React.FC<InputProps> = ({
-  id,
-  type = 'text',
-  name,
-  label,
-  required,
-  value,
-  defaultValue,
-  error,
-  hint,
-  multiline,
-  minRows,
-  maxRows,
-  onChange,
-  overrideContainerStyles,
-  overrideInputStyles,
-  overrideHintContainerStyles,
-  overrideErrorContainerStyles,
-}) => {
-  let Component
-  const sharedProps = {
-    id,
-    required,
-    name,
-    placeholder: ' ',
-    value,
-    defaultValue,
-    onChange,
-  }
-  if (!multiline) {
-    Component = (
-      <input
-        {...sharedProps}
-        type={type}
-        css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
-      />
-    )
-  } else {
-    Component = (
-      <TextareaAutosize
-        {...sharedProps}
-        minRows={minRows}
-        maxRows={maxRows}
-        css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
-      />
-    )
-  }
+export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
+  (
+    {
+      id,
+      type = 'text',
+      name,
+      label,
+      required,
+      value,
+      defaultValue,
+      error,
+      hint,
+      multiline,
+      minRows,
+      maxRows,
+      onChange,
+      overrideContainerStyles,
+      overrideInputStyles,
+      overrideHintContainerStyles,
+      overrideErrorContainerStyles,
+      ...rest
+    },
+    ref
+  ) => {
+    let Component
+    const sharedProps = {
+      id,
+      required,
+      name,
+      placeholder: ' ',
+      value,
+      defaultValue,
+      onChange,
+    }
+    if (!multiline) {
+      Component = (
+        <input
+          {...sharedProps}
+          type={type}
+          css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
+          ref={ref}
+          {...rest}
+        />
+      )
+    } else {
+      Component = (
+        <TextareaAutosize
+          {...sharedProps}
+          minRows={minRows}
+          maxRows={maxRows}
+          css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
+          ref={ref}
+          {...rest}
+        />
+      )
+    }
 
-  return (
-    <div
-      css={[
-        tw`relative z-0 w-full mb-5 text-textPrimary`,
-        styles({ error }),
-        overrideContainerStyles,
-      ]}
-    >
-      {Component}
-      <Typography as="label" htmlFor={id} tw="absolute duration-300 top-3 left-2 z-auto ">
-        {label} {required && <Typography tw="text-red-300">*</Typography>}
-      </Typography>
-      {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
-      {error && <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>}
-    </div>
-  )
-}
+    return (
+      <div
+        css={[
+          tw`relative z-0 w-full mb-5 text-textPrimary`,
+          styles({ error }),
+          overrideContainerStyles,
+        ]}
+      >
+        {Component}
+        <Typography as="label" htmlFor={id} tw="absolute duration-300 top-3 left-2 z-auto ">
+          {label} {required && <Typography tw="text-red-300">*</Typography>}
+        </Typography>
+        {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
+        {error && (
+          <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>
+        )}
+      </div>
+    )
+  }
+)

@@ -45,3 +45,27 @@ export const getTextColorStyles = (color: Color) => {
       return tw`text-white`
   }
 }
+
+// TODO: FIND A BETTER NAME
+export const getItem = (item: string | any, key: string | (() => string)) => {
+  return item
+    ? typeof item === 'string'
+      ? item
+      : item[typeof key === 'function' ? key() : key]
+    : null
+}
+
+export const mergeRefs = (...refs) => {
+  const filteredRefs = refs.filter(Boolean)
+  if (!filteredRefs.length) return null
+  if (filteredRefs.length === 0) return filteredRefs[0]
+  return (inst) => {
+    for (const ref of filteredRefs) {
+      if (typeof ref === 'function') {
+        ref(inst)
+      } else if (ref) {
+        ref.current = inst
+      }
+    }
+  }
+}
