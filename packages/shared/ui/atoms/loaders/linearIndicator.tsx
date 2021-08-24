@@ -2,7 +2,7 @@ import React from 'react'
 import tw from 'twin.macro'
 
 export type LinearIndicatorProps = {
-  color: 'primary' | 'secondary'
+  color?: 'primary' | 'secondary'
 }
 
 const styles = {
@@ -25,7 +25,7 @@ const styles = {
   '@keyframes shimmer': { '100%': { transform: 'translateX(0%)', opacity: 0 } },
 }
 
-export const LinearIndicator: React.FC<LinearIndicatorProps> = ({ color }) => {
+export const LinearIndicator: React.FC<LinearIndicatorProps> = ({ color = 'primary' }) => {
   return (
     <div
       css={[

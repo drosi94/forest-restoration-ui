@@ -12,3 +12,8 @@ const Template: Story<LinearIndicatorProps> = (args) => <LinearIndicator {...arg
 
 export const Primary = Template.bind({})
 Primary.args = {}
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+  color: 'secondary',
+}
