@@ -120,7 +120,6 @@ export default function Home() {
             minRows={20}
           />
         </div>
-
         <Popover label="Here Popover" placement="bottom-start">
           <div>hey</div>
         </Popover>
