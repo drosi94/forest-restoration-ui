@@ -7,22 +7,35 @@ import {
   Typography,
   Modal,
   Accordion,
+  AccordionCard,
   BaseCard,
   TitledCard,
   Switch,
   Input,
+  Select,
+  Pill,
+  Popover,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
+import { ToggleTheme } from '../../shared/components/toggleTheme'
+
+const options = [
+  { label: 'Test1', value: 'test1' },
+  { label: 'Test2', value: 'test2' },
+]
 
 export default function Home() {
   const { t } = useTranslation(['common', 'home'])
   const [open, setOpen] = useState(false)
   const [checked, setChecked] = useState(false)
   const [textValue, setTextValue] = useState('')
+  const [selectValue, setSelectValue] = useState('')
 
   return (
     <div tw="h-full py-8">
       <div tw="flex justify-center items-center h-full flex-col gap-3">
+        <ToggleTheme />
+
         <Button>{t('common:hello')}</Button>
         <Typography as="h1" variant="heading" tw="text-2xl">
           {t('home:test')}
@@ -77,6 +90,17 @@ export default function Home() {
             sed sit amet dui.
           </Typography>
         </TitledCard>
+        <AccordionCard title="Lorem Ipsum Title">
+          <Typography variant="body2">
+            Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum
+            congue leo eget malesuada. Proin eget tortor risus. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis
+            quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien
+            massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie
+            malesuada. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci
+          </Typography>
+        </AccordionCard>
 
         <Switch
           label="My Switch"
@@ -96,6 +120,22 @@ export default function Home() {
             minRows={20}
           />
         </div>
+        <Popover label="Here Popover" placement="bottom-start">
+          <div>hey</div>
+        </Popover>
+        <div tw="w-full mb-20">
+          <Select
+            id="select"
+            name="select"
+            label="Select"
+            value={selectValue}
+            options={options}
+            onChange={setSelectValue}
+            noOptionText="No option"
+            shouldResetOption
+          />
+        </div>
+        <Pill textColor="textSecondary">Here I am</Pill>
       </div>
     </div>
   )

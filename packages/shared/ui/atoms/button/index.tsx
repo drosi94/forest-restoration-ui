@@ -46,9 +46,9 @@ const colorAndVariantStyles = (color: string, variant: string) => {
     case 'contained':
       return [
         color === 'primary' &&
-          tw`bg-primary-800 hover:bg-primary-500 active:bg-primary-900  text-textPrimary`,
+          tw`bg-primary-800 hover:bg-primary-500 active:bg-primary-900 dark:text-textPrimary text-textSecondary`,
         color === 'secondary' &&
-          tw`bg-secondary-500 hover:bg-secondary-400 active:bg-secondary-700 text-textSecondary`,
+          tw`bg-secondary-500 hover:bg-secondary-400 active:bg-secondary-700 dark:text-textPrimary text-textSecondary`,
       ]
     case 'outlined':
       return [

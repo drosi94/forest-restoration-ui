@@ -11,7 +11,7 @@ exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
   type="button"
 >
   <h2
-    className="css-gxuocn-Typography-Accordion e1eqcpp10"
+    className="css-skx53n-Typography-Accordion e1eqcpp10"
   >
     Do you know forest restoration app?
   </h2>
@@ -41,7 +41,7 @@ exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
   type="button"
 >
   <h2
-    className="css-gxuocn-Typography-Accordion e1eqcpp10"
+    className="css-skx53n-Typography-Accordion e1eqcpp10"
   >
     Do you know forest restoration app?
   </h2>
@@ -62,7 +62,7 @@ exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Contained 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -71,7 +71,7 @@ exports[`Storyshots Shared/UI/Button Contained 1`] = `
 
 exports[`Storyshots Shared/UI/Button Disabled 1`] = `
 <button
-  className="css-1spcpzm-Button e1p27jrl0"
+  className="css-1j7d64s-Button e1p27jrl0"
   color="primary"
   disabled={true}
 >
@@ -81,7 +81,7 @@ exports[`Storyshots Shared/UI/Button Disabled 1`] = `
 
 exports[`Storyshots Shared/UI/Button Full Width 1`] = `
 <button
-  className="css-14vwuej-Button e1p27jrl0"
+  className="css-1s42i13-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -90,7 +90,7 @@ exports[`Storyshots Shared/UI/Button Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/Button Large 1`] = `
 <button
-  className="css-15wiyrp-Button e1p27jrl0"
+  className="css-1mamdyp-Button e1p27jrl0"
   color="primary"
   size="large"
 >
@@ -100,7 +100,7 @@ exports[`Storyshots Shared/UI/Button Large 1`] = `
 
 exports[`Storyshots Shared/UI/Button Link 1`] = `
 <a
-  className="css-70sqgc-Button e1p27jrl0"
+  className="css-iz6vpf-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -109,7 +109,7 @@ exports[`Storyshots Shared/UI/Button Link 1`] = `
 
 exports[`Storyshots Shared/UI/Button Medium 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
   color="primary"
   size="medium"
 >
@@ -119,7 +119,7 @@ exports[`Storyshots Shared/UI/Button Medium 1`] = `
 
 exports[`Storyshots Shared/UI/Button No Shadow 1`] = `
 <button
-  className="css-jccqdr-Button e1p27jrl0"
+  className="css-1udko7x-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -128,7 +128,7 @@ exports[`Storyshots Shared/UI/Button No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/Button Outlined 1`] = `
 <button
-  className="css-3ql8e7-Button e1p27jrl0"
+  className="css-1njvmdb-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -137,7 +137,7 @@ exports[`Storyshots Shared/UI/Button Outlined 1`] = `
 
 exports[`Storyshots Shared/UI/Button Primary 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -146,7 +146,7 @@ exports[`Storyshots Shared/UI/Button Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Rounded 1`] = `
 <button
-  className="css-1j7bi6p-Button e1p27jrl0"
+  className="css-qhdzhu-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -155,7 +155,7 @@ exports[`Storyshots Shared/UI/Button Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/Button Secondary 1`] = `
 <button
-  className="css-10ji96a-Button e1p27jrl0"
+  className="css-1yzo9fa-Button e1p27jrl0"
   color="secondary"
 >
   My Button
@@ -164,7 +164,7 @@ exports[`Storyshots Shared/UI/Button Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Small 1`] = `
 <button
-  className="css-gpj9d3-Button e1p27jrl0"
+  className="css-yionkb-Button e1p27jrl0"
   color="primary"
   size="small"
 >
@@ -174,16 +174,61 @@ exports[`Storyshots Shared/UI/Button Small 1`] = `
 
 exports[`Storyshots Shared/UI/Button Text 1`] = `
 <button
-  className="css-h5zwan-Button e1p27jrl0"
+  className="css-1agept6-Button e1p27jrl0"
   color="primary"
 >
   My Button
 </button>
 `;
 
+exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
+<div
+  className="css-lgqibh-Component"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+>
+  <button
+    aria-expanded={false}
+    className="css-128kkrk-AccordionCard"
+    id="headlessui-disclosure-button-13"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <div
+      className="css-xuxdb9-AccordionCard"
+    >
+      <span
+        className="css-1lhz13y-Typography e1eqcpp10"
+      >
+        This is a title
+      </span>
+    </div>
+    <svg
+      className="css-14rkpa9-AccordionCard"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 15l7-7 7 7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 <div
-  className="css-gitq5l-BaseCard eck2yil0"
+  className="css-133y0n3-Component"
+  role="presentation"
 >
   <div>
     Hello here
@@ -193,7 +238,8 @@ exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
 <div
-  className="css-cfu4k3-BaseCard eck2yil0"
+  className="css-1aya1jl-Component"
+  role="presentation"
 >
   <div>
     Hello here
@@ -203,7 +249,8 @@ exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 <div
-  className="css-4oanin-BaseCard eck2yil0"
+  className="css-lgqibh-Component"
+  role="presentation"
 >
   <div>
     Hello here
@@ -213,8 +260,8 @@ exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
 <div
-  className="css-1fwyafo-BaseCard eck2yil0"
-  color="bgPrimary"
+  className="css-p0teq3-Component"
+  role="presentation"
 >
   <div>
     Hello here
@@ -224,7 +271,8 @@ exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
 <div
-  className="css-jqlmnb-BaseCard eck2yil0"
+  className="css-zj9zij-Component"
+  role="presentation"
 >
   <div>
     Hello here
@@ -234,14 +282,14 @@ exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/Card/TitledCard Primary 1`] = `
 <div
-  className="css-4oanin-BaseCard eck2yil0"
-  color="bgSecondary"
+  className="css-lgqibh-Component"
+  role="presentation"
 >
   <div
     className="css-12qcvlk-TitledCard"
   >
     <h2
-      className="css-13xwp29-Typography e1eqcpp10"
+      className="css-1lhz13y-Typography e1eqcpp10"
     >
       Card
     </h2>
@@ -268,7 +316,7 @@ exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
     type="date"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -289,7 +337,7 @@ exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
     type="password"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -310,7 +358,7 @@ exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
     type="text"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -331,7 +379,7 @@ exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
     type="time"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -352,7 +400,7 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
     type="text"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -380,7 +428,7 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
     type="text"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -408,7 +456,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
     type="text"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -418,7 +466,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
     className="css-safnee-Error"
   >
     <span
-      className="css-8e1tv0-Typography-Error e1eqcpp10"
+      className="css-dzbg2z-Typography-Error e1eqcpp10"
       fontSize="small"
     >
       This is an error
@@ -439,7 +487,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
     type="text"
   />
   <label
-    className="css-75pfc2-Typography-Input e1eqcpp10"
+    className="css-18uojik-Typography-Input e1eqcpp10"
     htmlFor="test"
   >
     Label
@@ -449,12 +497,301 @@ exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
     className="css-1y0sv9c-Hint"
   >
     <span
-      className="css-19hly3h-Typography e1eqcpp10"
+      className="css-19xwz45-Typography e1eqcpp10"
       fontSize="small"
     >
       A useful hint to help you out
     </span>
   </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Select Primary 1`] = `
+<div
+  className="css-w2vxd-Select"
+>
+  <div
+    className="css-1q842lx-Select"
+  >
+    <span
+      className="css-16e6xoq-Typography-Select e1eqcpp10"
+      id="headlessui-listbox-label-15"
+      onClick={[Function]}
+    >
+      Label
+       
+    </span>
+  </div>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    className="css-1m4om3u-Select"
+    disabled={false}
+    id="headlessui-listbox-button-16"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="css-grusrs-Typography-Select e1eqcpp10"
+    >
+      Test1
+    </span>
+    <span
+      className="css-m1069v-Typography-Select e1eqcpp10"
+    >
+      <svg
+        aria-hidden="true"
+        className="css-13r2shm-Select"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Select With Error 1`] = `
+Array [
+  <div
+    className="css-w2vxd-Select"
+  >
+    <div
+      className="css-1q842lx-Select"
+    >
+      <span
+        className="css-1ep4288-Typography-Select e1eqcpp10"
+        id="headlessui-listbox-label-17"
+        onClick={[Function]}
+      >
+        Label
+         
+      </span>
+    </div>
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      className="css-565jrk-Select"
+      disabled={false}
+      id="headlessui-listbox-button-18"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="css-grusrs-Typography-Select e1eqcpp10"
+      >
+        Test1
+      </span>
+      <span
+        className="css-m1069v-Typography-Select e1eqcpp10"
+      >
+        <svg
+          aria-hidden="true"
+          className="css-13r2shm-Select"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>,
+  <div
+    className="css-safnee-Error"
+  >
+    <span
+      className="css-dzbg2z-Typography-Error e1eqcpp10"
+      fontSize="small"
+    >
+      This is an error
+    </span>
+  </div>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Form/Select With Hint 1`] = `
+Array [
+  <div
+    className="css-w2vxd-Select"
+  >
+    <div
+      className="css-1q842lx-Select"
+    >
+      <span
+        className="css-16e6xoq-Typography-Select e1eqcpp10"
+        id="headlessui-listbox-label-19"
+        onClick={[Function]}
+      >
+        Label
+         
+      </span>
+    </div>
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      className="css-1m4om3u-Select"
+      disabled={false}
+      id="headlessui-listbox-button-20"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="css-grusrs-Typography-Select e1eqcpp10"
+      >
+        Test1
+      </span>
+      <span
+        className="css-m1069v-Typography-Select e1eqcpp10"
+      >
+        <svg
+          aria-hidden="true"
+          className="css-13r2shm-Select"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>,
+  <div
+    className="css-1y0sv9c-Hint"
+  >
+    <span
+      className="css-19xwz45-Typography e1eqcpp10"
+      fontSize="small"
+    >
+      This is a hint
+    </span>
+  </div>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Form/Select With Placeholder 1`] = `
+<div
+  className="css-w2vxd-Select"
+>
+  <div
+    className="css-1q842lx-Select"
+  >
+    <span
+      className="css-16e6xoq-Typography-Select e1eqcpp10"
+      id="headlessui-listbox-label-23"
+      onClick={[Function]}
+    >
+      Label
+       
+    </span>
+  </div>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    className="css-1m4om3u-Select"
+    disabled={false}
+    id="headlessui-listbox-button-24"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="css-grusrs-Typography-Select e1eqcpp10"
+    >
+      Please select an option wisely
+    </span>
+    <span
+      className="css-m1069v-Typography-Select e1eqcpp10"
+    >
+      <svg
+        aria-hidden="true"
+        className="css-13r2shm-Select"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Select With Reset Option 1`] = `
+<div
+  className="css-w2vxd-Select"
+>
+  <div
+    className="css-1q842lx-Select"
+  >
+    <span
+      className="css-16e6xoq-Typography-Select e1eqcpp10"
+      id="headlessui-listbox-label-21"
+      onClick={[Function]}
+    >
+      Label
+       
+    </span>
+  </div>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    className="css-1m4om3u-Select"
+    disabled={false}
+    id="headlessui-listbox-button-22"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    type="button"
+  >
+    <span
+      className="css-grusrs-Typography-Select e1eqcpp10"
+    >
+      Test1
+    </span>
+    <span
+      className="css-m1069v-Typography-Select e1eqcpp10"
+    >
+      <svg
+        aria-hidden="true"
+        className="css-13r2shm-Select"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </span>
+  </button>
 </div>
 `;
 
@@ -464,9 +801,9 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
 >
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-14"
+    aria-labelledby="headlessui-label-32"
     className="css-1tiw86o-Switch"
-    id="headlessui-switch-13"
+    id="headlessui-switch-31"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -483,8 +820,8 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
     />
   </button>
   <span
-    className="css-1xggxmq-Typography-Label e1eqcpp10"
-    id="headlessui-label-14"
+    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    id="headlessui-label-32"
     onClick={[Function]}
   >
     Switch
@@ -497,17 +834,17 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
   className="css-gxbv2c-Switch"
 >
   <span
-    className="css-15v5hy3-Typography-Label e1eqcpp10"
-    id="headlessui-label-19"
+    className="css-1ng4m2i-Typography-Label e1eqcpp10"
+    id="headlessui-label-37"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-19"
+    aria-labelledby="headlessui-label-37"
     className="css-1g1l4v0-Switch"
-    id="headlessui-switch-20"
+    id="headlessui-switch-38"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -533,7 +870,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
   <button
     aria-checked={true}
     className="css-1tiw86o-Switch"
-    id="headlessui-switch-15"
+    id="headlessui-switch-33"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -557,17 +894,17 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
   className="css-gxbv2c-Switch"
 >
   <span
-    className="css-1xggxmq-Typography-Label e1eqcpp10"
-    id="headlessui-label-17"
+    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    id="headlessui-label-35"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={false}
-    aria-labelledby="headlessui-label-17"
+    aria-labelledby="headlessui-label-35"
     className="css-5y9lu-Switch"
-    id="headlessui-switch-18"
+    id="headlessui-switch-36"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -591,17 +928,17 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
   className="css-gxbv2c-Switch"
 >
   <span
-    className="css-1xggxmq-Typography-Label e1eqcpp10"
-    id="headlessui-label-7"
+    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    id="headlessui-label-25"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-7"
+    aria-labelledby="headlessui-label-25"
     className="css-1tiw86o-Switch"
-    id="headlessui-switch-8"
+    id="headlessui-switch-26"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -626,9 +963,9 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
 >
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-10"
+    aria-labelledby="headlessui-label-28"
     className="css-1tiw86o-Switch"
-    id="headlessui-switch-9"
+    id="headlessui-switch-27"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -645,8 +982,8 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
     />
   </button>
   <span
-    className="css-1xggxmq-Typography-Label e1eqcpp10"
-    id="headlessui-label-10"
+    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    id="headlessui-label-28"
     onClick={[Function]}
   >
     Switch
@@ -659,17 +996,17 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
   className="css-1halu6f-Switch"
 >
   <span
-    className="css-1xggxmq-Typography-Label e1eqcpp10"
-    id="headlessui-label-11"
+    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    id="headlessui-label-29"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-11"
+    aria-labelledby="headlessui-label-29"
     className="css-1tiw86o-Switch"
-    id="headlessui-switch-12"
+    id="headlessui-switch-30"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -693,7 +1030,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
   className="flex flex-row gap-2"
 >
   <span
-    className="css-1vlagpw-Typography e1eqcpp10"
+    className="css-kxpzc2-Typography e1eqcpp10"
   >
     Left
   </span>
@@ -702,7 +1039,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
   >
     <button
       className="css-5y9lu-Switch"
-      id="headlessui-switch-16"
+      id="headlessui-switch-34"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -720,7 +1057,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
     </button>
   </div>
   <span
-    className="css-1vlagpw-Typography e1eqcpp10"
+    className="css-kxpzc2-Typography e1eqcpp10"
   >
     Right
   </span>
@@ -733,17 +1070,17 @@ Array [
     className="css-gxbv2c-Switch"
   >
     <span
-      className="css-1xggxmq-Typography-Label e1eqcpp10"
-      id="headlessui-label-23"
+      className="css-a4pg8w-Typography-Label e1eqcpp10"
+      id="headlessui-label-41"
       onClick={[Function]}
     >
       Switch
     </span>
     <button
       aria-checked={true}
-      aria-labelledby="headlessui-label-23"
+      aria-labelledby="headlessui-label-41"
       className="css-kqmpa8-Switch"
-      id="headlessui-switch-24"
+      id="headlessui-switch-42"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -764,7 +1101,7 @@ Array [
     className="css-safnee-Error"
   >
     <span
-      className="css-8e1tv0-Typography-Error e1eqcpp10"
+      className="css-dzbg2z-Typography-Error e1eqcpp10"
       fontSize="small"
     >
       This is an error
@@ -779,17 +1116,17 @@ Array [
     className="css-gxbv2c-Switch"
   >
     <span
-      className="css-1xggxmq-Typography-Label e1eqcpp10"
-      id="headlessui-label-21"
+      className="css-a4pg8w-Typography-Label e1eqcpp10"
+      id="headlessui-label-39"
       onClick={[Function]}
     >
       Switch
     </span>
     <button
       aria-checked={true}
-      aria-labelledby="headlessui-label-21"
+      aria-labelledby="headlessui-label-39"
       className="css-1tiw86o-Switch"
-      id="headlessui-switch-22"
+      id="headlessui-switch-40"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -810,7 +1147,7 @@ Array [
     className="css-1y0sv9c-Hint"
   >
     <span
-      className="css-19hly3h-Typography e1eqcpp10"
+      className="css-19xwz45-Typography e1eqcpp10"
       fontSize="small"
     >
       A useful hint here
@@ -821,13 +1158,13 @@ Array [
 
 exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -846,14 +1183,14 @@ exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Disabled 1`] = `
 <button
-  className="css-1spcpzm-Button e1p27jrl0"
+  className="css-1j7d64s-Button e1p27jrl0"
   disabled={true}
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -872,13 +1209,13 @@ exports[`Storyshots Shared/UI/IconButton Disabled 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Full Width 1`] = `
 <button
-  className="css-14vwuej-Button e1p27jrl0"
+  className="css-1s42i13-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -897,14 +1234,14 @@ exports[`Storyshots Shared/UI/IconButton Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Large 1`] = `
 <button
-  className="css-15wiyrp-Button e1p27jrl0"
+  className="css-1mamdyp-Button e1p27jrl0"
   size="large"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -923,13 +1260,13 @@ exports[`Storyshots Shared/UI/IconButton Large 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Link 1`] = `
 <a
-  className="css-70sqgc-Button e1p27jrl0"
+  className="css-iz6vpf-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -948,14 +1285,14 @@ exports[`Storyshots Shared/UI/IconButton Link 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Medium 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
   size="medium"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -974,13 +1311,13 @@ exports[`Storyshots Shared/UI/IconButton Medium 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 <button
-  className="css-jccqdr-Button e1p27jrl0"
+  className="css-1udko7x-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -999,13 +1336,13 @@ exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 <button
-  className="css-3ql8e7-Button e1p27jrl0"
+  className="css-1njvmdb-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1024,13 +1361,13 @@ exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Primary 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1049,13 +1386,13 @@ exports[`Storyshots Shared/UI/IconButton Primary 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Rounded 1`] = `
 <button
-  className="css-1j7bi6p-Button e1p27jrl0"
+  className="css-qhdzhu-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1074,14 +1411,14 @@ exports[`Storyshots Shared/UI/IconButton Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Secondary 1`] = `
 <button
-  className="css-10ji96a-Button e1p27jrl0"
+  className="css-1yzo9fa-Button e1p27jrl0"
   color="secondary"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1100,14 +1437,14 @@ exports[`Storyshots Shared/UI/IconButton Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Small 1`] = `
 <button
-  className="css-1xxozgk-Button e1p27jrl0"
+  className="css-1k6r4wa-Button e1p27jrl0"
   size="medium"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1126,13 +1463,13 @@ exports[`Storyshots Shared/UI/IconButton Small 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Text 1`] = `
 <button
-  className="css-h5zwan-Button e1p27jrl0"
+  className="css-1agept6-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
   >
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1147,6 +1484,44 @@ exports[`Storyshots Shared/UI/IconButton Text 1`] = `
     My Icon here
   </span>
 </button>
+`;
+
+exports[`Storyshots Shared/UI/Loaders/LinearIndicator Primary 1`] = `
+<div
+  className="css-1prxrkl-LinearIndicator"
+>
+  <div
+    className="css-1j3bg6v-Component"
+  >
+    <div
+      className="shim css-p8h9f7-LinearIndicator"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Loaders/LinearIndicator Secondary 1`] = `
+<div
+  className="css-2ny3uk-LinearIndicator"
+>
+  <div
+    className="css-1j3bg6v-Component"
+  >
+    <div
+      className="shim css-p8h9f7-LinearIndicator"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Loaders/Spinner Primary 1`] = `
+<div
+  className="css-nc1i2i-Spinner"
+>
+  <div
+    className="css-7cvwhs-Spinner"
+  />
+</div>
 `;
 
 exports[`Storyshots Shared/UI/Logo Custom 1`] = `
@@ -1219,80 +1594,232 @@ exports[`Storyshots Shared/UI/Logo Small 1`] = `
 `;
 
 exports[`Storyshots Shared/UI/Modal Custom Footer 1`] = `
-<div>
-  <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal Full Screen 1`] = `
-<div>
-  <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal Full Width 1`] = `
-<div>
-  <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal Primary 1`] = `
-<div>
-  <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Modal With Content 1`] = `
-<div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
+`;
+
+exports[`Storyshots Shared/UI/Pill Custom Children 1`] = `
+<span
+  className="css-1pm2g0b-Pill"
+>
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
+    className="border-2 border-secondary-400"
   >
-    open
+    I am a button
   </button>
+</span>
+`;
+
+exports[`Storyshots Shared/UI/Pill Primary 1`] = `
+<span
+  className="css-1pm2g0b-Pill"
+>
+  <span
+    className="css-1vz2iyp-Typography-Pill e1eqcpp10"
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Storyshots Shared/UI/Pill With Close 1`] = `
+<span
+  className="css-1pm2g0b-Pill"
+>
+  <span
+    className="css-1vz2iyp-Typography-Pill e1eqcpp10"
+  >
+    Hello
+  </span>
+  <div
+    className="css-9oelbo-Pill"
+  >
+    <button
+      aria-label="Close Modal"
+      className="css-5a6dou-CloseButton"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        width={14}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 18L18 6M6 6l12 12"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+        />
+      </svg>
+    </button>
+  </div>
+</span>
+`;
+
+exports[`Storyshots Shared/UI/Pill With Icon 1`] = `
+<span
+  className="css-1pm2g0b-Pill"
+>
+  <span>
+    <span
+      className="css-12e79s5-Pill"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={12}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+  </span>
+  <span
+    className="css-1vz2iyp-Typography-Pill e1eqcpp10"
+  >
+    Hello
+  </span>
+</span>
+`;
+
+exports[`Storyshots Shared/UI/Popover Primary 1`] = `
+<div
+  className="css-udih9e-Template"
+>
+  <div
+    className="css-17d5uml-Popover"
+  >
+    <button
+      aria-expanded={false}
+      className="css-ursgz3-Button-Popover e1p27jrl0"
+      id="headlessui-popover-button-5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="css-86b7hj-Typography-Popover e1eqcpp10"
+      >
+        Popover
+      </span>
+      <svg
+        aria-hidden="true"
+        className="css-1q5g0oi-Popover"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Popover Top 1`] = `
+<div
+  className="css-udih9e-Template"
+>
+  <div
+    className="css-17d5uml-Popover"
+  >
+    <button
+      aria-expanded={false}
+      className="css-ursgz3-Button-Popover e1p27jrl0"
+      id="headlessui-popover-button-8"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      type="button"
+    >
+      <span
+        className="css-86b7hj-Typography-Popover e1eqcpp10"
+      >
+        Popover
+      </span>
+      <svg
+        aria-hidden="true"
+        className="css-1q5g0oi-Popover"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
-<div>
-  <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
-<div>
-  <button
-    className="css-1xxozgk-Button e1p27jrl0"
-    onClick={[Function]}
-  >
-    open
-  </button>
-</div>
+<button
+  className="css-1k6r4wa-Button e1p27jrl0"
+  onClick={[Function]}
+>
+  open
+</button>
 `;
 
 exports[`Storyshots Shared/UI/Toast Custom 1`] = `
@@ -1313,7 +1840,7 @@ Array [
     }
   />,
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
+    className="css-1k6r4wa-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1339,7 +1866,7 @@ Array [
     }
   />,
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
+    className="css-1k6r4wa-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1365,7 +1892,7 @@ Array [
     }
   />,
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
+    className="css-1k6r4wa-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1391,7 +1918,7 @@ Array [
     }
   />,
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
+    className="css-1k6r4wa-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1417,7 +1944,7 @@ Array [
     }
   />,
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
+    className="css-1k6r4wa-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1443,7 +1970,7 @@ Array [
     }
   />,
   <button
-    className="css-1xxozgk-Button e1p27jrl0"
+    className="css-1k6r4wa-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -1453,7 +1980,7 @@ Array [
 
 exports[`Storyshots Shared/UI/Typography Body 1`] = `
 <span
-  className="css-1xfeocz-Typography e1eqcpp10"
+  className="css-12sht3b-Typography e1eqcpp10"
 >
   My Body 1
 </span>
@@ -1461,7 +1988,7 @@ exports[`Storyshots Shared/UI/Typography Body 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Body 2 1`] = `
 <span
-  className="css-4dbfqp-Typography e1eqcpp10"
+  className="css-hd1tcl-Typography e1eqcpp10"
 >
   My Body 2
 </span>
@@ -1469,7 +1996,7 @@ exports[`Storyshots Shared/UI/Typography Body 2 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Bold 1`] = `
 <span
-  className="css-ymkt3d-Typography e1eqcpp10"
+  className="css-1hz7gcu-Typography e1eqcpp10"
   fontWeight="bold"
 >
   My Text
@@ -1478,7 +2005,7 @@ exports[`Storyshots Shared/UI/Typography Bold 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Heading 1`] = `
 <h2
-  className="css-13xwp29-Typography e1eqcpp10"
+  className="css-1lhz13y-Typography e1eqcpp10"
 >
   My Heading
 </h2>
@@ -1486,7 +2013,7 @@ exports[`Storyshots Shared/UI/Typography Heading 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Italic 1`] = `
 <span
-  className="css-c4687g-Typography e1eqcpp10"
+  className="css-13iao0c-Typography e1eqcpp10"
 >
   My Text
 </span>
@@ -1494,7 +2021,7 @@ exports[`Storyshots Shared/UI/Typography Italic 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Light 1`] = `
 <span
-  className="css-n3t3bp-Typography e1eqcpp10"
+  className="css-1s06rs5-Typography e1eqcpp10"
   fontWeight="light"
 >
   My Text
@@ -1503,7 +2030,7 @@ exports[`Storyshots Shared/UI/Typography Light 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Noto Serif 1`] = `
 <span
-  className="css-sicm3t-Typography e1eqcpp10"
+  className="css-1yairov-Typography e1eqcpp10"
   fontFamily="notoSerif"
 >
   My Text
@@ -1512,7 +2039,7 @@ exports[`Storyshots Shared/UI/Typography Noto Serif 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Primary 1`] = `
 <span
-  className="css-1xfeocz-Typography e1eqcpp10"
+  className="css-12sht3b-Typography e1eqcpp10"
 >
   My Typography
 </span>
@@ -1520,7 +2047,7 @@ exports[`Storyshots Shared/UI/Typography Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Primary Color 1`] = `
 <span
-  className="css-schob0-Typography e1eqcpp10"
+  className="css-13dj7hd-Typography e1eqcpp10"
   color="primary"
 >
   My Text
@@ -1529,7 +2056,7 @@ exports[`Storyshots Shared/UI/Typography Primary Color 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Sans 1`] = `
 <span
-  className="css-1vlagpw-Typography e1eqcpp10"
+  className="css-kxpzc2-Typography e1eqcpp10"
   fontFamily="sans"
 >
   My Text
@@ -1538,7 +2065,7 @@ exports[`Storyshots Shared/UI/Typography Sans 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Secondary Color 1`] = `
 <span
-  className="css-13tdw6e-Typography e1eqcpp10"
+  className="css-9c1726-Typography e1eqcpp10"
   color="secondary"
 >
   My Text
@@ -1547,7 +2074,7 @@ exports[`Storyshots Shared/UI/Typography Secondary Color 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Text Primary Color 1`] = `
 <span
-  className="css-1vlagpw-Typography e1eqcpp10"
+  className="css-kxpzc2-Typography e1eqcpp10"
   color="textPrimary"
 >
   My Text
@@ -1556,7 +2083,7 @@ exports[`Storyshots Shared/UI/Typography Text Primary Color 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Text Secondary Color 1`] = `
 <span
-  className="css-1au5wh6-Typography e1eqcpp10"
+  className="css-1e5sktk-Typography e1eqcpp10"
   color="textSecondary"
 >
   My Text
@@ -1565,7 +2092,7 @@ exports[`Storyshots Shared/UI/Typography Text Secondary Color 1`] = `
 
 exports[`Storyshots Shared/UI/Typography Underlined 1`] = `
 <span
-  className="css-14lvqru-Typography e1eqcpp10"
+  className="css-t5cudr-Typography e1eqcpp10"
 >
   My Text
 </span>

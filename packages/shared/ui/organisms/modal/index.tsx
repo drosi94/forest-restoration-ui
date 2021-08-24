@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import tw from 'twin.macro'
 import { useMedia } from 'react-use'
 import { Dialog } from '@headlessui/react'
-import { Button } from '../../atoms'
+import { Button, CloseButton } from '../../atoms'
 import { StyledTransition } from './transition'
 import { Title } from './title'
 import { Description } from './description'
-import { CloseButton } from './closeButton'
 
 export type ModalProps = {
   /**
@@ -72,7 +71,7 @@ const noop = () => {}
 const DefaultFooter = <Button>OK</Button>
 const DefaultChildren = ''
 
-const modalBaseStyles = tw`z-10 overflow-y-auto text-white`
+const modalBaseStyles = tw`z-40 overflow-y-auto text-white`
 const modalPositionStyles = tw`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-72`
 const modalBackgroundStyles = tw`bg-bgSecondary shadow-xl`
 
@@ -95,6 +94,8 @@ export const Modal: React.FC<ModalProps> = ({
   ...rest
 }) => {
   const isSmallDevice = useMedia('(max-width: 1080px)')
+  const closeButtonRef = useRef(null)
+
   return (
     <StyledTransition
       show={isOpen}
@@ -105,7 +106,7 @@ export const Modal: React.FC<ModalProps> = ({
       leaveFrom="leaveFrom"
       leaveTo="leaveTo"
     >
-      <Dialog onClose={handleClose} css={[modalBaseStyles]} {...rest}>
+      <Dialog initialFocus={closeButtonRef} onClose={handleClose} css={[modalBaseStyles]} {...rest}>
         <div className="flex items-center justify-center min-h-screen">
           <Dialog.Overlay css={[tw`fixed inset-0 bg-white bg-opacity-30`, overrideOverlayStyles]} />
           <div
@@ -118,7 +119,9 @@ export const Modal: React.FC<ModalProps> = ({
               overrideDialogBaseStyles,
             ]}
           >
-            <CloseButton onClick={handleClose} />
+            <div tw="p-2">
+              <CloseButton buttonRef={closeButtonRef} onClick={handleClose} />
+            </div>
             <div tw="px-10 py-4">
               <Dialog.Title
                 as={Title}

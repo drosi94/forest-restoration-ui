@@ -2,9 +2,9 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Switch as BaseSwitch } from '@headlessui/react'
 import { Typography, Hint, Error } from '../../atoms'
+import { getColorStyles, Color } from '../../utils'
 
 type LabelPosition = 'left' | 'right' | 'top' | 'bottom' | 'hidden'
-type Color = 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'bgPrimary' | 'bgSecondary'
 
 export type SwitchProps = {
   /**
@@ -62,25 +62,6 @@ export type SwitchProps = {
 }
 
 const noop = () => {}
-
-const getColorStyles = (color: Color) => {
-  switch (color) {
-    case 'primary':
-      return tw`bg-primary-500`
-    case 'secondary':
-      return tw`bg-secondary-300`
-    case 'textPrimary':
-      return tw`bg-textPrimary`
-    case 'textSecondary':
-      return tw`bg-textSecondary`
-    case 'bgPrimary':
-      return tw`bg-bgPrimary`
-    case 'bgSecondary':
-      return tw`bg-bgSecondary`
-    default:
-      return tw`bg-white`
-  }
-}
 
 const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   switch (labelPosition) {

@@ -1,6 +1,12 @@
 require('tailwindcss/tailwind.css')
+import { useEffect } from 'react'
+import { addDecorator } from '@storybook/react'
 
-const parameters = {
+import { themes } from '@storybook/theming'
+import { useDarkMode } from 'storybook-dark-mode'
+import '../../pwa/theme.css'
+
+export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
@@ -9,15 +15,23 @@ const parameters = {
     },
   },
   backgrounds: {
-    default: 'primary',
+    default: 'primaryDark',
     values: [
       {
-        name: 'primary',
+        name: 'primaryDark',
         value: '#696969',
       },
       {
-        name: 'modal',
+        name: 'secondaryDark',
         value: '#484848',
+      },
+      {
+        name: 'primaryLight',
+        value: '#ffffff',
+      },
+      {
+        name: 'secondaryLight',
+        value: '#e8e8e8',
       },
       {
         name: 'white',
@@ -33,6 +47,35 @@ const parameters = {
       },
     ],
   },
+  darkMode: {
+    // Override the default dark theme
+    dark: { ...themes.dark, html: { className: 'dark' } },
+    // Override the default light theme
+    light: { ...themes.normal, html: { className: 'light' } },
+  },
 }
 
-module.exports = { parameters }
+const ThemeProvider = ({ children }) => {
+  const darkMode = useDarkMode()
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.remove('light')
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.add('light')
+    }
+  }, [darkMode])
+
+  return children
+}
+
+addDecorator((Story) => (
+  <ThemeProvider>
+    <Story />
+  </ThemeProvider>
+))
+
+export const globalTypes = {
+  darkMode: true,
+}
