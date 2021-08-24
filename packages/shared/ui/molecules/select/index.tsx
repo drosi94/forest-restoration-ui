@@ -119,7 +119,9 @@ export const Select: React.FC<SelectProps> = ({
           </Listbox.Label>
         </div>
         <Listbox.Button css={[baseSelectContainerStyle, error && tw`bg-red-500`]}>
-          <Typography css={[tw`block truncate`]}>{getLabel(value) || placeholder}</Typography>
+          <Typography css={[tw`block truncate dark:text-textPrimary text-textSecondary`]}>
+            {getLabel(value) || placeholder}
+          </Typography>
           <Typography
             css={[tw`absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none`]}
           >

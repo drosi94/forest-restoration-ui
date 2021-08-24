@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 
 const ThemeContext = React.createContext({
-  isDarkMode: true,
+  isDarkMode: null,
   setIsDarkMode: (_: boolean) => {},
 })
 
@@ -9,10 +9,14 @@ export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true)
 
   useEffect(() => {
-    if (document.documentElement.classList.contains('light')) {
+    if (localStorage.getItem('theme') === 'light') {
       setIsDarkMode(false)
     }
   }, [])
+
+  useEffect(() => {
+    isDarkMode ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light')
+  }, [isDarkMode])
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>{children}</ThemeContext.Provider>

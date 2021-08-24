@@ -10,7 +10,7 @@ export const CloseButton: React.FC<CloseButtonProps> = ({ onClick = () => {}, wi
   return (
     <div
       role="button"
-      css={[tw`float-right cursor-pointer hover:opacity-70 active:text-gray-400`]}
+      css={[tw`float-right cursor-pointer hover:opacity-70 text-textPrimary active:text-gray-400`]}
       aria-label="Close Modal"
     >
       <XIcon onClick={onClick} width={width} />

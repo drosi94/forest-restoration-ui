@@ -136,7 +136,7 @@ export default function Home() {
             shouldResetOption
           />
         </div>
-        <Pill>Here I am</Pill>
+        <Pill textColor="textSecondary">Here I am</Pill>
       </div>
     </div>
   )
