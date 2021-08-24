@@ -183,8 +183,10 @@ exports[`Storyshots Shared/UI/Button Text 1`] = `
 
 exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 <div
-  className="css-zi9ppx-Component"
+  className="css-lgqibh-Component"
   onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   role="button"
 >
   <button
@@ -225,7 +227,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 <div
-  className="css-1dkbmf3-Component"
+  className="css-133y0n3-Component"
   role="presentation"
 >
   <div>
@@ -236,7 +238,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
 <div
-  className="css-et0h14-Component"
+  className="css-1aya1jl-Component"
   role="presentation"
 >
   <div>
@@ -247,7 +249,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 <div
-  className="css-zi9ppx-Component"
+  className="css-lgqibh-Component"
   role="presentation"
 >
   <div>
@@ -258,7 +260,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
 <div
-  className="css-1qu6e0s-Component"
+  className="css-p0teq3-Component"
   role="presentation"
 >
   <div>
@@ -269,7 +271,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
 <div
-  className="css-1wyf7e8-Component"
+  className="css-zj9zij-Component"
   role="presentation"
 >
   <div>
@@ -280,7 +282,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/Card/TitledCard Primary 1`] = `
 <div
-  className="css-zi9ppx-Component"
+  className="css-lgqibh-Component"
   role="presentation"
 >
   <div

@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "NODE_ENV=test jest",
-    "test:ci": "NODE_ENV=test jest --ci",
+    "test": "jest",
+    "test:u": "jest -u",
+    "test:ci": "jest --ci",
+    "test:ci:u": "jest --ci -u",
     "lint": "next lint"
   },
   "dependencies": {
