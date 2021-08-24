@@ -12,7 +12,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run tests 
-        # run: yarn test:ci
         run: yarn test:ci
       - name: deploy storybook to vercel
         uses: amondnet/vercel-action@v20

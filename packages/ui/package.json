@@ -14,8 +14,8 @@
     "start": "yarn run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest storybook.test.js",
-    "test:ci": "jest --ci storybook.test.js"
+    "test": "NODE_ENV=test jest storybook.test.js",
+    "test:ci": "NODE_ENV=test jest --ci storybook.test.js"
   },
   "bugs": {
     "url": "https://github.com/drosi94/forest-restoration-ui/issues"

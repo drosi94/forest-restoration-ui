@@ -189,7 +189,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 >
   <button
     aria-expanded={false}
-    className="css-7xsqe2-AccordionCard"
+    className="css-128kkrk-AccordionCard"
     id="headlessui-disclosure-button-13"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -206,7 +206,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
       </span>
     </div>
     <svg
-      className="css-n22zlx-AccordionCard"
+      className="css-14rkpa9-AccordionCard"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
