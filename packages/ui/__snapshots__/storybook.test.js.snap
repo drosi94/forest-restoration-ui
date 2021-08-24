@@ -1486,7 +1486,21 @@ exports[`Storyshots Shared/UI/IconButton Text 1`] = `
 
 exports[`Storyshots Shared/UI/Loaders/LinearIndicator Primary 1`] = `
 <div
-  className="css-199uqow-LinearIndicator"
+  className="css-1prxrkl-LinearIndicator"
+>
+  <div
+    className="css-1j3bg6v-Component"
+  >
+    <div
+      className="shim css-p8h9f7-LinearIndicator"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Loaders/LinearIndicator Secondary 1`] = `
+<div
+  className="css-2ny3uk-LinearIndicator"
 >
   <div
     className="css-1j3bg6v-Component"
