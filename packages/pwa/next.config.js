@@ -28,7 +28,7 @@ module.exports = withPlugins(
     redirects() {
       return [
         process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true"
-          ? { source: "/((?!maintenance)(?!_next)(?!static).*)", destination: "/maintenance", permanent: false }
+          ? { source: "/((?!maintenance)(?!_next)(?!static|(?!image))(?!favicon-16x16.png)(?!favicon-32x32.png)(?!icon-192x192.png)(?!manifest.json)(?!themeToggle.js).*)", destination: "/maintenance", permanent: false }
           : null,
       ].filter(Boolean);
     }
