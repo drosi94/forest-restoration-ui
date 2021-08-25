@@ -5,12 +5,14 @@ type CloseButtonProps = {
   onClick: () => void
   width?: number
   buttonRef?: React.RefObject<any>
+  label?: string
 }
 
 export const CloseButton: React.FC<CloseButtonProps> = ({
   onClick = () => {},
   buttonRef,
   width = 24,
+  label = 'Close',
 }) => {
   return (
     <button
@@ -19,7 +21,7 @@ export const CloseButton: React.FC<CloseButtonProps> = ({
       css={[
         tw`float-right cursor-pointer hover:opacity-70 text-textPrimary active:text-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500`,
       ]}
-      aria-label="Close Modal"
+      aria-label={label}
     >
       <XIcon width={width} />
     </button>
