@@ -12,7 +12,7 @@ export default function Maintenance() {
   const { t } = useTranslation('maintenance')
 
   return (
-    <div tw="h-full">
+    <div>
       <div tw="p-2 float-right">
         <ToggleTheme />
       </div>
