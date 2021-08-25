@@ -1,7 +1,9 @@
 import React from 'react'
+import { useState } from '@storybook/addons'
 import { Story, Meta } from '@storybook/react'
 
 import { Autocomplete, AutocompleteProps } from '@forest-restoration/shared'
+import { MultipleAutocomplete, MultipleAutocompleteProps } from '@forest-restoration/shared'
 
 export default {
   title: 'Shared/UI/Form/Autocomplete',
@@ -41,4 +43,25 @@ export const WithResetOption = Template.bind({})
 WithResetOption.args = {
   ...Primary.args,
   shouldResetOption: true,
+}
+
+export const Multiple: Story<AutocompleteProps> = (args) => {
+  const options = [
+    { id: 1, name: 'John' },
+    { id: 2, name: 'Joe' },
+    { id: 3, name: 'Mary' },
+    { id: 4, name: 'Hellen' },
+  ]
+  const [value, setValue] = useState([options[0]])
+
+  return (
+    <MultipleAutocomplete
+      {...Primary.args}
+      {...args}
+      value={value}
+      options={options}
+      onChange={(newValues) => setValue(newValues)}
+      optionLabelItem="name"
+    />
+  )
 }

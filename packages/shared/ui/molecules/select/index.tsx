@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import tw from 'twin.macro'
-import { Fragment } from 'react'
-import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
+import { Listbox } from '@headlessui/react'
 import { Error, Hint, Typography } from '../../atoms'
 import { getItem } from '../../utils'
+import { SingleValueButton } from './singleValueButton'
+import { MultipleValueButton } from './multipleValueButton'
+import { SingleValueOptions } from './singleValueOptions'
+import { MultipleValueOptions } from './multipleValueOptions'
 
 export type SelectProps = {
   /**
@@ -28,6 +30,10 @@ export type SelectProps = {
    */
   value?: any
   /**
+   * Should receive multiple values
+   */
+  multiple?: boolean
+  /**
    * The default value of the select (uncontrolled)
    */
   defaultValue?: any
@@ -39,6 +45,10 @@ export type SelectProps = {
    * The label item property
    */
   optionLabelItem?: string | (() => string)
+  /**
+   * The label item property
+   */
+  optionValueItem?: string | (() => string)
   /**
    * The button text when nothing is selected
    */
@@ -89,8 +99,10 @@ export const Select: React.FC<SelectProps> = ({
   name,
   label,
   optionLabelItem = 'label',
+  optionValueItem = 'value',
   required,
   options = [],
+  multiple,
   noOptionText = 'No Option',
   placeholder = 'Select a value',
   value,
@@ -103,82 +115,79 @@ export const Select: React.FC<SelectProps> = ({
   overrideHintContainerStyles,
   overrideErrorContainerStyles,
 }) => {
+  const removeValue = useCallback(
+    (valueToRemove) => {
+      const removedSelection = value?.filter(
+        (selected) => getItem(selected, optionValueItem) !== getItem(valueToRemove, optionValueItem)
+      )
+      onChange(removedSelection)
+    },
+    [value, onChange]
+  )
+
+  const handleSelection = (newValue: any) => {
+    if (!multiple) {
+      onChange(newValue)
+    } else {
+      const selectedResult = value?.filter(
+        (selected) => getItem(selected, optionValueItem) === getItem(newValue, optionValueItem)
+      )
+
+      if (selectedResult?.length) {
+        removeValue(newValue)
+      } else {
+        onChange((currentValue: any[]) => [...(currentValue ?? []), newValue])
+      }
+    }
+  }
   return (
-    <Listbox value={value} onChange={onChange}>
+    <Listbox value={value} onChange={handleSelection}>
       <div css={[tw`relative mt-1`]}>
         <div css={[tw`mb-2`]}>
           <Listbox.Label as={Typography} css={[error && tw`text-red-300`]}>
             {label} {required && <Typography tw="text-red-300">*</Typography>}
           </Listbox.Label>
         </div>
-        <Listbox.Button css={[baseSelectContainerStyle, error && tw`bg-red-500`]}>
-          <Typography css={[tw`block truncate dark:text-textPrimary text-textSecondary`]}>
-            {getItem(value, optionLabelItem) || placeholder}
-          </Typography>
-          <Typography
-            css={[tw`absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none`]}
-          >
-            <SelectorIcon css={[tw`w-5 h-5 text-textPrimary`]} aria-hidden="true" />
-          </Typography>
-        </Listbox.Button>
-        <Transition
-          as={Fragment}
-          leave="transition ease-in duration-100"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <Listbox.Options
-            css={[
-              tw`absolute w-full py-1 mt-1 overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
-            ]}
-          >
-            {shouldResetOption && (
-              <Listbox.Option
-                css={[tw`cursor-pointer select-none relative py-2 pl-10 pr-4`]}
-                value={null}
-              >
-                {({ selected }) => (
-                  <>
-                    <Typography
-                      italic
-                      css={[tw`block truncate font-normal`, selected && tw`font-medium`]}
-                    >
-                      {noOptionText}
-                    </Typography>
-                    {selected ? (
-                      <Typography
-                        italic
-                        css={[tw`absolute inset-y-0 left-0 flex items-center pl-3`]}
-                      >
-                        <CheckIcon css={[tw`w-5 h-5`]} aria-hidden="true" />
-                      </Typography>
-                    ) : null}
-                  </>
-                )}
-              </Listbox.Option>
-            )}
-            {options.map((option, index) => (
-              <Listbox.Option
-                key={index}
-                css={[tw`cursor-pointer select-none relative py-2 pl-10 pr-4 text-gray-900`]}
-                value={option}
-              >
-                {({ selected }) => (
-                  <>
-                    <Typography css={[tw`block truncate font-normal`, selected && tw`font-medium`]}>
-                      {getItem(option, optionLabelItem) || noOptionText}
-                    </Typography>
-                    {selected ? (
-                      <Typography css={[tw`absolute inset-y-0 left-0 flex items-center pl-3`]}>
-                        <CheckIcon css={[tw`w-5 h-5`]} aria-hidden="true" />
-                      </Typography>
-                    ) : null}
-                  </>
-                )}
-              </Listbox.Option>
-            ))}
-          </Listbox.Options>
-        </Transition>
+        {!multiple ? (
+          <SingleValueButton
+            baseSelectContainerStyle={baseSelectContainerStyle}
+            error={error}
+            value={value}
+            optionLabelItem={optionLabelItem}
+            placeholder={placeholder}
+          />
+        ) : (
+          <MultipleValueButton
+            baseSelectContainerStyle={baseSelectContainerStyle}
+            error={error}
+            value={value}
+            optionLabelItem={optionLabelItem}
+            placeholder={placeholder}
+            removeValue={removeValue}
+          />
+        )}
+
+        {!multiple ? (
+          <SingleValueOptions
+            {...{
+              shouldResetOption,
+              noOptionText,
+              optionValueItem,
+              optionLabelItem,
+              options,
+              value,
+            }}
+          />
+        ) : (
+          <MultipleValueOptions
+            {...{
+              optionValueItem,
+              optionLabelItem,
+              options,
+              value,
+            }}
+          />
+        )}
       </div>
       {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
       {error && <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>}

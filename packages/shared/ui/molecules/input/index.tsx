@@ -22,6 +22,10 @@ export type InputProps = {
    */
   label: string
   /**
+   * The placeholder of the input
+   */
+  placeholder?: string
+  /**
    * Is required to be filled
    */
   required?: boolean
@@ -76,18 +80,17 @@ export type InputProps = {
 }
 
 const styles = ({ error }) => ({
-  'input:focus ~ label,\n  input:not(:placeholder-shown) ~ label,\n  textarea:focus ~ label,\n  textarea:not(:placeholder-shown) ~ label':
-    {
-      '--tw-translate-x': '0',
-      '--tw-translate-y': ['0', '-1.5rem'],
-      '--tw-rotate': '0',
-      '--tw-skew-x': '0',
-      '--tw-skew-y': '0',
-      transform:
-        'translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))\n      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))',
-      '--tw-scale-x': '0.75',
-      '--tw-scale-y': '0.75',
-    },
+  'input:focus ~ label,\n  input:not(:placeholder-shown) ~ label,\n  textarea:focus ~ label,\n  textarea:not(:placeholder-shown) ~ label': {
+    '--tw-translate-x': '0',
+    '--tw-translate-y': ['0', '-1.5rem'],
+    '--tw-rotate': '0',
+    '--tw-skew-x': '0',
+    '--tw-skew-y': '0',
+    transform:
+      'translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))\n      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))',
+    '--tw-scale-x': '0.75',
+    '--tw-scale-y': '0.75',
+  },
   'input:focus ~ label,\n  textarea:focus ~ label': {
     color: !error ? theme('colors.primary[400]') : theme('colors.red[300]'),
     left: '0px',
@@ -108,6 +111,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
       required,
       value,
       defaultValue,
+      placeholder,
       error,
       hint,
       multiline,
@@ -127,7 +131,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
       id,
       required,
       name,
-      placeholder: ' ',
+      placeholder,
       value,
       defaultValue,
       onChange,

@@ -19,8 +19,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <GlobalStyles />
-      <div tw="flex flex-col h-[calc(100 * var(--vh))]">
-        <main tw="flex-1">
+      <div tw="flex flex-col h-screen">
+        <main>
           <Component {...pageProps} />
         </main>
 

@@ -6,6 +6,7 @@ type CloseButtonProps = {
   width?: number
   buttonRef?: React.RefObject<any>
   label?: string
+  preventPropagation?: boolean
 }
 
 export const CloseButton: React.FC<CloseButtonProps> = ({
@@ -13,11 +14,15 @@ export const CloseButton: React.FC<CloseButtonProps> = ({
   buttonRef,
   width = 24,
   label = 'Close',
+  preventPropagation,
 }) => {
   return (
     <button
       ref={buttonRef}
-      onClick={onClick}
+      onClick={(e) => {
+        preventPropagation && e.stopPropagation()
+        onClick()
+      }}
       css={[
         tw`float-right cursor-pointer hover:opacity-70 text-textPrimary active:text-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500`,
       ]}

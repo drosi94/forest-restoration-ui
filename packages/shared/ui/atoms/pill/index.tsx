@@ -9,7 +9,7 @@ export type PillProps = {
   color?: Color
   textColor?: Color
   icon?: React.ReactNode | HTMLElement
-  onClose?: () => void
+  onRemove?: () => void
 }
 
 export const Pill: React.FC<PillProps> = ({
@@ -17,7 +17,7 @@ export const Pill: React.FC<PillProps> = ({
   color = 'primary',
   textColor = 'textPrimary',
   icon,
-  onClose,
+  onRemove,
 }) => {
   return (
     <span
@@ -44,9 +44,9 @@ export const Pill: React.FC<PillProps> = ({
       ) : (
         children
       )}
-      {onClose && (
+      {onRemove && (
         <div css={[tw`ml-2`, getTextColorStyles(textColor as Color)]}>
-          <CloseButton onClick={onClose} width={14} />
+          <CloseButton onClick={onRemove} preventPropagation width={14} />
         </div>
       )}
     </span>

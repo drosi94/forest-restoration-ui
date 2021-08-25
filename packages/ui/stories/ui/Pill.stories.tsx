@@ -14,13 +14,13 @@ const Template: Story<PillProps> = (args) => <Pill {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
   children: 'Hello',
-  onClose: null,
+  onRemove: null,
 }
 
 export const WithClose = Template.bind({})
 WithClose.args = {
   ...Primary.args,
-  onClose: () => {},
+  onRemove: () => {},
 }
 
 export const WithIcon = Template.bind({})
