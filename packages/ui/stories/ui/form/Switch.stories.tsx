@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from '@storybook/addons'
 import { Story, Meta } from '@storybook/react'
 
 import { Switch, SwitchProps, Typography } from '@forest-restoration/shared'
@@ -6,13 +7,33 @@ import { Switch, SwitchProps, Typography } from '@forest-restoration/shared'
 export default {
   title: 'Shared/UI/Form/Switch',
   component: Switch,
+  decorators: [
+    (story: any, props) => {
+      const [checked, setChecked] = useState(false)
+
+      return (
+        <>
+          {story({
+            args: {
+              checked,
+              onChange: (newChecked) => {
+                setChecked(newChecked)
+              },
+              ...props.args,
+            },
+          })}
+        </>
+      )
+    },
+  ],
 } as Meta
 
-const Template: Story<SwitchProps> = (args) => <Switch {...args} />
+const Template: Story<SwitchProps> = ({ checked, onChange, ...args }) => (
+  <Switch checked={checked} onChange={onChange} {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {
-  checked: true,
   label: 'Switch',
 }
 
@@ -47,12 +68,6 @@ export const WithDoubleText = (args) => (
     <Typography>Right</Typography>
   </div>
 )
-
-export const NotChecked = Template.bind({})
-NotChecked.args = {
-  ...Primary.args,
-  checked: false,
-}
 
 export const Disabled = Template.bind({})
 Disabled.args = {
