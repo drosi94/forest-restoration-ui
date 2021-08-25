@@ -304,12 +304,280 @@ exports[`Storyshots Shared/UI/Card/TitledCard Primary 1`] = `
 </div>
 `;
 
+exports[`Storyshots Shared/UI/Form/Autocomplete Primary 1`] = `
+Array [
+  <label
+    className="css-1unkrv7-Typography-Autocomplete e1eqcpp10"
+    htmlFor="downshift-0-input"
+    id="downshift-0-label"
+  >
+    Label
+     
+  </label>,
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="downshift-0-menu"
+    className="css-7cybzn-Autocomplete"
+    role="combobox"
+  >
+    <div
+      className="css-1hr276g-Input"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-controls="downshift-0-menu"
+        aria-labelledby="downshift-0-label"
+        autoComplete="off"
+        className="css-ny6pux-Component"
+        id="downshift-0-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=" "
+        type="text"
+        value=""
+      />
+      <label
+        className="css-18uojik-Typography-Input e1eqcpp10"
+        htmlFor="downshift-0-input"
+      >
+         
+      </label>
+    </div>
+  </div>,
+  <div>
+    <ul
+      aria-labelledby="downshift-0-label"
+      className="css-ksmlrf-Autocomplete"
+      id="downshift-0-menu"
+      onMouseLeave={[Function]}
+      role="listbox"
+      style={
+        Object {
+          "left": "0",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Form/Autocomplete With Error 1`] = `
+Array [
+  <label
+    className="css-1myuzso-Typography-Autocomplete e1eqcpp10"
+    htmlFor="downshift-3-input"
+    id="downshift-3-label"
+  >
+    Label
+     
+  </label>,
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="downshift-3-menu"
+    className="css-7cybzn-Autocomplete"
+    role="combobox"
+  >
+    <div
+      className="css-1swh3qq-Input"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-controls="downshift-3-menu"
+        aria-labelledby="downshift-3-label"
+        autoComplete="off"
+        className="css-abokzd-Component"
+        id="downshift-3-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=" "
+        type="text"
+        value=""
+      />
+      <label
+        className="css-18uojik-Typography-Input e1eqcpp10"
+        htmlFor="downshift-3-input"
+      >
+         
+      </label>
+      <div
+        className="css-safnee-Error"
+      >
+        <span
+          className="css-dzbg2z-Typography-Error e1eqcpp10"
+          fontSize="small"
+        >
+          This is an error
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div>
+    <ul
+      aria-labelledby="downshift-3-label"
+      className="css-ksmlrf-Autocomplete"
+      id="downshift-3-menu"
+      onMouseLeave={[Function]}
+      role="listbox"
+      style={
+        Object {
+          "left": "0",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Form/Autocomplete With Hint 1`] = `
+Array [
+  <label
+    className="css-1unkrv7-Typography-Autocomplete e1eqcpp10"
+    htmlFor="downshift-6-input"
+    id="downshift-6-label"
+  >
+    Label
+     
+  </label>,
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="downshift-6-menu"
+    className="css-7cybzn-Autocomplete"
+    role="combobox"
+  >
+    <div
+      className="css-1hr276g-Input"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-controls="downshift-6-menu"
+        aria-labelledby="downshift-6-label"
+        autoComplete="off"
+        className="css-ny6pux-Component"
+        id="downshift-6-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=" "
+        type="text"
+        value=""
+      />
+      <label
+        className="css-18uojik-Typography-Input e1eqcpp10"
+        htmlFor="downshift-6-input"
+      >
+         
+      </label>
+      <div
+        className="css-1y0sv9c-Hint"
+      >
+        <span
+          className="css-19xwz45-Typography e1eqcpp10"
+          fontSize="small"
+        >
+          This is a hint
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div>
+    <ul
+      aria-labelledby="downshift-6-label"
+      className="css-ksmlrf-Autocomplete"
+      id="downshift-6-menu"
+      onMouseLeave={[Function]}
+      role="listbox"
+      style={
+        Object {
+          "left": "0",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Shared/UI/Form/Autocomplete With Reset Option 1`] = `
+Array [
+  <label
+    className="css-1unkrv7-Typography-Autocomplete e1eqcpp10"
+    htmlFor="downshift-9-input"
+    id="downshift-9-label"
+  >
+    Label
+     
+  </label>,
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="downshift-9-menu"
+    className="css-7cybzn-Autocomplete"
+    role="combobox"
+  >
+    <div
+      className="css-1hr276g-Input"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-controls="downshift-9-menu"
+        aria-labelledby="downshift-9-label"
+        autoComplete="off"
+        className="css-ny6pux-Component"
+        id="downshift-9-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=" "
+        type="text"
+        value=""
+      />
+      <label
+        className="css-18uojik-Typography-Input e1eqcpp10"
+        htmlFor="downshift-9-input"
+      >
+         
+      </label>
+    </div>
+  </div>,
+  <div>
+    <ul
+      aria-labelledby="downshift-9-label"
+      className="css-ksmlrf-Autocomplete"
+      id="downshift-9-menu"
+      onMouseLeave={[Function]}
+      role="listbox"
+      style={
+        Object {
+          "left": "0",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    />
+  </div>,
+]
+`;
+
 exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
 <div
-  className="css-18px25j-Input"
+  className="css-1hr276g-Input"
 >
   <input
-    className="css-1wt2cer-Component"
+    className="css-ny6pux-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -327,10 +595,10 @@ exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
 <div
-  className="css-18px25j-Input"
+  className="css-1hr276g-Input"
 >
   <input
-    className="css-1wt2cer-Component"
+    className="css-ny6pux-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -348,10 +616,10 @@ exports[`Storyshots Shared/UI/Form/Input Password 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
 <div
-  className="css-18px25j-Input"
+  className="css-1hr276g-Input"
 >
   <input
-    className="css-1wt2cer-Component"
+    className="css-ny6pux-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -369,10 +637,10 @@ exports[`Storyshots Shared/UI/Form/Input Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
 <div
-  className="css-18px25j-Input"
+  className="css-1hr276g-Input"
 >
   <input
-    className="css-1wt2cer-Component"
+    className="css-ny6pux-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -390,10 +658,10 @@ exports[`Storyshots Shared/UI/Form/Input Time 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
 <div
-  className="css-u0ps3g-Input"
+  className="css-1swh3qq-Input"
 >
   <input
-    className="css-17v1x3b-Component"
+    className="css-abokzd-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -418,10 +686,10 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Error 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
 <div
-  className="css-18px25j-Input"
+  className="css-1hr276g-Input"
 >
   <input
-    className="css-1wt2cer-Component"
+    className="css-ny6pux-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -446,10 +714,10 @@ exports[`Storyshots Shared/UI/Form/Input With Custom Hint 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
 <div
-  className="css-u0ps3g-Input"
+  className="css-1swh3qq-Input"
 >
   <input
-    className="css-17v1x3b-Component"
+    className="css-abokzd-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -477,10 +745,10 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
 
 exports[`Storyshots Shared/UI/Form/Input With Text Hint 1`] = `
 <div
-  className="css-18px25j-Input"
+  className="css-1hr276g-Input"
 >
   <input
-    className="css-1wt2cer-Component"
+    className="css-ny6pux-Component"
     defaultValue=""
     id="test"
     placeholder=" "
@@ -802,7 +1070,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-32"
-    className="css-1tiw86o-Switch"
+    className="css-1v5n85v-Switch"
     id="headlessui-switch-31"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -816,7 +1084,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
       Switch
     </label>
     <span
-      className="css-1m6lgjs-Switch"
+      className="css-1qzz937-Switch"
     />
   </button>
   <span
@@ -843,7 +1111,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-37"
-    className="css-1g1l4v0-Switch"
+    className="css-1btqwon-Switch"
     id="headlessui-switch-38"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -857,7 +1125,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
       Switch
     </label>
     <span
-      className="css-1k4uabd-Switch"
+      className="css-1niei4k-Switch"
     />
   </button>
 </div>
@@ -869,7 +1137,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
 >
   <button
     aria-checked={true}
-    className="css-1tiw86o-Switch"
+    className="css-1v5n85v-Switch"
     id="headlessui-switch-33"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -883,7 +1151,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
       Switch
     </label>
     <span
-      className="css-1m6lgjs-Switch"
+      className="css-1qzz937-Switch"
     />
   </button>
 </div>
@@ -903,7 +1171,7 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
   <button
     aria-checked={false}
     aria-labelledby="headlessui-label-35"
-    className="css-5y9lu-Switch"
+    className="css-1egbjtf-Switch"
     id="headlessui-switch-36"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -917,7 +1185,7 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
       Switch
     </label>
     <span
-      className="css-lmfnk8-Switch"
+      className="css-1ad1k0v-Switch"
     />
   </button>
 </div>
@@ -937,7 +1205,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-25"
-    className="css-1tiw86o-Switch"
+    className="css-1v5n85v-Switch"
     id="headlessui-switch-26"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -951,7 +1219,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
       Switch
     </label>
     <span
-      className="css-1m6lgjs-Switch"
+      className="css-1qzz937-Switch"
     />
   </button>
 </div>
@@ -964,7 +1232,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-28"
-    className="css-1tiw86o-Switch"
+    className="css-1v5n85v-Switch"
     id="headlessui-switch-27"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -978,7 +1246,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
       Switch
     </label>
     <span
-      className="css-1m6lgjs-Switch"
+      className="css-1qzz937-Switch"
     />
   </button>
   <span
@@ -1005,7 +1273,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-29"
-    className="css-1tiw86o-Switch"
+    className="css-1v5n85v-Switch"
     id="headlessui-switch-30"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1019,7 +1287,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
       Switch
     </label>
     <span
-      className="css-1m6lgjs-Switch"
+      className="css-1qzz937-Switch"
     />
   </button>
 </div>
@@ -1038,7 +1306,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
     className="css-1dgmue2-Switch"
   >
     <button
-      className="css-5y9lu-Switch"
+      className="css-1egbjtf-Switch"
       id="headlessui-switch-34"
       onClick={[Function]}
       onKeyPress={[Function]}
@@ -1052,7 +1320,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
         Label
       </label>
       <span
-        className="css-lmfnk8-Switch"
+        className="css-1ad1k0v-Switch"
       />
     </button>
   </div>
@@ -1079,7 +1347,7 @@ Array [
     <button
       aria-checked={true}
       aria-labelledby="headlessui-label-41"
-      className="css-kqmpa8-Switch"
+      className="css-11mhm4o-Switch"
       id="headlessui-switch-42"
       onClick={[Function]}
       onKeyPress={[Function]}
@@ -1093,7 +1361,7 @@ Array [
         Switch
       </label>
       <span
-        className="css-1m6lgjs-Switch"
+        className="css-1qzz937-Switch"
       />
     </button>
   </div>,
@@ -1125,7 +1393,7 @@ Array [
     <button
       aria-checked={true}
       aria-labelledby="headlessui-label-39"
-      className="css-1tiw86o-Switch"
+      className="css-1v5n85v-Switch"
       id="headlessui-switch-40"
       onClick={[Function]}
       onKeyPress={[Function]}
@@ -1139,7 +1407,7 @@ Array [
         Switch
       </label>
       <span
-        className="css-1m6lgjs-Switch"
+        className="css-1qzz937-Switch"
       />
     </button>
   </div>,
@@ -1640,7 +1908,7 @@ exports[`Storyshots Shared/UI/Modal With Content 1`] = `
 
 exports[`Storyshots Shared/UI/Pill Custom Children 1`] = `
 <span
-  className="css-1pm2g0b-Pill"
+  className="css-1iop0zq-Pill"
 >
   <button
     className="border-2 border-secondary-400"
@@ -1652,10 +1920,10 @@ exports[`Storyshots Shared/UI/Pill Custom Children 1`] = `
 
 exports[`Storyshots Shared/UI/Pill Primary 1`] = `
 <span
-  className="css-1pm2g0b-Pill"
+  className="css-1iop0zq-Pill"
 >
   <span
-    className="css-1vz2iyp-Typography-Pill e1eqcpp10"
+    className="css-9dmnqu-Typography-Pill e1eqcpp10"
   >
     Hello
   </span>
@@ -1664,18 +1932,18 @@ exports[`Storyshots Shared/UI/Pill Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Pill With Close 1`] = `
 <span
-  className="css-1pm2g0b-Pill"
+  className="css-1iop0zq-Pill"
 >
   <span
-    className="css-1vz2iyp-Typography-Pill e1eqcpp10"
+    className="css-9dmnqu-Typography-Pill e1eqcpp10"
   >
     Hello
   </span>
   <div
-    className="css-9oelbo-Pill"
+    className="css-hls8o7-Pill"
   >
     <button
-      aria-label="Close Modal"
+      aria-label="Close"
       className="css-5a6dou-CloseButton"
       onClick={[Function]}
     >
@@ -1700,7 +1968,7 @@ exports[`Storyshots Shared/UI/Pill With Close 1`] = `
 
 exports[`Storyshots Shared/UI/Pill With Icon 1`] = `
 <span
-  className="css-1pm2g0b-Pill"
+  className="css-1iop0zq-Pill"
 >
   <span>
     <span
@@ -1719,7 +1987,7 @@ exports[`Storyshots Shared/UI/Pill With Icon 1`] = `
     </span>
   </span>
   <span
-    className="css-1vz2iyp-Typography-Pill e1eqcpp10"
+    className="css-9dmnqu-Typography-Pill e1eqcpp10"
   >
     Hello
   </span>
