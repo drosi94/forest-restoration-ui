@@ -17,7 +17,8 @@
     "test": "jest storybook.test.js",
     "test:u": "jest storybook.test.js -u",
     "test:ci": "jest --ci storybook.test.js",
-    "test:ci:u": "jest --ci storybook.test.js -u"
+    "test:ci:u": "jest --ci storybook.test.js -u",
+    "chromatic": "npx chromatic --project-token=dbbf15a99855"
   },
   "bugs": {
     "url": "https://github.com/drosi94/forest-restoration-ui/issues"

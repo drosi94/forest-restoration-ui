@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "chromatic": "^5.9.2",
     "dotenv": "^10.0.0",
     "husky": "^7.0.1",
     "lerna": "^4.0.0",
@@ -37,7 +38,8 @@
     "test:ui": "lerna run test --scope @forest-restoration/ui --stream",
     "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
     "build:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream build-storybook",
-    "run:build:ui": "lerna run start --scope @forest-restoration/ui"
+    "run:build:ui": "lerna run start --scope @forest-restoration/ui",
+    "chromatic": "lerna run chromatic --scope @forest-restoration/ui --stream"
   },
   "workspaces": [
     "packages/*"
