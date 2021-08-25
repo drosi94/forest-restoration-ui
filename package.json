@@ -39,7 +39,7 @@
     "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
     "build:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui",
-    "chromatic": "lerna run chromatic --scope @forest-restoration/ui --stream"
+    "chromatic": "lerna run chromatic:ci --scope @forest-restoration/ui --stream"
   },
   "workspaces": [
     "packages/*"
