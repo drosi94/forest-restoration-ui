@@ -24,7 +24,7 @@ jobs:
         uses: chromaui/action@v1
         if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:') || startsWith(github.event.pull_request.title, 'misc:')
         with:
-          working-directory: packages/ui
+          workingDir: packages/ui
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       - name: deploy pwa to vercel
