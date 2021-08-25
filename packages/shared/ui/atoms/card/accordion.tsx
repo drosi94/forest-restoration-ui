@@ -23,7 +23,7 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
   return (
     <BaseCard
       onClick={() => setIsOpen(!isOpen)}
-      color={'bgPrimary'}
+      color={color}
       rounded={rounded}
       noShadow={noShadow}
       centered={centered}
