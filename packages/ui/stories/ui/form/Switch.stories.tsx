@@ -15,11 +15,11 @@ export default {
         <>
           {story({
             args: {
+              ...props.args,
               checked,
               onChange: (newChecked) => {
                 setChecked(newChecked)
               },
-              ...props.args,
             },
           })}
         </>
@@ -29,7 +29,7 @@ export default {
 } as Meta
 
 const Template: Story<SwitchProps> = ({ checked, onChange, ...args }) => (
-  <Switch checked={checked} onChange={onChange} {...args} />
+  <Switch {...args} checked={checked} onChange={onChange} />
 )
 
 export const Primary = Template.bind({})
