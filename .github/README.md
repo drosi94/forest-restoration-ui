@@ -1,3 +1,5 @@
+![powered-by-vercel](https://user-images.githubusercontent.com/3253526/130764295-181b7862-0dd4-459a-9096-6202847d41be.png)
+
 # Forest Restoration UI
 
 > This monorepo contains the code for the forest restoration progressive web application.
