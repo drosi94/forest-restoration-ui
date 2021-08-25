@@ -1,3 +1,10 @@
+html {
+  /* Little hack to overcome the issue with the 100vh in mobile phones:
+    https://dev.to/admitkard/mobile-issue-with-100vh-height-100-100vh-3-solutions-3nae 
+  */
+  --vh: 1px;
+}
+
 .light {
   --bgPrimary: #ffffff;
   --bgSecondary: #e8e8e8;

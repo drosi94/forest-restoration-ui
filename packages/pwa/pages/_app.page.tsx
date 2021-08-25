@@ -3,12 +3,13 @@ import { appWithTranslation } from 'next-i18next'
 import Image from 'next/image'
 import { GlobalStyles } from 'twin.macro'
 import { Toast } from '@forest-restoration/shared'
+import { useFixHeightViewport } from '../shared/hooks/useFixHeightViewport'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/themeProvider'
-import poweredByVercel from './powered-by-vercel.png'
 import '../theme.css'
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useThemeProvider()
+  useFixHeightViewport()
 
   return (
     <>
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }) {
             rel="noreferrer"
             href="https://vercel.com/?utm_source=[forest-restoration]&utm_campaign=oss"
           >
-            <Image alt="Vercel Logo" src={poweredByVercel} width={212} height={44} />
+            <Image alt="Vercel Logo" src="/poweredByVercel.png" width={212} height={44} />
           </a>
         </footer>
       </div>
