@@ -29,10 +29,6 @@ export type AutocompleteProps = {
    */
   value?: any
   /**
-   * The default value of the autocomplete (uncontrolled)
-   */
-  defaultValue?: any
-  /**
    * The autocomplete options
    */
   options?: any[]
@@ -44,14 +40,6 @@ export type AutocompleteProps = {
    * The value item property
    */
   optionValueItem?: string | (() => string)
-  /**
-   * The button text when nothing is selected
-   */
-  placeholder?: string
-  /**
-   * The text when nothing is selected
-   */
-  noOptionText?: string
   /**
    * Add reset option
    */
@@ -77,9 +65,9 @@ export type AutocompleteProps = {
    */
   overrideContainerStyles?: any
   /**
-   * Override styles of the autocomplete
+   * Override styles of the input
    */
-  overrideSelectStyles?: any
+  overrideInputStyles?: any
   /**
    * Override styles of the hint container
    */
@@ -96,6 +84,16 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   optionLabelItem = 'label',
   optionValueItem = 'value',
   placement = 'bottom-start',
+  required,
+  value,
+  onChange,
+  shouldResetOption,
+  error,
+  hint,
+  overrideContainerStyles,
+  overrideInputStyles,
+  overrideHintContainerStyles,
+  overrideErrorContainerStyles,
 }) => {
   const [inputItems, setInputItems] = useState<any>(options)
   const [referenceElement, setReferenceElement] = useState<any>()
@@ -128,7 +126,6 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   const {
     isOpen,
     selectedItem,
-    getToggleButtonProps,
     getLabelProps,
     getMenuProps,
     getInputProps,
@@ -140,29 +137,44 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
     closeMenu,
   } = useCombobox({
     items: inputItems,
+    defaultSelectedItem: value,
     onInputValueChange: ({ inputValue }) => {
       setInputItems(
         options.filter((item) => {
           const itemValue = getItem(item, optionLabelItem) || ''
-          console.log(itemValue.toLowerCase().startsWith(inputValue.toLowerCase()))
           return itemValue.toLowerCase().startsWith(inputValue.toLowerCase())
         })
       )
     },
-    onSelectedItemChange: () => {
+    onSelectedItemChange: ({ selectedItem: newItem }) => {
+      onChange(newItem)
       closeMenu()
     },
     itemToString: (item) => getItem(item, optionLabelItem) || '',
   })
   return (
     <>
-      <Typography as="label" {...getLabelProps()}>
-        {label}
+      <Typography as="label" css={[error && tw`text-red-300`]} {...getLabelProps()}>
+        {label} {required && <Typography tw="text-red-300">*</Typography>}
       </Typography>
-      <div {...getComboboxProps()} tw="relative">
-        <Input {...getInputProps({ ref: setReferenceElement })} onFocus={() => openMenu()} />
-        {selectedItem && (
-          <div tw="absolute right-2 bottom-4">
+      <div {...getComboboxProps()} css={[tw`relative`, overrideContainerStyles]}>
+        <Input
+          {...getInputProps({ ref: setReferenceElement })}
+          onFocus={() => openMenu()}
+          error={error}
+          hint={hint}
+          overrideInputStyles={overrideInputStyles}
+          overrideHintContainerStyles={overrideHintContainerStyles}
+          overrideErrorContainerStyles={overrideErrorContainerStyles}
+        />
+        {shouldResetOption && selectedItem && (
+          <div
+            css={[
+              tw`absolute right-2 bottom-4`,
+              (error || hint) && tw`bottom-8`,
+              error && hint && tw`bottom-16`,
+            ]}
+          >
             <CloseButton label="Reset option" onClick={() => reset()} />
           </div>
         )}
@@ -179,11 +191,11 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
           {isOpen &&
             inputItems.map((item: any, index: number) => (
               <li
+                key={getItem(item, optionLabelItem) || index.toString()}
                 css={[
                   tw`cursor-pointer select-none relative py-2 pl-10 pr-4`,
                   highlightedIndex === index && tw`bg-primary-400`,
                 ]}
-                key={`${getItem(item, optionLabelItem)}${index}`}
                 {...getItemProps({ item, index, key: getItem(item, optionValueItem) })}
               >
                 <Typography
