@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       <div tw="flex flex-col h-[calc(100 * var(--vh))]">
-        <main>
+        <main tw="flex-1">
           <Component {...pageProps} />
         </main>
 
