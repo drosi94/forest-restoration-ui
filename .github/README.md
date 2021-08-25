@@ -1,4 +1,4 @@
-![powered-by-vercel](https://user-images.githubusercontent.com/3253526/130764295-181b7862-0dd4-459a-9096-6202847d41be.png)
+[![powered-by-vercel](https://user-images.githubusercontent.com/3253526/130764295-181b7862-0dd4-459a-9096-6202847d41be.png)](https://vercel.com/?utm_source=[forest-restoration]&utm_campaign=oss)
 
 # Forest Restoration UI
 
