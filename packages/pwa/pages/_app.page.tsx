@@ -5,6 +5,7 @@ import { Toast } from '@forest-restoration/shared'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/themeProvider'
 
 import '../theme.css'
+import Image from 'next/image'
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useThemeProvider()
@@ -17,7 +18,18 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <div tw="flex flex-col h-screen">
+        <Component {...pageProps} />
+        <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary-300">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://vercel.com/?utm_source=[forest-restoration]&utm_campaign=oss"
+          >
+            <Image alt="Vercel Logo" src="/powered-by-vercel.png" width={212} height={44} />
+          </a>
+        </footer>
+      </div>
     </>
   )
 }
