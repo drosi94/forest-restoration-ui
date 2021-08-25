@@ -48,11 +48,16 @@ export const getTextColorStyles = (color: Color) => {
 
 // TODO: FIND A BETTER NAME
 export const getItem = (item: string | any, key: string | (() => string)) => {
-  return item
-    ? typeof item === 'string'
-      ? item
-      : item[typeof key === 'function' ? key() : key]
-    : null
+  if (Array.isArray(item)) {
+    return item.map((i) => getItem(i, key))
+    // throw new Error('Maybe you forgot to add the multiple prop')
+  } else {
+    return item
+      ? typeof item === 'string'
+        ? item
+        : item[typeof key === 'function' ? key() : key]
+      : null
+  }
 }
 
 export const mergeRefs = (...refs) => {

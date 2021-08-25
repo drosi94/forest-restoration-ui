@@ -19,7 +19,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       <div tw="flex flex-col h-screen">
-        <Component {...pageProps} />
+        <main>
+          <Component {...pageProps} />
+        </main>
+
         <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary-300">
           <a
             target="_blank"

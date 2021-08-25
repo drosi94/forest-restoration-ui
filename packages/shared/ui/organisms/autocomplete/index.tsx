@@ -25,6 +25,10 @@ export type AutocompleteProps = {
    */
   required?: boolean
   /**
+   * Placeholder label when no option is selected
+   */
+  placeholder?: string
+  /**
    * The value of the autocomplete (controlled)
    */
   value?: any
@@ -84,6 +88,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   optionLabelItem = 'label',
   optionValueItem = 'value',
   placement = 'bottom-start',
+  placeholder,
   required,
   value,
   onChange,
@@ -161,6 +166,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
         <Input
           {...getInputProps({ ref: setReferenceElement })}
           onFocus={() => openMenu()}
+          placeholder={placeholder}
           error={error}
           hint={hint}
           overrideInputStyles={overrideInputStyles}
@@ -179,38 +185,36 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
           </div>
         )}
       </div>
-      <div ref={setPopperElement}>
-        <ul
-          {...getMenuProps({ ref: setPopperElement })}
-          style={styles.popper}
-          css={[
-            tw`w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
-          ]}
-          {...attributes.popper}
-        >
-          {isOpen &&
-            inputItems.map((item: any, index: number) => (
-              <li
-                key={getItem(item, optionLabelItem) || index.toString()}
+      <ul
+        {...getMenuProps({ ref: setPopperElement })}
+        style={styles.popper}
+        css={[
+          tw`w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+        ]}
+        {...attributes.popper}
+      >
+        {isOpen &&
+          inputItems.map((item: any, index: number) => (
+            <li
+              key={getItem(item, optionLabelItem) || index.toString()}
+              css={[
+                tw`cursor-pointer select-none relative py-2 pl-10 pr-4`,
+                highlightedIndex === index && tw`bg-primary-400 rounded-md`,
+              ]}
+              {...getItemProps({ item, index, key: getItem(item, optionValueItem) })}
+            >
+              <Typography
                 css={[
-                  tw`cursor-pointer select-none relative py-2 pl-10 pr-4`,
-                  highlightedIndex === index && tw`bg-primary-400`,
+                  tw`block truncate font-normal`,
+                  getItem(selectedItem, optionValueItem) === getItem(item, optionValueItem) &&
+                    tw`font-medium`,
                 ]}
-                {...getItemProps({ item, index, key: getItem(item, optionValueItem) })}
               >
-                <Typography
-                  css={[
-                    tw`block truncate font-normal`,
-                    getItem(selectedItem, optionValueItem) === getItem(item, optionValueItem) &&
-                      tw`font-medium`,
-                  ]}
-                >
-                  {getItem(item, optionLabelItem)}
-                </Typography>
-              </li>
-            ))}
-        </ul>
-      </div>
+                {getItem(item, optionLabelItem)}
+              </Typography>
+            </li>
+          ))}
+      </ul>
     </>
   )
 }
