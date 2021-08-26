@@ -3,7 +3,7 @@
 exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
 <button
   aria-expanded={false}
-  className="css-h2soi5-Accordion"
+  className="css-1kdqbi0-Accordion"
   id="headlessui-disclosure-button-3"
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -11,12 +11,12 @@ exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
   type="button"
 >
   <h2
-    className="css-skx53n-Typography-Accordion e1eqcpp10"
+    className="css-o794fu-Typography-Accordion e1eqcpp10"
   >
     Do you know forest restoration app?
   </h2>
   <svg
-    className="css-tcqes-Accordion"
+    className="css-8ocl8v-Accordion"
     fill="currentColor"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
 exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
 <button
   aria-expanded={false}
-  className="css-h2soi5-Accordion"
+  className="css-1kdqbi0-Accordion"
   id="headlessui-disclosure-button-undefined"
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -41,12 +41,12 @@ exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
   type="button"
 >
   <h2
-    className="css-skx53n-Typography-Accordion e1eqcpp10"
+    className="css-o794fu-Typography-Accordion e1eqcpp10"
   >
     Do you know forest restoration app?
   </h2>
   <svg
-    className="css-tcqes-Accordion"
+    className="css-8ocl8v-Accordion"
     fill="currentColor"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@ exports[`Storyshots Shared/UI/Button Text 1`] = `
 
 exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 <div
-  className="css-lgqibh-Component"
+  className="css-z26b5d-Component"
   onClick={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
@@ -227,7 +227,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 <div
-  className="css-133y0n3-Component"
+  className="css-tsum1f-Component"
   role="presentation"
 >
   <div>
@@ -238,7 +238,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
 <div
-  className="css-1aya1jl-Component"
+  className="css-pr5w44-Component"
   role="presentation"
 >
   <div>
@@ -249,7 +249,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Not Centered 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 <div
-  className="css-lgqibh-Component"
+  className="css-z26b5d-Component"
   role="presentation"
 >
   <div>
@@ -260,7 +260,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
 <div
-  className="css-p0teq3-Component"
+  className="css-1bq3qse-Component"
   role="presentation"
 >
   <div>
@@ -271,7 +271,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
 <div
-  className="css-zj9zij-Component"
+  className="css-1mam3iy-Component"
   role="presentation"
 >
   <div>
@@ -282,7 +282,7 @@ exports[`Storyshots Shared/UI/Card/BaseCard Without Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/Card/TitledCard Primary 1`] = `
 <div
-  className="css-lgqibh-Component"
+  className="css-z26b5d-Component"
   role="presentation"
 >
   <div
@@ -2243,6 +2243,335 @@ exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
 >
   open
 </button>
+`;
+
+exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
+<div
+  aria-orientation="horizontal"
+  className="css-19hglq7-TabList"
+  role="tablist"
+>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-45"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      New
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-46"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      Old
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-47"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      Something else
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
+<div
+  aria-orientation="horizontal"
+  className="css-19hglq7-TabList"
+  role="tablist"
+>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-48"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      Notifications
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-49"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      Another one
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-50"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      More tab
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Tabs/TabList With Only Icons 1`] = `
+<div
+  aria-orientation="horizontal"
+  className="css-19hglq7-TabList"
+  role="tablist"
+>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-51"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-52"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-53"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Tabs/TabPanels Primary 1`] = `
+Array [
+  <div
+    aria-orientation="horizontal"
+    className="css-19hglq7-TabList"
+    role="tablist"
+  >
+    <button
+      aria-selected={false}
+      className="css-1duw0jq-TabList"
+      id="headlessui-tabs-tab-54"
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      <span
+        className="css-1k75k7r-Typography-TabList e1eqcpp10"
+        fontSize="small"
+      >
+        New
+      </span>
+    </button>
+    <button
+      aria-selected={false}
+      className="css-1duw0jq-TabList"
+      id="headlessui-tabs-tab-55"
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      <span
+        className="css-1k75k7r-Typography-TabList e1eqcpp10"
+        fontSize="small"
+      >
+        Old
+      </span>
+    </button>
+    <button
+      aria-selected={false}
+      className="css-1duw0jq-TabList"
+      id="headlessui-tabs-tab-56"
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      <span
+        className="css-1k75k7r-Typography-TabList e1eqcpp10"
+        fontSize="small"
+      >
+        Something else
+      </span>
+    </button>
+  </div>,
+  <div
+    className="css-1xcmdsv-TabPanels"
+  />,
+]
 `;
 
 exports[`Storyshots Shared/UI/Toast Custom 1`] = `
