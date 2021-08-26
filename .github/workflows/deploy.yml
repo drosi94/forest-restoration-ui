@@ -5,8 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Set up node
         with:
           node-version: '14'
@@ -22,13 +20,6 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
           vercel-org-id: ${{ secrets.ORGID}}
           vercel-project-id: ${{ secrets.STORYBOOKPROJECTID}}
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:') || startsWith(github.event.pull_request.title, 'misc:')
-        with:
-          workingDir: packages/ui
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       - name: deploy pwa to vercel
         uses: amondnet/vercel-action@v20
         with:
