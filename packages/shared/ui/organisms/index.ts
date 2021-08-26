@@ -1,5 +1,6 @@
 export * from './modal'
 export * from './sideDrawer'
 export * from './toast'
+export * from './tabs'
 export * from './autocomplete'
 export * from './autocomplete/multiple'
