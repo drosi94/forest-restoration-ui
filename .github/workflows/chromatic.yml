@@ -1,0 +1,23 @@
+name: visual tests with chromatic
+on: [push]
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up node
+        with:
+          node-version: '14'
+        uses: actions/setup-node@v1
+      - name: Install dependencies
+        run: yarn install --network-timeout 1000000
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:') || startsWith(github.event.pull_request.title, 'misc:')
+        with:
+          workingDir: packages/ui
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
