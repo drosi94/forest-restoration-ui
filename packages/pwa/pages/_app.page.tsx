@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://vercel.com/?utm_source=[forest-restoration]&utm_campaign=oss"
+            href="https://vercel.com/?utm_source=forest-restoration&utm_campaign=oss"
           >
             <Image alt="Vercel Logo" src="/poweredByVercel.png" width={212} height={44} />
           </a>
