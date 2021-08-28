@@ -62,7 +62,7 @@ exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Contained 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -71,7 +71,7 @@ exports[`Storyshots Shared/UI/Button Contained 1`] = `
 
 exports[`Storyshots Shared/UI/Button Disabled 1`] = `
 <button
-  className="css-1j7d64s-Button e1p27jrl0"
+  className="css-1k7z95i-Button e1p27jrl0"
   color="primary"
   disabled={true}
 >
@@ -81,7 +81,7 @@ exports[`Storyshots Shared/UI/Button Disabled 1`] = `
 
 exports[`Storyshots Shared/UI/Button Full Width 1`] = `
 <button
-  className="css-1s42i13-Button e1p27jrl0"
+  className="css-1yllye1-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -90,7 +90,7 @@ exports[`Storyshots Shared/UI/Button Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/Button Large 1`] = `
 <button
-  className="css-1mamdyp-Button e1p27jrl0"
+  className="css-1hvu46c-Button e1p27jrl0"
   color="primary"
   size="large"
 >
@@ -100,7 +100,7 @@ exports[`Storyshots Shared/UI/Button Large 1`] = `
 
 exports[`Storyshots Shared/UI/Button Link 1`] = `
 <a
-  className="css-iz6vpf-Button e1p27jrl0"
+  className="css-7mou0n-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -109,7 +109,7 @@ exports[`Storyshots Shared/UI/Button Link 1`] = `
 
 exports[`Storyshots Shared/UI/Button Medium 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   color="primary"
   size="medium"
 >
@@ -119,7 +119,7 @@ exports[`Storyshots Shared/UI/Button Medium 1`] = `
 
 exports[`Storyshots Shared/UI/Button No Shadow 1`] = `
 <button
-  className="css-1udko7x-Button e1p27jrl0"
+  className="css-16j7oqy-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -128,7 +128,7 @@ exports[`Storyshots Shared/UI/Button No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/Button Outlined 1`] = `
 <button
-  className="css-1njvmdb-Button e1p27jrl0"
+  className="css-hq98lq-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -137,7 +137,7 @@ exports[`Storyshots Shared/UI/Button Outlined 1`] = `
 
 exports[`Storyshots Shared/UI/Button Primary 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -146,7 +146,7 @@ exports[`Storyshots Shared/UI/Button Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Rounded 1`] = `
 <button
-  className="css-qhdzhu-Button e1p27jrl0"
+  className="css-168lrg4-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -155,7 +155,7 @@ exports[`Storyshots Shared/UI/Button Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/Button Secondary 1`] = `
 <button
-  className="css-1yzo9fa-Button e1p27jrl0"
+  className="css-ojs4nx-Button e1p27jrl0"
   color="secondary"
 >
   My Button
@@ -164,7 +164,7 @@ exports[`Storyshots Shared/UI/Button Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Button Small 1`] = `
 <button
-  className="css-yionkb-Button e1p27jrl0"
+  className="css-cd38lc-Button e1p27jrl0"
   color="primary"
   size="small"
 >
@@ -174,7 +174,7 @@ exports[`Storyshots Shared/UI/Button Small 1`] = `
 
 exports[`Storyshots Shared/UI/Button Text 1`] = `
 <button
-  className="css-1agept6-Button e1p27jrl0"
+  className="css-15ghc94-Button e1p27jrl0"
   color="primary"
 >
   My Button
@@ -191,7 +191,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 >
   <button
     aria-expanded={false}
-    className="css-128kkrk-AccordionCard"
+    className="css-xj5f2k-AccordionCard"
     id="headlessui-disclosure-button-13"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -208,7 +208,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
       </span>
     </div>
     <svg
-      className="css-14rkpa9-AccordionCard"
+      className="css-1ja5sny-AccordionCard"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -1225,7 +1225,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-34"
-    className="css-1v5n85v-Switch"
+    className="css-i4flkr-Switch"
     id="headlessui-switch-33"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1239,7 +1239,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
       Switch
     </label>
     <span
-      className="css-1qzz937-Switch"
+      className="css-1ldsxb7-Switch"
     />
   </button>
   <span
@@ -1266,7 +1266,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-39"
-    className="css-1btqwon-Switch"
+    className="css-9bbghf-Switch"
     id="headlessui-switch-40"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1280,7 +1280,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
       Switch
     </label>
     <span
-      className="css-1niei4k-Switch"
+      className="css-vi6nt4-Switch"
     />
   </button>
 </div>
@@ -1292,7 +1292,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
 >
   <button
     aria-checked={true}
-    className="css-1v5n85v-Switch"
+    className="css-i4flkr-Switch"
     id="headlessui-switch-35"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1306,7 +1306,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
       Switch
     </label>
     <span
-      className="css-1qzz937-Switch"
+      className="css-1ldsxb7-Switch"
     />
   </button>
 </div>
@@ -1326,7 +1326,7 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
   <button
     aria-checked={false}
     aria-labelledby="headlessui-label-37"
-    className="css-1egbjtf-Switch"
+    className="css-5mbv1f-Switch"
     id="headlessui-switch-38"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1340,7 +1340,7 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
       Switch
     </label>
     <span
-      className="css-1ad1k0v-Switch"
+      className="css-1rpbwei-Switch"
     />
   </button>
 </div>
@@ -1360,7 +1360,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-27"
-    className="css-1v5n85v-Switch"
+    className="css-i4flkr-Switch"
     id="headlessui-switch-28"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1374,7 +1374,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
       Switch
     </label>
     <span
-      className="css-1qzz937-Switch"
+      className="css-1ldsxb7-Switch"
     />
   </button>
 </div>
@@ -1387,7 +1387,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-30"
-    className="css-1v5n85v-Switch"
+    className="css-i4flkr-Switch"
     id="headlessui-switch-29"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1401,7 +1401,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
       Switch
     </label>
     <span
-      className="css-1qzz937-Switch"
+      className="css-1ldsxb7-Switch"
     />
   </button>
   <span
@@ -1428,7 +1428,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
   <button
     aria-checked={true}
     aria-labelledby="headlessui-label-31"
-    className="css-1v5n85v-Switch"
+    className="css-i4flkr-Switch"
     id="headlessui-switch-32"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1442,7 +1442,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
       Switch
     </label>
     <span
-      className="css-1qzz937-Switch"
+      className="css-1ldsxb7-Switch"
     />
   </button>
 </div>
@@ -1461,7 +1461,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
     className="css-1dgmue2-Switch"
   >
     <button
-      className="css-1egbjtf-Switch"
+      className="css-5mbv1f-Switch"
       id="headlessui-switch-36"
       onClick={[Function]}
       onKeyPress={[Function]}
@@ -1475,7 +1475,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
         Label
       </label>
       <span
-        className="css-1ad1k0v-Switch"
+        className="css-1rpbwei-Switch"
       />
     </button>
   </div>
@@ -1502,7 +1502,7 @@ Array [
     <button
       aria-checked={true}
       aria-labelledby="headlessui-label-43"
-      className="css-11mhm4o-Switch"
+      className="css-i1qc5z-Switch"
       id="headlessui-switch-44"
       onClick={[Function]}
       onKeyPress={[Function]}
@@ -1516,7 +1516,7 @@ Array [
         Switch
       </label>
       <span
-        className="css-1qzz937-Switch"
+        className="css-1ldsxb7-Switch"
       />
     </button>
   </div>,
@@ -1548,7 +1548,7 @@ Array [
     <button
       aria-checked={true}
       aria-labelledby="headlessui-label-41"
-      className="css-1v5n85v-Switch"
+      className="css-i4flkr-Switch"
       id="headlessui-switch-42"
       onClick={[Function]}
       onKeyPress={[Function]}
@@ -1562,7 +1562,7 @@ Array [
         Switch
       </label>
       <span
-        className="css-1qzz937-Switch"
+        className="css-1ldsxb7-Switch"
       />
     </button>
   </div>,
@@ -1581,7 +1581,7 @@ Array [
 
 exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1606,7 +1606,7 @@ exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Disabled 1`] = `
 <button
-  className="css-1j7d64s-Button e1p27jrl0"
+  className="css-1k7z95i-Button e1p27jrl0"
   disabled={true}
 >
   <span
@@ -1632,7 +1632,7 @@ exports[`Storyshots Shared/UI/IconButton Disabled 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Full Width 1`] = `
 <button
-  className="css-1s42i13-Button e1p27jrl0"
+  className="css-1yllye1-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1657,7 +1657,7 @@ exports[`Storyshots Shared/UI/IconButton Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Large 1`] = `
 <button
-  className="css-1mamdyp-Button e1p27jrl0"
+  className="css-1hvu46c-Button e1p27jrl0"
   size="large"
 >
   <span
@@ -1683,7 +1683,7 @@ exports[`Storyshots Shared/UI/IconButton Large 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Link 1`] = `
 <a
-  className="css-iz6vpf-Button e1p27jrl0"
+  className="css-7mou0n-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1708,7 +1708,7 @@ exports[`Storyshots Shared/UI/IconButton Link 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Medium 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   size="medium"
 >
   <span
@@ -1734,7 +1734,7 @@ exports[`Storyshots Shared/UI/IconButton Medium 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 <button
-  className="css-1udko7x-Button e1p27jrl0"
+  className="css-16j7oqy-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1759,7 +1759,7 @@ exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 <button
-  className="css-1njvmdb-Button e1p27jrl0"
+  className="css-hq98lq-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1784,7 +1784,7 @@ exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Primary 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1809,7 +1809,7 @@ exports[`Storyshots Shared/UI/IconButton Primary 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Rounded 1`] = `
 <button
-  className="css-qhdzhu-Button e1p27jrl0"
+  className="css-168lrg4-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1834,7 +1834,7 @@ exports[`Storyshots Shared/UI/IconButton Rounded 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Secondary 1`] = `
 <button
-  className="css-1yzo9fa-Button e1p27jrl0"
+  className="css-ojs4nx-Button e1p27jrl0"
   color="secondary"
 >
   <span
@@ -1860,7 +1860,7 @@ exports[`Storyshots Shared/UI/IconButton Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Small 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   size="medium"
 >
   <span
@@ -1886,7 +1886,7 @@ exports[`Storyshots Shared/UI/IconButton Small 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Text 1`] = `
 <button
-  className="css-1agept6-Button e1p27jrl0"
+  className="css-15ghc94-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
@@ -1939,7 +1939,7 @@ exports[`Storyshots Shared/UI/Loaders/LinearIndicator Secondary 1`] = `
 
 exports[`Storyshots Shared/UI/Loaders/Spinner Primary 1`] = `
 <div
-  className="css-nc1i2i-Spinner"
+  className="css-1be343j-Spinner"
 >
   <div
     className="css-7cvwhs-Spinner"
@@ -2018,7 +2018,7 @@ exports[`Storyshots Shared/UI/Logo Small 1`] = `
 
 exports[`Storyshots Shared/UI/Modal Custom Footer 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2027,7 +2027,7 @@ exports[`Storyshots Shared/UI/Modal Custom Footer 1`] = `
 
 exports[`Storyshots Shared/UI/Modal Full Screen 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2036,7 +2036,7 @@ exports[`Storyshots Shared/UI/Modal Full Screen 1`] = `
 
 exports[`Storyshots Shared/UI/Modal Full Width 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2045,7 +2045,7 @@ exports[`Storyshots Shared/UI/Modal Full Width 1`] = `
 
 exports[`Storyshots Shared/UI/Modal Primary 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2054,7 +2054,7 @@ exports[`Storyshots Shared/UI/Modal Primary 1`] = `
 
 exports[`Storyshots Shared/UI/Modal With Content 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2158,7 +2158,7 @@ exports[`Storyshots Shared/UI/Popover Primary 1`] = `
   >
     <button
       aria-expanded={false}
-      className="css-ursgz3-Button-Popover e1p27jrl0"
+      className="css-1tqgvre-Button-Popover e1p27jrl0"
       id="headlessui-popover-button-5"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -2197,7 +2197,7 @@ exports[`Storyshots Shared/UI/Popover Top 1`] = `
   >
     <button
       aria-expanded={false}
-      className="css-ursgz3-Button-Popover e1p27jrl0"
+      className="css-1tqgvre-Button-Popover e1p27jrl0"
       id="headlessui-popover-button-8"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -2229,7 +2229,7 @@ exports[`Storyshots Shared/UI/Popover Top 1`] = `
 
 exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2238,7 +2238,7 @@ exports[`Storyshots Shared/UI/SideDrawer Primary 1`] = `
 
 exports[`Storyshots Shared/UI/SideDrawer Right 1`] = `
 <button
-  className="css-1k6r4wa-Button e1p27jrl0"
+  className="css-e8v7tn-Button e1p27jrl0"
   onClick={[Function]}
 >
   open
@@ -2592,7 +2592,7 @@ Array [
     }
   />,
   <button
-    className="css-1k6r4wa-Button e1p27jrl0"
+    className="css-e8v7tn-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -2618,7 +2618,7 @@ Array [
     }
   />,
   <button
-    className="css-1k6r4wa-Button e1p27jrl0"
+    className="css-e8v7tn-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -2644,7 +2644,7 @@ Array [
     }
   />,
   <button
-    className="css-1k6r4wa-Button e1p27jrl0"
+    className="css-e8v7tn-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -2670,7 +2670,7 @@ Array [
     }
   />,
   <button
-    className="css-1k6r4wa-Button e1p27jrl0"
+    className="css-e8v7tn-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -2696,7 +2696,7 @@ Array [
     }
   />,
   <button
-    className="css-1k6r4wa-Button e1p27jrl0"
+    className="css-e8v7tn-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
@@ -2722,7 +2722,7 @@ Array [
     }
   />,
   <button
-    className="css-1k6r4wa-Button e1p27jrl0"
+    className="css-e8v7tn-Button e1p27jrl0"
     onClick={[Function]}
   >
     Show Toast
