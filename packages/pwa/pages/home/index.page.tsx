@@ -15,13 +15,35 @@ import {
   Select,
   Pill,
   Popover,
+  TabList,
+  Tab,
+  TabPanels,
 } from '@forest-restoration/shared'
 import { useState } from 'react'
 import { ToggleTheme } from '../../shared/components/toggleTheme'
+import { BellIcon } from '@heroicons/react/solid'
 
 const options = [
   { label: 'Test1', value: 'test1' },
   { label: 'Test2', value: 'test2' },
+]
+
+const tabs = [
+  {
+    id: '1',
+    label: 'My Tab 1',
+    icon: <BellIcon width={24} />,
+  },
+  {
+    id: '2',
+    label: 'Notifications',
+    icon: <BellIcon width={24} />,
+  },
+  {
+    id: '3',
+    label: 'More',
+    icon: <BellIcon width={24} />,
+  },
 ]
 
 export default function Home() {
@@ -136,6 +158,27 @@ export default function Home() {
           />
         </div>
         <Pill textColor="textSecondary">Here I am</Pill>
+        <div tw="mb-20 w-full">
+          <Tab.Group>
+            <TabList tabs={tabs} />
+            <TabPanels
+              panels={[
+                {
+                  tab: tabs[0].label,
+                  component: <div>Tab 1</div>,
+                },
+                {
+                  tab: tabs[1].label,
+                  component: <div>Tab 2</div>,
+                },
+                {
+                  tab: tabs[2].label,
+                  component: <div>Tab 3</div>,
+                },
+              ]}
+            />
+          </Tab.Group>
+        </div>
       </div>
     </div>
   )
