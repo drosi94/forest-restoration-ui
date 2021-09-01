@@ -1,10 +1,8 @@
 {
   "name": "@forest-restoration/ui",
   "version": "0.0.0",
+  "private": "true",
   "description": "UI library story",
-  "author": "vasileios.drosatos <vasileios.drosatos@workable.com>",
-  "homepage": "https://github.com/drosi94/forest-restoration-ui#readme",
-  "license": "ISC",
   "main": "index.ts",
   "repository": {
     "type": "git",

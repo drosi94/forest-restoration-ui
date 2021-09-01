@@ -39,11 +39,20 @@
     "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
     "build:ui": "node -r ./dotenv.config.js lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui",
+    "firebase:deploy:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
     "chromatic": "lerna run chromatic:ci --scope @forest-restoration/ui --stream"
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/firebase-admin",
+      "**/firebase-admin/**",
+      "**/firebase-functions",
+      "**/firebase-functions/**"
+    ]
+  },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "postcss": "^8.3.6",
