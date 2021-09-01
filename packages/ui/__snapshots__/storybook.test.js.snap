@@ -884,7 +884,6 @@ exports[`Storyshots Shared/UI/Form/Select Multiple 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
-      type="button"
     >
       <div
         className="css-1r7aiga-MultipleValueButton"
@@ -1232,6 +1231,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1273,6 +1273,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1299,6 +1300,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1333,6 +1335,7 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1367,6 +1370,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1394,6 +1398,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1435,6 +1440,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
     onKeyUp={[Function]}
     role="switch"
     tabIndex={0}
+    type="button"
   >
     <label
       className="css-so2e4e-Switch"
@@ -1468,6 +1474,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
       onKeyUp={[Function]}
       role="switch"
       tabIndex={0}
+      type="button"
     >
       <label
         className="css-so2e4e-Switch"
@@ -1509,6 +1516,7 @@ Array [
       onKeyUp={[Function]}
       role="switch"
       tabIndex={0}
+      type="button"
     >
       <label
         className="css-so2e4e-Switch"
@@ -1555,6 +1563,7 @@ Array [
       onKeyUp={[Function]}
       role="switch"
       tabIndex={0}
+      type="button"
     >
       <label
         className="css-so2e4e-Switch"
@@ -2163,7 +2172,6 @@ exports[`Storyshots Shared/UI/Popover Primary 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
-      type="button"
     >
       <span
         className="css-86b7hj-Typography-Popover e1eqcpp10"
@@ -2202,7 +2210,6 @@ exports[`Storyshots Shared/UI/Popover Top 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
-      type="button"
     >
       <span
         className="css-86b7hj-Typography-Popover e1eqcpp10"
