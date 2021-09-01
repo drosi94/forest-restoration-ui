@@ -1,6 +1,7 @@
 {
-  "name": "@drosi94/firebase",
+  "name": "@forest-restoration/firebase",
   "version": "0.0.1",
+  "private": true,
   "description": "Firebase specific package. Functions, etc",
   "homepage": "https://github.com/drosi94/forest-restoration-ui#readme",
   "repository": {
@@ -8,12 +9,9 @@
     "url": "git+https://github.com/drosi94/forest-restoration-ui.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "deploy:functions": "cd functions && yarn deploy"
   },
   "bugs": {
     "url": "https://github.com/drosi94/forest-restoration-ui/issues"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
