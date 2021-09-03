@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "doppler run -- next dev",
-    "build": "doppler run -- next build",
+    "build": "next build",
     "start": "doppler run -- next start",
     "test": "doppler run -- jest",
     "test:u": "jest -u",
