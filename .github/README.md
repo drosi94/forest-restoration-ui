@@ -24,6 +24,8 @@ You need to install [node](https://nodejs.org/en/), yarn & lerna
   npm install -g yarn lerna
 ```
 
+Optionally, you can install doppler (Enviromental Secret Management, TODO: LINK WITH INSTALLATION GUIDE) or you can create a .env.local file in the monorepo root you want to work. Please send an email in dev@forestrestoration.gr to provide you with the enviromental secrets that you need for the local enviroment.
+
 ## Installation
 
 Install all the packages
@@ -46,9 +48,18 @@ Run locally the storybook with the UI components. It will run at [localhost:6006
 
 Run locally the PWA. It will run at [localhost:3000](localhost:3000)
 
+If you have install & configure the doppler CLI
+
 ```bash
 
   yarn start:pwa
+```
+
+If you have .env.local file in packages/pwa root folder
+
+```bash
+
+  yarn start:pwa:env
 ```
 
 ## Run Tests
