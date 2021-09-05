@@ -19,10 +19,11 @@ import {
   Tab,
   TabPanels,
 } from '@forest-restoration/shared'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ToggleTheme } from '../../shared/components/toggleTheme'
 import { BellIcon } from '@heroicons/react/solid'
 import { AuthenticationModal } from './authenticationModal'
+import firebase from 'firebase'
 
 const options = [
   { label: 'Test1', value: 'test1' },
@@ -53,6 +54,12 @@ export default function Home() {
   const [checked, setChecked] = useState(false)
   const [textValue, setTextValue] = useState('')
   const [selectValue, setSelectValue] = useState('')
+
+  useEffect(() => {
+    if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+      setOpen(true)
+    }
+  }, [])
 
   return (
     <div tw="h-full py-8">
