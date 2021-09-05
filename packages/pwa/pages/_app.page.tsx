@@ -6,6 +6,7 @@ import { Toast } from '@forest-restoration/shared'
 import { useFixHeightViewport } from '../shared/hooks/useFixHeightViewport'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/themeProvider'
 import '../theme.css'
+import '../firebase/clientApp'
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useThemeProvider()
