@@ -22,6 +22,7 @@ import {
 import { useState } from 'react'
 import { ToggleTheme } from '../../shared/components/toggleTheme'
 import { BellIcon } from '@heroicons/react/solid'
+import { AuthenticationModal } from './authenticationModal'
 
 const options = [
   { label: 'Test1', value: 'test1' },
@@ -62,15 +63,8 @@ export default function Home() {
         <Typography as="h1" variant="heading" tw="text-2xl">
           {t('home:test')}
         </Typography>
-        <Button onClick={() => setOpen((v) => !v)}>{open ? 'close' : 'open'}</Button>
-        <Modal
-          isOpen={open}
-          handleClose={() => setOpen(false)}
-          title="A title"
-          description="My descr"
-        >
-          <span>fef</span>
-        </Modal>
+        <Button onClick={() => setOpen((v) => !v)}>{open ? 'close' : 'authenticate'}</Button>
+        <AuthenticationModal isOpen={open} setIsOpen={setOpen} />
 
         <div tw="w-96 max-w-xs">
           <Accordion title="Hello there" tw="w-2" isOpened>
