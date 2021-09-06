@@ -6,6 +6,7 @@
     "dev": "doppler run -- next dev",
     "build": "next build",
     "start": "doppler run -- next start",
+    "start:https": "doppler run -- node server.js",
     "test": "doppler run -- jest",
     "test:u": "jest -u",
     "test:ci": "jest --ci",

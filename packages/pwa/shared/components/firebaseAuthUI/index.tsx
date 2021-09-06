@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import firebase from 'firebase'
 
 const FIREBASEUI_CONTAINER_ID = 'firebaseui_container'
