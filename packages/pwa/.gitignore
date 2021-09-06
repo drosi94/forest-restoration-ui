@@ -36,3 +36,5 @@ yarn-error.log*
 #other
 **/public/workbox-*.js
 **/public/fallback-*.js
+
+certificates/
