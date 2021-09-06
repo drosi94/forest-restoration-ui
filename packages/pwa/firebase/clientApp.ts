@@ -1,5 +1,7 @@
 import firebase from "firebase";
 
+export const auth = firebase.auth
+
 export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -8,9 +10,10 @@ export const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
+export let firebaseApp;
 
 if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
+  firebaseApp = firebase.initializeApp(firebaseConfig);
   if(process.env.NEXT_PUBLIC_USE_FIREBASE_ANALYTICS === 'true') {
     firebase.analytics();
   }
