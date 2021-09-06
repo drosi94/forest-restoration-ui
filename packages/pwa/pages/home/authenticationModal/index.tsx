@@ -18,6 +18,7 @@ const uiConfig = {
       forceSameDevice: false,
     },
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
   ],
   callbacks: {
     signInSuccessWithAuthResult: () => false,
