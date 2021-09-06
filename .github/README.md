@@ -24,7 +24,7 @@ You need to install [node](https://nodejs.org/en/), yarn & lerna
   npm install -g yarn lerna
 ```
 
-Optionally, you can install doppler (Enviromental Secret Management, TODO: LINK WITH INSTALLATION GUIDE) or you can create a .env.local file in the monorepo root you want to work. Please send an email in dev@forestrestoration.gr to provide you with the enviromental secrets that you need for the local enviroment.
+Optionally, you can install doppler (Enviromental Secret Management, [Installation Guide](https://github.com/drosi94/forest-restoration-ui/wiki/Doppler-Universal-Secrets-Manager)) or you can create a .env.local file in the monorepo root you want to work. Please send an email in dev@forestrestoration.gr to provide you with the enviromental secrets that you need for the local enviroment.
 
 ## Installation
 
