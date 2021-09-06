@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "doppler run -- next dev",
+    "dev:env": "next dev",
     "build": "next build",
     "start": "doppler run -- next start",
     "start:https": "doppler run -- node server.js",
+    "start:https:env": "node server.js",
     "test": "doppler run -- jest",
     "test:u": "jest -u",
     "test:ci": "jest --ci",
