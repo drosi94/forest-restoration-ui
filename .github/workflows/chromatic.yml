@@ -1,5 +1,5 @@
 name: visual tests with chromatic
-on: [push]
+on: [pull_request]
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
         run: yarn install --network-timeout 1000000
       - name: Publish to Chromatic
         uses: chromaui/action@v1
-        # if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:') || startsWith(github.event.pull_request.title, 'misc:')
+        if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:') || startsWith(github.event.pull_request.title, 'misc:')
         with:
           workingDir: packages/ui
           token: ${{ secrets.GITHUB_TOKEN }}
