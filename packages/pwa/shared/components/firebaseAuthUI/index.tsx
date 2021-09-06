@@ -13,6 +13,7 @@ export const FirebaseAuthUI = ({ uiConfig, className = undefined, uiCallback = u
     let unmount = null
     const firebaseUI = window['firebaseui']
     if (firebaseUI) {
+      // @ts-ignore */}
       window['firebase'] = firebase
       const firebaseAuth = firebase.auth()
 
