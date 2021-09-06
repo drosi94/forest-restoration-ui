@@ -62,6 +62,8 @@ If you have .env.local file in packages/pwa root folder
   yarn start:pwa:env
 ```
 
+If you want to run in HTTPS mode check the [Wiki Page](https://github.com/drosi94/forest-restoration-ui/wiki/Run-locally-in-HTTPS)
+
 ## Run Tests
 
 Run all the tests
