@@ -6,6 +6,7 @@
     "dev": "doppler run -- next dev",
     "dev:env": "next dev",
     "build": "next build",
+    "build:doppler": "doppler run -- next build",
     "start": "doppler run -- next start",
     "start:https": "doppler run -- node server.js",
     "start:https:env": "node server.js",
