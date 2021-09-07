@@ -108,9 +108,7 @@ export default function Home() {
             Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec
             sollicitudin molestie malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et
             ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
-            ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula
-            elementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementumelementum
-            sed sit amet dui.
+            ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula sed sit amet dui.
           </Typography>
         </TitledCard>
         <AccordionCard title="Lorem Ipsum Title">
