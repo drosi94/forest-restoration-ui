@@ -18,6 +18,13 @@ if (!firebase.apps.length) {
     require('firebase/analytics')
     firebase.analytics();
   }
+
+  // Enable app check if env variable is set and the process is in browser
+  if (process.browser && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_API_KEY) {
+    require('firebase/app-check')
+    const appCheck = firebase.appCheck();
+    appCheck.activate(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_API_KEY, true);
+  }
 }
 
 // Use firebase emulators if the process is not in production and env variable is set
