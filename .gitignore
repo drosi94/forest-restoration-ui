@@ -35,6 +35,5 @@ coverage/
 
 .env.*.local
 .env.local
-.env.local.*
 
 certificates/
