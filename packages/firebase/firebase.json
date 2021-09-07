@@ -1,6 +1,8 @@
 {
   "functions": {
-    "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run build"],
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ],
     "source": "functions"
   },
   "firestore": {
@@ -24,5 +26,19 @@
       "enabled": true,
       "port": 8090
     }
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
