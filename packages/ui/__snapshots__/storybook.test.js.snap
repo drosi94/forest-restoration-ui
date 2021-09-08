@@ -1,5 +1,140 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Shared/Layout/Navbar Primary 1`] = `
+<nav
+  className="css-mcaga5-Navbar"
+>
+  <div
+    className="css-a3ewee-Navbar"
+  >
+    <div
+      className="css-14rh0m-Navbar"
+    >
+      <div>
+        <a
+          className="css-140w4nz-Navbar"
+          href="#"
+        >
+          <div>
+            <img
+              alt="Forest Restoration logo"
+              src="test-file-stub"
+              style={
+                Object {
+                  "height": "45px",
+                  "width": "45px",
+                }
+              }
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        className="css-1ebo3nx-Navbar"
+      >
+        <div
+          className="css-1xdgu2f-Navbar"
+        >
+          <a
+            href="#"
+          >
+            <span
+              className="css-1g7mioc-primaryNav"
+            >
+              Features
+            </span>
+          </a>
+          <a
+            href="#"
+          >
+            <span
+              className="css-1g7mioc-primaryNav"
+            >
+              Pricing
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="css-1xdgu2f-Navbar"
+      />
+      <div
+        className="css-16v3akf-Navbar"
+      >
+        <button
+          onClick={[Function]}
+        >
+          <svg
+            className="css-16fhvtl-Navbar"
+            fill="currentColor"
+            height="30"
+            viewBox="0 0 20 20"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+        <div
+          className="css-f4xaox-Navbar"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-joetz1-Navbar"
+  >
+    <div
+      className="css-4puh0d-Navbar"
+    >
+      <a
+        href="#"
+      >
+        <span
+          className="css-1g7mioc-primaryNav"
+        >
+          Features
+        </span>
+      </a>
+      <a
+        href="#"
+      >
+        <span
+          className="css-1g7mioc-primaryNav"
+        >
+          Pricing
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Storyshots Shared/Layout/UserActionsPopover Primary 1`] = `
+<div
+  className="css-17d5uml-Popover"
+>
+  <button
+    aria-expanded={false}
+    className="css-ioila7-Popover"
+    id="headlessui-popover-button-13"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <img
+      alt="user's avatar"
+      className="css-1roef5l-containerButton"
+      src="https://eu.ui-avatars.com/api/?name=Test user&background=10b981&color=eaeaea"
+    />
+  </button>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Accordion Custom Component 1`] = `
 <button
   aria-expanded={false}
@@ -192,7 +327,7 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
   <button
     aria-expanded={false}
     className="css-xj5f2k-AccordionCard"
-    id="headlessui-disclosure-button-13"
+    id="headlessui-disclosure-button-16"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -865,7 +1000,7 @@ exports[`Storyshots Shared/UI/Form/Select Multiple 1`] = `
   >
     <span
       className="css-16e6xoq-Typography-Select e1eqcpp10"
-      id="headlessui-listbox-label-17"
+      id="headlessui-listbox-label-20"
       onClick={[Function]}
     >
       Label
@@ -880,7 +1015,7 @@ exports[`Storyshots Shared/UI/Form/Select Multiple 1`] = `
       aria-haspopup={true}
       className="css-1nn7e9l-MultipleValueButton"
       disabled={false}
-      id="headlessui-listbox-button-18"
+      id="headlessui-listbox-button-21"
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -927,7 +1062,7 @@ exports[`Storyshots Shared/UI/Form/Select Primary 1`] = `
   >
     <span
       className="css-16e6xoq-Typography-Select e1eqcpp10"
-      id="headlessui-listbox-label-15"
+      id="headlessui-listbox-label-18"
       onClick={[Function]}
     >
       Label
@@ -939,7 +1074,7 @@ exports[`Storyshots Shared/UI/Form/Select Primary 1`] = `
     aria-haspopup={true}
     className="css-1knnve3-SingleValueButton"
     disabled={false}
-    id="headlessui-listbox-button-16"
+    id="headlessui-listbox-button-19"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -983,7 +1118,7 @@ Array [
     >
       <span
         className="css-1ep4288-Typography-Select e1eqcpp10"
-        id="headlessui-listbox-label-19"
+        id="headlessui-listbox-label-22"
         onClick={[Function]}
       >
         Label
@@ -995,7 +1130,7 @@ Array [
       aria-haspopup={true}
       className="css-rxay7n-SingleValueButton"
       disabled={false}
-      id="headlessui-listbox-button-20"
+      id="headlessui-listbox-button-23"
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -1050,7 +1185,7 @@ Array [
     >
       <span
         className="css-16e6xoq-Typography-Select e1eqcpp10"
-        id="headlessui-listbox-label-21"
+        id="headlessui-listbox-label-24"
         onClick={[Function]}
       >
         Label
@@ -1062,7 +1197,7 @@ Array [
       aria-haspopup={true}
       className="css-1knnve3-SingleValueButton"
       disabled={false}
-      id="headlessui-listbox-button-22"
+      id="headlessui-listbox-button-25"
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -1116,7 +1251,7 @@ exports[`Storyshots Shared/UI/Form/Select With Placeholder 1`] = `
   >
     <span
       className="css-16e6xoq-Typography-Select e1eqcpp10"
-      id="headlessui-listbox-label-25"
+      id="headlessui-listbox-label-28"
       onClick={[Function]}
     >
       Label
@@ -1128,7 +1263,7 @@ exports[`Storyshots Shared/UI/Form/Select With Placeholder 1`] = `
     aria-haspopup={true}
     className="css-1knnve3-SingleValueButton"
     disabled={false}
-    id="headlessui-listbox-button-26"
+    id="headlessui-listbox-button-29"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -1171,7 +1306,7 @@ exports[`Storyshots Shared/UI/Form/Select With Reset Option 1`] = `
   >
     <span
       className="css-16e6xoq-Typography-Select e1eqcpp10"
-      id="headlessui-listbox-label-23"
+      id="headlessui-listbox-label-26"
       onClick={[Function]}
     >
       Label
@@ -1183,7 +1318,7 @@ exports[`Storyshots Shared/UI/Form/Select With Reset Option 1`] = `
     aria-haspopup={true}
     className="css-1knnve3-SingleValueButton"
     disabled={false}
-    id="headlessui-listbox-button-24"
+    id="headlessui-listbox-button-27"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -1223,9 +1358,9 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
 >
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-34"
+    aria-labelledby="headlessui-label-37"
     className="css-i4flkr-Switch"
-    id="headlessui-switch-33"
+    id="headlessui-switch-36"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1244,7 +1379,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
   </button>
   <span
     className="css-a4pg8w-Typography-Label e1eqcpp10"
-    id="headlessui-label-34"
+    id="headlessui-label-37"
     onClick={[Function]}
   >
     Switch
@@ -1258,16 +1393,16 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
 >
   <span
     className="css-1ng4m2i-Typography-Label e1eqcpp10"
-    id="headlessui-label-39"
+    id="headlessui-label-42"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-39"
+    aria-labelledby="headlessui-label-42"
     className="css-9bbghf-Switch"
-    id="headlessui-switch-40"
+    id="headlessui-switch-43"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1294,7 +1429,7 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
   <button
     aria-checked={true}
     className="css-i4flkr-Switch"
-    id="headlessui-switch-35"
+    id="headlessui-switch-38"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1320,16 +1455,16 @@ exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
 >
   <span
     className="css-a4pg8w-Typography-Label e1eqcpp10"
-    id="headlessui-label-37"
+    id="headlessui-label-40"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={false}
-    aria-labelledby="headlessui-label-37"
+    aria-labelledby="headlessui-label-40"
     className="css-5mbv1f-Switch"
-    id="headlessui-switch-38"
+    id="headlessui-switch-41"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1355,16 +1490,16 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
 >
   <span
     className="css-a4pg8w-Typography-Label e1eqcpp10"
-    id="headlessui-label-27"
+    id="headlessui-label-30"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-27"
+    aria-labelledby="headlessui-label-30"
     className="css-i4flkr-Switch"
-    id="headlessui-switch-28"
+    id="headlessui-switch-31"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1390,9 +1525,9 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
 >
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-30"
+    aria-labelledby="headlessui-label-33"
     className="css-i4flkr-Switch"
-    id="headlessui-switch-29"
+    id="headlessui-switch-32"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1411,7 +1546,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
   </button>
   <span
     className="css-a4pg8w-Typography-Label e1eqcpp10"
-    id="headlessui-label-30"
+    id="headlessui-label-33"
     onClick={[Function]}
   >
     Switch
@@ -1425,16 +1560,16 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
 >
   <span
     className="css-a4pg8w-Typography-Label e1eqcpp10"
-    id="headlessui-label-31"
+    id="headlessui-label-34"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
     aria-checked={true}
-    aria-labelledby="headlessui-label-31"
+    aria-labelledby="headlessui-label-34"
     className="css-i4flkr-Switch"
-    id="headlessui-switch-32"
+    id="headlessui-switch-35"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1468,7 +1603,7 @@ exports[`Storyshots Shared/UI/Form/Switch With Double Text 1`] = `
   >
     <button
       className="css-5mbv1f-Switch"
-      id="headlessui-switch-36"
+      id="headlessui-switch-39"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -1501,16 +1636,16 @@ Array [
   >
     <span
       className="css-a4pg8w-Typography-Label e1eqcpp10"
-      id="headlessui-label-43"
+      id="headlessui-label-46"
       onClick={[Function]}
     >
       Switch
     </span>
     <button
       aria-checked={true}
-      aria-labelledby="headlessui-label-43"
+      aria-labelledby="headlessui-label-46"
       className="css-i1qc5z-Switch"
-      id="headlessui-switch-44"
+      id="headlessui-switch-47"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -1548,16 +1683,16 @@ Array [
   >
     <span
       className="css-a4pg8w-Typography-Label e1eqcpp10"
-      id="headlessui-label-41"
+      id="headlessui-label-44"
       onClick={[Function]}
     >
       Switch
     </span>
     <button
       aria-checked={true}
-      aria-labelledby="headlessui-label-41"
+      aria-labelledby="headlessui-label-44"
       className="css-i4flkr-Switch"
-      id="headlessui-switch-42"
+      id="headlessui-switch-45"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -2167,7 +2302,7 @@ exports[`Storyshots Shared/UI/Popover Primary 1`] = `
   >
     <button
       aria-expanded={false}
-      className="css-1tqgvre-Button-Popover e1p27jrl0"
+      className="css-62udfs-Button-Popover e1p27jrl0"
       id="headlessui-popover-button-5"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -2205,7 +2340,7 @@ exports[`Storyshots Shared/UI/Popover Top 1`] = `
   >
     <button
       aria-expanded={false}
-      className="css-1tqgvre-Button-Popover e1p27jrl0"
+      className="css-62udfs-Button-Popover e1p27jrl0"
       id="headlessui-popover-button-8"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -2261,7 +2396,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-45"
+    id="headlessui-tabs-tab-48"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2278,7 +2413,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-46"
+    id="headlessui-tabs-tab-49"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2295,7 +2430,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-47"
+    id="headlessui-tabs-tab-50"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2321,7 +2456,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-48"
+    id="headlessui-tabs-tab-51"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2352,7 +2487,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-49"
+    id="headlessui-tabs-tab-52"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2383,7 +2518,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-50"
+    id="headlessui-tabs-tab-53"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2423,7 +2558,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Only Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-51"
+    id="headlessui-tabs-tab-54"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2454,7 +2589,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Only Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-52"
+    id="headlessui-tabs-tab-55"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2485,7 +2620,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Only Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-53"
+    id="headlessui-tabs-tab-56"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2526,7 +2661,7 @@ Array [
     <button
       aria-selected={false}
       className="css-1duw0jq-TabList"
-      id="headlessui-tabs-tab-54"
+      id="headlessui-tabs-tab-57"
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2543,7 +2678,7 @@ Array [
     <button
       aria-selected={false}
       className="css-1duw0jq-TabList"
-      id="headlessui-tabs-tab-55"
+      id="headlessui-tabs-tab-58"
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2560,7 +2695,7 @@ Array [
     <button
       aria-selected={false}
       className="css-1duw0jq-TabList"
-      id="headlessui-tabs-tab-56"
+      id="headlessui-tabs-tab-59"
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
