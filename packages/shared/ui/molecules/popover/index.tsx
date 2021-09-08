@@ -16,6 +16,7 @@ export type PopoverProps = {
   panelComponent?: any
   placement?: Placement
   children: React.ReactNode
+  overrideButtonStyles?: any
 }
 
 export const Popover: React.FC<PopoverProps> = ({
@@ -25,6 +26,7 @@ export const Popover: React.FC<PopoverProps> = ({
   containerComponent,
   panelComponent,
   placement = 'bottom-start',
+  overrideButtonStyles,
 }) => {
   const [referenceElement, setReferenceElement] = useState()
   const [popperElement, setPopperElement] = useState()
@@ -62,8 +64,9 @@ export const Popover: React.FC<PopoverProps> = ({
             ref={setReferenceElement}
             css={[
               tw`
-                px-3 py-2  inline-flex items-center hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`,
+                px-3 py-2 inline-flex items-center hover:text-opacity-100 focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-white focus-visible:ring-opacity-75`,
               !open && tw`text-opacity-90`,
+              overrideButtonStyles,
             ]}
           >
             <Typography css={[tw`dark:text-textPrimary text-textSecondary`]}>{label}</Typography>
@@ -84,9 +87,7 @@ export const Popover: React.FC<PopoverProps> = ({
             style={styles.popper}
             {...attributes.popper}
           >
-            <div tw="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-              {children}
-            </div>
+            <div tw="overflow-hidden shadow-lg ring-1 ring-black ring-opacity-5">{children}</div>
           </BasePopover.Panel>
         </>
       )}
