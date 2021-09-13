@@ -1,5 +1,4 @@
 {
-  "include": [
-    ".eslintrc.js"
-  ]
+  "include": ["src/**/*", ".eslintrc.js", ".prettierrc.js"],
+  "exclude": ["node_modules", "lib"]
 }
