@@ -13,7 +13,7 @@
 
 ## About
 
-Find more about the project [here](https://drive.google.com/drive/folders/1WFFxw82sffyXTs-3liRE7-qbZ3dvEKc9?usp=sharing)
+Find more about the project [here](https://drive.google.com/drive/folders/1WFFxw82sffyXTs-3liRE7-qbZ3dvEKc9?usp=sharing) and on the [landing page](https://about.forestrestore.app)
 
 ## Getting Started
 
