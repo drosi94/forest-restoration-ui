@@ -16,7 +16,7 @@ module.exports = {
   rules: {
     "no-restricted-globals": ["error", "name", "length"],
     "prefer-arrow-callback": "error",
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "no-prototype-builtins": "warn",
     "no-useless-escape": "warn",
     "prefer-promise-reject-errors": "warn"
