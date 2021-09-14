@@ -23,7 +23,8 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: "2017",
-    project: ["tsconfig.dev.json"],
+    project: ["./tsconfig.dev.json"],
+    tsconfigRootDir: __dirname,
     sourceType: "module",
     warnOnUnsupportedTypeScriptVersion: false
   },
