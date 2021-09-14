@@ -53,7 +53,9 @@
       "**/firebase-admin",
       "**/firebase-admin/**",
       "**/firebase-functions",
-      "**/firebase-functions/**"
+      "**/firebase-functions/**",
+      "**/@firebase/rules-unit-testing",
+      "**/@firebase/rules-unit-testing/**"
     ]
   },
   "dependencies": {
