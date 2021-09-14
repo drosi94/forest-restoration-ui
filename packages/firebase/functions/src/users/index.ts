@@ -2,22 +2,11 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 
 import { transformUserAuthToUserDocument } from "./transformers";
+import { sendWelcomeEmail } from "../mails/helpers";
 
 admin.initializeApp();
 
 const db = admin.firestore();
-
-const sendWelcomeEmail = (userId: string, displayName = "") => {
-  return db.collection("mails").add({
-    toUids: [userId],
-    template: {
-      name: "welcome_el",
-      data: {
-        displayName
-      }
-    }
-  });
-};
 
 export const createUserDocument = functions.auth
   .user()
