@@ -67,7 +67,7 @@ describe('Database rules', () => {
   test('deny when trying to update a user document that its not authorized', async () => {
     const ref = db.collection('users').doc('userid2')
 
-    expect(await assertFails(ref.update({ username: 'user2', displayName: 'xazos' })))
+    expect(await assertFails(ref.update({ username: 'user2', displayName: 'test' })))
   })
 
   test('deny when trying to update a user document with email field', async () => {
@@ -84,6 +84,6 @@ describe('Database rules', () => {
   test('allow when trying to update an authorized user document with allowed keys', async () => {
     const ref = db.collection('users').doc('userid1')
 
-    expect(await assertSucceeds(ref.update({ displayName: 'ekspynos' })))
+    expect(await assertSucceeds(ref.update({ displayName: 'test' })))
   })
 })
