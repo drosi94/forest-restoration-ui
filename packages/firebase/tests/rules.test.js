@@ -81,9 +81,28 @@ describe('Database rules', () => {
 
     expect(await assertFails(ref.update({ username: 'user1', emailVerified: true })))
   })
+
   test('allow when trying to update an authorized user document with allowed keys', async () => {
     const ref = db.collection('users').doc('userid1')
 
     expect(await assertSucceeds(ref.update({ displayName: 'test' })))
+  })
+
+  test('allow when trying to read a username', async () => {
+    const ref = db.collection('usernames').doc('user2')
+
+    expect(await assertSucceeds(ref.get()))
+  })
+
+  test('deny when trying to create a username without an associated user', async () => {
+    const ref = db.collection('usernames').doc('user3')
+
+    expect(await assertFails(ref.set({ uid: 'shouldfail' })))
+  })
+
+  test('deny when trying to update a username', async () => {
+    const ref = db.collection('usernames').doc('user1')
+
+    expect(await assertFails(ref.update({ uid: 'shouldfail' })))
   })
 })
