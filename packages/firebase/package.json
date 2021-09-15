@@ -10,7 +10,7 @@
   },
   "scripts": {
     "deploy:functions": "cd functions && yarn deploy",
-    "test": "export FIRESTORE_EMULATOR_HOST=localhost:8081 && jest --env=node --forceExit --detectOpenHandles"
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "bugs": {
     "url": "https://github.com/drosi94/forest-restoration-ui/issues"
