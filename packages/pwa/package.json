@@ -14,6 +14,7 @@
     "test:u": "jest -u",
     "test:ci": "jest --ci",
     "test:ci:u": "jest --ci -u",
+    "test:e2e": "concurrently \"yarn dev\" \"cypress open\" ",
     "lint": "next lint"
   },
   "dependencies": {
@@ -47,8 +48,12 @@
     "@types/jest": "^27.0.1",
     "babel-jest": "^27.0.6",
     "babel-plugin-macros": "^3.1.0",
+    "cypress": "^8.4.1",
+    "cypress-firebase": "^2.0.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "firebase-admin": "^9.8.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "jest-watch-typeahead": "^0.6.1",
