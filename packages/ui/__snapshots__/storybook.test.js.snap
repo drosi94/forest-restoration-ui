@@ -195,6 +195,16 @@ exports[`Storyshots Shared/UI/Accordion Primary 1`] = `
 </button>
 `;
 
+exports[`Storyshots Shared/UI/Button Animated 1`] = `
+<button
+  className="css-e8v7tn-Button e1p27jrl0"
+  color="primary"
+  style={Object {}}
+>
+  My Button
+</button>
+`;
+
 exports[`Storyshots Shared/UI/Button Contained 1`] = `
 <button
   className="css-e8v7tn-Button e1p27jrl0"
