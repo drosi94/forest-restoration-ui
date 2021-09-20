@@ -1,12 +1,13 @@
+import { MotionProps } from 'framer-motion'
 import tw, { styled } from 'twin.macro'
 
-export type ButtonProps = {
-  as?: string
+export type ButtonProps = MotionProps & {
+  as?: string | any
   /**
    * The variant of the button
    */
   variant?: 'contained' | 'outlined' | 'text'
-  /**
+  /**]
    * The color of the button
    */
   color?: 'primary' | 'secondary'
@@ -68,6 +69,7 @@ const colorAndVariantStyles = (color: string, variant: string) => {
       return []
   }
 }
+
 export const Button: React.FC<ButtonProps> = styled.button(
   ({
     as,
@@ -90,3 +92,5 @@ export const Button: React.FC<ButtonProps> = styled.button(
     fullWidth && tw`min-w-full`,
   ]
 )
+
+export * from './animated'
