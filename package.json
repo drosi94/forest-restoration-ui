@@ -3,6 +3,7 @@
   "private": true,
   "devDependencies": {
     "chromatic": "^5.9.2",
+    "concurrently": "^6.2.1",
     "dotenv": "^10.0.0",
     "husky": "^7.0.1",
     "lerna": "^4.0.0",
@@ -40,6 +41,7 @@
     "start:ui": "lerna run storybook --scope @forest-restoration/ui --stream",
     "test:ui": "lerna run test --scope @forest-restoration/ui --stream",
     "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
+    "test:e2e": "lerna run test:e2e --scope @forest-restoration/pwa --stream",
     "build:ui": "lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui",
     "firebase:deploy:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
