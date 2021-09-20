@@ -1,7 +1,8 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
+import { MotionProps } from 'framer-motion'
 
-import { Button, ButtonProps } from '@forest-restoration/shared'
+import { AnimatedButton, Button, ButtonProps } from '@forest-restoration/shared'
 
 export default {
   title: 'Shared/UI/Button',
@@ -9,6 +10,7 @@ export default {
 } as Meta
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />
+const AnimatedTemplate: Story<ButtonProps & MotionProps> = (args) => <AnimatedButton {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
@@ -87,4 +89,9 @@ export const Link = Template.bind({})
 Link.args = {
   ...Primary.args,
   as: 'a',
+}
+
+export const Animated = AnimatedTemplate.bind({})
+Animated.args = {
+  ...Primary.args,
 }
