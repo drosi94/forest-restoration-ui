@@ -1,0 +1,27 @@
+{
+  "name": "@forest-restoration/sanity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Vasileios Drosatos <vasileios.drosatos@workable.com>",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "keywords": [
+    "blog",
+    "forest",
+    "restoration"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.20.0",
+    "@sanity/core": "^2.20.0",
+    "@sanity/default-layout": "^2.20.0",
+    "@sanity/default-login": "^2.19.0",
+    "@sanity/desk-tool": "^2.20.0",
+    "@sanity/vision": "^2.20.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {}
+}
