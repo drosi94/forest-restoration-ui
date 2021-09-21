@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "Forest Restoration Blog"
+    "name": "Forest Restoration Blog",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "cnwt3vcx",
@@ -15,9 +16,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
