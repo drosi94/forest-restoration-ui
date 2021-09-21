@@ -19,8 +19,9 @@ class PWADocument extends Document {
             rel="stylesheet"
           />
           <meta name="theme-color" content="#fff" />
-          <script src="/cookieConsent.js" defer />
-          <script src="/themeToggle.js" defer />
+          <script src="/scripts/hotjar.js" defer />
+          <script src="/scripts/cookieConsent.js" defer />
+          <script src="/scripts/themeToggle.js" defer />
         </Head>
         <body tw="bg-bgPrimary text-white">
           <Main />
