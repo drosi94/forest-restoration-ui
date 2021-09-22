@@ -44,9 +44,9 @@
     "test:e2e": "lerna run test:e2e --scope @forest-restoration/pwa --stream",
     "build:ui": "lerna run --scope @forest-restoration/ui --stream build-storybook",
     "run:build:ui": "lerna run start --scope @forest-restoration/ui --stream",
-    "sanity:start": "lerna run start --scope @forest-restoration/sanity --stream",
-    "sanity:build": "lerna run build --scope @forest-restoration/sanity --stream",
-    "sanity:deploy": "lerna run deploy --scope @forest-restoration/sanity --stream",
+    "start:sanity": "lerna run start --scope @forest-restoration/sanity --stream",
+    "build:sanity": "lerna run build --scope @forest-restoration/sanity --stream",
+    "deploy:sanity": "lerna run deploy --scope @forest-restoration/sanity --stream",
     "firebase:deploy:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
     "chromatic": "lerna run chromatic:ci --scope @forest-restoration/ui --stream"
   },
