@@ -10,7 +10,6 @@ import { getClient } from '../../lib/sanity'
 export const PostCard = ({ post }) => {
   const imageProps = useNextSanityImage(getClient(false), post.mainImage)
   const router = useRouter()
-  console.log(post.slug.current)
 
   const handlePostClick = (e) => {
     e.preventDefault()
@@ -28,10 +27,10 @@ export const PostCard = ({ post }) => {
           variant="heading"
           tw="text-lg overflow-ellipsis overflow-hidden line-clamp-2"
         >
-          {post.title_el}
+          {post.title}
         </Typography>
         <Typography as="p" variant="body">
-          {post.abstract_el}
+          {post.abstract}
         </Typography>
       </div>
     </BaseCard>
