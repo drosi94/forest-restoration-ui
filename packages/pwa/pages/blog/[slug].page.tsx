@@ -6,8 +6,11 @@ import { useNextSanityImage } from 'next-sanity-image'
 import { groq } from 'next-sanity'
 import { Typography } from '@forest-restoration/shared'
 import { getClient, PortableText, usePreviewSubscription } from './lib/sanity'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router'
 
 export default function Post({ data }) {
+  const { locale } = useRouter()
   const { data: response } = usePreviewSubscription(query, {
     params: { slug: data.post.slug },
     initialData: data,
@@ -26,28 +29,32 @@ export default function Post({ data }) {
 
   const imageProps: any = useNextSanityImage(getClient(), mainImage)
 
+  const postTitle = locale === 'el' ? titleEl : title
+  const postAbstract = locale === 'el' ? abstractEl : abstract
+  const postBody = locale === 'el' ? bodyEl : body
+
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{postTitle}</title>
         <meta name="description" content={abstract} />
         <meta property="og:type" content="website" />
-        <meta name="og:title" property="og:title" content={title} />
+        <meta name="og:title" property="og:title" content={postTitle} />
         <meta name="og:description" property="og:description" content="" />
         <meta property="og:image" content={imageProps?.src} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={abstract} />
+        <meta name="twitter:title" content={postTitle} />
+        <meta name="twitter:description" content={postAbstract} />
         <meta name="twitter:image" content={imageProps?.src} />
       </Head>
       <article tw="p-8 md:p-24 flex flex-col gap-4 items-center justify-center">
-        <Image {...imageProps} alt={title} layout="intrinsic" width={600} height={400} />
+        <Image {...imageProps} alt={postTitle} layout="intrinsic" width={600} height={400} />
 
         <Typography as="h1" variant="heading" tw="text-4xl">
-          {title}
+          {postTitle}
         </Typography>
 
-        <PortableText blocks={body}></PortableText>
+        <PortableText blocks={postBody}></PortableText>
       </article>
     </>
   )
@@ -68,7 +75,7 @@ const query = groq`
 }
 `
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ locale, params }) {
   const slug = params.slug ?? ''
 
   if (!slug) {
@@ -87,18 +94,21 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['common', 'blog'])),
       data: { post },
     },
   }
 }
 
-export async function getStaticPaths() {
-  const paths = await getClient().fetch(
+export async function getStaticPaths({ locales }) {
+  let paths = []
+  const slugs = await getClient().fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
   )
+  slugs.forEach((slug) => locales.forEach((locale) => paths.push({ params: { slug }, locale })))
 
   return {
-    paths: paths.map((slug) => ({ params: { slug } })),
+    paths,
     fallback: false,
   }
 }
