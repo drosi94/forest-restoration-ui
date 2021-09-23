@@ -42,5 +42,8 @@ module.exports = withPlugins(
       ].filter(Boolean);
     },
     rewrites: () => [STUDIO_REWRITE],
+    images: {
+      domains: ['cdn.sanity.io']
+    }
   }
 )

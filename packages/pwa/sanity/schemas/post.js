@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   name: 'post',
   title: 'Post',
@@ -5,8 +6,15 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Title English',
       type: 'string',
+      description: 'Provide the english title'
+    },
+    {
+      name: 'title_el',
+      title: 'Title Greek',
+      type: 'string',
+      description: 'Provide the greek title'
     },
     {
       name: 'slug',
@@ -43,9 +51,29 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'abstract',
+      title: 'Abstract English',
+      type: 'text',
+      description: 'Provide an abstract in english'
+    },
+    {
+      name: 'abstract_el',
+      title: 'Abstract Greek',
+      type: 'text',
+      description: 'Provide an abstract in greek'
+    },
+    {
       name: 'body',
-      title: 'Body',
+      title: 'Body English',
       type: 'blockContent',
+      description: 'Provide the english body'
+    },
+    {
+      name: 'body_el',
+      title: 'Body Greek',
+      type: 'blockContent',
+      description: 'Provide the greek body'
+
     },
   ],
 
