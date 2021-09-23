@@ -57,7 +57,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('tailwindcss-filters'), require('@tailwindcss/typography'), require('tailwindcss-hyphens')],
+  plugins: [require('tailwindcss-filters'), require('@tailwindcss/typography'), require('tailwindcss-hyphens'), require('@tailwindcss/line-clamp')],
   xwind: {
     mode: 'objectstyles',
   },

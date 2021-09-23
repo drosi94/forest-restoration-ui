@@ -1,13 +1,12 @@
 import React from 'react'
-import tw from 'twin.macro'
+import 'twin.macro'
 import { useTranslation } from 'next-i18next'
 import { groq } from 'next-sanity'
 import { useRouter } from 'next/router'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import { Typography } from '@forest-restoration/shared'
 import { getClient, usePreviewSubscription } from './lib/sanity'
-import { PostBody } from './components/postBody'
+import { PostCard } from './components/postCard'
 
 export default function Blog({ initialPosts, preview }) {
   const router = useRouter()
@@ -19,34 +18,28 @@ export default function Blog({ initialPosts, preview }) {
   })
 
   return (
-    <div>
-      {posts?.map(
-        (post: any) =>
-          (
-            <article key={post._id}>
-              <Typography as="h3" variant="heading" tw="text-lg">
-                {post.title}
-              </Typography>
-              <hr />
-              <PostBody body={post.body} />
-            </article>
-          ) ?? <></>
-      )}
+    <div tw="grid content-center justify-center grid-cols-1 auto-rows-max md:auto-rows-min gap-x-2 gap-y-4 p-16 md:p-28 md:grid-cols-3">
+      {posts?.map((post: any) => (
+        <div key={post.slug.current} tw="w-full h-full">
+          <PostCard post={post} />
+        </div>
+      ))}
     </div>
   )
 }
 
 const query = groq`
-                *[_type == "post"] | order(_createdAt desc){
-                  _id,
+                *[_type == "post"] | order(_createdAt asc){
                   title,
-                  slug,
-                  mainImage{
-                    asset->{
-                      url
-                    }
+                  title_el,
+                  abstract,
+                  abstract_el,
+                  slug{
+                    current
                   },
-                  body
+                  mainImage{
+                    asset
+                  }
                 }
               `
 
@@ -59,6 +52,5 @@ export async function getStaticProps({ locale, preview = false }) {
       initialPosts: post,
       preview,
     },
-    revalidate: 10,
   }
 }

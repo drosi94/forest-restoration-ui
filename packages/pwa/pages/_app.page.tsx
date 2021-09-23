@@ -48,9 +48,9 @@ function MyApp({ Component, pageProps }) {
                     <Typography tw="hover:opacity-70">Home</Typography>
                   </a>
                 </Link>
-                <Link href="/maintenance" passHref>
+                <Link href="/blog" passHref>
                   <a>
-                    <Typography tw="hover:opacity-70">Maintenance</Typography>
+                    <Typography tw="hover:opacity-70">Blog</Typography>
                   </a>
                 </Link>
               </>
