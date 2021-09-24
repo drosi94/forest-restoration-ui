@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import tw from 'twin.macro'
 import { Typography, Switch } from '@forest-restoration/shared'
-import { useThemeProvider } from '../../providers/themeProvider'
+import { useThemeProvider } from '../../providers/theme'
 
 export const ToggleTheme = () => {
   const { isDarkMode, setIsDarkMode } = useThemeProvider()
