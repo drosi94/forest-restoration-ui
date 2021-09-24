@@ -3,17 +3,20 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import { Logo, Navbar, Typography, UserActionsPopover } from '@forest-restoration/shared'
-import { ToggleTheme } from '../toggleTheme'
 import { UserIcon } from '@heroicons/react/solid'
-import { AuthenticationModal } from '../../../pages/home/authenticationModal'
+import { Logo, Navbar, Typography, UserActionsPopover } from '@forest-restoration/shared'
+
+import { useAuthentication } from '../../providers/authentication'
+import { ToggleTheme } from '../toggleTheme'
+import { AuthenticationModal } from '../authenticationModal'
 import { firebase } from '../../../firebase/clientApp'
 import { NavLink } from './navLink'
+import toast from 'react-hot-toast'
 
-const isAuthenticated = false
 
 export const Navigation = () => {
-  const { t } = useTranslation(['common', 'navigation'])
+  const { t } = useTranslation(['common', 'authentication', 'navigation'])
+  const {isAuthenticated, user} = useAuthentication()
 
   const [isAuthenticationModalOpened, setIsAuthenticationModalOpened] = useState(false)
   useEffect(() => {
@@ -21,6 +24,18 @@ export const Navigation = () => {
       setIsAuthenticationModalOpened(true)
     }
   }, [])
+
+  const handleLogout = async () => {
+    try {
+      await firebase.auth().signOut()
+      toast.success(t('authentication:Logged Out'))
+    } catch(err) {
+      toast.error(t('common:Something went wrong'))
+      throw err;
+    }
+
+  }
+
   return (
     <>
       <header>
@@ -51,11 +66,16 @@ export const Navigation = () => {
           secondaryNav={
             <>
               {isAuthenticated ? (
-                <UserActionsPopover displayName="test">
-                  <div tw="flex flex-col">
-                    <a href="#" tw="py-3 px-2 hover:bg-primary-500">
-                      <Typography tw="hover:opacity-70">{t('navigation:Logout')}</Typography>
-                    </a>
+                <UserActionsPopover displayName={user.displayName}>
+                  <div tw="flex flex-col w-96">
+                    <div tw="p-2">
+                      <Typography>{t('authentication:You are logged in as')}: {' '}
+                        <Typography color="primary">{user.displayName}</Typography>
+                      </Typography>
+                    </div>
+                    <button onClick={handleLogout} tw="py-3 px-2 text-left hover:bg-primary-500">
+                      <Typography>{t('navigation:Logout')}</Typography>
+                    </button>
                   </div>
                 </UserActionsPopover>
               ) : (

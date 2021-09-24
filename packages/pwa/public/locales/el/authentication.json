@@ -1,3 +1,5 @@
 {
-  "Authentication": "Σύνδεση"
+  "Authentication": "Σύνδεση",
+  "You are logged in as": "Έχετε συνδεθεί ώς",
+  "Logged Out": "Επιτυχής αποσύνδεση"
 }
