@@ -68,7 +68,6 @@ export type ModalProps = {
 }
 
 const noop = () => {}
-const DefaultFooter = <Button>OK</Button>
 const DefaultChildren = ''
 
 const modalBaseStyles = tw`z-40 overflow-y-auto text-white`
@@ -89,7 +88,7 @@ export const Modal: React.FC<ModalProps> = ({
   overrideDescriptionStyles,
   overrideFooterSpacingStyles,
   overrideFooterStyles,
-  Footer = DefaultFooter,
+  Footer,
   children = DefaultChildren,
   ...rest
 }) => {
