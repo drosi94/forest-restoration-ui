@@ -1,14 +1,19 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
+import { MotionProps } from 'framer-motion'
 
-import { BaseCard, BaseCardProps } from '@forest-restoration/shared'
+import { AnimatedCard, BaseCard, BaseCardProps } from '@forest-restoration/shared'
+import tw from 'twin.macro'
 
 export default {
   title: 'Shared/UI/Card/BaseCard',
   component: BaseCard,
 } as Meta
 
-const BaseCardTemplate: Story<BaseCardProps> = (args) => <BaseCard {...args} />
+const BaseCardTemplate: Story<BaseCardProps & MotionProps> = (args) => <BaseCard {...args} />
+const AnimatedCardTemplate: Story<BaseCardProps & MotionProps> = (args) => (
+  <AnimatedCard {...args} />
+)
 
 export const Primary = BaseCardTemplate.bind({})
 Primary.args = {
@@ -37,4 +42,11 @@ export const NoRounded = BaseCardTemplate.bind({})
 NoRounded.args = {
   ...Primary.args,
   rounded: false,
+}
+
+export const Animated = AnimatedCardTemplate.bind({})
+Animated.args = {
+  ...Primary.args,
+  overrideStyles: { width: '200px' },
+  whileHover: { scale: 1.1 },
 }
