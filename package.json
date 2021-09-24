@@ -48,6 +48,8 @@
     "build:sanity": "lerna run build --scope @forest-restoration/sanity --stream",
     "deploy:sanity": "lerna run deploy --scope @forest-restoration/sanity --stream",
     "firebase:deploy:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
+    "start:firebase:emulators": "lerna run start:emulators --scope @forest-restoration/firebase --stream",
+    "deploy:firebase:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
     "chromatic": "lerna run chromatic:ci --scope @forest-restoration/ui --stream"
   },
   "workspaces": {
