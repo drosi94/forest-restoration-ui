@@ -29,7 +29,7 @@ export type BaseCardProps = {
   /**
    * Override of the base styling
    */
-  overrideStylesoverrideStyles?: any
+  overrideStyles?: any
   children?: string | React.ReactNode
 }
 
