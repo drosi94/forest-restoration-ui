@@ -1,4 +1,5 @@
 {
   "Authentication": "Authentication",
-  "Close": "Close"
+  "You are logged in as": "You are logged in as",
+  "Logged Out": "Logged Out"
 }

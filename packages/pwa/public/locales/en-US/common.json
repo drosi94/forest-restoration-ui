@@ -1,3 +1,4 @@
 {
-  "hello": "Hello World"
+  "hello": "Hello World",
+  "Something went wrong": "Something went wrong. Try again."
 }

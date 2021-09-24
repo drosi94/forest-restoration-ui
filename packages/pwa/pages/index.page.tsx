@@ -1,11 +1,12 @@
-import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+import { getServerSideTranslations } from '../shared/utils/serverSideTranslations'
 
 export default function Home() {
   const { pathname, replace } = useRouter()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (process.env.NEXT_PUBLIC_MAINTENANCE_MODE == 'true' && pathname == '/') {
       replace('/maintenance')
     }
@@ -17,7 +18,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'navigation', 'authentication'])),
+      ...(await getServerSideTranslations(locale)),
     },
   }
 }

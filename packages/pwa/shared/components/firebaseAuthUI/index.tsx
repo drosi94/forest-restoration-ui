@@ -1,11 +1,30 @@
 import React, { useEffect, useRef } from 'react'
-import firebase from 'firebase'
+import { firebase } from '../../../firebase/clientApp'
 
 const FIREBASEUI_CONTAINER_ID = 'firebaseui_container'
 
 const firebaseUiDeletion = Promise.resolve()
 
-export const FirebaseAuthUI = ({ uiConfig, className = undefined, uiCallback = undefined }) => {
+const uiConfig = {
+  signInFlow:
+    process.browser && firebase.auth().isSignInWithEmailLink(window.location.href)
+      ? 'redirect'
+      : 'popup',
+  signInOptions: [
+    {
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      signInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD,
+      forceSameDevice: false,
+    },
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+  ],
+  callbacks: {
+    signInSuccessWithAuthResult: () => false,
+  },
+}
+
+export const FirebaseAuthUI = ({ className = undefined, uiCallback = undefined }) => {
   const unregisterAuthObserver = useRef(null)
   const container = useRef()
 
@@ -58,7 +77,7 @@ export const FirebaseAuthUI = ({ uiConfig, className = undefined, uiCallback = u
 
       return unmount
     }
-  }, [uiCallback, uiConfig])
+  }, [uiCallback])
 
   return (
     <>

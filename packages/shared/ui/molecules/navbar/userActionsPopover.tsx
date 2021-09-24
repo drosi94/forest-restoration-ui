@@ -39,7 +39,7 @@ export const UserActionsPopover: React.FC<UserActionsPopoverProps> = ({
       buttonComponent={containerButton}
       overrideButtonStyles={tw`p-0! block h-10 w-10 rounded-full overflow-hidden `}
     >
-      <div tw="w-40 bg-bgSecondary text-textPrimary border border-gray-400">{children}</div>
+      <div tw="bg-bgSecondary text-textPrimary border border-gray-400">{children}</div>
     </Popover>
   )
 }
