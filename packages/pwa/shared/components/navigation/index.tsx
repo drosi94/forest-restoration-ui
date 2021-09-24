@@ -63,7 +63,7 @@ export const Navigation = () => {
                   tw="border-2 border-textPrimary rounded-full p-1 hover:opacity-70 active:border-gray-500"
                   onClick={() => setIsAuthenticationModalOpened(true)}
                 >
-                  <UserIcon tw="text-textPrimary" width={24} aria-label={t('navigation:Login')} />
+                  <UserIcon tw="text-textPrimary" width={18} aria-label={t('navigation:Login')} />
                 </button>
               )}
               <ToggleTheme />
