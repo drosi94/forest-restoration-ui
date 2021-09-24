@@ -3,10 +3,10 @@ import 'twin.macro'
 import { useTranslation } from 'next-i18next'
 import { groq } from 'next-sanity'
 import { useRouter } from 'next/router'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { getClient, usePreviewSubscription } from './lib/sanity'
 import { PostCard } from './components/postCard'
+import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
 
 export default function Blog({ initialPosts, preview }) {
   const router = useRouter()
@@ -64,7 +64,7 @@ export async function getStaticProps({ locale, preview = false }) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'blog'])),
+      ...await getServerSideTranslations(locale, ['blog']),
       initialPosts: post,
       preview,
     },
