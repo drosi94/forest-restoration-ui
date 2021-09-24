@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { appWithTranslation } from 'next-i18next'
@@ -8,6 +7,7 @@ import { Toast } from '@forest-restoration/shared'
 import { useFixHeightViewport } from '../shared/hooks/useFixHeightViewport'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/theme'
 import { Navigation } from '../shared/components/navigation'
+import { AuthenticationProvider } from '../shared/providers/authentication'
 import '../theme.css'
 import '../firebase/clientApp'
 
@@ -46,9 +46,12 @@ function MyApp({ Component, pageProps }) {
 
 function AppWithProviders({ Component, pageProps }) {
   return (
-    <ThemeProvider>
-      <MyApp Component={Component} pageProps={pageProps} />
-    </ThemeProvider>
+    <AuthenticationProvider>
+      <ThemeProvider>
+        <MyApp Component={Component} pageProps={pageProps} />
+      </ThemeProvider>
+    </AuthenticationProvider>
+ 
   )
 }
 
