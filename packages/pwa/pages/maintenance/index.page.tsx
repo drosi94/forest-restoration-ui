@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import tw from 'twin.macro'
 import { Typography, Logo } from '../../../shared'
 import { ToggleTheme } from '../../shared/components/toggleTheme'
 
 import logoImage from '../../public/icon-384x384.png'
+import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
 
 export default function Maintenance() {
   const { t } = useTranslation('maintenance')
@@ -66,7 +66,7 @@ export default function Maintenance() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'maintenance'])),
+      ...await getServerSideTranslations(locale, ['maintenance']),
     },
   }
 }

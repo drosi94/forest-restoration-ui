@@ -1,11 +1,9 @@
 import tw from 'twin.macro'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { toast } from 'react-hot-toast'
 import {
   AnimatedButton as Button,
   Typography,
-  Modal,
   Accordion,
   AccordionCard,
   BaseCard,
@@ -22,6 +20,7 @@ import {
 import { useState } from 'react'
 import { ToggleTheme } from '../../shared/components/toggleTheme'
 import { BellIcon } from '@heroicons/react/solid'
+import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
 
 const options = [
   { label: 'Test1', value: 'test1' },
@@ -176,7 +175,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'navigation', 'authentication', 'home'])),
+      ...await getServerSideTranslations(locale, ['home']),
     },
   }
 }
