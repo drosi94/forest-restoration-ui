@@ -19,11 +19,9 @@ import {
   Tab,
   TabPanels,
 } from '@forest-restoration/shared'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ToggleTheme } from '../../shared/components/toggleTheme'
 import { BellIcon } from '@heroicons/react/solid'
-import { AuthenticationModal } from './authenticationModal'
-import firebase from 'firebase'
 
 const options = [
   { label: 'Test1', value: 'test1' },
@@ -55,12 +53,6 @@ export default function Home() {
   const [textValue, setTextValue] = useState('')
   const [selectValue, setSelectValue] = useState('')
 
-  useEffect(() => {
-    if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
-      setOpen(true)
-    }
-  }, [])
-
   return (
     <div tw="h-full py-8">
       <div tw="flex justify-center items-center h-full flex-col gap-3">
@@ -70,8 +62,6 @@ export default function Home() {
         <Typography as="h1" variant="heading" tw="text-2xl">
           {t('home:test')}
         </Typography>
-        <Button onClick={() => setOpen((v) => !v)}>{open ? 'close' : 'authenticate'}</Button>
-        <AuthenticationModal isOpen={open} setIsOpen={setOpen} />
 
         <div tw="w-96 max-w-xs">
           <Accordion title="Hello there" tw="w-2" isOpened>
@@ -186,7 +176,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'home'])),
+      ...(await serverSideTranslations(locale, ['common', 'navigation', 'authentication', 'home'])),
     },
   }
 }

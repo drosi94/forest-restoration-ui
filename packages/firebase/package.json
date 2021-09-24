@@ -10,6 +10,7 @@
   },
   "scripts": {
     "deploy:functions": "cd functions && yarn deploy",
+    "start:emulators": "firebase emulators:start",
     "test": "jest --forceExit --detectOpenHandles"
   },
   "bugs": {
