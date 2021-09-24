@@ -3,11 +3,12 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import { Button, Logo, Navbar, Typography, UserActionsPopover } from '@forest-restoration/shared'
+import { Logo, Navbar, Typography, UserActionsPopover } from '@forest-restoration/shared'
 import { ToggleTheme } from '../toggleTheme'
 import { UserIcon } from '@heroicons/react/solid'
 import { AuthenticationModal } from '../../../pages/home/authenticationModal'
 import { firebase } from '../../../firebase/clientApp'
+import { NavLink } from './navLink'
 
 const isAuthenticated = false
 
@@ -27,22 +28,24 @@ export const Navigation = () => {
           customLogo={
             <Logo
               CustomImageComponent={
-                <Image alt="Logo" src="/icon-384x384.png" width="50" height="50" />
+                <Link href="/" passHref>
+                  <a>
+                    <Image
+                      alt="Forest Restoration Logo"
+                      src="/icon-384x384.png"
+                      width="50"
+                      height="50"
+                    />
+                  </a>
+                </Link>
               }
             />
           }
           primaryNav={
             <>
-              <Link href="/home" passHref>
-                <a>
-                  <Typography tw="hover:opacity-70">{t('navigation:Home')}</Typography>
-                </a>
-              </Link>
-              <Link href="/maintenance" passHref>
-                <a>
-                  <Typography tw="hover:opacity-70">Maintenance</Typography>
-                </a>
-              </Link>
+              <NavLink href="/" exact title={t('navigation:Home')} />
+              <NavLink href="/home" title={t('navigation:Playground')} />
+              <NavLink href="/blog" title={t('navigation:Blog')} />
             </>
           }
           secondaryNav={

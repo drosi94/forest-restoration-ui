@@ -5,12 +5,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import { groq } from 'next-sanity'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router'
 import { Typography } from '@forest-restoration/shared'
 
 import { getClient, PortableText, usePreviewSubscription } from './lib/sanity'
 import { Breadcrumbs } from '../../shared/components/breadcrumbs'
+import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
 
 export default function Post({ data }) {
   const { locale } = useRouter()
@@ -114,7 +114,7 @@ export async function getStaticProps({ locale, params }) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'blog'])),
+      ...await getServerSideTranslations(locale, ['blog']),
       data: { post },
     },
   }
