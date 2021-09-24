@@ -1,14 +1,23 @@
-import { useEffect } from 'react'
-
-import Router from 'next/router'
+import { useLayoutEffect } from 'react'
+import { useRouter } from 'next/router'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Home() {
-  useEffect(() => {
-    const { pathname } = Router
+  const { pathname, replace } = useRouter()
+
+  useLayoutEffect(() => {
     if (process.env.NEXT_PUBLIC_MAINTENANCE_MODE == 'true' && pathname == '/') {
-      Router.push('/maintenance')
+      replace('/maintenance')
     }
   })
 
-  return <div>It works!</div>
+  return <div></div>
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'navigation', 'authentication'])),
+    },
+  }
 }
