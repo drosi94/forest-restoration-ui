@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import firebase from 'firebase'
+import { useTranslation } from 'next-i18next'
+import { firebase } from '../../../firebase/clientApp'
 import { Button, Modal, Typography } from '../../../../shared'
 import { FirebaseAuthUI } from '../../../shared/components/firebaseAuthUI'
 
@@ -26,15 +27,17 @@ const uiConfig = {
 }
 
 export const AuthenticationModal = ({ isOpen, setIsOpen, version = '5.0.0' }) => {
-  const [isSignedIn, setIsSignedIn] = useState(false)
   const { locale } = useRouter()
+  const { t } = useTranslation(['common', 'authentication'])
+
+  const [isSignedIn, setIsSignedIn] = useState(false)
   useEffect(() => {
     const unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {
       setIsSignedIn(!!user)
     })
     return () => {
       unregisterAuthObserver()
-    } // Make sure we un-register Firebase observers when the component unmounts.
+    }
   }, [])
 
   const isLocaleRtl = false
@@ -59,13 +62,7 @@ export const AuthenticationModal = ({ isOpen, setIsOpen, version = '5.0.0' }) =>
       <Modal
         isOpen={isOpen}
         handleClose={() => setIsOpen(false)}
-        title="Authentication"
-        description={
-          !isSignedIn
-            ? 'Please select the way that you want to firebase.authenticate. You can create/use your local account (Sign in with email) or your existing one in google, facebook etc'
-            : ''
-        }
-        Footer={<Button onClick={() => setIsOpen(false)}>Close</Button>}
+        title={t('authentication:Authentication')}
       >
         {!isSignedIn ? (
           <FirebaseAuthUI uiConfig={uiConfig} />

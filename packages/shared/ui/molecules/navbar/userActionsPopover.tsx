@@ -6,21 +6,30 @@ export type UserActionsPopoverProps = {
   /**
    * The user's display name
    */
-  displayName: string
+  displayName?: string
+  /**
+   * Custom image to render
+   */
+  customImage?: React.ReactElement
 }
 
 export const UserActionsPopover: React.FC<UserActionsPopoverProps> = ({
   displayName,
+  customImage,
   children,
 }) => {
   const containerButton = React.forwardRef<any, any>((props, ref) => {
     return (
       <button ref={ref} {...props}>
-        <img
-          tw="h-full w-full object-cover"
-          src={`https://eu.ui-avatars.com/api/?name=${displayName}&background=10b981&color=eaeaea`}
-          alt="user's avatar"
-        />
+        {customImage ? (
+          customImage
+        ) : (
+          <img
+            tw="h-full w-full object-cover"
+            src={`https://eu.ui-avatars.com/api/?name=${displayName}&background=10b981&color=eaeaea`}
+            alt="user's avatar"
+          />
+        )}
       </button>
     )
   })
