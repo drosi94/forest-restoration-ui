@@ -3,7 +3,7 @@ import 'twin.macro'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import { useRouter } from 'next/router'
-import { BaseCard, Typography } from '@forest-restoration/shared'
+import { AnimatedCard, Typography } from '@forest-restoration/shared'
 
 import { getClient } from '../../lib/sanity'
 
@@ -17,7 +17,7 @@ export const PostCard = ({ post }) => {
   }
 
   return (
-    <BaseCard onClick={handlePostClick}>
+    <AnimatedCard onClick={handlePostClick} whileHover={{ scale: 1.1 }}>
       <div tw="-m-4">
         <Image {...imageProps} alt={post.title} />
       </div>
@@ -29,10 +29,10 @@ export const PostCard = ({ post }) => {
         >
           {post.title}
         </Typography>
-        <Typography as="p" variant="body">
+        <Typography as="p" variant="body" tw="overflow-ellipsis overflow-hidden line-clamp-4">
           {post.abstract}
         </Typography>
       </div>
-    </BaseCard>
+    </AnimatedCard>
   )
 }

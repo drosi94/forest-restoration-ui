@@ -17,27 +17,29 @@ export default function Blog({ initialPosts, preview }) {
     enabled: preview || router.query.preview !== undefined,
   })
 
+  const renderPost = (post) => {
+    const { title, title_el: titleEl, abstract, abstract_el: abstractEl, mainImage, slug } = post
+
+    const postTitle = router.locale === 'el' ? titleEl : title
+    const postAbstract = router.locale === 'el' ? abstractEl : abstract
+
+    return (
+      <div key={slug.current} tw="w-full h-full">
+        <PostCard
+          post={{
+            title: postTitle,
+            abstract: postAbstract,
+            mainImage,
+            slug,
+          }}
+        />
+      </div>
+    )
+  }
+
   return (
-    <div tw="grid content-center justify-center grid-cols-1 auto-rows-max md:auto-rows-min gap-x-2 gap-y-4 p-16 md:p-28 md:grid-cols-3">
-      {posts?.map((post: any) => {
-        const {
-          title,
-          title_el: titleEl,
-          abstract,
-          abstract_el: abstractEl,
-          mainImage,
-          slug,
-        } = post
-
-        const postTitle = router.locale === 'el' ? titleEl : title
-        const postAbstract = router.locale === 'el' ? abstractEl : abstract
-
-        return (
-          <div key={post.slug.current} tw="w-full h-full">
-            <PostCard post={{ title: postTitle, abstract: postAbstract, mainImage, slug }} />
-          </div>
-        )
-      })}
+    <div tw="grid content-center grid-cols-1 auto-rows-max md:auto-rows-min gap-x-6 gap-y-4 p-16 md:p-28 md:grid-cols-3">
+      {posts?.map((post: any) => renderPost(post))}
     </div>
   )
 }

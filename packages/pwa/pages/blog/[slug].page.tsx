@@ -1,13 +1,16 @@
 import React from 'react'
-import 'twin.macro'
+import tw from 'twin.macro'
+import { format as formatDate } from 'date-fns'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 import { groq } from 'next-sanity'
-import { Typography } from '@forest-restoration/shared'
-import { getClient, PortableText, usePreviewSubscription } from './lib/sanity'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router'
+import { Typography } from '@forest-restoration/shared'
+
+import { getClient, PortableText, usePreviewSubscription } from './lib/sanity'
+import { Breadcrumbs } from '../../shared/components/breadcrumbs'
 
 export default function Post({ data }) {
   const { locale } = useRouter()
@@ -17,6 +20,7 @@ export default function Post({ data }) {
   })
 
   const {
+    createdAt,
     title,
     title_el: titleEl,
     abstract,
@@ -36,7 +40,7 @@ export default function Post({ data }) {
   return (
     <>
       <Head>
-        <title>{postTitle}</title>
+        <title>Forest Restoration: {postTitle}</title>
         <meta name="description" content={abstract} />
         <meta property="og:type" content="website" />
         <meta name="og:title" property="og:title" content={postTitle} />
@@ -47,14 +51,29 @@ export default function Post({ data }) {
         <meta name="twitter:description" content={postAbstract} />
         <meta name="twitter:image" content={imageProps?.src} />
       </Head>
+      <Breadcrumbs />
       <article tw="p-8 md:p-24 flex flex-col gap-4 items-center justify-center">
+        <div tw="flex flex-col">
+          <Typography as="h1" variant="heading" tw="text-4xl">
+            {postTitle}
+          </Typography>
+          <div tw="text-center">
+            <Typography italic>{formatDate(new Date(createdAt), 'yyyy-MM-dd HH:mm:ss')}</Typography>
+          </div>
+        </div>
+
         <Image {...imageProps} alt={postTitle} layout="intrinsic" width={600} height={400} />
 
-        <Typography as="h1" variant="heading" tw="text-4xl">
-          {postTitle}
-        </Typography>
-
-        <PortableText blocks={postBody}></PortableText>
+        <div tw="flex flex-col gap-4 max-w-3xl">
+          <Typography variant="body" color="primary">
+            TL;DR
+          </Typography>
+          <Typography as="p" variant="body">
+            {postAbstract}
+          </Typography>
+          <hr />
+          <PortableText blocks={postBody}></PortableText>
+        </div>
       </article>
     </>
   )
@@ -71,7 +90,8 @@ const query = groq`
   body_el,
   abstract,
   abstract_el,
-  "slug": slug.current
+  "slug": slug.current,
+  "createdAt": _createdAt
 }
 `
 
