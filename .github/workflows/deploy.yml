@@ -23,7 +23,8 @@ jobs:
         uses: cypress-io/github-action@v2.9.7
         with:
           browser: chrome
-          start: yarn test:e2e:ci
+          start: cd ../../ && yarn test:e2e:ci
+          record: true
           working-directory: './packages/pwa'
         env:
           # Authorization for running the firebase CLI (emulator)
@@ -32,6 +33,7 @@ jobs:
           # Cypress variables
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_BASE_URL: http://localhost:3000
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
           # Authorization for firebase-admin (server-side)
           FIREBASE_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
