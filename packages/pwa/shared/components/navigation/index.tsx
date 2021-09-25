@@ -57,7 +57,11 @@ export const Navigation = () => {
             <>
               {isAuthenticated ? (
                 <UserActionsPopover
-                  displayName={user.displayName ?? user.email.replaceAll('.', '').replace('@', '')}
+                  data-testid="nav-user-actions-popover"
+                  label={t('navigation:User actions')}
+                  displayName={
+                    user.displayName ?? user?.email.replaceAll('.', '')?.replace('@', '') ?? ''
+                  }
                 >
                   <div tw="flex flex-col w-72 md:w-96">
                     <div tw="p-2">
@@ -68,14 +72,21 @@ export const Navigation = () => {
                         </Typography>
                       </Typography>
                     </div>
-                    <button onClick={handleLogout} tw="py-3 px-2 text-left hover:bg-primary-500">
+                    <button
+                      onClick={handleLogout}
+                      data-testid="nav-logout-button"
+                      tw="py-3 px-2 text-left hover:bg-primary-500"
+                    >
                       <Typography>{t('navigation:Logout')}</Typography>
                     </button>
                   </div>
                 </UserActionsPopover>
               ) : (
                 <AuthenticationLink shallow passHref>
-                  <a tw="border-2 border-textPrimary rounded-full p-1 hover:opacity-70 active:border-gray-500">
+                  <a
+                    data-testid="nav-login-link"
+                    tw="border-2 border-textPrimary rounded-full p-1 hover:opacity-70 active:border-gray-500"
+                  >
                     <UserIcon tw="text-textPrimary" width={18} aria-label={t('navigation:Login')} />
                   </a>
                 </AuthenticationLink>

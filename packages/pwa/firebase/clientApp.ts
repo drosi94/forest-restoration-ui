@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-export const firebaseConfig = {
+export const firebaseConfig: any = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
@@ -38,6 +38,11 @@ if (
       'localhost',
       parseInt(process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_FIRESTORE_PORT || '0')
     )
+  firebase.firestore().settings({
+    host: `localhost:${process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_FIRESTORE_PORT}`,
+    experimentalForceLongPolling: true,
+    ssl: false,
+  })
   firebase
     .functions()
     .useEmulator(
