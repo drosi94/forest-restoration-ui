@@ -23,7 +23,8 @@ jobs:
         uses: cypress-io/github-action@v2.9.7
         with:
           browser: chrome
-          run: yarn test:e2e:ci
+          start: yarn test:e2e:ci
+          working-directory: './packages/pwa'
         env:
           # Authorization for running the firebase CLI (emulator)
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
