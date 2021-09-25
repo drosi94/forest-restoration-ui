@@ -38,3 +38,9 @@ yarn-error.log*
 **/public/fallback-*.js
 
 certificates/
+
+/cypress/screenshots/
+/cypress/videos/
+/cypress/downloads/
+
+serviceAccount.json

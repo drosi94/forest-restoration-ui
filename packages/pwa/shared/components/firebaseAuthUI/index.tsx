@@ -27,7 +27,11 @@ export const FirebaseAuthUI = ({ className = undefined, uiCallback = undefined }
   const container = useRef()
   const router = useRouter()
   uiConfig.signInFlow =
-    process.browser && firebase.auth().isSignInWithEmailLink(router.asPath) ? 'redirect' : 'popup'
+    process.env.NEXT_PUBLIC_E2E_TEST === 'true'
+      ? 'redirect'
+      : process.browser && firebase.auth().isSignInWithEmailLink(router.asPath)
+      ? 'redirect'
+      : 'popup'
 
   useEffect(() => {
     let unmount = null
