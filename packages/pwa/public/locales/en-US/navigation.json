@@ -1,8 +1,10 @@
 {
-  "Home": "Home",
-  "Blog": "Blog",
-  "Login": "Login",
-  "Logout": "Logout",
-  "Not logged in actions": "Not logged in actions",
-  "User actions": "User actions"
+    "Home": "Home",
+    "Blog": "Blog",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Not logged in actions": "Not logged in actions",
+    "User actions": "User actions",
+    "You are logged in as": "You are logged in as",
+    "Logged Out": "Logged Out"
 }

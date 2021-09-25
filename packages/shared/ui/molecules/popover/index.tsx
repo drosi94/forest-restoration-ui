@@ -84,7 +84,8 @@ export const Popover: React.FC<PopoverProps> = ({
           <BasePopover.Panel
             as={panelComponent}
             ref={setPopperElement}
-            style={styles.popper}
+            tw="z-50"
+            style={{ ...styles.popper }}
             {...attributes.popper}
           >
             <div tw="overflow-hidden shadow-lg ring-1 ring-black ring-opacity-5">{children}</div>

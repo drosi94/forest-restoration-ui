@@ -19,7 +19,9 @@ class PWADocument extends Document {
             rel="stylesheet"
           />
           <meta name="theme-color" content="#fff" />
-          <script src="/scripts/hotjar.js" defer />
+          {process.env.NEXT_PUBLIC_HOTJAR_SHOW === 'true' && (
+            <script src="/scripts/hotjar.js" defer />
+          )}
           <script src="/scripts/cookieConsent.js" defer />
           <script src="/scripts/themeToggle.js" defer />
         </Head>

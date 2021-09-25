@@ -1,13 +1,11 @@
-import {  Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { createContainer } from 'react-tracked'
-import { firebase} from '../../../firebase/clientApp'
-
-
+import { firebase } from '../../../firebase/clientApp'
 
 export type State = {
-  isAuthenticated?: boolean;
-  user?: firebase.User;
-};
+  isAuthenticated?: boolean
+  user?: firebase.User
+}
 
 const initialState = {
   isAuthenticated: false,
@@ -15,13 +13,13 @@ const initialState = {
 }
 
 const useAuthenticationState = () => {
-  const [state, setState] = useState<State>(initialState);
+  const [state, setState] = useState<State>(initialState)
 
   useEffect(() => {
     const unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {
       setState({
         isAuthenticated: !!user,
-        user: user
+        user: user,
       })
     })
 
@@ -30,8 +28,11 @@ const useAuthenticationState = () => {
     }
   }, [])
 
-  return [state, setState] as readonly [State, Dispatch<SetStateAction<State>>];
+  return [state, setState] as readonly [State, Dispatch<SetStateAction<State>>]
 }
 
-export const { Provider: AuthenticationProvider, useTrackedState: useAuthentication, useUpdate: useSetAuthentication} =
-  createContainer(useAuthenticationState);
+export const {
+  Provider: AuthenticationProvider,
+  useTrackedState: useAuthentication,
+  useUpdate: useSetAuthentication,
+} = createContainer(useAuthenticationState)
