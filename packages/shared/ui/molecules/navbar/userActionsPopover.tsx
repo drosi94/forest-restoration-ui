@@ -3,6 +3,7 @@ import tw from 'twin.macro'
 import { Popover } from '../popover'
 
 export type UserActionsPopoverProps = {
+  label: string
   /**
    * The user's display name
    */
@@ -14,13 +15,15 @@ export type UserActionsPopoverProps = {
 }
 
 export const UserActionsPopover: React.FC<UserActionsPopoverProps> = ({
+  label,
   displayName,
   customImage,
   children,
+  ...rest
 }) => {
   const containerButton = React.forwardRef<any, any>((props, ref) => {
     return (
-      <button ref={ref} {...props}>
+      <button ref={ref} aria-label={label} {...props} {...rest}>
         {customImage ? (
           customImage
         ) : (
@@ -35,7 +38,7 @@ export const UserActionsPopover: React.FC<UserActionsPopoverProps> = ({
   })
   return (
     <Popover
-      label="User Actions"
+      label={label}
       buttonComponent={containerButton}
       overrideButtonStyles={tw`p-0! block h-10 w-10 rounded-full overflow-hidden `}
     >

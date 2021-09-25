@@ -1,76 +1,79 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "chromatic": "^5.9.2",
-    "concurrently": "^6.2.1",
-    "dotenv": "^10.0.0",
-    "husky": "^7.0.1",
-    "lerna": "^4.0.0",
-    "prettier": "^2.2.0",
-    "tailwindcss-hyphens": "^0.1.0",
-    "twin.macro": "2.7.0"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
-    "*.{js,jsx,ts,tsx,css,md,json,graphql}": "prettier --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run test:ci"
+    "name": "root",
+    "private": true,
+    "devDependencies": {
+        "chromatic": "^5.9.2",
+        "concurrently": "^6.2.1",
+        "dotenv": "^10.0.0",
+        "husky": "^7.0.1",
+        "lerna": "^4.0.0",
+        "prettier": "^2.2.0",
+        "tailwindcss-hyphens": "^0.1.0",
+        "twin.macro": "2.7.0",
+        "wait-on": "^6.0.0"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+        "*.{js,jsx,ts,tsx,css,md,json,graphql}": "prettier --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && npm run test:ci"
+        }
+    },
+    "scripts": {
+        "postinstall": "lerna bootstrap",
+        "prepare": "husky install",
+        "clean": "lerna run clean && lerna clean --yes",
+        "format": "lerna run format",
+        "bootstrap": "yarn install && lerna bootstrap;",
+        "start": "lerna run start --parallel",
+        "test": "lerna run test --parallel",
+        "test:ci": "lerna run test:ci --parallel",
+        "test:ci:u": "lerna run test:ci:u --parallel",
+        "test:pwa": "lerna run test --scope @forest-restoration/pwa --stream",
+        "test:pwa:u": "lerna run test:u --scope @forest-restoration/pwa --stream",
+        "start:pwa": "lerna run dev --scope @forest-restoration/pwa --stream",
+        "start:pwa:env": "lerna run dev:env --scope @forest-restoration/pwa --stream",
+        "start:pwa:https": "lerna run start:https --scope @forest-restoration/pwa --stream",
+        "start:pwa:https:env": "lerna run start:https:env --scope @forest-restoration/pwa --stream",
+        "build:pwa": "lerna run --scope @forest-restoration/pwa --stream build",
+        "run:build:pwa": "lerna run start --scope @forest-restoration/pwa --stream",
+        "start:ui": "lerna run storybook --scope @forest-restoration/ui --stream",
+        "test:ui": "lerna run test --scope @forest-restoration/ui --stream",
+        "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
+        "test:e2e": "concurrently \"yarn start:firebase:emulators\" \"lerna run test:e2e --scope @forest-restoration/pwa --stream\"",
+        "test:e2e:ci": "concurrently \"yarn start:firebase:emulators\" \"lerna run test:e2e:ci --scope @forest-restoration/pwa --stream\"",
+        "test:e2e:open": "concurrently \"yarn start:firebase:emulators\" \"lerna run test:e2e:open --scope @forest-restoration/pwa --stream\"",
+        "build:ui": "lerna run --scope @forest-restoration/ui --stream build-storybook",
+        "run:build:ui": "lerna run start --scope @forest-restoration/ui --stream",
+        "start:sanity": "lerna run start --scope @forest-restoration/sanity --stream",
+        "build:sanity": "lerna run build --scope @forest-restoration/sanity --stream",
+        "deploy:sanity": "lerna run deploy --scope @forest-restoration/sanity --stream",
+        "firebase:deploy:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
+        "start:firebase:emulators": "lerna run start:emulators --scope @forest-restoration/firebase --stream",
+        "deploy:firebase:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
+        "chromatic": "lerna run chromatic:ci --scope @forest-restoration/ui --stream"
+    },
+    "workspaces": {
+        "packages": [
+            "packages/**"
+        ],
+        "nohoist": [
+            "**/firebase-admin",
+            "**/firebase-admin/**",
+            "**/firebase-functions",
+            "**/firebase-functions/**",
+            "**/@firebase/rules-unit-testing",
+            "**/@firebase/rules-unit-testing/**"
+        ]
+    },
+    "dependencies": {
+        "@tailwindcss/line-clamp": "^0.2.1",
+        "@tailwindcss/typography": "^0.4.1",
+        "date-fns": "^2.24.0",
+        "postcss": "^8.3.6",
+        "react-use": "^17.2.4",
+        "tailwindcss": "^2.2.7"
     }
-  },
-  "scripts": {
-    "postinstall": "lerna bootstrap",
-    "prepare": "husky install",
-    "clean": "lerna run clean && lerna clean --yes",
-    "format": "lerna run format",
-    "bootstrap": "yarn install && lerna bootstrap;",
-    "start": "lerna run start --parallel",
-    "test": "lerna run test --parallel",
-    "test:ci": "lerna run test:ci --parallel",
-    "test:ci:u": "lerna run test:ci:u --parallel",
-    "test:pwa": "lerna run test --scope @forest-restoration/pwa --stream",
-    "test:pwa:u": "lerna run test:u --scope @forest-restoration/pwa --stream",
-    "start:pwa": "lerna run dev --scope @forest-restoration/pwa --stream",
-    "start:pwa:env": "lerna run dev:env --scope @forest-restoration/pwa --stream",
-    "start:pwa:https": "lerna run start:https --scope @forest-restoration/pwa --stream",
-    "start:pwa:https:env": "lerna run start:https:env --scope @forest-restoration/pwa --stream",
-    "build:pwa": "lerna run --scope @forest-restoration/pwa --stream build",
-    "run:build:pwa": "lerna run start --scope @forest-restoration/pwa --stream",
-    "start:ui": "lerna run storybook --scope @forest-restoration/ui --stream",
-    "test:ui": "lerna run test --scope @forest-restoration/ui --stream",
-    "test:ui:u": "lerna run test:u --scope @forest-restoration/ui --stream",
-    "test:e2e": "lerna run test:e2e --scope @forest-restoration/pwa --stream",
-    "build:ui": "lerna run --scope @forest-restoration/ui --stream build-storybook",
-    "run:build:ui": "lerna run start --scope @forest-restoration/ui --stream",
-    "start:sanity": "lerna run start --scope @forest-restoration/sanity --stream",
-    "build:sanity": "lerna run build --scope @forest-restoration/sanity --stream",
-    "deploy:sanity": "lerna run deploy --scope @forest-restoration/sanity --stream",
-    "firebase:deploy:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
-    "start:firebase:emulators": "lerna run start:emulators --scope @forest-restoration/firebase --stream",
-    "deploy:firebase:functions": "lerna run deploy:functions --scope @forest-restoration/firebase --stream",
-    "chromatic": "lerna run chromatic:ci --scope @forest-restoration/ui --stream"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/**"
-    ],
-    "nohoist": [
-      "**/firebase-admin",
-      "**/firebase-admin/**",
-      "**/firebase-functions",
-      "**/firebase-functions/**",
-      "**/@firebase/rules-unit-testing",
-      "**/@firebase/rules-unit-testing/**"
-    ]
-  },
-  "dependencies": {
-    "@tailwindcss/line-clamp": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.1",
-    "date-fns": "^2.24.0",
-    "postcss": "^8.3.6",
-    "react-use": "^17.2.4",
-    "tailwindcss": "^2.2.7"
-  }
 }

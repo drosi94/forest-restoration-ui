@@ -1,4 +1,8 @@
 {
-  "baseUrl": "http://localhost:3000",
-  "ignoreTestFiles": "./cypress/integration/examples/**"
+    "baseUrl": "http://localhost:3000/en-US",
+    "ignoreTestFiles": "/cypress/integration/examples/**",
+    "viewportWidth": 1920,
+    "viewportHeight": 860,
+    "chromeWebSecurity": false,
+    "projectId": "zxofgo"
 }
