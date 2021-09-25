@@ -10,6 +10,7 @@ import { Navigation } from '../shared/components/navigation'
 import { AuthenticationProvider } from '../shared/providers/authentication'
 import '../theme.css'
 import '../firebase/clientApp'
+import { ModalHandler } from '../shared/components/modals/handler'
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useThemeProvider()
@@ -18,7 +19,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Toast darkMode={isDarkMode} />
+      <Toast darkMode={isDarkMode} duration={4000} marginTop="2.5rem" />
       <Head>
         <title>Forest Restoration</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -40,6 +41,7 @@ function MyApp({ Component, pageProps }) {
           </a>
         </footer>
       </div>
+      <ModalHandler />
     </>
   )
 }
@@ -51,7 +53,6 @@ function AppWithProviders({ Component, pageProps }) {
         <MyApp Component={Component} pageProps={pageProps} />
       </ThemeProvider>
     </AuthenticationProvider>
- 
   )
 }
 

@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useEffect, useRef } from 'react'
 import { firebase } from '../../../firebase/clientApp'
 
@@ -6,10 +7,7 @@ const FIREBASEUI_CONTAINER_ID = 'firebaseui_container'
 const firebaseUiDeletion = Promise.resolve()
 
 const uiConfig = {
-  signInFlow:
-    process.browser && firebase.auth().isSignInWithEmailLink(window.location.href)
-      ? 'redirect'
-      : 'popup',
+  signInFlow: 'popup',
   signInOptions: [
     {
       provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -27,6 +25,9 @@ const uiConfig = {
 export const FirebaseAuthUI = ({ className = undefined, uiCallback = undefined }) => {
   const unregisterAuthObserver = useRef(null)
   const container = useRef()
+  const router = useRouter()
+  uiConfig.signInFlow =
+    process.browser && firebase.auth().isSignInWithEmailLink(router.asPath) ? 'redirect' : 'popup'
 
   useEffect(() => {
     let unmount = null
@@ -77,7 +78,7 @@ export const FirebaseAuthUI = ({ className = undefined, uiCallback = undefined }
 
       return unmount
     }
-  }, [uiCallback])
+  }, [uiCallback, router])
 
   return (
     <>

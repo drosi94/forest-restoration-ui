@@ -1,7 +1,9 @@
 {
-  "Home": "Αρχική",
-  "Blog": "Blog",
-  "Login": "Σύνδεση",
-  "Logout": "Αποσύνδεση",
-  "User actions": "Ενέργειες χρήστη"
+    "Home": "Αρχική",
+    "Blog": "Blog",
+    "Login": "Σύνδεση",
+    "Logout": "Αποσύνδεση",
+    "User actions": "Ενέργειες χρήστη",
+    "You are logged in as": "Έχετε συνδεθεί ώς",
+    "Logged Out": "Επιτυχής αποσύνδεση"
 }
