@@ -1,9 +1,8 @@
 name: deploy forest-restoration to vercel
 on: [pull_request]
 jobs:
-  vercel:
+  setup:
     runs-on: ubuntu-latest
-    container: cypress/included:7.0.1
     steps:
       - uses: actions/checkout@v2
       - name: Set up node
@@ -11,52 +10,17 @@ jobs:
           node-version: '14'
         uses: actions/setup-node@v1
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
+  ci:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
       - name: Run tests 
         run: yarn test:ci:u
-      - name: Install Java
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11'  
-      - name: Install Firebase tools
-        run: npm install -g firebase-tools
-      - name: Run e2e tests
-        uses: cypress-io/github-action@v2.9.7
-        with:
-          browser: chrome
-          command: yarn test:e2e:ci
-          record: true
-          working-directory: './packages/pwa'
-        env:
-          # Authorization for running the firebase CLI (emulator)
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
-          # Cypress variables
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CYPRESS_BASE_URL: http://localhost:3000/en-US
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          SERVICE_ACCOUNT: ${{ secrets.SERVICE_ACCOUNT }}
-          ACTIONS_STEP_DEBUG: true
-
-          # Authorization for firebase-admin (server-side)
-          FIREBASE_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
-          FIREBASE_PRIVATE_KEY:  ${{ secrets.FIREBASE_PRIVATE_KEY }}
-          FIRESTORE_EMULATOR_HOST: ${{ secrets.FIRESTORE_EMULATOR_HOST }}
-
-          # Authorization for firebase web API
-          NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
-          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
-          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}  
-          NEXT_PUBLIC_USE_FIREBASE_AUTH_EMULATOR: ${{ secrets.NEXT_PUBLIC_USE_FIREBASE_AUTH_EMULATOR }}  
-          NEXT_PUBLIC_USE_FIREBASE_EMULATOR: ${{ secrets.NEXT_PUBLIC_USE_FIREBASE_EMULATOR }}  
-          NEXT_PUBLIC_FIREBASE_EMULATOR_AUTH_PORT: ${{ secrets.NEXT_PUBLIC_FIREBASE_EMULATOR_AUTH_PORT }}  
-          NEXT_PUBLIC_FIREBASE_EMULATOR_FIRESTORE_PORT: ${{ secrets.NEXT_PUBLIC_FIREBASE_EMULATOR_FIRESTORE_PORT }}  
-          NEXT_PUBLIC_FIREBASE_EMULATOR_FUNCTIONS_PORT: ${{ secrets.NEXT_PUBLIC_FIREBASE_EMULATOR_FUNCTIONS_PORT }}  
-          NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}  
-          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ${{ secrets.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}  
-          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ secrets.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}  
-          NEXT_PUBLIC_E2E_TEST: ${{ secrets.NEXT_PUBLIC_E2E_TEST }}  
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
       - name: deploy storybook to vercel
         uses: amondnet/vercel-action@v20
         if: startsWith(github.event.pull_request.title, 'shared:') || startsWith(github.event.pull_request.title, 'ui:') || startsWith(github.event.pull_request.title, 'global:')
@@ -69,5 +33,5 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
           vercel-org-id: ${{ secrets.ORGID}}
-          vercel-project-id: ${{ secrets.PROJECTID}}
+          vercel-project-id: ${{ secrets.PROJECTID}}      
 
