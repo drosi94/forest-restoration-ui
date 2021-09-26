@@ -16,7 +16,7 @@ export type TypographyProps = {
   /**
    * The font size of the text
    */
-  fontSize?: 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
+  fontSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
   /**
    * The font family of the text
    */
@@ -57,6 +57,7 @@ const variantStyles = {
 }
 
 const fontSizeStyles = {
+  xsmall: [tw`text-xs`],
   small: [tw`text-sm`],
   medium: [tw`text-base`],
   large: [tw`text-lg`],
