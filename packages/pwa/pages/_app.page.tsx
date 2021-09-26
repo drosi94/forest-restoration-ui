@@ -13,7 +13,9 @@ import '../theme.css'
 import '../firebase/clientApp'
 import { ModalHandler } from '../shared/components/modals/handler'
 
-LogRocket.init('hq4geg/forest-restoration')
+if (process.env.NODE_ENV === 'production') {
+  LogRocket.init('hq4geg/forest-restoration')
+}
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useThemeProvider()

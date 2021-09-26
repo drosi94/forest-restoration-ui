@@ -24,7 +24,7 @@ jobs:
         with:
           browser: chrome
           install-command: npm install -g firebase-tools
-          command: firebase use staging && yarn test:e2e:ci
+          command: yarn test:e2e:ci
           record: true
           working-directory: './packages/pwa'
         env:
