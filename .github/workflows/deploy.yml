@@ -22,9 +22,9 @@ jobs:
       - name: Run e2e tests
         uses: cypress-io/github-action@v2.9.7
         with:
-          install-command: npm install -g firebase-tools
           browser: chrome
-          command: yarn test:e2e:ci
+          install-command: npm install -g firebase-tools
+          command: firebase use staging && yarn test:e2e:ci
           record: true
           working-directory: './packages/pwa'
         env:
