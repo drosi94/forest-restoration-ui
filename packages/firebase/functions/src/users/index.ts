@@ -4,7 +4,9 @@ import * as admin from "firebase-admin";
 import { transformUserAuthToUserDocument } from "./transformers";
 import { sendWelcomeEmail } from "../mails/helpers";
 
-admin.initializeApp();
+if (admin.apps.length === 0) {
+  admin.initializeApp();
+}
 
 const db = admin.firestore();
 
