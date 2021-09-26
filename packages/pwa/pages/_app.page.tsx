@@ -1,3 +1,4 @@
+import LogRocket from 'logrocket'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -11,6 +12,8 @@ import { AuthenticationProvider } from '../shared/providers/authentication'
 import '../theme.css'
 import '../firebase/clientApp'
 import { ModalHandler } from '../shared/components/modals/handler'
+
+LogRocket.init('hq4geg/forest-restoration')
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useThemeProvider()
