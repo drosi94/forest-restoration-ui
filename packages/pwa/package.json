@@ -17,7 +17,7 @@
         "test:ci": "jest --ci",
         "test:ci:u": "jest --ci -u",
         "test:e2e": "concurrently \"yarn dev:e2e\" \"wait-on http-get://localhost:3000 && doppler run --config dev_e2e -- cypress run\" ",
-        "test:e2e:ci": "firebase emulators:exec 'start-server-and-test dev:env http://localhost:3000 cypress:headless' --import=scripts/firebase/firestore-export/ --export-on-exit",
+        "test:e2e:ci": "cd ../firebase && firebase emulators:exec 'cd ../pwa && start-server-and-test dev:env http://localhost:3000 cypress:headless' --import=scripts/firebase/firestore-export/ --export-on-exit",
         "test:e2e:open": "concurrently \"yarn dev:e2e\" \"wait-on http-get://localhost:3000 && doppler run --config dev_e2e -- cypress open\" ",
         "lint": "next lint"
     },
@@ -32,6 +32,7 @@
         "firebase": "^8.10.0",
         "firebaseui": "^5.0.0",
         "framer-motion": "^4.1.17",
+        "logrocket": "^2.0.0",
         "next": "11.1.2",
         "next-compose-plugins": "^2.2.1",
         "next-i18next": "^8.6.0",
