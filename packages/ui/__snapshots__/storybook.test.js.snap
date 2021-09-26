@@ -370,6 +370,21 @@ exports[`Storyshots Shared/UI/Card/AccordionCard Primary 1`] = `
 </div>
 `;
 
+exports[`Storyshots Shared/UI/Card/BaseCard Animated 1`] = `
+<div
+  style={Object {}}
+>
+  <div
+    className="css-19wao8a-Component"
+    role="presentation"
+  >
+    <div>
+      Hello here
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Shared/UI/Card/BaseCard No Rounded 1`] = `
 <div
   className="css-tsum1f-Component"
@@ -1731,6 +1746,462 @@ Array [
     </span>
   </div>,
 ]
+`;
+
+exports[`Storyshots Shared/UI/FormStepper Five Steps 1`] = `
+<nav
+  aria-label="Form Steps"
+  className="css-10hzge-FormStepper"
+>
+  <div
+    className="css-zp6gul-FormStepper"
+  >
+    <button
+      aria-label="Step 1"
+      className="css-1skdaoj-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-17j3hdt-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-nllbut-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 1
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-tduo3x-HorizontalLine"
+    />
+    <button
+      aria-label="Step 2"
+      className="css-139ysis-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1inqz1c-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1wmw1xl-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 2
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-py5jvo-HorizontalLine"
+    />
+    <button
+      aria-label="Step 3"
+      className="css-1l3bcmf-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1k906gi-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1dozy0m-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 3
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-py5jvo-HorizontalLine"
+    />
+    <button
+      aria-label="Step 4"
+      className="css-1l3bcmf-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1k906gi-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1dozy0m-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 4
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-py5jvo-HorizontalLine"
+    />
+    <button
+      aria-label="Step 5"
+      className="css-1l3bcmf-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1k906gi-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1dozy0m-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 5
+        </span>
+      </div>
+    </button>
+  </div>
+</nav>
+`;
+
+exports[`Storyshots Shared/UI/FormStepper Middle Selected 1`] = `
+<nav
+  aria-label="Form Steps"
+  className="css-10hzge-FormStepper"
+>
+  <div
+    className="css-zp6gul-FormStepper"
+  >
+    <button
+      aria-label="Step 1"
+      className="css-1skdaoj-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-17j3hdt-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-nllbut-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 1
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-tduo3x-HorizontalLine"
+    />
+    <button
+      aria-label="Step 2"
+      className="css-139ysis-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1inqz1c-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1wmw1xl-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 2
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-py5jvo-HorizontalLine"
+    />
+    <button
+      aria-label="Step 3"
+      className="css-1l3bcmf-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1k906gi-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1dozy0m-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 3
+        </span>
+      </div>
+    </button>
+  </div>
+</nav>
+`;
+
+exports[`Storyshots Shared/UI/FormStepper Primary 1`] = `
+<nav
+  aria-label="Form Steps"
+  className="css-10hzge-FormStepper"
+>
+  <div
+    className="css-zp6gul-FormStepper"
+  >
+    <button
+      aria-label="Step 1"
+      className="css-139ysis-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1inqz1c-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1wmw1xl-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 1
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-py5jvo-HorizontalLine"
+    />
+    <button
+      aria-label="Step 2"
+      className="css-1l3bcmf-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1k906gi-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1dozy0m-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 2
+        </span>
+      </div>
+    </button>
+    <div
+      className="css-py5jvo-HorizontalLine"
+    />
+    <button
+      aria-label="Step 3"
+      className="css-1l3bcmf-FormStepper"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <div
+        className="css-1k906gi-FormStepper"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+      </div>
+      <div
+        className="css-16t6w8t-FormStepper"
+      >
+        <span
+          className="css-1dozy0m-Typography-FormStepper e1eqcpp10"
+          fontSize="xsmall"
+          fontWeight="400"
+        >
+          Step 3
+        </span>
+      </div>
+    </button>
+  </div>
+</nav>
 `;
 
 exports[`Storyshots Shared/UI/IconButton Contained 1`] = `
