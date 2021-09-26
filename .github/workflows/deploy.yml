@@ -23,7 +23,7 @@ jobs:
         uses: cypress-io/github-action@v2.9.7
         with:
           browser: chrome
-          install-command: npm install -g firebase-tools
+          install-command: curl -sL https://firebase.tools | bash
           command: yarn test:e2e:ci
           record: true
           working-directory: './packages/pwa'
