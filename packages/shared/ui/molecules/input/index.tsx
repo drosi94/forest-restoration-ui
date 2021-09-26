@@ -2,7 +2,6 @@ import React from 'react'
 import tw, { theme } from 'twin.macro'
 import TextareaAutosize from 'react-textarea-autosize'
 import { Typography, Hint, Error } from '../../atoms'
-import { mergeRefs } from '../../utils'
 
 export type InputProps = {
   /**
@@ -62,7 +61,7 @@ export type InputProps = {
    */
   onChange?: (value: any) => void
   /**
-   * Override styles of the container inpt
+   * Override styles of the container input
    */
   overrideContainerStyles?: any
   /**
