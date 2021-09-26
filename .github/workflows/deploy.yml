@@ -25,7 +25,6 @@ jobs:
           install-command: npm install -g firebase-tools
           browser: chrome
           command: yarn test:e2e:ci
-          wait-on: 'http://localhost:3000'
           record: true
           working-directory: './packages/pwa'
         env:
