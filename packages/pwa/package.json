@@ -17,7 +17,7 @@
         "test:ci": "jest --ci",
         "test:ci:u": "jest --ci -u",
         "test:e2e": "concurrently \"yarn dev:e2e\" \"wait-on http-get://localhost:3000 && doppler run --config dev_e2e -- cypress run\" ",
-        "test:e2e:ci": "cd ../firebase && firebase use staging && firebase emulators:exec --only firestore,auth,functions,storage 'cd ../pwa && start-server-and-test dev:env http://localhost:3000 cypress:headless' --import=scripts/firebase/firestore-export/ --export-on-exit",
+        "test:e2e:ci": "cd ../firebase && firebase emulators:exec --project forest-restoration-staging --only firestore,auth,functions,storage 'cd ../pwa && start-server-and-test dev:env http://localhost:3000 cypress:headless' --import=scripts/firebase/firestore-export/ --export-on-exit",
         "test:e2e:open": "concurrently \"yarn dev:e2e\" \"wait-on http-get://localhost:3000 && doppler run --config dev_e2e -- cypress open\" ",
         "lint": "next lint"
     },
