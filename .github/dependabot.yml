@@ -11,6 +11,16 @@ updates:
       interval: "daily"
       
   - package-ecosystem: "npm"
+    directory: "/packages/firebase"
+    schedule:
+      interval: "daily"
+      
+  - package-ecosystem: "npm"
+    directory: "/packages/firebase/functions"
+    schedule:
+      interval: "daily"
+            
+  - package-ecosystem: "npm"
     directory: "/packages/pwa"
     schedule:
       interval: "daily"
