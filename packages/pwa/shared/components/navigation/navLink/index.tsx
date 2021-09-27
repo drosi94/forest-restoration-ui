@@ -1,13 +1,15 @@
 import React from 'react'
-import tw from 'twin.macro'
+import tw, { theme } from 'twin.macro'
+import { motion } from 'framer-motion'
 import Link, { LinkProps } from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Typography } from '../../../../../shared'
-import { useRouter } from 'next/router'
 
 type NavLinkProps = LinkProps & {
   title: string
   exact?: boolean
+  disabled?: boolean
   icon?: React.ReactNode
 }
 
@@ -19,20 +21,22 @@ export const NavLink: React.FC<NavLinkProps> = ({ title, href, exact, icon, ...l
   const isActive = exact ? asPath === hrefString : asPath.includes(hrefString)
 
   return (
-    <li>
+    <motion.li animate whileHover={{ scale: 0.9 }}>
       <Link href={href} passHref {...linkProps}>
-        <a
-          css={[
-            tw`flex gap-2 uppercase text-textPrimary hover:opacity-70`,
-            isActive && tw`text-primary-500`,
-          ]}
-        >
+        <a css={[tw`flex gap-2 uppercase text-textPrimary`, isActive && tw`text-primary-500`]}>
           {icon}
-          <Typography fontFamily="notoSerif" tw="text-current">
+          <Typography fontFamily="notoSerif" tw="relative text-current" fontSize="small">
             {title}
+            {isActive && (
+              <motion.div
+                tw="w-full h-1 rounded absolute -bottom-1 md:-bottom-2"
+                layoutId="underline"
+                style={{ backgroundColor: theme`colors.primary.500` }}
+              />
+            )}
           </Typography>
         </a>
       </Link>
-    </li>
+    </motion.li>
   )
 }
