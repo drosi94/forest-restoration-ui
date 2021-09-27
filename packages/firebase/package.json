@@ -11,7 +11,7 @@
     "scripts": {
         "build:functions": "cd functions && yarn build",
         "deploy:functions": "cd functions && yarn deploy",
-        "start:emulators": "yarn build:functions && firebase emulators:start --only auth,firestore,functions --import=scripts/firebase/firestore-export/ --export-on-exit",
+        "start:emulators": "yarn build:functions && firebase emulators:start --only auth,firestore,functions --import=scripts/firebase/firestore-export/",
         "test": "jest --forceExit --detectOpenHandles"
     },
     "bugs": {
