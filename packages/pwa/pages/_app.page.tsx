@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       {route !== '/maintenance' && <Navigation />}
-      <div tw="flex flex-col h-[calc(100 * var(--vh))]">
+      <div tw="flex flex-col">
         <main tw="flex-1">
           <Component {...pageProps} />
         </main>
