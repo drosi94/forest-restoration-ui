@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import tw from 'twin.macro'
 import { useRouter } from 'next/router'
 
 import { getServerSideTranslations } from '../shared/utils/serverSideTranslations'
@@ -12,7 +13,7 @@ export default function Home() {
     }
   })
 
-  return <div></div>
+  return <div tw="h-[calc(100 * var(--vh))]"></div>
 }
 
 export async function getStaticProps({ locale }) {
