@@ -105,28 +105,6 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   const [popperElement, setPopperElement] = useState<any>()
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement,
-    modifiers: [
-      {
-        name: 'preventOverflow',
-        options: {
-          boundary: 'clippingParents',
-        },
-      },
-      {
-        name: 'flip',
-        options: {
-          allowedAutoPlacements: ['bottom-end'],
-          fallbackPlacements: ['bottom-end', 'top-start'],
-          altBoundary: true,
-        },
-      },
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 4],
-        },
-      },
-    ],
   })
   const {
     isOpen,
@@ -181,15 +159,21 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
               error && hint && tw`bottom-16`,
             ]}
           >
-            <CloseButton label="Reset option" onClick={() => reset()} />
+            <CloseButton
+              label="Reset option"
+              onClick={() => {
+                reset()
+                onChange(null)
+              }}
+            />
           </div>
         )}
       </div>
       <ul
         {...getMenuProps({ ref: setPopperElement })}
-        style={styles.popper}
+        style={isOpen && inputItems.length > 0 ? styles.popper : { display: 'none' }}
         css={[
-          tw`w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
         ]}
         {...attributes.popper}
       >

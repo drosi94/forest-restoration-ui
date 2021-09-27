@@ -37,28 +37,6 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
   const [popperElement, setPopperElement] = useState<any>()
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement,
-    modifiers: [
-      {
-        name: 'preventOverflow',
-        options: {
-          boundary: 'clippingParents',
-        },
-      },
-      {
-        name: 'flip',
-        options: {
-          allowedAutoPlacements: ['bottom-end'],
-          fallbackPlacements: ['bottom-end', 'top-start'],
-          altBoundary: true,
-        },
-      },
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 4],
-        },
-      },
-    ],
   })
   const [inputValue, setInputValue] = useState('')
   const {
@@ -147,7 +125,7 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
               getDropdownProps({
                 preventKeyAction: isOpen,
                 onFocus: () => {
-                  if (!isOpen) {
+                  if (!isOpen && getFilteredItems(options)?.length > 0) {
                     openMenu()
                   }
                 },
@@ -175,9 +153,11 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
       </div>
       <ul
         {...getMenuProps({ ref: setPopperElement })}
-        style={styles.popper}
+        style={
+          isOpen && getFilteredItems(options)?.length > 0 ? styles.popper : { display: 'none' }
+        }
         css={[
-          tw`w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
           (!selectedItems || selectedItems.length == 0) && tw`-top-11!`,
         ]}
         {...attributes.popper}

@@ -3,6 +3,7 @@ import tw, { styled } from 'twin.macro'
 
 export type ButtonProps = MotionProps & {
   as?: string | any
+  type?: 'button' | 'submit' | 'reset'
   /**
    * The variant of the button
    */
@@ -73,6 +74,7 @@ const colorAndVariantStyles = (color: string, variant: string) => {
 export const Button: React.FC<ButtonProps> = styled.button(
   ({
     as,
+    type = 'button',
     variant = 'contained',
     color = 'primary',
     size = 'medium',

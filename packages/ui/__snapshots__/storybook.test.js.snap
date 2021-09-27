@@ -557,15 +557,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-12-label"
-    className="css-ecfv92-MultipleAutocomplete"
+    className="css-9tljps-MultipleAutocomplete"
     id="downshift-12-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -616,15 +614,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-0-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-0-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -685,15 +681,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-3-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-3-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -754,15 +748,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-6-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-6-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -813,15 +805,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-9-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-9-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
