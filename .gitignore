@@ -38,3 +38,5 @@ coverage/
 .env.local.*
 
 certificates/
+
+serviceAcount.json
