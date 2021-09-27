@@ -5,90 +5,96 @@ exports[`Storyshots Shared/Layout/Navbar Primary 1`] = `
   className="css-mcaga5-Navbar"
 >
   <div
-    className="css-a3ewee-Navbar"
+    className="css-16gzvtw-Navbar"
   >
     <div
-      className="css-14rh0m-Navbar"
+      className="css-7yfzc-Navbar"
     >
-      <div>
-        <a
-          className="css-140w4nz-Navbar"
-          href="#"
-        >
-          <div>
-            <img
-              alt="Forest Restoration logo"
-              src="test-file-stub"
-              style={
-                Object {
-                  "height": "45px",
-                  "width": "45px",
-                }
-              }
-            />
-          </div>
-        </a>
-      </div>
       <div
-        className="css-1ebo3nx-Navbar"
+        className="css-1l33m1y-Navbar"
       >
         <div
-          className="css-1xdgu2f-Navbar"
+          className="css-djhc0v-Navbar"
         >
           <a
+            className="css-16xyxo9-Navbar"
             href="#"
           >
-            <span
-              className="css-1g7mioc-primaryNav"
-            >
-              Features
-            </span>
+            <div>
+              <img
+                alt="Forest Restoration logo"
+                src="test-file-stub"
+                style={
+                  Object {
+                    "height": "45px",
+                    "width": "45px",
+                  }
+                }
+              />
+            </div>
           </a>
-          <a
-            href="#"
+        </div>
+        <div
+          className="css-cvynkf-Navbar"
+        >
+          <ul
+            className="css-tdv9cw-Navbar"
           >
-            <span
-              className="css-1g7mioc-primaryNav"
+            <a
+              href="#"
             >
-              Pricing
-            </span>
-          </a>
+              <span
+                className="css-1g7mioc-primaryNav"
+              >
+                Features
+              </span>
+            </a>
+            <a
+              href="#"
+            >
+              <span
+                className="css-1g7mioc-primaryNav"
+              >
+                Pricing
+              </span>
+            </a>
+          </ul>
         </div>
       </div>
       <div
-        className="css-1xdgu2f-Navbar"
+        className="css-1hl0h7l-Navbar"
       />
-      <div
-        className="css-16v3akf-Navbar"
+    </div>
+    <div
+      className="css-1nyu67i-Navbar"
+    >
+      <button
+        onClick={[Function]}
       >
-        <button
-          onClick={[Function]}
+        <svg
+          className="css-16fhvtl-Navbar"
+          fill="currentColor"
+          height="30"
+          viewBox="0 0 20 20"
+          width="30"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className="css-16fhvtl-Navbar"
-            fill="currentColor"
-            height="30"
-            viewBox="0 0 20 20"
-            width="30"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clipRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              fillRule="evenodd"
-            />
-          </svg>
-        </button>
-        <div
-          className="css-f4xaox-Navbar"
-        />
-      </div>
+          <path
+            clipRule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
+      <div
+        className="css-13hiyed-Navbar"
+      />
     </div>
   </div>
   <div
     className="css-joetz1-Navbar"
   >
-    <div
+    <ul
       className="css-4puh0d-Navbar"
     >
       <a
@@ -109,7 +115,7 @@ exports[`Storyshots Shared/Layout/Navbar Primary 1`] = `
           Pricing
         </span>
       </a>
-    </div>
+    </ul>
   </div>
 </nav>
 `;
