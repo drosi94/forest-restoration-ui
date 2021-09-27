@@ -118,10 +118,10 @@ export const Modal: React.FC<ModalProps> = ({
               overrideDialogBaseStyles,
             ]}
           >
-            <div tw="p-2">
+            <div tw="absolute top-6 right-8 md:top-4 md:right-6">
               <CloseButton buttonRef={closeButtonRef} onClick={handleClose} />
             </div>
-            <div tw="px-10 py-4">
+            <div tw="px-10 py-10">
               <Dialog.Title
                 as={Title}
                 variant="heading"
