@@ -3,7 +3,7 @@ import toast from 'react-hot-toast'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
-import { UserIcon } from '@heroicons/react/solid'
+import { HomeIcon, PlayIcon, UserIcon, BookOpenIcon } from '@heroicons/react/solid'
 import { Logo, Navbar, Typography, UserActionsPopover } from '@forest-restoration/shared'
 
 import { useAuthentication } from '../../providers/authentication'
@@ -48,13 +48,22 @@ export const Navigation = () => {
           }
           primaryNav={
             <>
-              <NavLink href="/" exact title={t('navigation:Home')} />
-              <NavLink href="/home" title={t('navigation:Playground')} />
-              <NavLink href="/blog" title={t('navigation:Blog')} />
+              <NavLink href="/" exact title={t('navigation:Home')} icon={<HomeIcon width="24" />} />
+              <NavLink
+                href="/home"
+                title={t('navigation:Playground')}
+                icon={<PlayIcon width="24" />}
+              />
+              <NavLink
+                href="/blog"
+                title={t('navigation:Blog')}
+                icon={<BookOpenIcon width="24" />}
+              />
             </>
           }
           secondaryNav={
             <>
+              <ToggleTheme />
               {isAuthenticated ? (
                 <UserActionsPopover
                   data-testid="nav-user-actions-popover"
@@ -91,7 +100,6 @@ export const Navigation = () => {
                   </a>
                 </AuthenticationLink>
               )}
-              <ToggleTheme />
             </>
           }
         />

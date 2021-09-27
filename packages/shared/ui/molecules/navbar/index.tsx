@@ -41,34 +41,37 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <nav ref={ref} tw="bg-bgSecondary">
-      <div tw="xl:max-w-7xl mx-auto py-2 px-4">
-        <div tw="flex justify-between">
-          <div>
-            {customLogo ? (
-              customLogo
-            ) : (
-              <a href="#" tw="flex items-center py-3 px-4">
-                <Logo size="custom" width={45} height={45} />
-              </a>
-            )}
-          </div>
-          <div tw="flex justify-center space-x-6 flex-1">
-            <div tw="hidden md:flex items-center space-x-4">{primaryNav}</div>
+      <div tw="xl:max-w-7xl mx-auto py-2 px-2">
+        <div tw="flex">
+          <div tw="flex flex-1 items-center gap-24">
+            <div tw="hidden md:block">
+              {customLogo ? (
+                customLogo
+              ) : (
+                <a href="#" tw=" py-3 px-4">
+                  <Logo size="custom" width={45} height={45} />
+                </a>
+              )}
+            </div>
+            <div tw="flex justify-center">
+              <ul tw="hidden md:flex md:items-center md:gap-16">{primaryNav}</ul>
+            </div>
           </div>
 
-          <div tw="hidden md:flex items-center space-x-4">{secondaryNav}</div>
+          <div tw="hidden md:flex md:items-center md:gap-8">{secondaryNav}</div>
+        </div>
 
-          <div tw="md:hidden flex items-center space-x-4">
-            <button onClick={() => setIsMobileMenuOpen((value) => !value)}>
-              <MenuIcon width="30" height="30" tw="text-textPrimary" />
-            </button>
-            {showSecondaryNavInMobile && <div tw="flex space-x-1 items-center">{secondaryNav}</div>}
-          </div>
+        {/* Small Screens */}
+        <div tw="md:hidden flex justify-between items-center">
+          <button onClick={() => setIsMobileMenuOpen((value) => !value)}>
+            <MenuIcon width="30" height="30" tw="text-textPrimary" />
+          </button>
+          {showSecondaryNavInMobile && <div tw="flex gap-4 items-center">{secondaryNav}</div>}
         </div>
       </div>
 
       <div css={[tw`md:hidden`, isSmallDevice && !isMobileMenuOpen && tw`hidden`]}>
-        <div tw="flex flex-col py-2 px-4 space-y-2">{primaryNav}</div>
+        <ul tw="flex flex-col py-2 px-4 space-y-2">{primaryNav}</ul>
       </div>
     </nav>
   )
