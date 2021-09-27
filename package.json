@@ -34,6 +34,7 @@
         "test:pwa": "lerna run test --scope @forest-restoration/pwa --stream",
         "test:pwa:u": "lerna run test:u --scope @forest-restoration/pwa --stream",
         "start:pwa": "lerna run dev --scope @forest-restoration/pwa --stream",
+        "start:dev": "concurrently \"yarn start:firebase:emulators\" \"lerna run dev --scope @forest-restoration/pwa --stream\"",
         "start:pwa:env": "lerna run dev:env --scope @forest-restoration/pwa --stream",
         "start:pwa:https": "lerna run start:https --scope @forest-restoration/pwa --stream",
         "start:pwa:https:env": "lerna run start:https:env --scope @forest-restoration/pwa --stream",
