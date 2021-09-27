@@ -38,7 +38,7 @@ exports[`Storyshots Shared/Layout/Navbar Primary 1`] = `
           className="css-cvynkf-Navbar"
         >
           <ul
-            className="css-tdv9cw-Navbar"
+            className="css-ml9ugw-Navbar"
           >
             <a
               href="#"
@@ -95,7 +95,7 @@ exports[`Storyshots Shared/Layout/Navbar Primary 1`] = `
     className="css-joetz1-Navbar"
   >
     <ul
-      className="css-4puh0d-Navbar"
+      className="css-df98z3-Navbar"
     >
       <a
         href="#"
