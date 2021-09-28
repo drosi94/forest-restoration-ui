@@ -48,6 +48,7 @@ export type TypographyProps = {
   htmlFor?: string
   css?: any
   children?: string | React.ReactNode
+  [key: string]: any
 }
 
 const variantStyles = {

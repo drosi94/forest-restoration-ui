@@ -12,7 +12,7 @@ export const Error: React.FC<ErrorProps> = ({ children, overrideErrorContainerSt
   return (
     <div css={[tw`mt-0.5`, overrideErrorContainerStyles]}>
       {typeof children === 'string' ? (
-        <Typography fontSize="small" css={[tw`text-error-300`]}>
+        <Typography fontSize="small" css={[tw`dark:text-error-300 text-error-500`]}>
           {children}
         </Typography>
       ) : (
