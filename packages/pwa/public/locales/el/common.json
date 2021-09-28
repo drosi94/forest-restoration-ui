@@ -1,4 +1,6 @@
 {
   "hello": "Γεια σου κοσμε",
-  "Something went wrong": "Κάτι πήγε στραβά. Δοκιμάστε ξανά."
+  "Something went wrong": "Κάτι πήγε στραβά. Δοκιμάστε ξανά.",
+  "You are not logged in": "Δεν είστε συνδεδεμένος",
+  "Login": "Σύνδεση"
 }

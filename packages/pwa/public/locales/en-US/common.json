@@ -1,4 +1,5 @@
 {
   "hello": "Hello World",
-  "Something went wrong": "Something went wrong. Try again."
+  "Something went wrong": "Something went wrong. Try again.",
+  "You are not logged in": "You are not authenticated"
 }

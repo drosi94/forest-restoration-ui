@@ -13,7 +13,7 @@
         "start:https:env": "node server.js",
         "cypress:headless": "cypress run",
         "cypress:headless:ci": "cypress run --record",
-        "test": "doppler run -- jest",
+        "test": "jest",
         "test:u": "jest -u",
         "test:ci": "jest --ci",
         "test:ci:u": "jest --ci -u",
