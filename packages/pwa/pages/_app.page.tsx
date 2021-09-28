@@ -12,6 +12,7 @@ import { AuthenticationProvider } from '../shared/providers/authentication'
 import '../theme.css'
 import '../firebase/clientApp'
 import { ModalHandler } from '../shared/components/modals/handler'
+import { RouteGuard } from '../shared/guards/routeGuard/routeGuard'
 
 if (process.env.NODE_ENV === 'production') {
   LogRocket.init('hq4geg/forest-restoration')
@@ -33,7 +34,9 @@ function MyApp({ Component, pageProps }) {
       {route !== '/maintenance' && <Navigation />}
       <div css={[tw`flex flex-col`, route === '/maintenance' && tw`h-[calc(100 * var(--vh))]`]}>
         <main tw="flex-1">
-          <Component {...pageProps} />
+          <RouteGuard>
+            <Component {...pageProps} />
+          </RouteGuard>
         </main>
 
         <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary">

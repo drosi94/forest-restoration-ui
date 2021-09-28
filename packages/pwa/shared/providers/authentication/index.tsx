@@ -7,16 +7,35 @@ export type State = {
   user?: firebase.User
 }
 
-const initialState = {
-  isAuthenticated: false,
-  user: null,
-}
-
 const useAuthenticationState = () => {
-  const [state, setState] = useState<State>(initialState)
+  const [state, setState] = useState<State>(() => {
+    try {
+      const storedUser = process.browser ? localStorage.getItem('user') : null
+      return {
+        isAuthenticated: !!storedUser,
+        user: storedUser ? (JSON.parse(storedUser) as firebase.User) : null,
+      }
+    } catch (err) {
+      return {
+        isAuthenticated: false,
+        user: null,
+      }
+    }
+  })
 
   useEffect(() => {
-    const unregisterAuthObserver = firebase.auth().onAuthStateChanged((user) => {
+    const unregisterAuthObserver = firebase.auth().onAuthStateChanged((user: firebase.User) => {
+      if (user) {
+        localStorage.setItem(
+          'user',
+          JSON.stringify({
+            displayName: user.displayName,
+            email: user.email,
+            emailVerified: user.emailVerified,
+            photoURL: user.photoURL,
+          })
+        )
+      }
       setState({
         isAuthenticated: !!user,
         user: user,
