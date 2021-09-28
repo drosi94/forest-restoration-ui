@@ -66,7 +66,7 @@ export default function Maintenance() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...await getServerSideTranslations(locale, ['maintenance']),
+      ...(await getServerSideTranslations(locale, ['maintenance'])),
     },
   }
 }
