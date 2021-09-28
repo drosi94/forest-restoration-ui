@@ -46,41 +46,7 @@ export default function Home() {
 
   return (
     <div tw="h-full py-8">
-      <div tw="flex h-full flex-col p-12 gap-3">
-        <form
-          tw="flex flex-col gap-2"
-          onSubmit={handleSubmit((data) => {
-            console.log(data)
-          })}
-          noValidate
-        >
-          <div>
-            <ControlledSwitch
-              labelPosition="top"
-              label="Love ME"
-              control={control}
-              name="LoveMe"
-              hint="Vale edw to genos soy"
-              rules={{ required: 'This is required' }}
-            />
-          </div>
-
-          <div>
-            <ControlledCheckbox
-              labelPosition="top"
-              label="Love ME2"
-              control={control}
-              name="LoveMe2"
-              hint="Vale edw to genos soy"
-              rules={{ required: 'This is required' }}
-            />
-          </div>
-
-          <div>
-            <Button type="submit">Submit</Button>
-          </div>
-        </form>
-      </div>
+      <div tw="flex h-full flex-col p-12 gap-3"></div>
     </div>
   )
 }
