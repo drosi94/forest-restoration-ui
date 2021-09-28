@@ -30,7 +30,7 @@ export const MultipleValueOptions = ({
       <Listbox.Options
         static
         css={[
-          tw`absolute w-full mt-1 overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+          tw`absolute w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
         ]}
       >
         {options.map((option: any) => {

@@ -22,16 +22,13 @@ export const SingleValueOptions = ({
     >
       <Listbox.Options
         css={[
-          tw`absolute w-full py-1 mt-1 overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+          tw`absolute w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
         ]}
       >
         {shouldResetOption && (
-          <Listbox.Option
-            css={[tw`cursor-pointer select-none relative py-2 pl-10 pr-4`]}
-            value={null}
-          >
-            {({ selected }) => (
-              <>
+          <Listbox.Option css={[tw`cursor-pointer select-none relative`]} value={null}>
+            {({ selected, active }) => (
+              <div css={[tw`py-2 pl-10 pr-4`, active && tw`bg-primary-400 rounded-md`]}>
                 <Typography
                   italic
                   css={[tw`block truncate font-normal`, selected && tw`font-medium`]}
@@ -43,20 +40,20 @@ export const SingleValueOptions = ({
                     <CheckIcon css={[tw`w-5 h-5`]} aria-hidden="true" />
                   </Typography>
                 ) : null}
-              </>
+              </div>
             )}
           </Listbox.Option>
         )}
         {options.map((option, index) => (
           <Listbox.Option
             key={index}
-            css={[tw`cursor-pointer select-none relative py-2 pl-10 pr-4 text-gray-900`]}
+            css={[tw`cursor-pointer select-none relative text-gray-900`]}
             value={option}
           >
-            {() => {
+            {({ active }) => {
               const selected = getItem(option, optionValueItem) === getItem(value, optionValueItem)
               return (
-                <>
+                <div css={[tw`py-2 pl-10 pr-4`, active && tw`bg-primary-400 rounded-md`]}>
                   <Typography css={[tw`block truncate font-normal`, selected && tw`font-medium`]}>
                     {getItem(option, optionLabelItem) || noOptionText}
                   </Typography>
@@ -65,7 +62,7 @@ export const SingleValueOptions = ({
                       <CheckIcon css={[tw`w-5 h-5`]} aria-hidden="true" />
                     </Typography>
                   ) : null}
-                </>
+                </div>
               )
             }}
           </Listbox.Option>

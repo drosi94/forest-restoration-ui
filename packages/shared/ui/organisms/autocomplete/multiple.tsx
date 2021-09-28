@@ -37,28 +37,6 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
   const [popperElement, setPopperElement] = useState<any>()
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement,
-    modifiers: [
-      {
-        name: 'preventOverflow',
-        options: {
-          boundary: 'clippingParents',
-        },
-      },
-      {
-        name: 'flip',
-        options: {
-          allowedAutoPlacements: ['bottom-end'],
-          fallbackPlacements: ['bottom-end', 'top-start'],
-          altBoundary: true,
-        },
-      },
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 4],
-        },
-      },
-    ],
   })
   const [inputValue, setInputValue] = useState('')
   const {
@@ -117,8 +95,12 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
   })
   return (
     <>
-      <Typography as="label" css={[error && tw`text-red-300`]} {...getLabelProps()}>
-        {label} {required && <Typography tw="text-red-300">*</Typography>}
+      <Typography
+        as="label"
+        css={[error && tw`dark:text-red-300 text-red-500`]}
+        {...getLabelProps()}
+      >
+        {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
       </Typography>
       <div>
         {selectedItems.map((selectedItem, index) => (
@@ -147,7 +129,7 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
               getDropdownProps({
                 preventKeyAction: isOpen,
                 onFocus: () => {
-                  if (!isOpen) {
+                  if (!isOpen && getFilteredItems(options)?.length > 0) {
                     openMenu()
                   }
                 },
@@ -175,9 +157,11 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
       </div>
       <ul
         {...getMenuProps({ ref: setPopperElement })}
-        style={styles.popper}
+        style={
+          isOpen && getFilteredItems(options)?.length > 0 ? styles.popper : { display: 'none' }
+        }
         css={[
-          tw`w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
           (!selectedItems || selectedItems.length == 0) && tw`-top-11!`,
         ]}
         {...attributes.popper}

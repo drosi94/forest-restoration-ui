@@ -557,15 +557,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-12-label"
-    className="css-ecfv92-MultipleAutocomplete"
+    className="css-9tljps-MultipleAutocomplete"
     id="downshift-12-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -616,15 +614,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-0-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-0-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -634,7 +630,7 @@ Array [
 exports[`Storyshots Shared/UI/Form/Autocomplete With Error 1`] = `
 Array [
   <label
-    className="css-1myuzso-Typography-Autocomplete e1eqcpp10"
+    className="css-1kwh7z2-Typography-Autocomplete e1eqcpp10"
     htmlFor="downshift-3-input"
     id="downshift-3-label"
   >
@@ -685,15 +681,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-3-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-3-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -754,15 +748,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-6-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-6-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -813,15 +805,13 @@ Array [
   </div>,
   <ul
     aria-labelledby="downshift-9-label"
-    className="css-ksmlrf-Autocomplete"
+    className="css-m8nvmy-Autocomplete"
     id="downshift-9-menu"
     onMouseLeave={[Function]}
     role="listbox"
     style={
       Object {
-        "left": "0",
-        "position": "absolute",
-        "top": "0",
+        "display": "none",
       }
     }
   />,
@@ -835,13 +825,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Bottom 1`] = `
   >
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-408"
+      id="checkbox-696"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="css-18h3u6a-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-408"
+      htmlFor="checkbox-696"
     >
       Checkbox
     </label>
@@ -856,14 +846,14 @@ exports[`Storyshots Shared/UI/Form/Checkbox Disabled 1`] = `
   >
     <label
       className="css-sf2mkl-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-359"
+      htmlFor="checkbox-399"
     >
       Checkbox
     </label>
     <input
       className="css-1sggt6y-Checkbox"
       disabled={true}
-      id="checkbox-359"
+      id="checkbox-399"
       onChange={[Function]}
       type="checkbox"
     />
@@ -878,13 +868,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Hidden 1`] = `
   >
     <label
       className="css-y4hnk2-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-602"
+      htmlFor="checkbox-694"
     >
       Checkbox
     </label>
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-602"
+      id="checkbox-694"
       onChange={[Function]}
       type="checkbox"
     />
@@ -899,13 +889,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Primary 1`] = `
   >
     <label
       className="css-18h3u6a-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-53"
+      htmlFor="checkbox-368"
     >
       Checkbox
     </label>
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-53"
+      id="checkbox-368"
       onChange={[Function]}
       type="checkbox"
     />
@@ -920,13 +910,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Right 1`] = `
   >
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-98"
+      id="checkbox-453"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="css-18h3u6a-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-98"
+      htmlFor="checkbox-453"
     >
       Checkbox
     </label>
@@ -941,13 +931,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Top 1`] = `
   >
     <label
       className="css-18h3u6a-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-613"
+      htmlFor="checkbox-705"
     >
       Checkbox
     </label>
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-613"
+      id="checkbox-705"
       onChange={[Function]}
       type="checkbox"
     />
@@ -962,13 +952,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox With Error 1`] = `
   >
     <label
       className="css-1957myq-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-149"
+      htmlFor="checkbox-524"
     >
       Checkbox
     </label>
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-149"
+      id="checkbox-524"
       onChange={[Function]}
       type="checkbox"
     />
@@ -993,13 +983,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox With Hint 1`] = `
   >
     <label
       className="css-18h3u6a-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-239"
+      htmlFor="checkbox-486"
     >
       Checkbox
     </label>
     <input
       className="css-1ot7rjd-Checkbox"
-      id="checkbox-239"
+      id="checkbox-486"
       onChange={[Function]}
       type="checkbox"
     />
@@ -1337,7 +1327,7 @@ Array [
       className="css-1q842lx-Select"
     >
       <span
-        className="css-1ep4288-Typography-Select e1eqcpp10"
+        className="css-11nvf49-Typography-Select e1eqcpp10"
         id="headlessui-listbox-label-22"
         onClick={[Function]}
       >
@@ -1597,7 +1587,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
     />
   </button>
   <span
-    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    className="css-caznhu-Typography-Label e1eqcpp10"
     id="headlessui-label-37"
     onClick={[Function]}
   >
@@ -1611,7 +1601,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
   className="css-gxbv2c-Switch"
 >
   <span
-    className="css-1ng4m2i-Typography-Label e1eqcpp10"
+    className="css-bb366v-Typography-Label e1eqcpp10"
     id="headlessui-label-40"
     onClick={[Function]}
   >
@@ -1671,7 +1661,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
   className="css-gxbv2c-Switch"
 >
   <span
-    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    className="css-caznhu-Typography-Label e1eqcpp10"
     id="headlessui-label-30"
     onClick={[Function]}
   >
@@ -1725,7 +1715,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
     />
   </button>
   <span
-    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    className="css-caznhu-Typography-Label e1eqcpp10"
     id="headlessui-label-33"
     onClick={[Function]}
   >
@@ -1739,7 +1729,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
   className="css-1halu6f-Switch"
 >
   <span
-    className="css-a4pg8w-Typography-Label e1eqcpp10"
+    className="css-caznhu-Typography-Label e1eqcpp10"
     id="headlessui-label-34"
     onClick={[Function]}
   >
@@ -1814,7 +1804,7 @@ Array [
     className="css-gxbv2c-Switch"
   >
     <span
-      className="css-a4pg8w-Typography-Label e1eqcpp10"
+      className="css-x1fweb-Typography-Label e1eqcpp10"
       id="headlessui-label-44"
       onClick={[Function]}
     >
@@ -1860,7 +1850,7 @@ Array [
     className="css-gxbv2c-Switch"
   >
     <span
-      className="css-a4pg8w-Typography-Label e1eqcpp10"
+      className="css-caznhu-Typography-Label e1eqcpp10"
       id="headlessui-label-42"
       onClick={[Function]}
     >

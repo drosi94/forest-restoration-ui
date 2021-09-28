@@ -144,8 +144,8 @@ export const Select: React.FC<SelectProps> = ({
     <Listbox value={value} onChange={handleSelection}>
       <div css={[tw`relative mt-1`]}>
         <div css={[tw`mb-2`]}>
-          <Listbox.Label as={Typography} css={[error && tw`text-red-300`]}>
-            {label} {required && <Typography tw="text-red-300">*</Typography>}
+          <Listbox.Label as={Typography} css={[error && tw`dark:text-red-300 text-red-500`]}>
+            {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
           </Listbox.Label>
         </div>
         {!multiple ? (

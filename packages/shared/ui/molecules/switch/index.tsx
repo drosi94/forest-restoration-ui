@@ -81,59 +81,71 @@ relative inline-flex items-center h-6 rounded-full w-11
 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
 `
 
-export const Switch: React.FC<SwitchProps> = ({
-  label,
-  labelPosition = 'left',
-  checked,
-  disabled,
-  onChange,
-  caretColor = 'textPrimary',
-  checkedColor = 'primary',
-  notCheckedColor = 'secondary',
-  error,
-  hint,
-  overrideLabelStyles,
-  overrideHintContainerStyles,
-  overrideErrorContainerStyles,
-}) => {
-  const Label = () => (
-    <BaseSwitch.Label
-      as={Typography}
-      css={[disabled && tw`cursor-not-allowed`, overrideLabelStyles]}
-    >
-      {label}
-    </BaseSwitch.Label>
-  )
-  return (
-    <BaseSwitch.Group>
-      <div css={[tw`flex`, getLabelPositionStyles(labelPosition)]}>
-        {(labelPosition === 'left' || labelPosition === 'top') && <Label />}
-        <BaseSwitch
-          checked={checked}
-          onChange={onChange}
-          css={[
-            switchBaseStyles,
-            checked && getColorStyles(checkedColor),
-            !checked && getColorStyles(notCheckedColor),
-            disabled && tw`bg-opacity-40 cursor-not-allowed`,
-            error && tw`bg-error-500!`,
-          ]}
-        >
-          <label tw="sr-only">{label}</label>
-          <span
+export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
+  (
+    {
+      label,
+      labelPosition = 'left',
+      checked,
+      disabled,
+      onChange,
+      caretColor = 'textPrimary',
+      checkedColor = 'primary',
+      notCheckedColor = 'secondary',
+      error,
+      hint,
+      overrideLabelStyles,
+      overrideHintContainerStyles,
+      overrideErrorContainerStyles,
+    },
+    ref
+  ) => {
+    const Label = () => (
+      <BaseSwitch.Label
+        as={Typography}
+        css={[
+          disabled && tw`cursor-not-allowed`,
+          error && tw`dark:text-error-300 text-error-500`,
+          overrideLabelStyles,
+        ]}
+      >
+        {label}
+      </BaseSwitch.Label>
+    )
+    return (
+      <BaseSwitch.Group>
+        <div css={[tw`flex`, getLabelPositionStyles(labelPosition)]}>
+          {(labelPosition === 'left' || labelPosition === 'top') && <Label />}
+          <BaseSwitch
+            checked={checked}
+            onChange={onChange}
             css={[
-              tw`inline-block w-4 h-4 transform transition ease-in-out duration-200  rounded-full`,
-              getColorStyles(caretColor),
-              checked && tw`translate-x-6`,
-              !checked && tw`translate-x-1`,
-              disabled && tw`bg-opacity-30`,
+              switchBaseStyles,
+              checked && getColorStyles(checkedColor),
+              !checked && getColorStyles(notCheckedColor),
+              disabled && tw`bg-opacity-40 cursor-not-allowed`,
+              error && tw`bg-error-500!`,
             ]}
-          />
-        </BaseSwitch>
-        {(labelPosition === 'right' || labelPosition === 'bottom') && <Label />}
-      </div>
-      {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
-      {error && <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>}
-    </BaseSwitch.Group>
-  )
-}
+          >
+            <label tw="sr-only">{label}</label>
+            <span
+              ref={ref}
+              css={[
+                tw`inline-block w-4 h-4 transform transition ease-in-out duration-200  rounded-full`,
+                getColorStyles(caretColor),
+                checked && tw`translate-x-6`,
+                !checked && tw`translate-x-1`,
+                disabled && tw`bg-opacity-30`,
+              ]}
+            />
+          </BaseSwitch>
+          {(labelPosition === 'right' || labelPosition === 'bottom') && <Label />}
+        </div>
+        {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
+        {error && (
+          <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>
+        )}
+      </BaseSwitch.Group>
+    )
+  }
+)

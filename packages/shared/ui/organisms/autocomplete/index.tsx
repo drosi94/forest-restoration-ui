@@ -105,28 +105,6 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   const [popperElement, setPopperElement] = useState<any>()
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement,
-    modifiers: [
-      {
-        name: 'preventOverflow',
-        options: {
-          boundary: 'clippingParents',
-        },
-      },
-      {
-        name: 'flip',
-        options: {
-          allowedAutoPlacements: ['bottom-end'],
-          fallbackPlacements: ['bottom-end', 'top-start'],
-          altBoundary: true,
-        },
-      },
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 4],
-        },
-      },
-    ],
   })
   const {
     isOpen,
@@ -159,8 +137,12 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   })
   return (
     <>
-      <Typography as="label" css={[error && tw`text-red-300`]} {...getLabelProps()}>
-        {label} {required && <Typography tw="text-red-300">*</Typography>}
+      <Typography
+        as="label"
+        css={[error && tw`dark:text-red-300 text-red-500`]}
+        {...getLabelProps()}
+      >
+        {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
       </Typography>
       <div {...getComboboxProps()} css={[tw`relative`, overrideContainerStyles]}>
         <Input
@@ -181,15 +163,21 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
               error && hint && tw`bottom-16`,
             ]}
           >
-            <CloseButton label="Reset option" onClick={() => reset()} />
+            <CloseButton
+              label="Reset option"
+              onClick={() => {
+                reset()
+                onChange(null)
+              }}
+            />
           </div>
         )}
       </div>
       <ul
         {...getMenuProps({ ref: setPopperElement })}
-        style={styles.popper}
+        style={isOpen && inputItems.length > 0 ? styles.popper : { display: 'none' }}
         css={[
-          tw`w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm`,
+          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
         ]}
         {...attributes.popper}
       >
