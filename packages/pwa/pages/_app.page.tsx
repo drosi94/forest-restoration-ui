@@ -1,9 +1,9 @@
 import LogRocket from 'logrocket'
+import tw, { GlobalStyles } from 'twin.macro'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { appWithTranslation } from 'next-i18next'
-import { GlobalStyles } from 'twin.macro'
 import { Toast } from '@forest-restoration/shared'
 import { useFixHeightViewport } from '../shared/hooks/useFixHeightViewport'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/theme'
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       {route !== '/maintenance' && <Navigation />}
-      <div tw="flex flex-col">
+      <div css={[tw`flex flex-col`, route === '/maintenance' && tw`h-[calc(100 * var(--vh))]`]}>
         <main tw="flex-1">
           <Component {...pageProps} />
         </main>
