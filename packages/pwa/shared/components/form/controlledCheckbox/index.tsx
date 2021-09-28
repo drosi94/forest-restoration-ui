@@ -1,13 +1,13 @@
 import { useController, UseControllerProps } from 'react-hook-form'
-import { Switch, SwitchProps } from '@forest-restoration/shared'
+import { Checkbox, CheckboxProps } from '@forest-restoration/shared'
 
-export const ControlledSwitch: React.FC<Omit<SwitchProps, 'name'> & UseControllerProps> = ({
+export const ControlledCheckbox: React.FC<Omit<CheckboxProps, 'name'> & UseControllerProps> = ({
   name,
   rules,
   shouldUnregister,
   defaultValue,
   control,
-  ...restSwitchProps
+  ...restCheckboxProps
 }) => {
   const { field, fieldState } = useController({
     name,
@@ -20,9 +20,9 @@ export const ControlledSwitch: React.FC<Omit<SwitchProps, 'name'> & UseControlle
   const { error, invalid } = fieldState
 
   return (
-    <Switch
+    <Checkbox
       {...field}
-      {...restSwitchProps}
+      {...restCheckboxProps}
       checked={field.value}
       error={invalid ? error?.message : undefined}
     />

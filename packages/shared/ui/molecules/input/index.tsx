@@ -168,7 +168,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
       >
         {Component}
         <Typography as="label" htmlFor={id} tw="absolute duration-300 top-3 left-2 z-auto ">
-          {label} {required && <Typography tw="text-red-300">*</Typography>}
+          {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
         </Typography>
         {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
         {error && (

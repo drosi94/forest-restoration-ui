@@ -95,8 +95,12 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
   })
   return (
     <>
-      <Typography as="label" css={[error && tw`text-red-300`]} {...getLabelProps()}>
-        {label} {required && <Typography tw="text-red-300">*</Typography>}
+      <Typography
+        as="label"
+        css={[error && tw`dark:text-red-300 text-red-500`]}
+        {...getLabelProps()}
+      >
+        {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
       </Typography>
       <div>
         {selectedItems.map((selectedItem, index) => (

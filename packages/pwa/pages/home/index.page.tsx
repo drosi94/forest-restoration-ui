@@ -13,6 +13,7 @@ import {
   ControlledSwitch,
 } from '../../shared/components/form'
 import { Button } from '../../../shared'
+import { ControlledCheckbox } from '../../shared/components/form/controlledCheckbox'
 
 const options = [
   { label: 'Test1', value: 'test1' },
@@ -38,6 +39,7 @@ export default function Home() {
       AutoOne: '',
       AutoMulti: '',
       LoveMe: false,
+      LoveMe2: false,
     },
     mode: 'onChange',
   })
@@ -53,80 +55,29 @@ export default function Home() {
           noValidate
         >
           <div>
-            <ControlledInput
-              required
-              label="First Name"
-              control={control}
-              name="FirstName"
-              rules={{ required: 'This is required' }}
-              hint="Vale edw to onoma soy"
-            />
-          </div>
-
-          <div>
-            <ControlledSelect
-              required
-              shouldResetOption
-              options={options}
-              label="Gender2"
-              control={control}
-              name="Gender2"
-              rules={{ required: 'This is required' }}
-              hint="Vale edw to genos soy2"
-            />
-          </div>
-          <div>
-            <ControlledSelect
-              required
-              shouldResetOption
-              multiple
-              options={options}
-              label="Gender"
-              control={control}
-              name="Gender"
-              rules={{ required: 'This is required' }}
-              hint="Vale edw to genos soy"
-            />
-          </div>
-          <div tw="w-96">
-            <ControlledAutocomplete
-              required
-              shouldResetOption
-              options={options}
-              label="AutoOne"
-              control={control}
-              name="AutoOne"
-              rules={{ required: 'This is required' }}
-              hint="Vale edw to AutoOne soy"
-            />
-          </div>
-          <div tw="w-96">
-            <ControlledMultipleAutocomplete
-              required
-              shouldResetOption
-              options={options}
-              label="AutoMulti"
-              control={control}
-              name="AutoMulti"
-              rules={{ required: 'This is required' }}
-              hint="Vale edw to genos soy"
-            />
-          </div>
-
-          <div>
             <ControlledSwitch
               labelPosition="top"
               label="Love ME"
               control={control}
               name="LoveMe"
               hint="Vale edw to genos soy"
+              rules={{ required: 'This is required' }}
             />
           </div>
 
           <div>
-            <Button type="submit" disabled={!isValid}>
-              Submit
-            </Button>
+            <ControlledCheckbox
+              labelPosition="top"
+              label="Love ME2"
+              control={control}
+              name="LoveMe2"
+              hint="Vale edw to genos soy"
+              rules={{ required: 'This is required' }}
+            />
+          </div>
+
+          <div>
+            <Button type="submit">Submit</Button>
           </div>
         </form>
       </div>
