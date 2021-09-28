@@ -1,18 +1,18 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { Switch, SwitchProps, Typography } from '@forest-restoration/shared'
+import { Checkbox, CheckboxProps, Typography } from '@forest-restoration/shared'
 
 export default {
-  title: 'Shared/UI/Form/Switch',
-  component: Switch,
+  title: 'Shared/UI/Form/Checkbox',
+  component: Checkbox,
 } as Meta
 
-const Template: Story<SwitchProps> = (args) => <Switch {...args} />
+const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  label: 'Switch',
+  label: 'Checkbox',
 }
 
 export const Right = Template.bind({})
@@ -38,14 +38,6 @@ Hidden.args = {
   ...Primary.args,
   labelPosition: 'hidden',
 }
-
-export const WithDoubleText = (args) => (
-  <div className="flex flex-row gap-2">
-    <Typography>Left</Typography>
-    <Switch label="Label" {...args} labelPosition="hidden" />
-    <Typography>Right</Typography>
-  </div>
-)
 
 export const Disabled = Template.bind({})
 Disabled.args = {

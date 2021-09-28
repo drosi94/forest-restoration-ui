@@ -8,6 +8,7 @@
         "husky": "^7.0.1",
         "lerna": "^4.0.0",
         "prettier": "^2.2.0",
+        "tailwind-accent-color": "^1.0.2",
         "tailwindcss-hyphens": "^0.1.0",
         "twin.macro": "2.7.0",
         "wait-on": "^6.0.0"

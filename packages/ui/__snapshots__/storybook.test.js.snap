@@ -675,7 +675,7 @@ Array [
         className="css-safnee-Error"
       >
         <span
-          className="css-dzbg2z-Typography-Error e1eqcpp10"
+          className="css-m9hr97-Typography-Error e1eqcpp10"
           fontSize="small"
         >
           This is an error
@@ -826,6 +826,195 @@ Array [
     }
   />,
 ]
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox Bottom 1`] = `
+<div>
+  <div
+    className="css-17w6mc7-Checkbox"
+  >
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-408"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="css-18h3u6a-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-408"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox Disabled 1`] = `
+<div>
+  <div
+    className="css-cm0rpc-Checkbox"
+  >
+    <label
+      className="css-sf2mkl-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-359"
+    >
+      Checkbox
+    </label>
+    <input
+      className="css-1sggt6y-Checkbox"
+      disabled={true}
+      id="checkbox-359"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox Hidden 1`] = `
+<div>
+  <div
+    className="css-1ilhwpv-Checkbox"
+  >
+    <label
+      className="css-y4hnk2-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-602"
+    >
+      Checkbox
+    </label>
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-602"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox Primary 1`] = `
+<div>
+  <div
+    className="css-cm0rpc-Checkbox"
+  >
+    <label
+      className="css-18h3u6a-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-53"
+    >
+      Checkbox
+    </label>
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-53"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox Right 1`] = `
+<div>
+  <div
+    className="css-cm0rpc-Checkbox"
+  >
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-98"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="css-18h3u6a-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-98"
+    >
+      Checkbox
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox Top 1`] = `
+<div>
+  <div
+    className="css-17w6mc7-Checkbox"
+  >
+    <label
+      className="css-18h3u6a-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-613"
+    >
+      Checkbox
+    </label>
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-613"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox With Error 1`] = `
+<div>
+  <div
+    className="css-cm0rpc-Checkbox"
+  >
+    <label
+      className="css-1957myq-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-149"
+    >
+      Checkbox
+    </label>
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-149"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+  <div
+    className="css-safnee-Error"
+  >
+    <span
+      className="css-m9hr97-Typography-Error e1eqcpp10"
+      fontSize="small"
+    >
+      This is an error
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shared/UI/Form/Checkbox With Hint 1`] = `
+<div>
+  <div
+    className="css-cm0rpc-Checkbox"
+  >
+    <label
+      className="css-18h3u6a-Typography-Label e1eqcpp10"
+      htmlFor="checkbox-239"
+    >
+      Checkbox
+    </label>
+    <input
+      className="css-1ot7rjd-Checkbox"
+      id="checkbox-239"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+  <div
+    className="css-1y0sv9c-Hint"
+  >
+    <span
+      className="css-19xwz45-Typography e1eqcpp10"
+      fontSize="small"
+    >
+      A useful hint here
+    </span>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Shared/UI/Form/Input Date 1`] = `
@@ -983,7 +1172,7 @@ exports[`Storyshots Shared/UI/Form/Input With Text Error 1`] = `
     className="css-safnee-Error"
   >
     <span
-      className="css-dzbg2z-Typography-Error e1eqcpp10"
+      className="css-m9hr97-Typography-Error e1eqcpp10"
       fontSize="small"
     >
       This is an error
@@ -1197,7 +1386,7 @@ Array [
     className="css-safnee-Error"
   >
     <span
-      className="css-dzbg2z-Typography-Error e1eqcpp10"
+      className="css-m9hr97-Typography-Error e1eqcpp10"
       fontSize="small"
     >
       This is an error
@@ -1388,9 +1577,8 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
   className="css-1halu6f-Switch"
 >
   <button
-    aria-checked={true}
     aria-labelledby="headlessui-label-37"
-    className="css-i4flkr-Switch"
+    className="css-5mbv1f-Switch"
     id="headlessui-switch-36"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1405,7 +1593,7 @@ exports[`Storyshots Shared/UI/Form/Switch Bottom 1`] = `
       Switch
     </label>
     <span
-      className="css-1ldsxb7-Switch"
+      className="css-1rpbwei-Switch"
     />
   </button>
   <span
@@ -1424,16 +1612,15 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
 >
   <span
     className="css-1ng4m2i-Typography-Label e1eqcpp10"
-    id="headlessui-label-42"
+    id="headlessui-label-40"
     onClick={[Function]}
   >
     Switch
   </span>
   <button
-    aria-checked={true}
-    aria-labelledby="headlessui-label-42"
-    className="css-9bbghf-Switch"
-    id="headlessui-switch-43"
+    aria-labelledby="headlessui-label-40"
+    className="css-omx1r8-Switch"
+    id="headlessui-switch-41"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1447,7 +1634,7 @@ exports[`Storyshots Shared/UI/Form/Switch Disabled 1`] = `
       Switch
     </label>
     <span
-      className="css-vi6nt4-Switch"
+      className="css-90s7w6-Switch"
     />
   </button>
 </div>
@@ -1458,44 +1645,8 @@ exports[`Storyshots Shared/UI/Form/Switch Hidden 1`] = `
   className="css-1dgmue2-Switch"
 >
   <button
-    aria-checked={true}
-    className="css-i4flkr-Switch"
-    id="headlessui-switch-38"
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    onKeyUp={[Function]}
-    role="switch"
-    tabIndex={0}
-    type="button"
-  >
-    <label
-      className="css-so2e4e-Switch"
-    >
-      Switch
-    </label>
-    <span
-      className="css-1ldsxb7-Switch"
-    />
-  </button>
-</div>
-`;
-
-exports[`Storyshots Shared/UI/Form/Switch Not Checked 1`] = `
-<div
-  className="css-gxbv2c-Switch"
->
-  <span
-    className="css-a4pg8w-Typography-Label e1eqcpp10"
-    id="headlessui-label-40"
-    onClick={[Function]}
-  >
-    Switch
-  </span>
-  <button
-    aria-checked={false}
-    aria-labelledby="headlessui-label-40"
     className="css-5mbv1f-Switch"
-    id="headlessui-switch-41"
+    id="headlessui-switch-38"
     onClick={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
@@ -1527,9 +1678,8 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
     Switch
   </span>
   <button
-    aria-checked={true}
     aria-labelledby="headlessui-label-30"
-    className="css-i4flkr-Switch"
+    className="css-5mbv1f-Switch"
     id="headlessui-switch-31"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1544,7 +1694,7 @@ exports[`Storyshots Shared/UI/Form/Switch Primary 1`] = `
       Switch
     </label>
     <span
-      className="css-1ldsxb7-Switch"
+      className="css-1rpbwei-Switch"
     />
   </button>
 </div>
@@ -1555,9 +1705,8 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
   className="css-gxbv2c-Switch"
 >
   <button
-    aria-checked={true}
     aria-labelledby="headlessui-label-33"
-    className="css-i4flkr-Switch"
+    className="css-5mbv1f-Switch"
     id="headlessui-switch-32"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1572,7 +1721,7 @@ exports[`Storyshots Shared/UI/Form/Switch Right 1`] = `
       Switch
     </label>
     <span
-      className="css-1ldsxb7-Switch"
+      className="css-1rpbwei-Switch"
     />
   </button>
   <span
@@ -1597,9 +1746,8 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
     Switch
   </span>
   <button
-    aria-checked={true}
     aria-labelledby="headlessui-label-34"
-    className="css-i4flkr-Switch"
+    className="css-5mbv1f-Switch"
     id="headlessui-switch-35"
     onClick={[Function]}
     onKeyPress={[Function]}
@@ -1614,7 +1762,7 @@ exports[`Storyshots Shared/UI/Form/Switch Top 1`] = `
       Switch
     </label>
     <span
-      className="css-1ldsxb7-Switch"
+      className="css-1rpbwei-Switch"
     />
   </button>
 </div>
@@ -1667,16 +1815,15 @@ Array [
   >
     <span
       className="css-a4pg8w-Typography-Label e1eqcpp10"
-      id="headlessui-label-46"
+      id="headlessui-label-44"
       onClick={[Function]}
     >
       Switch
     </span>
     <button
-      aria-checked={true}
-      aria-labelledby="headlessui-label-46"
-      className="css-i1qc5z-Switch"
-      id="headlessui-switch-47"
+      aria-labelledby="headlessui-label-44"
+      className="css-64nakb-Switch"
+      id="headlessui-switch-45"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -1690,7 +1837,7 @@ Array [
         Switch
       </label>
       <span
-        className="css-1ldsxb7-Switch"
+        className="css-1rpbwei-Switch"
       />
     </button>
   </div>,
@@ -1698,7 +1845,7 @@ Array [
     className="css-safnee-Error"
   >
     <span
-      className="css-dzbg2z-Typography-Error e1eqcpp10"
+      className="css-m9hr97-Typography-Error e1eqcpp10"
       fontSize="small"
     >
       This is an error
@@ -1714,16 +1861,15 @@ Array [
   >
     <span
       className="css-a4pg8w-Typography-Label e1eqcpp10"
-      id="headlessui-label-44"
+      id="headlessui-label-42"
       onClick={[Function]}
     >
       Switch
     </span>
     <button
-      aria-checked={true}
-      aria-labelledby="headlessui-label-44"
-      className="css-i4flkr-Switch"
-      id="headlessui-switch-45"
+      aria-labelledby="headlessui-label-42"
+      className="css-5mbv1f-Switch"
+      id="headlessui-switch-43"
       onClick={[Function]}
       onKeyPress={[Function]}
       onKeyUp={[Function]}
@@ -1737,7 +1883,7 @@ Array [
         Switch
       </label>
       <span
-        className="css-1ldsxb7-Switch"
+        className="css-1rpbwei-Switch"
       />
     </button>
   </div>,
@@ -2883,7 +3029,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-48"
+    id="headlessui-tabs-tab-46"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2900,7 +3046,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-49"
+    id="headlessui-tabs-tab-47"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2917,7 +3063,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList Primary 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-50"
+    id="headlessui-tabs-tab-48"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2943,7 +3089,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-51"
+    id="headlessui-tabs-tab-49"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -2974,7 +3120,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-52"
+    id="headlessui-tabs-tab-50"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -3005,7 +3151,7 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-53"
+    id="headlessui-tabs-tab-51"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -3045,69 +3191,69 @@ exports[`Storyshots Shared/UI/Tabs/TabList With Only Icons 1`] = `
   <button
     aria-selected={false}
     className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-52"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
+    id="headlessui-tabs-tab-53"
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    role="tab"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1qv0jkg-TabList"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </span>
+    <span
+      className="css-1k75k7r-Typography-TabList e1eqcpp10"
+      fontSize="small"
+    >
+      
+    </span>
+  </button>
+  <button
+    aria-selected={false}
+    className="css-1duw0jq-TabList"
     id="headlessui-tabs-tab-54"
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    role="tab"
-    tabIndex={-1}
-  >
-    <span
-      className="css-1qv0jkg-TabList"
-    >
-      <svg
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        width={24}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
-        />
-      </svg>
-    </span>
-    <span
-      className="css-1k75k7r-Typography-TabList e1eqcpp10"
-      fontSize="small"
-    >
-      
-    </span>
-  </button>
-  <button
-    aria-selected={false}
-    className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-55"
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    role="tab"
-    tabIndex={-1}
-  >
-    <span
-      className="css-1qv0jkg-TabList"
-    >
-      <svg
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        width={24}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
-        />
-      </svg>
-    </span>
-    <span
-      className="css-1k75k7r-Typography-TabList e1eqcpp10"
-      fontSize="small"
-    >
-      
-    </span>
-  </button>
-  <button
-    aria-selected={false}
-    className="css-1duw0jq-TabList"
-    id="headlessui-tabs-tab-56"
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -3148,7 +3294,7 @@ Array [
     <button
       aria-selected={false}
       className="css-1duw0jq-TabList"
-      id="headlessui-tabs-tab-57"
+      id="headlessui-tabs-tab-55"
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3165,7 +3311,7 @@ Array [
     <button
       aria-selected={false}
       className="css-1duw0jq-TabList"
-      id="headlessui-tabs-tab-58"
+      id="headlessui-tabs-tab-56"
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3182,7 +3328,7 @@ Array [
     <button
       aria-selected={false}
       className="css-1duw0jq-TabList"
-      id="headlessui-tabs-tab-59"
+      id="headlessui-tabs-tab-57"
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}

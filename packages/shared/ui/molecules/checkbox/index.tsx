@@ -1,14 +1,14 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { Switch as BaseSwitch } from '@headlessui/react'
 import { Typography, Hint, Error } from '../../atoms'
-import { getColorStyles, Color } from '../../utils'
+import { Color, getAccentColorStyles } from '../../utils'
 
 type LabelPosition = 'left' | 'right' | 'top' | 'bottom' | 'hidden'
 
-export type SwitchProps = {
+export type CheckboxProps = {
+  id?: string
   /**
-   * The label of the switch. Should be defined even if it's hidden for accessibility reasons.
+   * The label of the checkbox. Should be defined even if it's hidden for accessibility reasons.
    */
   label: string
   /**
@@ -16,35 +16,31 @@ export type SwitchProps = {
    */
   labelPosition?: 'left' | 'right' | 'top' | 'bottom' | 'hidden'
   /**
-   * Should the switch be in checked state
+   * Should the checkbox be in checked state
    */
   checked?: boolean
   /**
-   * Should the switch be disabled
+   * Should the checkbox be disabled
    */
   disabled?: boolean
   /**
-   * Callback function to be called when the switch is toggled
+   * Should the checkbox be checked
+   */
+  required?: boolean
+  /**
+   * The color of the switch
+   */
+  accentColor?: Color
+  /**
+   * Callback function to be called when the checkbox is toggled
    */
   onChange?: (checked: boolean) => void
   /**
-   * The color of the caret
-   */
-  caretColor?: Color
-  /**
-   * The color of the switch in checked state
-   */
-  checkedColor?: Color
-  /**
-   * The color of the switch in not checked state
-   */
-  notCheckedColor?: Color
-  /**
-   * The error of the switch
+   * The error of the checkbox
    */
   error?: string | React.ReactNode
   /**
-   * The hint of the switch
+   * The hint of the checkbox
    */
   hint?: string | React.ReactNode
   /**
@@ -61,6 +57,8 @@ export type SwitchProps = {
   overrideErrorContainerStyles?: any
 }
 
+const noop = () => {}
+
 const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   switch (labelPosition) {
     case 'left':
@@ -76,64 +74,70 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   }
 }
 
-const switchBaseStyles = tw`
+const checkboxBaseStyles = tw`
 relative inline-flex items-center h-6 rounded-full w-11 
 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
 `
 
-export const Switch: React.FC<SwitchProps> = ({
+export const Checkbox: React.FC<CheckboxProps> = ({
+  id,
   label,
   labelPosition = 'left',
   checked,
   disabled,
-  onChange,
-  caretColor = 'textPrimary',
-  checkedColor = 'primary',
-  notCheckedColor = 'secondary',
+  required,
+  accentColor = 'primary',
+  onChange = noop,
   error,
   hint,
   overrideLabelStyles,
   overrideHintContainerStyles,
   overrideErrorContainerStyles,
 }) => {
+  const forId = id || `checkbox-${Math.floor(Math.random() * 1000)}`
+
   const Label = () => (
-    <BaseSwitch.Label
-      as={Typography}
-      css={[disabled && tw`cursor-not-allowed`, overrideLabelStyles]}
+    <Typography
+      as="label"
+      htmlFor={forId}
+      css={[
+        disabled && tw`cursor-not-allowed`,
+        error && tw`dark:text-error-300 text-error-500`,
+        labelPosition === 'hidden' && tw`sr-only`,
+        overrideLabelStyles,
+      ]}
     >
       {label}
-    </BaseSwitch.Label>
+    </Typography>
   )
+
   return (
-    <BaseSwitch.Group>
+    <div>
       <div css={[tw`flex`, getLabelPositionStyles(labelPosition)]}>
-        {(labelPosition === 'left' || labelPosition === 'top') && <Label />}
-        <BaseSwitch
+        {(labelPosition === 'left' || labelPosition === 'top' || labelPosition === 'hidden') && (
+          <Label />
+        )}
+        <input
+          id={forId}
+          type="checkbox"
+          required={required}
           checked={checked}
-          onChange={onChange}
+          disabled={disabled}
+          onChange={
+            onChange
+              ? (e: React.FormEvent<HTMLInputElement>) => onChange(e.currentTarget.checked)
+              : undefined
+          }
           css={[
-            switchBaseStyles,
-            checked && getColorStyles(checkedColor),
-            !checked && getColorStyles(notCheckedColor),
-            disabled && tw`bg-opacity-40 cursor-not-allowed`,
-            error && tw`bg-error-500!`,
+            checkboxBaseStyles,
+            getAccentColorStyles(accentColor),
+            disabled && tw`cursor-not-allowed`,
           ]}
-        >
-          <label tw="sr-only">{label}</label>
-          <span
-            css={[
-              tw`inline-block w-4 h-4 transform transition ease-in-out duration-200  rounded-full`,
-              getColorStyles(caretColor),
-              checked && tw`translate-x-6`,
-              !checked && tw`translate-x-1`,
-              disabled && tw`bg-opacity-30`,
-            ]}
-          />
-        </BaseSwitch>
+        />
         {(labelPosition === 'right' || labelPosition === 'bottom') && <Label />}
       </div>
       {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
       {error && <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>}
-    </BaseSwitch.Group>
+    </div>
   )
 }

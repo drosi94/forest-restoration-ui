@@ -62,6 +62,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('tailwindcss-hyphens'),
     require('@tailwindcss/line-clamp'),
+    require('tailwind-accent-color')(),
   ],
   xwind: {
     mode: 'objectstyles',
