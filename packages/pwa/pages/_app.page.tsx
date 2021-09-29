@@ -33,21 +33,21 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyles />
       {route !== '/maintenance' && <Navigation />}
       <div css={[tw`flex flex-col`, route === '/maintenance' && tw`h-[calc(100 * var(--vh))]`]}>
-        <main tw="flex-1">
-          <RouteGuard>
+        <RouteGuard>
+          <main tw="flex-1">
             <Component {...pageProps} />
-          </RouteGuard>
-        </main>
+          </main>
 
-        <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://vercel.com/?utm_source=forest-restoration&utm_campaign=oss"
-          >
-            <Image alt="Vercel Logo" src="/poweredByVercel.png" width={212} height={44} />
-          </a>
-        </footer>
+          <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://vercel.com/?utm_source=forest-restoration&utm_campaign=oss"
+            >
+              <Image alt="Vercel Logo" src="/poweredByVercel.png" width={212} height={44} />
+            </a>
+          </footer>
+        </RouteGuard>
       </div>
       <ModalHandler />
     </>

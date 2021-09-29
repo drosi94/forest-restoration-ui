@@ -9,7 +9,9 @@ export const firebaseConfig: any = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
 
-const firebaseApp = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app()
+export const firebaseApp = !firebase.apps.length
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app()
 
 if (!firebase.apps.length) {
   // Enable analytics if env variable is set and the process is in browser
@@ -62,4 +64,9 @@ if (
     .useEmulator(`http://localhost:${process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_AUTH_PORT}`)
 }
 
-export { firebaseApp, firebase }
+export const firestore = firebase.firestore()
+export const serverTimestamp = firebase.firestore.FieldValue.serverTimestamp
+export const fromMillis = firebase.firestore.Timestamp.fromMillis
+export const increment = firebase.firestore.FieldValue.increment
+
+export { firebase }

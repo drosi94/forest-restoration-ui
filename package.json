@@ -76,6 +76,7 @@
         "daisyui": "^1.14.2",
         "date-fns": "^2.24.0",
         "postcss": "^8.2.10",
+        "loadash": "^1.0.0",
         "react-use": "^17.2.4",
         "tailwindcss": "^2.1.1"
     }

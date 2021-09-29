@@ -20,6 +20,6 @@ export const ControlledInput: React.FC<Omit<InputProps, 'name' | 'id'> & UseCont
   const { error, invalid } = fieldState
 
   return (
-    <Input {...field} {...restInputProps} id={name} error={invalid ? error?.message : undefined} />
+    <Input error={invalid ? error?.message : undefined} {...field} {...restInputProps} id={name} />
   )
 }

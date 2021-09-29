@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import tw from 'twin.macro'
-import { useKeyPressEvent, useMedia } from 'react-use'
+import { useKey, useMedia } from 'react-use'
 
 import { Typography } from '../../atoms'
 
@@ -79,8 +79,8 @@ export const FormStepper: React.FC<FormStepperProps> = ({
     }
   }
 
-  useKeyPressEvent('ArrowRight', handleNextStep)
-  useKeyPressEvent('ArrowLeft', handlePreviousStep)
+  useKey((event) => event.shiftKey && event.keyCode === 39, handleNextStep, { event: 'keyup' })
+  useKey((event) => event.shiftKey && event.keyCode === 37, handlePreviousStep, { event: 'keyup' })
 
   if (isSmallDevice && steps.length > 4) {
     return null
