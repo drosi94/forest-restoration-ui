@@ -13156,9 +13156,9 @@ next-pwa@^5.3.1:
     workbox-window "^6.2.4"
 
 next-sanity-image@^3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-3.1.6.tgz#618781754f31636a42339c479958ecd5e009bdc1"
-  integrity sha512-+DWafmOyS/9EA1tpR/bh2wmz6vBWLm9x1z1i8VJbC54mkqsoODX9xwVX270FL5eazaqPYQjEpnnZkXuv6cwGXw==
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-3.1.7.tgz#3b57bcecd6987aadc85d2761d0164b21fe243947"
+  integrity sha512-mk842380HwDrlUSmyyx54MGcGcbz847c2rCTj9c75lkO+VSpuJ00+uaiJE3arktrnHAUV4XCZ+OVxJ6C1mqtBw==
   dependencies:
     "@sanity/image-url" "^0.140.22"
 
