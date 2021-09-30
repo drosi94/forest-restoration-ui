@@ -14,6 +14,8 @@ export const useUsernameUnique = (regex: RegExp) => {
     debounce(async (value: string) => {
       if (!value) return true
 
+      console.log(value)
+
       const username = value.toLowerCase()
 
       if (!regex.test(username)) {

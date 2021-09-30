@@ -1,12 +1,9 @@
-import tw from 'twin.macro'
-import { useCallback, useState } from 'react'
+import 'twin.macro'
 import { useTranslation } from 'next-i18next'
 import { useFormContext } from 'react-hook-form'
-import debounce from 'lodash.debounce'
 import { Typography } from '@forest-restoration/shared'
 
-import { ControlledInput } from '../../../../shared/components/form'
-import { firestore } from '../../../../firebase/clientApp'
+import { ControlledInput } from 'shared/components/form'
 import { useUsernameUnique } from './useUsernameUnique'
 
 const USERNAME_REGEX = /^(?=[a-zA-Z0-9._]{3,15}$)(?!.*[_.]{2})[^_.].*[^_.]$/
@@ -20,12 +17,9 @@ const UsernameHint = ({ showLoading }) => {
 
       <div tw="p-4">
         <ul tw="list-disc">
-          <li>At least 3 characters</li>
-          <li>Maximum 15 characters</li>
-          <li>
-            Does not contain special characters. Only '<kbd>.</kbd>' and '<kbd>_</kbd>' are valid
-          </li>
-          <li>Does not contain spaces</li>
+          <li>{t('profile:At least 3 and maximum 15 characters')}</li>
+          <li>{t('profile:Spaces are not valid')}</li>
+          <li>{t('profile:Only "." and "_" are valid characters')}</li>
         </ul>
       </div>
     </>
@@ -46,14 +40,16 @@ export const PickUsername = () => {
   return (
     <div tw="flex flex-col flex-1 gap-8">
       <Typography>
-        Pick a unique username to use in the application. It will be visible by the other users.
+        {t(
+          'profile:Pick a unique username to use in the application. It will be visible by the other users.'
+        )}
       </Typography>
 
       <ControlledInput
         required
         name="username"
         control={control}
-        label={t('Choose username')}
+        label={t('profile:Choose username')}
         hint={<UsernameHint showLoading={isUsernameCheckLoading} />}
         error={
           !isUsernameCheckLoading ? usernameCheckError || errors?.username?.message : undefined
@@ -61,7 +57,7 @@ export const PickUsername = () => {
         rules={{
           required: { value: true, message: t('profile:Username is required') },
           minLength: { value: 3, message: t('profile:Username is too short') },
-          maxLength: { value: 15, message: t('profile:Username is too big') },
+          maxLength: { value: 15, message: t('profile:Username is too long') },
           pattern: {
             value: USERNAME_REGEX,
             message: t('profile:Username contains invalid characters'),

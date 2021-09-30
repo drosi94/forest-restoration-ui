@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { HTMLInputTypeAttribute } from 'react'
 import tw, { theme } from 'twin.macro'
 import TextareaAutosize from 'react-textarea-autosize'
 import { Typography, Hint, Error } from '../../atoms'
@@ -11,7 +11,7 @@ export type InputProps = {
   /**
    * The id of the input
    */
-  type?: string
+  type?: HTMLInputTypeAttribute
   /**
    * The name of the input
    */

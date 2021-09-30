@@ -1,7 +1,8 @@
 import 'twin.macro'
 import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
-import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
+import { getServerSideTranslations } from 'shared/utils/serverSideTranslations'
+
 import { CreateProfile } from './create'
 
 export default function Profile() {
