@@ -1,83 +1,76 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import tw from 'twin.macro'
 import { RadioGroup as BaseRadioGroup } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/outline'
+import { Typography } from '../..'
+
+export type RadioOption = {
+  id: string
+  label: string
+  description?: string
+}
 
 export type RadioGroupProps = {
-    /**
-     * Default opened
-     */
-    isOpened?: boolean
-
+  items: RadioOption[],
+  label: string
 }
 
 const plans = [
-    {
-        label: 'Startup',
-        description: '12GB'
-    },
-    {
-        label: 'Business',
-        description: '16GB'
-    },
-    {
-        label: 'Enterprise',
-        description: '32GB'
-    },
+  {
+    label: 'Startup',
+    description: '12GB',
+  },
+  {
+    label: 'Business',
+    description: '16GB',
+  },
+  {
+    label: 'Enterprise',
+ 
+  },
 ]
 
-export const RadioGroup: React.FC<RadioGroupProps> = ({
+export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans,  label}) => {
+  const [selected, setSelected] = useState(plans[0])
 
-}) => {
-
-    const [selected, setSelected] = useState(plans[0])
-
-    return (
-        <div tw="w-full px-4 py-16">
-            <div tw="w-full max-w-md mx-auto">
-                <BaseRadioGroup value={selected} onChange={setSelected}>
-                    <BaseRadioGroup.Label tw="sr-only">Server size</BaseRadioGroup.Label>
-                    <div tw="space-y-2">
-                        {plans.map((plan) => (
-                            <BaseRadioGroup.Option
-                                key={plan.label}
-                                value={plan}
-                                className={({ active, checked }) =>
-                                    `${active ? 'ring-2 ring-offset-2 ring-offset-primary-300 ring-white ring-opacity-60' : ''}
-                                    ${checked ? 'bg-primary-900 bg-opacity-75 text-white': 'bg-white' }
-                                    relative rounded-lg shadow-md px-5 py-4 cursor-pointer flex focus:outline-none`
-                                }
-                            >
-                                {({ active, checked }) => (
-                                    <>
-                                        <div tw="flex items-center w-full bg-blue-200">
-                                            <div tw="text-white ml-1 mr-4">
-                                                <CheckIcon tw="w-6 h-6" />
-                                            </div>
-                                            <div tw="text-sm">
-                                                <BaseRadioGroup.Label
-                                                    as="p"
-                                                    className={`font-medium  ${checked ? 'text-primary-100' : 'text-white'}`}
-                                                >
-                                                    {plan.label}
-                                                </BaseRadioGroup.Label>
-                                                <BaseRadioGroup.Description
-                                                    as="span"
-                                                    className={`inline ${checked ? 'text-primary-100' : 'text-white'}`}
-                                                >
-                                                    <span>
-                                                        {plan.description}
-                                                    </span>
-                                                </BaseRadioGroup.Description>
-                                            </div>
-                                        </div>
-                                    </>
-                                )}
-                            </BaseRadioGroup.Option>
-                        ))}
-                    </div>
-                </BaseRadioGroup>
-            </div>
-        </div>
-    )
+  return (
+    <BaseRadioGroup value={selected} onChange={setSelected}>
+      <BaseRadioGroup.Label tw="sr-only">{label}</BaseRadioGroup.Label>
+      <div tw="space-y-2">
+        {items.map((item) => (
+          <BaseRadioGroup.Option
+            key={item.label}
+            value={item}
+            as={Fragment}
+          >
+            {({ active, checked }) => (
+              <div
+                css={[
+                  tw`relative shadow-md rounded-lg cursor-pointer flex focus:outline-none`,
+                  active &&
+                    tw`ring-2 ring-offset-2 ring-offset-primary-300 ring-white ring-opacity-60`,
+                  checked &&
+                    tw`bg-primary-500 bg-opacity-75 text-textPrimary border-2 border-gray-300`,
+                ]}
+              >
+                <div tw="flex items-center w-full bg-bgSecondary rounded-lg p-2">
+                  <div tw="text-textPrimary ml-1 mr-4">
+                    {checked && <CheckIcon tw="w-6 h-6" />}
+                  </div>
+                  <div tw="flex flex-col gap-2">
+                    <BaseRadioGroup.Label as={Typography} fontSize="small" fontWeight="bold">
+                      {item.label}
+                    </BaseRadioGroup.Label>
+                    <BaseRadioGroup.Description as={Typography} fontSize="xsmall">
+                      <span>{item.description}</span>
+                    </BaseRadioGroup.Description>
+                  </div>
+                </div>
+              </div>
+            )}
+          </BaseRadioGroup.Option>
+        ))}
+      </div>
+    </BaseRadioGroup>
+  )
 }
