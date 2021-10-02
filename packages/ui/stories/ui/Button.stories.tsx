@@ -34,7 +34,7 @@ Contained.args = {
 export const Outlined = Template.bind({})
 Outlined.args = {
   ...Primary.args,
-  variant: 'outlined',
+  variant: 'outline',
 }
 
 export const Text = Template.bind({})
@@ -65,18 +65,6 @@ export const FullWidth = Template.bind({})
 FullWidth.args = {
   ...Primary.args,
   fullWidth: true,
-}
-
-export const Rounded = Template.bind({})
-Rounded.args = {
-  ...Primary.args,
-  rounded: true,
-}
-
-export const NoShadow = Template.bind({})
-NoShadow.args = {
-  ...Primary.args,
-  noShadow: true,
 }
 
 export const Disabled = Template.bind({})

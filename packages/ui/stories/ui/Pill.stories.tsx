@@ -32,5 +32,5 @@ WithIcon.args = {
 export const CustomChildren = Template.bind({})
 CustomChildren.args = {
   ...Primary.args,
-  children: <button className="border-2 border-secondary-400">I am a button</button>,
+  children: <button className="border-2 border-primaryTemp-400">I am a button</button>,
 }

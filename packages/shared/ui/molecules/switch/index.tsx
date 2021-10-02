@@ -78,7 +78,7 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
 
 const switchBaseStyles = tw`
 relative inline-flex items-center h-6 rounded-full w-11 
-transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
+transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryTemp-900
 `
 
 export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
@@ -105,7 +105,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
         as={Typography}
         css={[
           disabled && tw`cursor-not-allowed`,
-          error && tw`dark:text-error-300 text-error-500`,
+          error && tw`dark:text-danger-300 text-danger-500`,
           overrideLabelStyles,
         ]}
       >
@@ -124,7 +124,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
               checked && getColorStyles(checkedColor),
               !checked && getColorStyles(notCheckedColor),
               disabled && tw`bg-opacity-40 cursor-not-allowed`,
-              error && tw`bg-error-500!`,
+              error && tw`bg-danger-500!`,
             ]}
           >
             <label tw="sr-only">{label}</label>

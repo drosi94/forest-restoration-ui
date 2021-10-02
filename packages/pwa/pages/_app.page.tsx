@@ -9,6 +9,7 @@ import { useFixHeightViewport } from '../shared/hooks/useFixHeightViewport'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/theme'
 import { Navigation } from '../shared/components/navigation'
 import { AuthenticationProvider } from '../shared/providers/authentication'
+import 'tailwindcss/tailwind.css'
 import '../theme.css'
 import '../firebase/clientApp'
 import { ModalHandler } from '../shared/components/modals/handler'
@@ -36,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
 
-        <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary-300">
+        <footer tw="flex justify-center items-end p-2 border-t-2 border-secondaryTemp-300">
           <a
             target="_blank"
             rel="noreferrer"

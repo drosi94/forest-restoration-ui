@@ -30,7 +30,7 @@ export const MultipleValueOptions = ({
       <Listbox.Options
         static
         css={[
-          tw`absolute w-full overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
+          tw`absolute w-full overflow-auto text-base bg-base-200 rounded-md shadow-lg max-h-60 sm:text-sm z-50`,
         ]}
       >
         {options.map((option: any) => {
@@ -42,7 +42,7 @@ export const MultipleValueOptions = ({
               value={option}
             >
               {({ active }) => (
-                <div css={[active && tw`bg-primary-500 rounded-md`]}>
+                <div css={[active && tw`bg-primary rounded-md`]}>
                   <Typography
                     css={[
                       tw`block truncate font-normal py-2 pl-10 pr-4 `,

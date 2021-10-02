@@ -1,3 +1,4 @@
+const fs = require('fs')
 const path = require('path')
 
 const toPath = (_path) => path.join(process.cwd(), _path)
@@ -18,7 +19,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     'storybook-dark-mode',
-    'storybook-tailwind-dark-mode',
+    'storybook-addon-themes',
     {
       name: '@storybook/addon-docs',
       options: {
@@ -41,11 +42,27 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          '@emotion/core': toPath('../../node_modules/@emotion/react'),
-          '@emotion/styled': toPath('../../node_modules/@emotion/styled'),
-          'emotion-theming': toPath('../../node_modules/@emotion/react'),
+          '@emotion/core': getPackageDir('@emotion/react'),
+          '@emotion/styled': getPackageDir('@emotion/styled'),
+          'emotion-theming': getPackageDir('@emotion/react'),
         },
       },
     }
   },
+}
+
+function getPackageDir(filepath) {
+  let currDir = path.dirname(require.resolve(filepath))
+  while (true) {
+    if (fs.existsSync(path.join(currDir, 'package.json'))) {
+      return currDir
+    }
+    const { dir, root } = path.parse(currDir)
+    if (dir === root) {
+      throw new Error(
+        `Could not find package.json in the parent directories starting from ${filepath}.`
+      )
+    }
+    currDir = dir
+  }
 }

@@ -24,7 +24,7 @@ export const CloseButton: React.FC<CloseButtonProps> = ({
         onClick()
       }}
       css={[
-        tw`float-right cursor-pointer hover:opacity-70 text-textPrimary active:text-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500`,
+        tw`float-right cursor-pointer hover:opacity-70 text-base-content active:text-neutral-content focus:ring-2 focus:ring-offset-2 focus:ring-primary`,
       ]}
       aria-label={label}
     >

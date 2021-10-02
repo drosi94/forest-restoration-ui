@@ -33,9 +33,7 @@ export const MultipleValueButton = ({
         <>
           {(!selectedValueLabels || selectedValueLabels.length === 0) && (
             <div tw="flex items-center">
-              <Typography css={[tw`block truncate  dark:text-textPrimary text-textSecondary`]}>
-                {placeholder}
-              </Typography>
+              <Typography css={[tw`block truncate text-primary-content`]}>{placeholder}</Typography>
             </div>
           )}
           {selectedValueLabels &&

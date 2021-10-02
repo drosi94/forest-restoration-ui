@@ -91,7 +91,7 @@ export type SelectProps = {
   overrideErrorContainerStyles?: any
 }
 
-const baseSelectContainerStyle = tw`relative w-full py-2 pl-3 pr-10 text-left bg-primary-500 rounded-lg shadow-md cursor-default text-textPrimary focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-primary-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm
+const baseSelectContainerStyle = tw`select-primary bg-primary relative w-full py-2 pl-3 pr-10 text-left rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-primaryTemp-300 focus-visible:ring-offset-2 sm:text-sm
 `
 
 export const Select: React.FC<SelectProps> = ({
@@ -142,11 +142,12 @@ export const Select: React.FC<SelectProps> = ({
   }
   return (
     <Listbox value={value} onChange={handleSelection}>
-      <div css={[tw`relative mt-1`]}>
-        <div css={[tw`mb-2`]}>
-          <Listbox.Label as={Typography} css={[error && tw`dark:text-red-300 text-red-500`]}>
-            {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
+      <div css={[tw`relative form-control`]}>
+        <div css={[tw`flex gap-1`]}>
+          <Listbox.Label as={Typography} css={[tw`label`, error && tw`text-error`]}>
+            {label}
           </Listbox.Label>
+          {required && <Typography tw="self-center text-error">*</Typography>}
         </div>
         {!multiple ? (
           <SingleValueButton
