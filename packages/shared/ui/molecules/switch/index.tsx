@@ -2,7 +2,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Switch as BaseSwitch } from '@headlessui/react'
 import { Typography, Hint, Error } from '../../atoms'
-import { getColorStyles, Color } from '../../utils'
+import { BaseColor } from '../../utils'
 
 type LabelPosition = 'left' | 'right' | 'top' | 'bottom' | 'hidden'
 
@@ -14,7 +14,7 @@ export type SwitchProps = {
   /**
    * The position of the label
    */
-  labelPosition?: 'left' | 'right' | 'top' | 'bottom' | 'hidden'
+  labelPosition?: LabelPosition
   /**
    * Should the switch be in checked state
    */
@@ -28,17 +28,13 @@ export type SwitchProps = {
    */
   onChange?: (checked: boolean) => void
   /**
-   * The color of the caret
-   */
-  caretColor?: Color
-  /**
    * The color of the switch in checked state
    */
-  checkedColor?: Color
+  checkedColor?: BaseColor | 'textPrimary'
   /**
    * The color of the switch in not checked state
    */
-  notCheckedColor?: Color
+  notCheckedColor?: BaseColor | 'textPrimary'
   /**
    * The error of the switch
    */
@@ -65,7 +61,7 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   switch (labelPosition) {
     case 'left':
     case 'right':
-      return tw`flex-row gap-4`
+      return tw`flex-row items-center gap-4`
     case 'top':
     case 'bottom':
       return tw`flex-col gap-2`
@@ -76,10 +72,20 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   }
 }
 
-const switchBaseStyles = tw`
-relative inline-flex items-center h-6 rounded-full w-11 
-transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryTemp-900
-`
+const getAccentColorStyles = (color: BaseColor | 'textPrimary') => {
+  switch (color) {
+    case 'primary':
+      return tw`toggle-primary`
+    case 'secondary':
+      return tw`toggle-secondary`
+    case 'textPrimary':
+      return tw`bg-base-content`
+    default:
+      return tw`bg-primary`
+  }
+}
+
+const BaseLabel = (props) => <Typography as="label" {...props} />
 
 export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
   (
@@ -89,9 +95,8 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
       checked,
       disabled,
       onChange,
-      caretColor = 'textPrimary',
       checkedColor = 'primary',
-      notCheckedColor = 'secondary',
+      notCheckedColor = 'textPrimary',
       error,
       hint,
       overrideLabelStyles,
@@ -100,12 +105,16 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
     },
     ref
   ) => {
+    const id = `switch-${label}`
+
     const Label = () => (
       <BaseSwitch.Label
-        as={Typography}
+        as={BaseLabel}
+        htmlFor={id}
         css={[
+          tw`label`,
           disabled && tw`cursor-not-allowed`,
-          error && tw`dark:text-danger-300 text-danger-500`,
+          error && tw`text-error`,
           overrideLabelStyles,
         ]}
       >
@@ -114,30 +123,23 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
     )
     return (
       <BaseSwitch.Group>
-        <div css={[tw`flex`, getLabelPositionStyles(labelPosition)]}>
+        <div aria-checked={checked} css={[tw`form-control`, getLabelPositionStyles(labelPosition)]}>
           {(labelPosition === 'left' || labelPosition === 'top') && <Label />}
-          <BaseSwitch
-            checked={checked}
-            onChange={onChange}
-            css={[
-              switchBaseStyles,
-              checked && getColorStyles(checkedColor),
-              !checked && getColorStyles(notCheckedColor),
-              disabled && tw`bg-opacity-40 cursor-not-allowed`,
-              error && tw`bg-danger-500!`,
-            ]}
-          >
-            <label tw="sr-only">{label}</label>
-            <span
-              ref={ref}
+          {/* @ts-ignore */}
+          <BaseSwitch as="div" checked={checked} onChange={onChange} ref={ref}>
+            <input
+              id={id}
+              type="checkbox"
+              checked={checked}
               css={[
-                tw`inline-block w-4 h-4 transform transition ease-in-out duration-200  rounded-full`,
-                getColorStyles(caretColor),
-                checked && tw`translate-x-6`,
-                !checked && tw`translate-x-1`,
-                disabled && tw`bg-opacity-30`,
+                tw`toggle`,
+                checked && getAccentColorStyles(checkedColor),
+                !checked && getAccentColorStyles(notCheckedColor),
+                disabled && tw`bg-opacity-40 cursor-not-allowed`,
+                error && tw`bg-error`,
               ]}
             />
+            <label tw="sr-only">{label}</label>
           </BaseSwitch>
           {(labelPosition === 'right' || labelPosition === 'bottom') && <Label />}
         </div>

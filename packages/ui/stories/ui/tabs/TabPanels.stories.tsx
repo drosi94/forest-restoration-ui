@@ -1,4 +1,5 @@
 import React from 'react'
+import 'twin.macro'
 import { Story, Meta } from '@storybook/react'
 
 import { Tab, TabList, TabPanels, TabPanelsProps } from '@forest-restoration/shared'
@@ -15,7 +16,7 @@ const Template: Story<TabPanelsProps> = (args) => {
       tab: tabs[0],
       component: (
         <div tw="p-4">
-          <span tw="text-textPrimary">Hello there 1</span>
+          <span tw="text-base-content">Hello there 1</span>
         </div>
       ),
     },
@@ -23,7 +24,7 @@ const Template: Story<TabPanelsProps> = (args) => {
       tab: tabs[1],
       component: (
         <div tw="p-4">
-          <span tw="text-textPrimary">Hello there 2</span>
+          <span tw="text-base-content">Hello there 2</span>
         </div>
       ),
     },
@@ -31,7 +32,7 @@ const Template: Story<TabPanelsProps> = (args) => {
       tab: tabs[2],
       component: (
         <div tw="p-4">
-          <span tw="text-textPrimary">Hello there 3</span>
+          <span tw="text-base-content text-opacity-100">Hello there 3</span>
         </div>
       ),
     },

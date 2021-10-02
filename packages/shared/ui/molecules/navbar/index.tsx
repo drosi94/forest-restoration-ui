@@ -40,40 +40,40 @@ export const Navbar: React.FC<NavbarProps> = ({
   })
 
   return (
-    <nav ref={ref} tw="bg-bgSecondary">
-      <div tw="xl:max-w-7xl mx-auto py-2 px-2">
-        <div tw="flex">
-          <div tw="flex flex-1 items-center gap-24">
-            <div tw="hidden md:block">
-              {customLogo ? (
-                customLogo
-              ) : (
-                <a href="#" tw="py-3 px-4">
-                  <Logo size="custom" width={45} height={45} />
-                </a>
-              )}
-            </div>
-            <div tw="flex justify-center">
-              <ul tw="hidden md:flex md:items-center md:gap-12">{primaryNav}</ul>
-            </div>
+    <>
+      <nav
+        ref={ref}
+        tw="sm:hidden navbar xl:max-w-7xl mx-auto py-2 px-2 mb-2 shadow-lg bg-base-200 text-base-content rounded-box"
+      >
+        <div tw="navbar-start">
+          <div tw="hidden md:block">
+            {customLogo ? (
+              customLogo
+            ) : (
+              <a href="#" tw="py-3 px-4">
+                <Logo size="custom" width={45} height={45} />
+              </a>
+            )}
           </div>
-
-          <div tw="hidden md:flex md:items-center md:gap-8">{secondaryNav}</div>
+        </div>
+        <div tw="flex justify-center navbar-center">
+          <ul tw="hidden md:flex md:items-center md:gap-12">{primaryNav}</ul>
         </div>
 
+        <div tw="hidden md:flex md:items-center md:gap-8 md:navbar-end">{secondaryNav}</div>
+
         {/* Small Screens */}
-        <div tw="md:hidden flex justify-between items-center">
+        <div tw="md:hidden flex justify-between items-center navbar-start">
           <button onClick={() => setIsMobileMenuOpen((value) => !value)}>
             <MenuIcon width="30" height="30" tw="text-textPrimary" />
           </button>
           {showSecondaryNavInMobile && <div tw="flex gap-4 items-center">{secondaryNav}</div>}
         </div>
-      </div>
-
+      </nav>
       <div css={[tw`md:hidden`, isSmallDevice && !isMobileMenuOpen && tw`hidden`]}>
         <ul tw="flex flex-col py-2 px-4 space-y-3">{primaryNav}</ul>
       </div>
-    </nav>
+    </>
   )
 }
 

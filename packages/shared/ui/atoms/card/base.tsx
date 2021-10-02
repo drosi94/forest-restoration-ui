@@ -33,11 +33,11 @@ export type BaseCardProps = {
   children?: string | React.ReactNode
 }
 
-const baseStyles = tw`w-full flex flex-col gap-2 flex-wrap items-start p-4 shadow-lg border-2 leading-relaxed break-words hyphens-auto`
+const baseStyles = tw`card bordered lg:card-side shadow-lg leading-relaxed break-words hyphens-auto`
 
 const colorStyles = (color: string) => [
-  color === 'bgSecondary' && tw`bg-bgSecondary border-bgPrimary border-opacity-30 text-textPrimary`,
-  color === 'bgPrimary' && tw`bg-bgPrimary border-bgSecondary border-opacity-30 text-textPrimary`,
+  color === 'bgSecondary' && tw`bg-base-200 text-base-content`,
+  color === 'bgPrimary' && tw`bg-base-100 text-base-content`,
 ]
 
 export const BaseCard: React.FC<BaseCardProps> = React.forwardRef<any, BaseCardProps>(
@@ -70,7 +70,7 @@ export const BaseCard: React.FC<BaseCardProps> = React.forwardRef<any, BaseCardP
         overrideStyles,
       ]}
     >
-      {children}
+      <div tw="card-body">{children}</div>
     </div>
   )
 )

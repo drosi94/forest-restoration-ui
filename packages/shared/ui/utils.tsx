@@ -1,27 +1,23 @@
 import tw from 'twin.macro'
 
-export type Color =
-  | 'primary'
-  | 'secondary'
-  | 'bgPrimary'
-  | 'bgSecondary'
-  | 'textPrimary'
-  | 'textSecondary'
+export type BaseColor = 'primary' | 'secondary'
+
+export type Color = BaseColor | 'bgPrimary' | 'bgSecondary' | 'textPrimary' | 'textSecondary'
 
 export const getColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
-      return tw`bg-primaryTemp-500`
+      return tw`bg-primary`
     case 'secondary':
-      return tw`bg-secondaryTemp-300`
+      return tw`bg-secondary`
     case 'textPrimary':
-      return tw`bg-textPrimary`
+      return tw`bg-base-content`
     case 'textSecondary':
-      return tw`bg-textSecondary`
+      return tw`bg-base-100`
     case 'bgPrimary':
-      return tw`bg-bgPrimary`
+      return tw`bg-base-100`
     case 'bgSecondary':
-      return tw`bg-bgSecondary`
+      return tw`bg-base-200`
     default:
       return tw`bg-white`
   }
@@ -30,17 +26,17 @@ export const getColorStyles = (color: Color) => {
 export const getAccentColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
-      return tw`accent-primaryTemp-600`
+      return tw`accent-primary`
     case 'secondary':
-      return tw`accent-secondaryTemp-300`
+      return tw`accent-secondary`
     case 'textPrimary':
-      return tw`accent-textPrimary`
+      return tw`accent-base-content`
     case 'textSecondary':
-      return tw`accent-textSecondary`
+      return tw`accent-base-100`
     case 'bgPrimary':
-      return tw`accent-bgPrimary`
+      return tw`accent-base-100`
     case 'bgSecondary':
-      return tw`accent-bgSecondary`
+      return tw`accent-base-200`
     default:
       return tw`accent-white`
   }

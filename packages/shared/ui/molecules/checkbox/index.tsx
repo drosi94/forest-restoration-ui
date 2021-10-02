@@ -1,7 +1,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 import { Typography, Hint, Error } from '../../atoms'
-import { Color, getAccentColorStyles } from '../../utils'
+import { BaseColor } from '../../utils'
 
 type LabelPosition = 'left' | 'right' | 'top' | 'bottom' | 'hidden'
 
@@ -30,7 +30,7 @@ export type CheckboxProps = {
   /**
    * The color of the switch
    */
-  accentColor?: Color
+  accentColor?: BaseColor
   /**
    * Callback function to be called when the checkbox is toggled
    */
@@ -74,10 +74,16 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   }
 }
 
-const checkboxBaseStyles = tw`
-relative inline-flex items-center h-6 rounded-full w-11 
-transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryTemp-900
-`
+const getAccentColorStyles = (color: BaseColor) => {
+  switch (color) {
+    case 'primary':
+      return tw`checkbox-primary`
+    case 'secondary':
+      return tw`checkbox-secondary`
+    default:
+      return tw`checkbox-primary`
+  }
+}
 
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,
@@ -102,7 +108,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       htmlFor={forId}
       css={[
         disabled && tw`cursor-not-allowed`,
-        error && tw`dark:text-danger-300 text-danger-500`,
+        error && tw`text-error`,
         labelPosition === 'hidden' && tw`sr-only`,
         overrideLabelStyles,
       ]}
@@ -112,7 +118,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   )
 
   return (
-    <div>
+    <div tw="form-control">
       <div css={[tw`flex`, getLabelPositionStyles(labelPosition)]}>
         {(labelPosition === 'left' || labelPosition === 'top' || labelPosition === 'hidden') && (
           <Label />
@@ -129,7 +135,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
               : undefined
           }
           css={[
-            checkboxBaseStyles,
+            tw`checkbox`,
             getAccentColorStyles(accentColor),
             disabled && tw`cursor-not-allowed`,
           ]}

@@ -39,7 +39,7 @@ export const TitledCard: React.FC<TitledCardProps> = ({
     >
       {typeof title === 'string' ? (
         <div css={[overrideTitleContainerStyles]}>
-          <Typography as="h2" variant="heading">
+          <Typography as="h2" variant="heading" tw="card-title">
             {title}
           </Typography>
         </div>
@@ -47,7 +47,7 @@ export const TitledCard: React.FC<TitledCardProps> = ({
         { title }
       )}
 
-      <div css={[tw`my-4`, overrideBodyContainerStyles]}>{children}</div>
+      <div css={[tw`space-y-2`, overrideBodyContainerStyles]}>{children}</div>
     </BaseCard>
   )
 }
