@@ -99,7 +99,7 @@ export const Typography: React.FC<TypographyProps> = styled.span(
     italic,
   }) => [
     color === 'textPrimary' && tw`text-base-content`,
-    color === 'textSecondary' && tw`text-textSecondary`,
+    color === 'textSecondary' && tw`text-base-100`,
     color === 'primary' && tw`text-primary`,
     color === 'secondary' && tw`text-secondary`,
     ...fontSizeStyles[fontSize],
