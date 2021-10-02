@@ -23,7 +23,7 @@ export const NavLink: React.FC<NavLinkProps> = ({ title, href, exact, icon, ...l
   return (
     <motion.li animate whileHover={{ scale: 0.9 }}>
       <Link href={href} passHref {...linkProps}>
-        <a css={[tw`flex gap-2 uppercase text-textPrimary`, isActive && tw`text-primary`]}>
+        <a css={[tw`flex gap-2 uppercase text-base-content`, isActive && tw`text-primary`]}>
           {icon}
           <Typography fontFamily="notoSerif" tw="relative text-current" fontSize="small">
             {title}
