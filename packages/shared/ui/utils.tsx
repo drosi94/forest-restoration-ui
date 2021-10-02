@@ -11,9 +11,9 @@ export type Color =
 export const getColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
-      return tw`bg-primary-500`
+      return tw`bg-primaryTemp-500`
     case 'secondary':
-      return tw`bg-secondary-300`
+      return tw`bg-secondaryTemp-300`
     case 'textPrimary':
       return tw`bg-textPrimary`
     case 'textSecondary':
@@ -30,9 +30,9 @@ export const getColorStyles = (color: Color) => {
 export const getAccentColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
-      return tw`accent-primary-600`
+      return tw`accent-primaryTemp-600`
     case 'secondary':
-      return tw`accent-secondary-300`
+      return tw`accent-secondaryTemp-300`
     case 'textPrimary':
       return tw`accent-textPrimary`
     case 'textSecondary':
@@ -49,17 +49,17 @@ export const getAccentColorStyles = (color: Color) => {
 export const getTextColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
-      return tw`text-primary-500`
+      return tw`text-primary`
     case 'secondary':
-      return tw`text-secondary-300`
+      return tw`text-secondary`
     case 'textPrimary':
-      return tw`text-textPrimary`
+      return tw`text-base-content`
     case 'textSecondary':
-      return tw`text-textSecondary`
+      return tw`text-base-100`
     case 'bgPrimary':
-      return tw`text-bgPrimary`
+      return tw`text-base-100`
     case 'bgSecondary':
-      return tw`text-bgSecondary`
+      return tw`text-base-200`
     default:
       return tw`text-white`
   }

@@ -1,9 +1,8 @@
 require('tailwindcss/tailwind.css')
-import { useEffect } from 'react'
 import { addDecorator } from '@storybook/react'
-
-import { themes } from '@storybook/theming'
+import { useEffect } from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
+
 import '../../pwa/theme.css'
 
 export const parameters = {
@@ -47,11 +46,25 @@ export const parameters = {
       },
     ],
   },
-  darkMode: {
-    // Override the default dark theme
-    dark: { ...themes.dark, html: { className: 'dark' } },
-    // Override the default light theme
-    light: { ...themes.normal, html: { className: 'light' } },
+  themes: {
+    default: 'dark',
+    list: [
+      { name: 'dark', class: 'dark', color: 'black' },
+      { name: 'light', class: 'light', color: 'white' },
+    ],
+    target: 'root',
+    onChange: (theme) => {
+      if (theme.name === 'dark') {
+        document
+          .getElementById('storybook-preview-iframe')
+          .contentWindow.document.documentElement.setAttribute('data-theme', 'dark')
+      }
+      if (theme.name === 'light') {
+        document
+          .getElementById('storybook-preview-iframe')
+          .contentWindow.document.documentElement.setAttribute('data-theme', 'light')
+      }
+    },
   },
 }
 

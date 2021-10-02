@@ -30,7 +30,7 @@ const HorizontalLine = ({ filled = false }) => (
   <div
     css={[
       tw`flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300`,
-      filled && tw`border-primary-500`,
+      filled && tw`border-primaryTemp-500`,
     ]}
   ></div>
 )
@@ -100,7 +100,7 @@ export const FormStepper: React.FC<FormStepperProps> = ({
                 onClick={() => enabled && handleStepChange(id)}
                 css={[
                   tw`flex items-center relative`,
-                  isBeforeSelectedStep && tw`text-primary-400`,
+                  isBeforeSelectedStep && tw`text-primaryTemp-400`,
                   isSelectedStep && tw`text-white`,
                   isAfterSelectedStep && tw`text-gray-300`,
                 ]}
@@ -110,8 +110,8 @@ export const FormStepper: React.FC<FormStepperProps> = ({
                 <div
                   css={[
                     baseStepStyle,
-                    isBeforeSelectedStep && tw`border-primary-500`,
-                    isSelectedStep && tw`bg-primary-500 border-primary-500`,
+                    isBeforeSelectedStep && tw`border-primaryTemp-500`,
+                    isSelectedStep && tw`bg-primaryTemp-500 border-primaryTemp-500`,
                     isAfterSelectedStep && tw`border-gray-300`,
                   ]}
                 >
@@ -121,8 +121,8 @@ export const FormStepper: React.FC<FormStepperProps> = ({
                   <Typography
                     css={[
                       tw`uppercase`,
-                      isBeforeSelectedStep && tw`text-primary-400`,
-                      isSelectedStep && tw`text-primary-400`,
+                      isBeforeSelectedStep && tw`text-primaryTemp-400`,
+                      isSelectedStep && tw`text-primaryTemp-400`,
                       isAfterSelectedStep && tw`text-gray-300`,
                     ]}
                     fontSize="xsmall"

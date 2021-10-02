@@ -32,7 +32,7 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
       <Disclosure defaultOpen={isOpen}>
         <>
           <Disclosure.Button
-            css={[tw`flex w-full justify-between focus:ring-2 ring-primary-500 ring-offset-2`]}
+            css={[tw`flex w-full justify-between focus:ring-2 ring-primaryTemp-500 ring-offset-2`]}
           >
             {typeof title === 'string' ? (
               <div css={[overrideTitleContainerStyles]}>

@@ -161,7 +161,7 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
           isOpen && getFilteredItems(options)?.length > 0 ? styles.popper : { display: 'none' }
         }
         css={[
-          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
+          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primaryTemp-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
           (!selectedItems || selectedItems.length == 0) && tw`-top-11!`,
         ]}
         {...attributes.popper}
@@ -171,7 +171,7 @@ export const MultipleAutocomplete: React.FC<MultipleAutocompleteProps> = ({
             <li
               css={[
                 tw`cursor-pointer select-none relative py-2 pl-10 pr-4`,
-                highlightedIndex === index && tw`bg-primary-400 rounded-md`,
+                highlightedIndex === index && tw`bg-primaryTemp-400 rounded-md`,
               ]}
               key={getItem(item, optionLabelItem) || index.toString()}
               {...getItemProps({ item, index, key: getItem(item, optionValueItem) })}

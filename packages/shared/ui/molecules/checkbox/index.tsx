@@ -76,7 +76,7 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
 
 const checkboxBaseStyles = tw`
 relative inline-flex items-center h-6 rounded-full w-11 
-transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
+transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryTemp-900
 `
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -102,7 +102,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       htmlFor={forId}
       css={[
         disabled && tw`cursor-not-allowed`,
-        error && tw`dark:text-error-300 text-error-500`,
+        error && tw`dark:text-danger-300 text-danger-500`,
         labelPosition === 'hidden' && tw`sr-only`,
         overrideLabelStyles,
       ]}

@@ -22,7 +22,7 @@ export const Pill: React.FC<PillProps> = ({
   return (
     <span
       css={[
-        tw`flex w-[fit-content] justify-center items-center m-1 font-medium  py-2 px-2 rounded-full text-textPrimary bg-bgSecondary border border-textPrimary border-opacity-70`,
+        tw`flex w-[fit-content] justify-center items-center m-1 font-medium  py-2 px-2 rounded-full bg-base-100 text-base-content border border-base-content border-opacity-70`,
         getColorStyles(color as Color),
       ]}
     >

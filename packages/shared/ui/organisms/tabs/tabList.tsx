@@ -45,7 +45,7 @@ export const TabList: React.FC<TabListProps> = ({
                 <button
                   css={[
                     tw`w-full flex gap-2 justify-center items-center py-2.5 text-sm leading-5 rounded-lg text-textPrimary`,
-                    tw`hover:bg-bgPrimary/5 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-primary-400 ring-white ring-opacity-60`,
+                    tw`hover:bg-bgPrimary/5 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-primaryTemp-400 ring-white ring-opacity-60`,
                     selected && [tw`bg-bgPrimary/5 shadow`, overrideTabSelectedButtonStyles],
                     overrideTabButtonStyles,
                   ]}
