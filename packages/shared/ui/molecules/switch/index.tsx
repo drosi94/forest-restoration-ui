@@ -14,7 +14,7 @@ export type SwitchProps = {
   /**
    * The position of the label
    */
-  labelPosition?: 'left' | 'right' | 'top' | 'bottom' | 'hidden'
+  labelPosition?: LabelPosition
   /**
    * Should the switch be in checked state
    */
@@ -34,11 +34,11 @@ export type SwitchProps = {
   /**
    * The color of the switch in checked state
    */
-  checkedColor?: Color
+  checkedColor?: BaseColor | 'textPrimary'
   /**
    * The color of the switch in not checked state
    */
-  notCheckedColor?: Color
+  notCheckedColor?: BaseColor | 'textPrimary'
   /**
    * The error of the switch
    */
@@ -65,7 +65,7 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
   switch (labelPosition) {
     case 'left':
     case 'right':
-      return tw`flex-row gap-4`
+      return tw`flex-row items-center gap-4`
     case 'top':
     case 'bottom':
       return tw`flex-col gap-2`
@@ -100,6 +100,8 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
     },
     ref
   ) => {
+    const id = `switch-${label}`
+
     const Label = () => (
       <BaseSwitch.Label
         as={Typography}
@@ -110,7 +112,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
     )
     return (
       <BaseSwitch.Group>
-        <div css={[tw`flex`, getLabelPositionStyles(labelPosition)]}>
+        <div aria-checked={checked} css={[tw`form-control`, getLabelPositionStyles(labelPosition)]}>
           {(labelPosition === 'left' || labelPosition === 'top') && <Label />}
           <BaseSwitch
             checked={checked}
@@ -134,6 +136,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
                 disabled && tw`bg-opacity-30`,
               ]}
             />
+            <label tw="sr-only">{label}</label>
           </BaseSwitch>
           {(labelPosition === 'right' || labelPosition === 'bottom') && <Label />}
         </div>
