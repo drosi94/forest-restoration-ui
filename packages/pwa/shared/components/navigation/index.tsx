@@ -81,7 +81,7 @@ export const Navigation = () => {
                   <button
                     onClick={handleLogout}
                     data-testid="nav-logout-button"
-                    tw="py-3 px-2 text-left hover:bg-primaryTemp-500"
+                    tw="py-3 px-2 text-left hover:bg-primary"
                   >
                     <Typography>{t('navigation:Logout')}</Typography>
                   </button>

@@ -47,7 +47,7 @@ export const parameters = {
     ],
   },
   themes: {
-    default: 'dark',
+    default: 'forest',
     list: [
       { name: 'forest', class: 'dark', color: 'black' },
       { name: 'emerald', class: 'light', color: 'white' },

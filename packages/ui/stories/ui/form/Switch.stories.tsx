@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import { Switch, SwitchProps, Typography } from '@forest-restoration/shared'
@@ -6,9 +6,30 @@ import { Switch, SwitchProps, Typography } from '@forest-restoration/shared'
 export default {
   title: 'Shared/UI/Form/Switch',
   component: Switch,
+  decorators: [
+    (story: any, props) => {
+      const [checked, setChecked] = useState(false)
+
+      return (
+        <>
+          {story({
+            args: {
+              checked: checked,
+              onChange: (value) => {
+                setChecked(value)
+              },
+              ...props.args,
+            },
+          })}
+        </>
+      )
+    },
+  ],
 } as Meta
 
-const Template: Story<SwitchProps> = (args) => <Switch {...args} />
+const Template: Story<SwitchProps> = ({ checked, onChange, ...args }) => (
+  <Switch {...args} checked={checked} onChange={onChange} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {

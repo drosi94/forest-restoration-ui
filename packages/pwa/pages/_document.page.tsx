@@ -27,7 +27,7 @@ class PWADocument extends Document {
           )}
           <script src="/scripts/themeToggle.js" defer />
         </Head>
-        <body tw="bg-bgPrimary text-white">
+        <body tw="bg-base-100 text-white">
           <Main />
           <NextScript />
         </body>
