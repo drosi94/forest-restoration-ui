@@ -23,7 +23,7 @@ export const getColorStyles = (color: Color) => {
   }
 }
 
-export const getBackgroundColorStyles = (color: Color) => {
+export const getBackgroundColorStyles = (color: Color | 'white') => {
   switch (color) {
     case 'primary':
       return tw`bg-primary`
@@ -37,6 +37,8 @@ export const getBackgroundColorStyles = (color: Color) => {
       return tw`bg-base-100`
     case 'bgSecondary':
       return tw`bg-base-200`
+    case 'white':
+      return tw`bg-white`
     default:
       return tw`bg-white`
   }

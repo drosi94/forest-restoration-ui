@@ -14,11 +14,11 @@ export default {
         <>
           {story({
             args: {
+              ...props.args,
               selected: selected,
               onChange: (value) => {
                 setSelected(value)
               },
-              ...props.args,
             },
           })}
         </>
@@ -28,7 +28,7 @@ export default {
 } as Meta
 
 const Template: Story<RadioGroupProps> = ({ selected, onChange, ...args }) => (
-  <RadioGroup {...args} selected={selected} onChange={onChange} />
+  <RadioGroup selected={selected} onChange={onChange} {...args} />
 )
 
 const plans = [
@@ -52,4 +52,6 @@ export const Primary = Template.bind({})
 Primary.args = {
   items: plans,
   name: 'name',
+  label: 'Label',
+  id: 'id',
 }

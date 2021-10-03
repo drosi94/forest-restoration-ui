@@ -30,7 +30,7 @@ export type SwitchProps = {
   /**
    * The color of the caret
    */
-  caretColor?: Color
+  caretColor?: Color | 'white'
   /**
    * The color of the switch in checked state
    */
@@ -89,7 +89,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
       checked,
       disabled,
       onChange,
-      caretColor = 'textPrimary',
+      caretColor = 'white',
       checkedColor = 'primary',
       notCheckedColor = 'primary',
       error,
