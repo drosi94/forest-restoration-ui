@@ -4,13 +4,13 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   purge: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './shared/components/**/*.{js,ts,jsx,tsx}',
-    './lib/**/*.{js,ts,jsx,tsx}',
-    './ui/**/*.{js,ts,jsx,tsx}',
-    './stories/**/*.{js,ts,jsx,tsx}',
+    'pages/**/*.{js,ts,jsx,tsx}',
+    'shared/components/**/*.{js,ts,jsx,tsx}',
+    'lib/**/*.{js,ts,jsx,tsx}',
+    'ui/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/@forest-restoration/shared/ui/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'class',
+  // darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {

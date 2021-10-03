@@ -131,6 +131,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
               id={id}
               type="checkbox"
               checked={checked}
+              onChange={(e) => onChange(e.currentTarget.checked)}
               css={[
                 tw`toggle`,
                 checked && getAccentColorStyles(checkedColor),
