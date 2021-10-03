@@ -74,9 +74,9 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({
               {({ active, checked }) => (
                 <div
                   css={[
-                    tw`relative shadow-md rounded-lg cursor-pointer flex focus:outline-none`,
-                    active && tw`ring-2 ring-offset-2 ring-white ring-opacity-60`,
-                    checked && tw`bg-opacity-75 text-base-content border-2 border-gray-300`,
+                    tw`relative bg-base-300 border-2 border-base-200 shadow-md rounded-lg cursor-pointer flex focus:outline-none`,
+                    active && tw`ring-2 ring-primary ring-opacity-60`,
+                    checked && tw`bg-opacity-75 text-base-content border-2 border-primary`,
                   ]}
                 >
                   <div tw="flex items-center w-full bg-base-200 rounded-lg p-2">

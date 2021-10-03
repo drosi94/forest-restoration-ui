@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
           </main>
 
-          <footer tw="flex justify-center items-end p-2 border-t-2 border-secondary">
+          <footer tw="flex justify-center items-end p-2 border-t-2 border-primary-focus">
             <a
               target="_blank"
               rel="noreferrer"

@@ -1,5 +1,5 @@
 import 'twin.macro'
-import { useTranslation } from 'next-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 import { useFormContext } from 'react-hook-form'
 import { Typography } from '@forest-restoration/shared'
 
@@ -19,7 +19,12 @@ const UsernameHint = ({ showLoading }) => {
         <ul tw="list-disc">
           <li>{t('profile:At least 3 and maximum 15 characters')}</li>
           <li>{t('profile:Spaces are not valid')}</li>
-          <li>{t('profile:Only "." and "_" are valid characters')}</li>
+          <li>
+            <Trans i18nKey="profile:Only . and _ are valid characters">
+              Only <kbd tw="kbd kbd-sm bg-base-300">.</kbd> and{' '}
+              <kbd tw="kbd kbd-sm bg-base-300">_</kbd> are valid characters
+            </Trans>
+          </li>
         </ul>
       </div>
     </>
@@ -34,8 +39,7 @@ export const PickUsername = () => {
     formState: { errors },
   } = useFormContext()
 
-  const { isUsernameCheckLoading, usernameCheckError, isUsernameUnique } =
-    useUsernameUnique(USERNAME_REGEX)
+  const { isUsernameCheckLoading, isUsernameUnique } = useUsernameUnique(USERNAME_REGEX)
 
   return (
     <div tw="flex flex-col flex-1 gap-8">
@@ -51,9 +55,7 @@ export const PickUsername = () => {
         control={control}
         label={t('profile:Choose username')}
         hint={<UsernameHint showLoading={isUsernameCheckLoading} />}
-        error={
-          !isUsernameCheckLoading ? usernameCheckError || errors?.username?.message : undefined
-        }
+        error={errors?.username?.message}
         rules={{
           required: { value: true, message: t('profile:Username is required') },
           minLength: { value: 3, message: t('profile:Username is too short') },

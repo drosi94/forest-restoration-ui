@@ -1,10 +1,9 @@
 import 'twin.macro'
-import { isValid as isDateValid } from 'date-fns'
 import { useTranslation } from 'next-i18next'
 import { useFormContext } from 'react-hook-form'
-
-import { ControlledInput, ControlledSelect } from 'shared/components/form'
 import { Typography } from '@forest-restoration/shared'
+
+import { ControlledInput, ControlledSelect, ControlledRadioGroup } from 'shared/components/form'
 import { genders } from 'pages/profile/model/gender'
 
 export const MoreDetails = () => {
@@ -13,6 +12,7 @@ export const MoreDetails = () => {
   const {
     control,
     formState: { errors },
+    watch,
   } = useFormContext()
 
   return (
@@ -32,13 +32,11 @@ export const MoreDetails = () => {
             maxLength: { value: 30, message: t('profile:Display name is too long') },
           }}
         />
-        <ControlledSelect
+        <ControlledRadioGroup
           name="gender"
           control={control}
           label={t('profile:Gender')}
-          noOptionText={t('profile:Prefer not to say')}
-          shouldResetOption
-          options={genders(t)}
+          items={genders(t)}
         />
         <ControlledInput
           type="date"

@@ -32,7 +32,8 @@ export const UserActionsPopover: React.FC<UserActionsPopoverProps> = ({
           <div tw="avatar placeholder">
             <div tw="!flex items-center justify-center bg-base-100 text-base-100 rounded-full w-10 h-10">
               <Typography fontSize="xlarge" tw="uppercase">
-                {splitDisplayName?.[0][0] + splitDisplayName?.[1]?.[0] ?? splitDisplayName?.[0][1]}
+                {splitDisplayName?.[0][0] +
+                  (splitDisplayName?.[1]?.[0] ?? splitDisplayName?.[0][1])}
               </Typography>
             </div>
           </div>

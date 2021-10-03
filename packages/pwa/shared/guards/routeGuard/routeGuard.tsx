@@ -4,12 +4,12 @@ import { useAuthentication } from '../../providers/authentication'
 import { publicPaths } from './publicPaths'
 
 export function RouteGuard({ children }) {
-  const { isAuthenticated } = useAuthentication()
+  const { isAuthenticated, loading } = useAuthentication()
   const router = useRouter()
   const [authorized, setAuthorized] = useState(false)
 
   useEffect(() => {
-    // on initial load - run auth check
+    // on initial load - run auth check]
 
     authCheck(router.asPath)
 
@@ -28,14 +28,19 @@ export function RouteGuard({ children }) {
   }, [isAuthenticated])
 
   function authCheck(url) {
-    const path = url.split('?')[0]
-    if (!isAuthenticated && !publicPaths.includes(path)) {
-      setAuthorized(false)
-      router.push({
-        pathname: '/',
-      })
-    } else {
+    const userExistInLocalStorage = process.browser ? !!localStorage.getItem('user') : false
+    if (userExistInLocalStorage) {
       setAuthorized(true)
+    } else {
+      const path = url.split('?')[0]
+      if (!isAuthenticated && !publicPaths.includes(path)) {
+        setAuthorized(false)
+        router.push({
+          pathname: '/',
+        })
+      } else {
+        setAuthorized(true)
+      }
     }
   }
 

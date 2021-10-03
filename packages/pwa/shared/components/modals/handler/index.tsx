@@ -1,10 +1,13 @@
 import { useRouter } from 'next/router'
 import React from 'react'
+import { useAuthentication } from 'shared/providers/authentication'
 
 import { AuthenticationModal } from '../authentication'
 
 export const ModalHandler = () => {
   const router = useRouter()
+
+  const { user } = useAuthentication()
 
   const query = router.query
 
@@ -13,7 +16,13 @@ export const ModalHandler = () => {
   return (
     <AuthenticationModal
       isOpen={!!query.authentication}
-      onClose={() => (previous ? router.replace(previous) : router.back())}
+      onClose={() => {
+        if (!user.hasCompleteProfile) {
+          router.push('/profile')
+        } else {
+          previous ? router.replace(previous) : router.back()
+        }
+      }}
     />
   )
 }

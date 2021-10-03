@@ -14,14 +14,19 @@
   "checking...": "checking...",
   "At least 3 and maximum 15 characters": "At least 3 and maximum 15 characters",
   "Spaces are not valid": "Spaces are not valid",
-  "Only \".\" and \"_\" are valid characters": "Only \".\" and \"_\" are valid characters",
+  "Only . and _ are valid characters": "Only <1>.</1> and <4>_</4> are valid characters",
   "Add your details here for a more personalized experience.": "Add your details here for a more personalized experience.",
   "Display name": "Display name",
   "Display name is required": "Display name is required",
   "Display name is too short": "Display name is too short",
   "Display name is too long": "Display name is too long",
   "Gender": "Gender",
+  "Male": "Male",
+  "Female": "Female",
   "Prefer not to say": "Prefer not to say",
   "Birth date": "Birth date",
-  "Create your profile": "Create your profile"
+  "Create your profile": "Create your profile",
+  "Your profile created successfully!": "Your profile created successfully!",
+  "An error occurred with the creation of your profile": "An error occurred with the creation of your profile",
+  "is taken": "is taken!"
 }

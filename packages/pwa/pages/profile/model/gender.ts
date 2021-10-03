@@ -3,14 +3,14 @@ import { TFunction } from 'next-i18next'
 export const genders = (t: TFunction) => [
   {
     label: t('profile:Male'),
-    value: 'M',
+    id: 'M',
   },
   {
     label: t('profile:Female'),
-    value: 'F',
+    id: 'F',
   },
   {
-    label: t('profile:Other'),
-    value: 'O',
+    label: t('profile:Prefer not to say'),
+    id: 'O',
   },
 ]

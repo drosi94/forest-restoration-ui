@@ -68,6 +68,7 @@ const variantStyles = (color) => ({
 export const Button: React.FC<ButtonProps> = styled.button(
   ({
     as,
+    type = 'button',
     variant = 'contained',
     color = 'primary',
     size = 'medium',

@@ -2,49 +2,49 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
-      allow read, write: if false;
-    }
+      match /users/{userId} {
+        allow read: if belongsTo(userId);
+        allow create: if false;
+        allow update: if isValidUser();
+        
 
-    match /users/{userId} {
-      allow read: if belongsTo(userId);
-      allow create: if false;
-      allow update: if isValidUser();
-      
+        function isValidUser() {
+          let username = request.resource.data.username;
+          let createdValidUsername = existsAfter(/databases/$(database)/documents/usernames/$(username));
 
-      function isValidUser() {
-        let username = request.resource.data.username;
-        let createdValidUsername = existsAfter(/databases/$(database)/documents/usernames/$(username));
-
-        return belongsTo(userId) && preventUpdateUnauthorizedKeys(['email', 'emailVerified']) && createdValidUsername;
+          return belongsTo(userId) && preventUpdateUnauthorizedKeys(['email', 'emailVerified']) && createdValidUsername;
+        }
       }
-    }
 
-    match /usernames/{username} {
-      allow read;
-      allow create: if isValidUsername(username);
-      allow update: if false;
+      match /usernames/{username} {
+        allow read;
+        allow create: if isValidUsername(username);
+        allow update: if false;
+
+   
+      }
 
       function isValidUsername(username) {
         let isValidLength = username.size() >= 3 && username.size() <= 15;
         let isValidUserDoc = getAfter(/databases/$(database)/documents/users/$(request.auth.uid)).data.username == username;
-        
+          
         return belongsTo(request.resource.data.uid) && isValidLength && isValidUserDoc;     
       }
-    }
 
-    function isLoggedIn() {
-      return request.auth.uid != null;
-    }
+      function isLoggedIn() {
+        return request.auth.uid != null;
+      }
 
-    function belongsTo(userId) {
-      return request.auth.uid == userId;
-    }
+      function belongsTo(userId) {
+        return request.auth.uid == userId;
+      }
 
-    function preventUpdateUnauthorizedKeys(unauthorizedKeys) {
-      return !request.resource.data
-                              .diff(resource.data)
-                              .affectedKeys()
-                              .hasAny(unauthorizedKeys)
+      function preventUpdateUnauthorizedKeys(unauthorizedKeys) {
+        return !request.resource.data
+                                .diff(resource.data)
+                                .affectedKeys()
+                                .hasAny(unauthorizedKeys)
+      }
     }
   }
 }

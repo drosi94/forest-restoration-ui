@@ -1,14 +1,9 @@
 import { useController, UseControllerProps } from 'react-hook-form'
 import { RadioGroup, RadioGroupProps } from '@forest-restoration/shared'
 
-export const ControlledRadioGroup: React.FC<Omit<RadioGroupProps, 'name'> & UseControllerProps> = ({
-  name,
-  rules,
-  shouldUnregister,
-  defaultValue,
-  control,
-  ...restRadioGroupProps
-}) => {
+export const ControlledRadioGroup: React.FC<
+  Omit<RadioGroupProps, 'name' | 'selected' | 'onChange'> & UseControllerProps
+> = ({ name, rules, shouldUnregister, defaultValue, control, ...restRadioGroupProps }) => {
   const { field, fieldState } = useController({
     name,
     rules,
