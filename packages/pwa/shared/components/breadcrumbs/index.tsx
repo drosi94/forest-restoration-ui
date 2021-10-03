@@ -10,7 +10,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
       containerStyle={tw`p-2 text-sm`}
       listStyle={tw`flex gap-2`}
       inactiveItemStyle={tw`capitalize`}
-      activeItemStyle={tw`text-primaryTemp-500`}
+      activeItemStyle={tw`text-primary`}
       {...props}
     />
   )

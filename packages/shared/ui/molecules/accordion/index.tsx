@@ -30,8 +30,8 @@ export type AccordionProps = {
 }
 
 const accordionButtonBaseStyles = tw`flex justify-between w-full px-4 py-2 text-sm font-medium 
-text-left  bg-primaryTemp-100 rounded-lg hover:bg-primaryTemp-200 focus:outline-none
-focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primaryTemp-900`
+text-left  bg-primary rounded-lg hover:bg-primaryTemp-200 focus:outline-none
+focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-focus`
 
 export const Accordion: React.FC<AccordionProps> = ({
   isOpened,
@@ -48,7 +48,7 @@ export const Accordion: React.FC<AccordionProps> = ({
           <Disclosure.Button css={[accordionButtonBaseStyles, overrideAccordionButtonStyles]}>
             <Typography
               as="h2"
-              css={[tw`text-primaryTemp-900 text-base`, overrideAccordionButtonTextStyles]}
+              css={[tw`text-primary-focus text-base`, overrideAccordionButtonTextStyles]}
             >
               {title}
             </Typography>

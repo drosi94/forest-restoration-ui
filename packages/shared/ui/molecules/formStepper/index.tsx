@@ -30,7 +30,7 @@ const HorizontalLine = ({ filled = false }) => (
   <div
     css={[
       tw`flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300`,
-      filled && tw`border-primaryTemp-500`,
+      filled && tw`border-primary`,
     ]}
   ></div>
 )
@@ -110,8 +110,8 @@ export const FormStepper: React.FC<FormStepperProps> = ({
                 <div
                   css={[
                     baseStepStyle,
-                    isBeforeSelectedStep && tw`border-primaryTemp-500`,
-                    isSelectedStep && tw`bg-primaryTemp-500 border-primaryTemp-500`,
+                    isBeforeSelectedStep && tw`border-primary`,
+                    isSelectedStep && tw`bg-primary border-primary`,
                     isAfterSelectedStep && tw`border-gray-300`,
                   ]}
                 >

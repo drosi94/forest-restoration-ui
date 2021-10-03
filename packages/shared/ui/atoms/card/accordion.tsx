@@ -33,9 +33,7 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
         <>
           <Disclosure.Button as="div">
             <button
-              css={[
-                tw`flex w-full justify-between focus:ring-2 ring-primaryTemp-500 ring-offset-2`,
-              ]}
+              css={[tw`flex w-full justify-between focus:ring-2 ring-primary ring-offset-2`]}
               onClick={() => setIsOpen(false)}
             >
               {typeof title === 'string' ? (

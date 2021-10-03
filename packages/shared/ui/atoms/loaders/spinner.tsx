@@ -7,7 +7,7 @@ export type SpinnerProps = {
 
 const styles = {
   div: {
-    borderTopColor: theme('colors.primaryTemp[500]'),
+    borderTopColor: theme('colors.primary'),
     animation: 'spinner 1.5s linear infinite',
   },
   '@-webkit-keyframes spinner': {
