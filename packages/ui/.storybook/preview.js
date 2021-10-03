@@ -18,11 +18,11 @@ export const parameters = {
     values: [
       {
         name: 'primaryDark',
-        value: '#696969',
+        value: '#171212',
       },
       {
         name: 'secondaryDark',
-        value: '#484848',
+        value: '#120E0E',
       },
       {
         name: 'primaryLight',
@@ -30,7 +30,7 @@ export const parameters = {
       },
       {
         name: 'secondaryLight',
-        value: '#e8e8e8',
+        value: '#F9FAFB',
       },
       {
         name: 'white',
@@ -49,21 +49,14 @@ export const parameters = {
   themes: {
     default: 'dark',
     list: [
-      { name: 'dark', class: 'dark', color: 'black' },
-      { name: 'light', class: 'light', color: 'white' },
+      { name: 'forest', class: 'dark', color: 'black' },
+      { name: 'emerald', class: 'light', color: 'white' },
     ],
     target: 'root',
     onChange: (theme) => {
-      if (theme.name === 'dark') {
-        document
-          .getElementById('storybook-preview-iframe')
-          .contentWindow.document.documentElement.setAttribute('data-theme', 'dark')
-      }
-      if (theme.name === 'light') {
-        document
-          .getElementById('storybook-preview-iframe')
-          .contentWindow.document.documentElement.setAttribute('data-theme', 'light')
-      }
+      document
+        .getElementById('storybook-preview-iframe')
+        .contentWindow.document.documentElement.setAttribute('data-theme', theme.name)
     },
   },
 }
