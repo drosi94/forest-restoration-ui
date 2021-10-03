@@ -2,7 +2,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Story, Meta } from '@storybook/react'
 
-import { Navbar, NavbarProps } from '@forest-restoration/shared'
+import { Navbar, NavbarProps, UserActionsPopover } from '@forest-restoration/shared'
 
 export default {
   title: 'Shared/Layout/Navbar',
@@ -22,9 +22,23 @@ const primaryNav = (
   </>
 )
 
-const secondaryNav = <button>Login</button>
+const secondaryNav = (
+  <>
+    <button>Login</button>
+    <button>register</button>
+  </>
+)
+
+const userActions = (
+  <UserActionsPopover label="User actions" displayName="test user">
+    <button>Login</button>
+    <button>register</button>
+  </UserActionsPopover>
+)
 
 export const Primary = Template.bind({})
 Primary.args = {
   primaryNav,
+  secondaryNav,
+  userActions,
 }

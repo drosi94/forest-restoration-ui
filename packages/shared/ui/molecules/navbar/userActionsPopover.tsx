@@ -1,5 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
+import { Typography } from '../..'
 import { Popover } from '../popover'
 
 export type UserActionsPopoverProps = {
@@ -21,17 +22,20 @@ export const UserActionsPopover: React.FC<UserActionsPopoverProps> = ({
   children,
   ...rest
 }) => {
+  const splitDisplayName = displayName?.split(' ')
   const containerButton = React.forwardRef<any, any>((props, ref) => {
     return (
       <button ref={ref} aria-label={label} {...props} {...rest}>
         {customImage ? (
           customImage
         ) : (
-          <img
-            tw="h-full w-full object-cover"
-            src={`https://eu.ui-avatars.com/api/?name=${displayName}&background=10b981&color=eaeaea`}
-            alt="user's avatar"
-          />
+          <div tw="avatar placeholder">
+            <div tw="!flex items-center justify-center bg-base-100 text-base-100 rounded-full w-10 h-10">
+              <Typography fontSize="xlarge" tw="uppercase">
+                {splitDisplayName?.[0][0] + splitDisplayName?.[1]?.[0] ?? splitDisplayName?.[0][1]}
+              </Typography>
+            </div>
+          </div>
         )}
       </button>
     )

@@ -8,6 +8,7 @@ import { CloseButton } from '../../atoms'
 
 export type SideDrawerProps = ModalProps & {
   side?: 'left' | 'right'
+  drawerRef?: React.RefObject<HTMLDivElement>
 }
 
 const noop = () => {}
@@ -22,6 +23,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
   side = 'left',
   title = 'Title',
   description,
+  drawerRef,
   handleClose = noop,
   overrideDialogBaseStyles,
   overrideOverlayStyles,
@@ -50,6 +52,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({
       open={isOpen}
       onClose={handleClose}
       css={[modalBaseStyles]}
+      ref={drawerRef}
     >
       <div className="flex items-center justify-center min-h-screen">
         <Dialog.Overlay css={[tw`fixed inset-0 bg-white bg-opacity-30`, overrideOverlayStyles]} />
