@@ -3,6 +3,7 @@ import tw from 'twin.macro'
 import { RadioGroup as BaseRadioGroup } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/outline'
 import { Typography } from '../..'
+import { getAccentColorStyles } from '../../utils'
 
 export type RadioOption = {
   id: string
@@ -11,7 +12,7 @@ export type RadioOption = {
 }
 
 export type RadioGroupProps = {
-  items: RadioOption[],
+  items: RadioOption[]
   label: string
 }
 
@@ -26,11 +27,10 @@ const plans = [
   },
   {
     label: 'Enterprise',
- 
   },
 ]
 
-export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans,  label}) => {
+export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans, label }) => {
   const [selected, setSelected] = useState(plans[0])
 
   return (
@@ -38,11 +38,7 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans,  label}) 
       <BaseRadioGroup.Label tw="sr-only">{label}</BaseRadioGroup.Label>
       <div tw="space-y-2">
         {items.map((item) => (
-          <BaseRadioGroup.Option
-            key={item.label}
-            value={item}
-            as={Fragment}
-          >
+          <BaseRadioGroup.Option key={item.label} value={item} as={Fragment}>
             {({ active, checked }) => (
               <div
                 css={[
@@ -55,7 +51,15 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans,  label}) 
               >
                 <div tw="flex items-center w-full bg-bgSecondary rounded-lg p-2">
                   <div tw="text-textPrimary ml-1 mr-4">
-                    {checked && <CheckIcon tw="w-6 h-6" />}
+                    {/* {checked && <CheckIcon tw="w-6 h-6" />} */}
+                    <input
+                      type="radio"
+                      name="opt"
+                      checked={checked && 'checked'}
+                      class="radio"
+                      value=""
+                      css={[checked && getAccentColorStyles('primary')]}
+                    ></input>
                   </div>
                   <div tw="flex flex-col gap-2">
                     <BaseRadioGroup.Label as={Typography} fontSize="small" fontWeight="bold">
