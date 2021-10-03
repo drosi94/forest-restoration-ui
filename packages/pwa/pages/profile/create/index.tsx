@@ -28,13 +28,15 @@ export const CreateProfile = () => {
 
   const {
     control,
-    formState: { isValid, errors, touchedFields },
+    formState: { isValid, errors, dirtyFields },
     handleSubmit,
   } = methods
 
-  const isUsernameStepCompleted = touchedFields.username && !errors.username
+  const isUsernameStepCompleted = dirtyFields.username && !errors.username
   const isMoreDetailsStepCompleted =
-    touchedFields.displayName && !errors.displayName && !errors.gender && !errors.birthDate
+    dirtyFields.displayName && !errors.displayName && !errors.gender && !errors.birthDate
+
+  console.log('touchedFields', dirtyFields, errors)
 
   const steps = [
     {
@@ -82,7 +84,7 @@ export const CreateProfile = () => {
           setCurrentStep(newStepId)
         }}
       />
-      <BaseCard fullWidth overrideStyles={tw`mt-12 p-12 items-center`}>
+      <BaseCard fullWidth overrideStyles={tw`mt-12 p-12 items-center max-w-sm md:max-w-2xl`}>
         <FormProvider {...methods}>
           <form onSubmit={handleSubmit(() => {})}>
             <div tw="flex flex-col">
@@ -91,6 +93,7 @@ export const CreateProfile = () => {
                   <PickUsername />
                   <div tw="self-center">
                     <Button
+                      wide
                       onClick={
                         isUsernameStepCompleted ? () => setCurrentStep('more_details') : undefined
                       }
@@ -105,6 +108,7 @@ export const CreateProfile = () => {
                   <MoreDetails />
                   <div tw="self-center">
                     <Button
+                      wide
                       onClick={
                         isMoreDetailsStepCompleted ? () => setCurrentStep('preview') : undefined
                       }
@@ -118,7 +122,9 @@ export const CreateProfile = () => {
                 <div tw="flex flex-col gap-6">
                   <Preview />
                   <div tw="self-center">
-                    <Button type="submit">{t('profile:Create your profile')}</Button>
+                    <Button wide type="submit">
+                      {t('profile:Create your profile')}
+                    </Button>
                   </div>
                 </div>
               )}
