@@ -14,24 +14,11 @@ export type RadioOption = {
 export type RadioGroupProps = {
   items: RadioOption[]
   label: string
+  name: string
 }
 
-const plans = [
-  {
-    label: 'Startup',
-    description: '12GB',
-  },
-  {
-    label: 'Business',
-    description: '16GB',
-  },
-  {
-    label: 'Enterprise',
-  },
-]
-
-export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans, label }) => {
-  const [selected, setSelected] = useState(plans[0])
+export const RadioGroup: React.FC<RadioGroupProps> = ({ items, label, name }) => {
+  const [selected, setSelected] = useState()
 
   return (
     <BaseRadioGroup value={selected} onChange={setSelected}>
@@ -54,10 +41,8 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({ items = plans, label }) 
                     {/* {checked && <CheckIcon tw="w-6 h-6" />} */}
                     <input
                       type="radio"
-                      name="opt"
-                      checked={checked && 'checked'}
-                      class="radio"
-                      value=""
+                      checked={checked}
+                      name={name}
                       css={[checked && getAccentColorStyles('primary')]}
                     ></input>
                   </div>
