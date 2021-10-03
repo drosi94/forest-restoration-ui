@@ -7,9 +7,9 @@ export type Color = BaseColor | 'bgPrimary' | 'bgSecondary' | 'textPrimary' | 't
 export const getColorStyles = (color: Color) => {
   switch (color) {
     case 'primary':
-      return tw`bg-primary`
+      return tw`badge-primary`
     case 'secondary':
-      return tw`bg-secondary`
+      return tw`badge-secondary`
     case 'textPrimary':
       return tw`bg-base-content`
     case 'textSecondary':
@@ -65,7 +65,6 @@ export const getTextColorStyles = (color: Color) => {
 export const getItem = (item: string | any, key: string | (() => string)) => {
   if (Array.isArray(item)) {
     return item.map((i) => getItem(i, key))
-    // throw new Error('Maybe you forgot to add the multiple prop')
   } else {
     return item
       ? typeof item === 'string'

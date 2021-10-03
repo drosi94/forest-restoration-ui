@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   }
 
   return (
-    <nav tw="navbar xl:max-w-7xl mx-auto py-2 px-4 min-h-6 mb-2 shadow-lg bg-base-200 text-base-content rounded-box">
+    <nav tw="navbar xl:max-w-7xl mx-auto py-2 px-4 min-h-6 mb-2 shadow-lg bg-base-300 text-base-content rounded-box">
       <div tw="navbar-start">
         {customLogo ? (
           customLogo

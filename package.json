@@ -75,8 +75,8 @@
         "@tailwindcss/typography": "^0.4.1",
         "daisyui": "^1.14.2",
         "date-fns": "^2.24.0",
-        "postcss": "^8.3.6",
+        "postcss": "^8.2.10",
         "react-use": "^17.2.4",
-        "tailwindcss": "^2.2.7"
+        "tailwindcss": "^2.1.1"
     }
 }
