@@ -17,7 +17,7 @@ export const ModalHandler = () => {
     <AuthenticationModal
       isOpen={!!query.authentication}
       onClose={() => {
-        if (!user.hasCompleteProfile) {
+        if (user && !user.hasCompleteProfile) {
           router.push('/profile')
         } else {
           previous ? router.replace(previous) : router.back()

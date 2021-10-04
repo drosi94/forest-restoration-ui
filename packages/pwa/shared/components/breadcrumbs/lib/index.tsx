@@ -184,10 +184,10 @@ const Breadcrumbs = ({
   }
 
   return (
-    <nav style={containerStyle} className={containerClassName} aria-label="breadcrumbs">
-      <ol style={listStyle} className={useDefaultStyle ? '_2jvtI' : listClassName}>
+    <nav tw="breadcrumbs" aria-label="breadcrumbs">
+      <ul>
         {!omitRootLabel && (
-          <li style={inactiveItemStyle} className={inactiveItemClassName}>
+          <li>
             <Link href="/">
               <a>
                 {convertBreadcrumb(
@@ -210,13 +210,7 @@ const Breadcrumbs = ({
               return
             }
             return (
-              <li
-                key={breadcrumb.href}
-                className={
-                  i === breadcrumbs.length - 1 ? activeItemClassName : inactiveItemClassName
-                }
-                style={i === breadcrumbs.length - 1 ? activeItemStyle : inactiveItemStyle}
-              >
+              <li key={breadcrumb.href}>
                 <Link href={breadcrumb.href}>
                   <a>
                     {convertBreadcrumb(
@@ -227,11 +221,10 @@ const Breadcrumbs = ({
                     )}
                   </a>
                 </Link>
-                {i < breadcrumbs.length - 1 && <span tw="ml-1">&rarr;</span>}
               </li>
             )
           })}
-      </ol>
+      </ul>
     </nav>
   )
 }

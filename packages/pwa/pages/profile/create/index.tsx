@@ -45,8 +45,6 @@ export const CreateProfile = () => {
     },
   })
 
-  console.log('USER create profile', user)
-
   if (loading) return null
 
   const {
@@ -81,8 +79,6 @@ export const CreateProfile = () => {
 
   const handleCreateProfile = handleSubmit(async ({ username, birthDate, gender, displayName }) => {
     try {
-      console.log('USER handleCreateProfile ', user)
-
       // Create refs for both documents
       const userDoc = firestore.doc(`users/${user.uid}`)
       const usernameDoc = firestore.doc(`usernames/${username}`)

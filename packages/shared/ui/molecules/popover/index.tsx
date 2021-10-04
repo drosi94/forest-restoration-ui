@@ -96,3 +96,5 @@ export const Popover: React.FC<PopoverProps> = ({
     </BasePopover>
   )
 }
+
+export { BasePopover }

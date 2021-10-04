@@ -28,5 +28,9 @@
   "Create your profile": "Δημιουργήστε το προφίλ σας",
   "Your profile created successfully!": "Το προφίλ σας δημιουργήθηκε επιτυχώς!",
   "An error occurred with the creation of your profile": "Ένα σφάλμα προέκυψε κατά την δημιουργία του προφίλ σας",
-  "is taken": "υπάρχει ήδη!"
+  "is taken": "υπάρχει ήδη!",
+  "My profile": "Το προφίλ μου",
+  "Edit profile": "Επεξεργασία προφίλ",
+  "Your profile updated successfully!": "Το προφίλ σας αποθηκεύτηκε επιτυχώς",
+  "An error occurred with the edition of your profile": "Ένα σφάλμα προέκυψε κατά την επεξεργασία του προφίλ σας"
 }

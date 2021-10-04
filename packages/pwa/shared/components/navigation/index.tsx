@@ -6,7 +6,14 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { HomeIcon, PlayIcon, UserIcon, BookOpenIcon } from '@heroicons/react/solid'
-import { Logo, Navbar, Typography, UserActionsPopover } from '@forest-restoration/shared'
+import {
+  Logo,
+  Navbar,
+  Typography,
+  BasePopover,
+  UserActionsPopover,
+  Button,
+} from '@forest-restoration/shared'
 import { publicPaths } from 'shared/guards/routeGuard/publicPaths'
 import { useAuthentication } from 'shared/providers/authentication'
 
@@ -14,6 +21,7 @@ import { ToggleTheme } from '../toggleTheme'
 import { firebase } from '../../../firebase/clientApp'
 import { NavLink } from './navLink'
 import { AuthenticationLink } from '../modals/authentication/link'
+import { PageLink } from '../pageLink'
 
 export const Navigation = () => {
   const { t } = useTranslation(['common', 'authentication', 'navigation'])
@@ -36,7 +44,7 @@ export const Navigation = () => {
     }
   }
 
-  const handleCompleteProfile = () => {
+  const handleGoToProfile = () => {
     push('/profile')
   }
 
@@ -63,7 +71,7 @@ export const Navigation = () => {
           <AnimateSharedLayout>
             <NavLink href="/" exact title={t('navigation:Home')} icon={<HomeIcon width="24" />} />
             <NavLink
-              href="/home"
+              href="/playground"
               title={t('navigation:Playground')}
               icon={<PlayIcon width="24" />}
             />
@@ -98,16 +106,29 @@ export const Navigation = () => {
                           </Typography>
                         </Typography>
                       </div>
-                      {!user.hasCompleteProfile && (
-                        <button
-                          onClick={handleCompleteProfile}
+                      {!user.hasCompleteProfile ? (
+                        <BasePopover.Button
+                          as={PageLink}
+                          href="/profile"
                           data-testid="nav-complete-profile"
-                          tw="py-3 px-2 text-left hover:bg-primary"
                         >
-                          <Typography tw="text-warning">
-                            {t('navigation:Complete profile')}
-                          </Typography>
-                        </button>
+                          <div tw="py-3 px-2 text-left hover:bg-primary">
+                            <Typography tw="text-warning">
+                              {t('navigation:Complete your profile')}
+                            </Typography>
+                          </div>
+                        </BasePopover.Button>
+                      ) : (
+                        <BasePopover.Button
+                          as={PageLink}
+                          href="/profile"
+                          passHref
+                          data-testid="nav-profile-button"
+                        >
+                          <div tw="py-3 px-2 text-left hover:bg-primary">
+                            <Typography>{t('navigation:My profile')}</Typography>
+                          </div>
+                        </BasePopover.Button>
                       )}
                       <button
                         onClick={handleLogout}

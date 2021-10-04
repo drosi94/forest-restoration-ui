@@ -28,5 +28,8 @@
   "Create your profile": "Create your profile",
   "Your profile created successfully!": "Your profile created successfully!",
   "An error occurred with the creation of your profile": "An error occurred with the creation of your profile",
-  "is taken": "is taken!"
+  "is taken": "is taken!",
+  "My profile": "My profile",
+  "Edit profile": "Edit profile",
+  "Your profile updated successfully!": "Your profile updated successfully!"
 }

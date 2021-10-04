@@ -63,8 +63,9 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({
       <BaseRadioGroup tw="flex flex-col gap-2" value={selected} onChange={onChange}>
         {/* @ts-ignore */}
         <BaseRadioGroup.Label
-          as={(props) => <Typography as="label" {...props} />}
-          css={[tw`label-text`, labelHidden && tw`sr-only`]}
+          as={(props) => (
+            <Typography as="label" css={[tw`label`, labelHidden && tw`sr-only`]} {...props} />
+          )}
         >
           {label}
         </BaseRadioGroup.Label>
