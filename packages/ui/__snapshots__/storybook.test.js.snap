@@ -835,13 +835,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Bottom 1`] = `
   >
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-510"
+      id="checkbox-633"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="css-1ydfun1-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-510"
+      htmlFor="checkbox-633"
     >
       Checkbox
     </label>
@@ -858,14 +858,14 @@ exports[`Storyshots Shared/UI/Form/Checkbox Disabled 1`] = `
   >
     <label
       className="css-j9m7kx-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-782"
+      htmlFor="checkbox-767"
     >
       Checkbox
     </label>
     <input
       className="css-54142n-Checkbox"
       disabled={true}
-      id="checkbox-782"
+      id="checkbox-767"
       onChange={[Function]}
       type="checkbox"
     />
@@ -882,13 +882,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Hidden 1`] = `
   >
     <label
       className="css-1m8gp89-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-192"
+      htmlFor="checkbox-651"
     >
       Checkbox
     </label>
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-192"
+      id="checkbox-651"
       onChange={[Function]}
       type="checkbox"
     />
@@ -905,13 +905,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Primary 1`] = `
   >
     <label
       className="css-1ydfun1-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-416"
+      htmlFor="checkbox-930"
     >
       Checkbox
     </label>
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-416"
+      id="checkbox-930"
       onChange={[Function]}
       type="checkbox"
     />
@@ -928,13 +928,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Right 1`] = `
   >
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-173"
+      id="checkbox-576"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="css-1ydfun1-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-173"
+      htmlFor="checkbox-576"
     >
       Checkbox
     </label>
@@ -951,13 +951,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox Top 1`] = `
   >
     <label
       className="css-1ydfun1-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-2"
+      htmlFor="checkbox-808"
     >
       Checkbox
     </label>
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-2"
+      id="checkbox-808"
       onChange={[Function]}
       type="checkbox"
     />
@@ -974,13 +974,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox With Error 1`] = `
   >
     <label
       className="css-yuc21c-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-733"
+      htmlFor="checkbox-623"
     >
       Checkbox
     </label>
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-733"
+      id="checkbox-623"
       onChange={[Function]}
       type="checkbox"
     />
@@ -1007,13 +1007,13 @@ exports[`Storyshots Shared/UI/Form/Checkbox With Hint 1`] = `
   >
     <label
       className="css-1ydfun1-Typography-Label e1eqcpp10"
-      htmlFor="checkbox-151"
+      htmlFor="checkbox-881"
     >
       Checkbox
     </label>
     <input
       className="css-1wnnt0h-Checkbox"
-      id="checkbox-151"
+      id="checkbox-881"
       onChange={[Function]}
       type="checkbox"
     />
@@ -2753,7 +2753,7 @@ exports[`Storyshots Shared/UI/IconButton No Shadow 1`] = `
 
 exports[`Storyshots Shared/UI/IconButton Outlined 1`] = `
 <button
-  className="css-hq98lq-Button e1p27jrl0"
+  className="css-3sqjk8-Button e1p27jrl0"
 >
   <span
     className="css-1339mxi-IconButton"
