@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import tw from 'twin.macro'
 import { Button } from '../../atoms/button'
 import { Popover } from '../popover'
@@ -12,7 +12,7 @@ export type Action = {
   onClick: () => void
 }
 
-export type SplitButtonPopoverProps = {
+export type SplitButtonProps = {
   /**
    * The actions to display in the popover
    */
@@ -23,11 +23,7 @@ export type SplitButtonPopoverProps = {
   selectedActionId?: string
 }
 
-export const SplitButtonPopover: React.FC<SplitButtonPopoverProps> = ({
-  actions,
-  selectedActionId,
-  ...rest
-}) => {
+export const SplitButton: React.FC<SplitButtonProps> = ({ actions, selectedActionId, ...rest }) => {
   if (selectedActionId && actions.find((action) => action.id === selectedActionId) === undefined) {
     throw new Error(`The selected action id ${selectedActionId} is not defined in the actions`)
   }
@@ -67,11 +63,13 @@ export const SplitButtonPopover: React.FC<SplitButtonPopoverProps> = ({
       >
         <div tw="flex flex-col w-48 md:w-72 bg-base-200">
           {actions.map((action) => (
-            <BasePopover.Button
-              onClick={() => handleActionClick(action)}
-              tw="py-3 px-2 text-left hover:bg-primaryTemp-500"
-            >
-              <Typography>{action.label}</Typography>
+            <BasePopover.Button as={Fragment}>
+              <button
+                onClick={() => handleActionClick(action)}
+                tw="py-3 px-2 text-left hover:bg-primaryTemp-500"
+              >
+                <Typography>{action.label}</Typography>
+              </button>
             </BasePopover.Button>
           ))}
         </div>

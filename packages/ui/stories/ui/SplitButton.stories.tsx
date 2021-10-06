@@ -2,14 +2,14 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Story, Meta } from '@storybook/react'
 
-import { SplitButtonPopover, SplitButtonPopoverProps } from '@forest-restoration/shared'
+import { SplitButton, SplitButtonProps } from '@forest-restoration/shared'
 
 export default {
-  title: 'Shared/UI/SplitButtonPopover',
-  component: SplitButtonPopover,
+  title: 'Shared/UI/SplitButton',
+  component: SplitButton,
 } as Meta
 
-const Template: Story<SplitButtonPopoverProps> = (args) => <SplitButtonPopover {...args} />
+const Template: Story<SplitButtonProps> = (args) => <SplitButton {...args} />
 
 const otherButtons = (
   <>
