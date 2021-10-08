@@ -38,7 +38,6 @@
         "react-hot-toast": "^2.1.0",
         "react-popper": "^2.2.5",
         "storybook-addon-themes": "^6.1.0",
-        "tailwindcss-filters": "^3.0.0",
         "typescript": "^4.3.5"
     },
     "devDependencies": {
