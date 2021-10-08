@@ -31,6 +31,7 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
     >
       <Disclosure defaultOpen={isOpen}>
         <>
+          {/* @ts-ignore */}
           <Disclosure.Button as="div">
             <button
               css={[tw`flex w-full justify-between focus:ring-2 ring-primary ring-offset-2`]}
