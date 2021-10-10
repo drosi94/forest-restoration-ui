@@ -52,9 +52,9 @@ export type TypographyProps = {
 }
 
 const variantStyles = {
-  heading: [tw`font-notoSerif dark:text-primaryTemp-400 text-primary-focus text-xl`],
-  body: [tw`font-sans text-base text-textPrimary`],
-  body2: [tw`font-sans text-lg text-textPrimary`],
+  heading: [tw`font-notoSerif dark:text-primary text-primary-focus text-xl`],
+  body: [tw`font-sans text-base text-base-content`],
+  body2: [tw`font-sans text-lg text-base-content`],
 }
 
 const fontSizeStyles = {

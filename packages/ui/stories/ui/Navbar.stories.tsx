@@ -14,10 +14,10 @@ const Template: Story<NavbarProps> = (args) => <Navbar {...args} />
 const primaryNav = (
   <>
     <a href="#">
-      <span tw="text-textPrimary hover:opacity-70">Features</span>
+      <span tw="text-base-content hover:opacity-70">Features</span>
     </a>
     <a href="#">
-      <span tw="text-textPrimary hover:opacity-70">Pricing</span>
+      <span tw="text-base-content hover:opacity-70">Pricing</span>
     </a>
   </>
 )

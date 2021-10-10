@@ -66,7 +66,7 @@ export const SplitButton: React.FC<SplitButtonProps> = ({ actions, selectedActio
             <BasePopover.Button as={Fragment}>
               <button
                 onClick={() => handleActionClick(action)}
-                tw="py-3 px-2 text-left hover:bg-primaryTemp-500"
+                tw="py-3 px-2 text-left hover:bg-primary"
               >
                 <Typography>{action.label}</Typography>
               </button>

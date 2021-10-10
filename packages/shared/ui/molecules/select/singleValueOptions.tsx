@@ -53,7 +53,7 @@ export const SingleValueOptions = ({
             {({ active }) => {
               const selected = getItem(option, optionValueItem) === getItem(value, optionValueItem)
               return (
-                <div css={[tw`py-2 pl-10 pr-4`, active && tw`bg-primaryTemp-400 rounded-md`]}>
+                <div css={[tw`py-2 pl-10 pr-4`, active && tw`bg-primary rounded-md`]}>
                   <Typography css={[tw`block truncate font-normal`, selected && tw`font-medium`]}>
                     {getItem(option, optionLabelItem) || noOptionText}
                   </Typography>

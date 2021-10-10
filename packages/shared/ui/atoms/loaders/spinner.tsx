@@ -30,7 +30,7 @@ const getSizeStyles = {
 
 export const Spinner: React.FC<SpinnerProps> = ({ size = 'medium' }) => {
   return (
-    <div css={[styles, tw`flex justify-center items-center border-headerText-500`]}>
+    <div css={[styles, tw`flex justify-center items-center border-primary`]}>
       <div css={[tw`ease-linear rounded-full border-gray-200`, getSizeStyles[size]]}></div>
     </div>
   )

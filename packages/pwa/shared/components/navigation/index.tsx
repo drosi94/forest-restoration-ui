@@ -147,7 +147,7 @@ export const Navigation = () => {
                   data-testid="nav-login-link"
                   tw="border-2 border-textPrimary rounded-full p-1 hover:opacity-70 active:border-gray-500"
                 >
-                  <UserIcon tw="text-textPrimary" width={18} aria-label={t('navigation:Login')} />
+                  <UserIcon tw="text-base-content" width={18} aria-label={t('navigation:Login')} />
                 </a>
               </AuthenticationLink>
             )}

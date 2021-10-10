@@ -74,7 +74,7 @@ export const Popover: React.FC<PopoverProps> = ({
             <ChevronDownIcon
               css={[
                 tw`
-              ml-2 h-5 w-5 dark:text-textPrimary text-textSecondary group-hover:text-opacity-80 transition ease-in-out duration-150`,
+              ml-2 h-5 w-5 text-base-content group-hover:text-opacity-80 transition ease-in-out duration-150`,
                 !open && tw`text-opacity-70`,
               ]}
               aria-hidden="true"

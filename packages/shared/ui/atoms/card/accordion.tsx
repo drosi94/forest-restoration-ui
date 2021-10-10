@@ -47,7 +47,7 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
                 { title }
               )}
               <ChevronUpIcon
-                css={[tw`w-5 h-5 text-textPrimary`, !isOpen && tw`transform rotate-180`]}
+                css={[tw`w-5 h-5 text-base-content`, !isOpen && tw`transform rotate-180`]}
               />
             </button>
           </Disclosure.Button>

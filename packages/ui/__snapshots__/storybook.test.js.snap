@@ -3060,7 +3060,7 @@ exports[`Storyshots Shared/UI/Pill Custom Children 1`] = `
   className="css-1rlg72h-Pill"
 >
   <button
-    className="border-2 border-primaryTemp-400"
+    className="border-2 border-primary"
   >
     I am a button
   </button>

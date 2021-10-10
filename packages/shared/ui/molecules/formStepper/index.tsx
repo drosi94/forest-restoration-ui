@@ -100,7 +100,7 @@ export const FormStepper: React.FC<FormStepperProps> = ({
                 onClick={() => enabled && handleStepChange(id)}
                 css={[
                   tw`flex items-center relative`,
-                  isBeforeSelectedStep && tw`text-primaryTemp-400`,
+                  isBeforeSelectedStep && tw`text-primary`,
                   isSelectedStep && tw`text-white`,
                   isAfterSelectedStep && tw`text-gray-300`,
                 ]}
@@ -121,8 +121,8 @@ export const FormStepper: React.FC<FormStepperProps> = ({
                   <Typography
                     css={[
                       tw`uppercase`,
-                      isBeforeSelectedStep && tw`text-primaryTemp-400`,
-                      isSelectedStep && tw`text-primaryTemp-400`,
+                      isBeforeSelectedStep && tw`text-primary`,
+                      isSelectedStep && tw`text-primary`,
                       isAfterSelectedStep && tw`text-gray-300`,
                     ]}
                     fontSize="xsmall"

@@ -30,7 +30,7 @@ export type AccordionProps = {
 }
 
 const accordionButtonBaseStyles = tw`flex justify-between w-full px-4 py-2 text-sm font-medium 
-text-left  bg-primary rounded-lg hover:bg-primaryTemp-200 focus:outline-none
+text-left  bg-primary rounded-lg hover:bg-primary focus:outline-none
 focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-focus`
 
 export const Accordion: React.FC<AccordionProps> = ({
@@ -52,9 +52,7 @@ export const Accordion: React.FC<AccordionProps> = ({
             >
               {title}
             </Typography>
-            <ChevronUpIcon
-              css={[tw` w-5 h-5 text-primaryTemp-600`, !open && tw`transform rotate-180`]}
-            />
+            <ChevronUpIcon css={[tw` w-5 h-5 text-primary`, !open && tw`transform rotate-180`]} />
           </Disclosure.Button>
           <StyledTransition
             enter="enter"

@@ -16,7 +16,7 @@ import { UserActionsPopover } from '.'
 // }
 // ;<div tw="md:hidden flex justify-between items-center navbar-start">
 //   <button onClick={() => setIsMobileMenuOpen((value) => !value)}>
-//     <MenuIcon width="30" height="30" tw="text-textPrimary" />
+//     <MenuIcon width="30" height="30" tw="text-base-content" />
 //   </button>
 //   {showSecondaryNavInMobile && <div tw="flex gap-4 items-center">{secondaryNav}</div>}
 // </div>
@@ -41,7 +41,7 @@ export const SmallScreensNavBar = ({ primaryNav, secondaryNav, userActions }) =>
 
   return (
     <div tw="flex flex-col gap-2">
-      <nav tw="navbar mb-2 shadow-lg bg-base-200 text-base-content rounded-box">
+      <nav tw="navbar mb-2 shadow-lg bg-base-200 text-base-content rounded-md">
         <div tw="flex-none">
           <button
             tw="btn btn-square btn-ghost"

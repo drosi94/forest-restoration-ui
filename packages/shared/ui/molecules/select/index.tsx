@@ -91,7 +91,7 @@ export type SelectProps = {
   overrideErrorContainerStyles?: any
 }
 
-const baseSelectContainerStyle = tw`select-primary bg-primary relative w-full py-2 pl-3 pr-10 text-left rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-primaryTemp-300 focus-visible:ring-offset-2 sm:text-sm
+const baseSelectContainerStyle = tw`select-primary bg-primary relative w-full py-2 pl-3 pr-10 text-left rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-primary focus-visible:ring-offset-2 sm:text-sm
 `
 
 export const Select: React.FC<SelectProps> = ({

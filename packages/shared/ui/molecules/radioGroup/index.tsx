@@ -81,7 +81,7 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({
                   ]}
                 >
                   <div tw="flex items-center w-full bg-base-200 rounded-lg p-2">
-                    <div tw="text-textPrimary ml-1 mr-4">
+                    <div tw="text-base-content ml-1 mr-4">
                       <input
                         id={item.id}
                         type="radio"
