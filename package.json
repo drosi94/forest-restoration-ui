@@ -17,8 +17,7 @@
         "@tailwindcss/typography": "^0.4.1",
         "twin.macro": "2.7.0",
         "wait-on": "^6.0.0",
-        "tailwindcss": "^2.2.16",
-        "daisyui": "^1.14.2"
+        "tailwindcss": "^2.2.16"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": "eslint --cache --fix",

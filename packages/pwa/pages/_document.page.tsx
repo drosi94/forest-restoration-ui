@@ -1,7 +1,25 @@
-import 'twin.macro'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { extractCritical } from '@emotion/server'
+
+import '../firebase/clientApp'
 
 class PWADocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    const critical = extractCritical(initialProps.html)
+    initialProps.html = critical.html
+    initialProps.styles = (
+      <>
+        {initialProps.styles}
+        <style
+          data-emotion-css={critical.ids.join(' ')}
+          dangerouslySetInnerHTML={{ __html: critical.css }}
+        />
+      </>
+    )
+
+    return initialProps
+  }
   render() {
     return (
       <Html>
@@ -27,7 +45,7 @@ class PWADocument extends Document {
           )}
           <script src="/scripts/themeToggle.js" defer />
         </Head>
-        <body tw="bg-base-100 text-white">
+        <body>
           <Main />
           <NextScript />
         </body>

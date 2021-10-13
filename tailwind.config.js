@@ -63,7 +63,7 @@ module.exports = {
     require('tailwindcss-hyphens'),
     require('@tailwindcss/line-clamp'),
     require('tailwind-accent-color')(),
-    require('daisyui'),
+    require('./theme/index'),
   ],
   daisyui: {
     themes: [

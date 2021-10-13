@@ -1,5 +1,5 @@
 import LogRocket from 'logrocket'
-import tw, { GlobalStyles } from 'twin.macro'
+import tw from 'twin.macro'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -9,10 +9,12 @@ import { useFixHeightViewport } from '../shared/hooks/useFixHeightViewport'
 import { ThemeProvider, useThemeProvider } from '../shared/providers/theme'
 import { Navigation } from '../shared/components/navigation'
 import { AuthenticationProvider } from '../shared/providers/authentication'
-import '../theme.css'
-import '../firebase/clientApp'
+
 import { ModalHandler } from '../shared/components/modals/handler'
 import { RouteGuard } from '../shared/guards/routeGuard/routeGuard'
+import { GlobalStyles } from '../styles/globalStyles'
+
+import '../theme.css'
 
 if (process.env.NODE_ENV === 'production') {
   LogRocket.init('hq4geg/forest-restoration')
@@ -25,12 +27,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <GlobalStyles />
       <Toast darkMode={isDarkMode} duration={4000} marginTop="2.5rem" />
       <Head>
         <title>Forest Restoration</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <GlobalStyles />
       {route !== '/maintenance' && <Navigation />}
       <div css={[tw`flex flex-col`, route === '/maintenance' && tw`h-[calc(100 * var(--vh))]`]}>
         <RouteGuard>

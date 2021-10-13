@@ -33,7 +33,7 @@ export function RouteGuard({ children }) {
       setAuthorized(true)
     } else {
       const path = url.split('?')[0]
-      if (!isAuthenticated && !publicPaths.includes(path)) {
+      if (!isAuthenticated && !publicPaths.find((publicPath) => path.includes(publicPath))) {
         setAuthorized(false)
         router.push({
           pathname: '/',
