@@ -22,7 +22,7 @@ module.exports = {
     },
     '.alert': { flexDirection: 'row' },
   },
-  '.alert>*': { display: 'flex' },
+  '.alert>*:not(style)': { display: 'flex' },
   '.artboard': { width: '100%' },
   '.avatar': { display: 'inline-flex', position: 'relative' },
   '.avatar>div': { display: 'block', overflow: 'hidden' },
@@ -156,7 +156,7 @@ module.exports = {
     flex: '1 1 auto',
     padding: 'var(--padding-card,2rem)',
   },
-  '.card figure,.card figure>*': { width: '100%' },
+  '.card figure,.card figure>*:not(style)': { width: '100%' },
   '.card-actions': {
     display: 'flex',
     flexWrap: 'wrap',
@@ -164,7 +164,7 @@ module.exports = {
     marginLeft: '-.25rem',
     marginRight: '-.25rem',
   },
-  '.card-actions>*': { margin: '.25rem' },
+  '.card-actions>*:not(style)': { margin: '.25rem' },
   '.card.image-full': { display: 'grid' },
   '.card.image-full:before': {
     position: 'relative',
@@ -175,7 +175,10 @@ module.exports = {
     zIndex: '10',
     borderRadius: 'var(--rounded-box,1rem)',
   },
-  '.card.image-full:before,.card.image-full>*': { gridColumnStart: '1', gridRowStart: '1' },
+  '.card.image-full:before,.card.image-full>*:not(style)': {
+    gridColumnStart: '1',
+    gridRowStart: '1',
+  },
   '.card.image-full>figure img': { height: '100%', OObjectFit: 'cover', objectFit: 'cover' },
   '.card.image-full>.card-body': {
     position: 'relative',
@@ -233,17 +236,18 @@ module.exports = {
     cursor: 'unset',
     transition: 'padding .2s ease-in-out,background-color .2s ease-in-out',
   },
-  '.collapse-open .collapse-content,.collapse:focus:not(.collapse-close) .collapse-content,.collapse:not(.collapse-close) input[type=checkbox]:checked~.collapse-content': {
-    maxHeight: '9000px',
-    '-TwBgOpacity': ['1', '0.1'],
-    backgroundColor: 'hsla(var(--bc)/var(--tw-bg-opacity,1))',
-    opacity: '1',
-    paddingBottom: '1rem',
-    transition: 'padding .2s ease-in-out,background-color .2s ease-in-out',
-  },
+  '.collapse-open .collapse-content,.collapse:focus:not(.collapse-close) .collapse-content,.collapse:not(.collapse-close) input[type=checkbox]:checked~.collapse-content':
+    {
+      maxHeight: '9000px',
+      '-TwBgOpacity': ['1', '0.1'],
+      backgroundColor: 'hsla(var(--bc)/var(--tw-bg-opacity,1))',
+      opacity: '1',
+      paddingBottom: '1rem',
+      transition: 'padding .2s ease-in-out,background-color .2s ease-in-out',
+    },
   ':root .countdown': { lineHeight: '1em' },
   '.countdown': { display: 'inline-flex' },
-  '.countdown>*': { height: '1em', display: 'inline-block', overflowY: 'hidden' },
+  '.countdown>*:not(style)': { height: '1em', display: 'inline-block', overflowY: 'hidden' },
   '.countdown>:before': {
     position: 'relative',
     content:
@@ -406,10 +410,11 @@ module.exports = {
   '.dropdown-top .dropdown-content': { top: 'auto', bottom: '100%', transformOrigin: 'bottom' },
   '.dropdown-end.dropdown-right .dropdown-content': { bottom: '0', top: 'auto' },
   '.dropdown-end.dropdown-left .dropdown-content': { bottom: '0', top: 'auto' },
-  '.dropdown.dropdown-hover:hover .dropdown-content,.dropdown.dropdown-open .dropdown-content,.dropdown:not(.dropdown-hover):focus-within .dropdown-content,.dropdown:not(.dropdown-hover):focus .dropdown-content': {
-    opacity: '1',
-    visibility: 'visible',
-  },
+  '.dropdown.dropdown-hover:hover .dropdown-content,.dropdown.dropdown-open .dropdown-content,.dropdown:not(.dropdown-hover):focus-within .dropdown-content,.dropdown:not(.dropdown-hover):focus .dropdown-content':
+    {
+      opacity: '1',
+      visibility: 'visible',
+    },
   '.footer': {
     display: 'grid',
     placeItems: 'start',
@@ -421,9 +426,9 @@ module.exports = {
     columnGap: '1rem',
     rowGap: '2.5rem',
   },
-  '.footer>*': { display: 'grid', placeItems: 'start', gap: '.5rem' },
+  '.footer>*:not(style)': { display: 'grid', placeItems: 'start', gap: '.5rem' },
   '.footer-center': { placeItems: 'center', textAlign: 'center' },
-  '.footer-center>*': { placeItems: 'center' },
+  '.footer-center>*:not(style)': { placeItems: 'center' },
   '@media (min-width:48rem)': {
     '.footer': { gridAutoFlow: 'column' },
     '.footer-center': { gridAutoFlow: 'row dense' },
@@ -446,7 +451,7 @@ module.exports = {
     placeItems: 'center',
     width: '100%',
   },
-  '.hero>*': { gridColumnStart: '1', gridRowStart: '1' },
+  '.hero>*:not(style)': { gridColumnStart: '1', gridRowStart: '1' },
   '.hero-overlay': {
     height: '100%',
     width: '100%',
@@ -658,7 +663,7 @@ module.exports = {
     padding: 'var(--navbar-padding,.5rem)',
     minHeight: '4rem',
   },
-  '.navbar>*': { display: 'flex', alignItems: 'center' },
+  '.navbar>*:not(style)': { display: 'flex', alignItems: 'center' },
   '.navbar-start': { width: '50%', justifyContent: 'flex-start' },
   '.navbar-center': { flexShrink: '0' },
   '.navbar-end': { width: '50%', justifyContent: 'flex-end' },
@@ -731,7 +736,7 @@ module.exports = {
     '-TwTextOpacity': '0.2',
   },
   '.stack': { display: 'inline-grid', placeItems: 'center', alignItems: 'flex-end' },
-  '.stack>*': {
+  '.stack>*:not(style)': {
     gridColumnStart: '1',
     gridRowStart: '1',
     transform: 'translateY(1rem)scale(.9)',
@@ -1434,9 +1439,10 @@ module.exports = {
     right: '1.4rem',
     content: '"+"',
   },
-  '.collapse:not(.collapse-open):not(.collapse-close) .collapse-title,.collapse:not(.collapse-open):not(.collapse-close) input[type=checkbox]': {
-    cursor: 'pointer',
-  },
+  '.collapse:not(.collapse-open):not(.collapse-close) .collapse-title,.collapse:not(.collapse-open):not(.collapse-close) input[type=checkbox]':
+    {
+      cursor: 'pointer',
+    },
   '.collapse:focus:not(.collapse-open):not(.collapse-close) .collapse-title': { cursor: 'unset' },
   '.collapse-title,.collapse>input[type=checkbox]': {
     padding: '1rem',
@@ -1448,18 +1454,21 @@ module.exports = {
     '-TwBgOpacity': ['1', '0.1'],
     backgroundColor: 'hsla(var(--bc)/var(--tw-bg-opacity,1))',
   },
-  '.collapse-open .collapse-title,.collapse:focus:not(.collapse-close) .collapse-title,.collapse:not(.collapse-close) input[type=checkbox]:checked~.collapse-title': {
-    '-TwBgOpacity': ['1', '0.1'],
-    backgroundColor: 'hsla(var(--bc)/var(--tw-bg-opacity,1))',
-    outline: '2px solid transparent',
-    outlineOffset: '2px',
-  },
-  '.collapse-arrow:focus:not(.collapse-close) .collapse-title:after,.collapse-arrow:not(.collapse-close) input[type=checkbox]:checked~.collapse-title:after,.collapse-open.collapse-arrow .collapse-title:after': {
-    transform: 'rotate(225deg)',
-  },
-  '.collapse-open.collapse-plus .collapse-title:after,.collapse-plus:focus:not(.collapse-close) .collapse-title:after,.collapse-plus:not(.collapse-close) input[type=checkbox]:checked~.collapse-title:after': {
-    content: '"−"',
-  },
+  '.collapse-open .collapse-title,.collapse:focus:not(.collapse-close) .collapse-title,.collapse:not(.collapse-close) input[type=checkbox]:checked~.collapse-title':
+    {
+      '-TwBgOpacity': ['1', '0.1'],
+      backgroundColor: 'hsla(var(--bc)/var(--tw-bg-opacity,1))',
+      outline: '2px solid transparent',
+      outlineOffset: '2px',
+    },
+  '.collapse-arrow:focus:not(.collapse-close) .collapse-title:after,.collapse-arrow:not(.collapse-close) input[type=checkbox]:checked~.collapse-title:after,.collapse-open.collapse-arrow .collapse-title:after':
+    {
+      transform: 'rotate(225deg)',
+    },
+  '.collapse-open.collapse-plus .collapse-title:after,.collapse-plus:focus:not(.collapse-close) .collapse-title:after,.collapse-plus:not(.collapse-close) input[type=checkbox]:checked~.collapse-title:after':
+    {
+      content: '"−"',
+    },
   '.divider:not(:empty):before': { marginRight: '1rem' },
   '.divider:not(:empty):after': { marginLeft: '1rem' },
   '.drawer.drawer-end .drawer-toggle:checked~.drawer-content': { '-TwTranslateX': '-0.5rem' },
@@ -1497,10 +1506,11 @@ module.exports = {
   '.drawer-toggle:focus-visible~.drawer-content .drawer-button.btn-link': {
     boxShadow: '0 0 0 2px currentColor',
   },
-  '.dropdown.dropdown-hover:hover .dropdown-content,.dropdown.dropdown-open .dropdown-content,.dropdown:focus-within .dropdown-content,.dropdown:focus .dropdown-content': {
-    '-TwScaleX': '1',
-    '-TwScaleY': '1',
-  },
+  '.dropdown.dropdown-hover:hover .dropdown-content,.dropdown.dropdown-open .dropdown-content,.dropdown:focus-within .dropdown-content,.dropdown:focus .dropdown-content':
+    {
+      '-TwScaleX': '1',
+      '-TwScaleY': '1',
+    },
   '.footer-title': {
     fontWeight: '700',
     marginBottom: '.5rem',
@@ -2344,19 +2354,22 @@ module.exports = {
     color: 'hsla(var(--pc)/var(--tw-text-opacity,1))',
   },
   '.table td,.table th': { padding: '1rem', verticalAlign: 'middle', whiteSpace: 'nowrap' },
-  '.table tr.active:nth-child(2n) td,.table tr.active:nth-child(2n) th,.table tr.active td,.table tr.active th': {
-    '-TwBgOpacity': '1',
-    backgroundColor: 'hsla(var(--b3)/var(--tw-bg-opacity,1))',
-  },
-  '.table tr.hover:hover td,.table tr.hover:hover th,.table tr.hover:nth-child(2n):hover td,.table tr.hover:nth-child(2n):hover th': {
-    '-TwBgOpacity': '1',
-    backgroundColor: 'hsla(var(--b3)/var(--tw-bg-opacity,1))',
-  },
-  '.table:not(.table-zebra) tbody tr:not(:last-child) td,.table:not(.table-zebra) tbody tr:not(:last-child) th,.table:not(.table-zebra) tfoot tr:not(:last-child) td,.table:not(.table-zebra) tfoot tr:not(:last-child) th,.table:not(.table-zebra) thead tr:not(:last-child) td,.table:not(.table-zebra) thead tr:not(:last-child) th': {
-    '-TwBorderOpacity': '1',
-    borderColor: 'hsla(var(--b2)/var(--tw-border-opacity,1))',
-    borderBottomWidth: '1px',
-  },
+  '.table tr.active:nth-child(2n) td,.table tr.active:nth-child(2n) th,.table tr.active td,.table tr.active th':
+    {
+      '-TwBgOpacity': '1',
+      backgroundColor: 'hsla(var(--b3)/var(--tw-bg-opacity,1))',
+    },
+  '.table tr.hover:hover td,.table tr.hover:hover th,.table tr.hover:nth-child(2n):hover td,.table tr.hover:nth-child(2n):hover th':
+    {
+      '-TwBgOpacity': '1',
+      backgroundColor: 'hsla(var(--b3)/var(--tw-bg-opacity,1))',
+    },
+  '.table:not(.table-zebra) tbody tr:not(:last-child) td,.table:not(.table-zebra) tbody tr:not(:last-child) th,.table:not(.table-zebra) tfoot tr:not(:last-child) td,.table:not(.table-zebra) tfoot tr:not(:last-child) th,.table:not(.table-zebra) thead tr:not(:last-child) td,.table:not(.table-zebra) thead tr:not(:last-child) th':
+    {
+      '-TwBorderOpacity': '1',
+      borderColor: 'hsla(var(--b2)/var(--tw-border-opacity,1))',
+      borderBottomWidth: '1px',
+    },
   '.table tfoot td,.table tfoot th,.table thead td,.table thead th': {
     '-TwBgOpacity': '1',
     backgroundColor: 'hsla(var(--b2)/var(--tw-bg-opacity,1))',
@@ -2365,14 +2378,16 @@ module.exports = {
     lineHeight: '1rem',
     textTransform: 'uppercase',
   },
-  '.table tfoot td:first-child,.table tfoot th:first-child,.table thead td:first-child,.table thead th:first-child': {
-    borderTopLeftRadius: '.5rem',
-    borderBottomLeftRadius: '.5rem',
-  },
-  '.table tfoot td:last-child,.table tfoot th:last-child,.table thead td:last-child,.table thead th:last-child': {
-    borderTopRightRadius: '.5rem',
-    borderBottomRightRadius: '.5rem',
-  },
+  '.table tfoot td:first-child,.table tfoot th:first-child,.table thead td:first-child,.table thead th:first-child':
+    {
+      borderTopLeftRadius: '.5rem',
+      borderBottomLeftRadius: '.5rem',
+    },
+  '.table tfoot td:last-child,.table tfoot th:last-child,.table thead td:last-child,.table thead th:last-child':
+    {
+      borderTopRightRadius: '.5rem',
+      borderBottomRightRadius: '.5rem',
+    },
   '.table tbody td,.table tbody th': {
     '-TwBgOpacity': '1',
     backgroundColor: 'hsla(var(--b1)/var(--tw-bg-opacity,1))',
@@ -2560,10 +2575,11 @@ module.exports = {
     right: 'auto',
     bottom: 'var(--tooltip-tail-offset)',
   },
-  '.tooltip.tooltip-open:after,.tooltip.tooltip-open:before,.tooltip:hover:after,.tooltip:hover:before': {
-    opacity: '1',
-    transitionDelay: '75ms',
-  },
+  '.tooltip.tooltip-open:after,.tooltip.tooltip-open:before,.tooltip:hover:after,.tooltip:hover:before':
+    {
+      opacity: '1',
+      transitionDelay: '75ms',
+    },
   '.tooltip-bottom:after': {
     transform: 'translateX(-50%)',
     borderLeftColor: 'transparent',
@@ -2614,12 +2630,14 @@ module.exports = {
     '-TooltipTextColor': 'hsl(var(--er))',
   },
   '.prose': { color: 'inherit' },
-  '.prose .lead,.prose a,.prose a code,.prose blockquote,.prose figure figcaption,.prose h1,.prose h2,.prose h3,.prose h4,.prose strong,.prose thead': {
-    color: 'inherit',
-  },
-  '.prose .lead:hover,.prose a:hover,.prose a code:hover,.prose blockquote:hover,.prose figure figcaption:hover,.prose h1:hover,.prose h2:hover,.prose h3:hover,.prose h4:hover,.prose strong:hover,.prose thead:hover': {
-    color: 'inherit',
-  },
+  '.prose .lead,.prose a,.prose a code,.prose blockquote,.prose figure figcaption,.prose h1,.prose h2,.prose h3,.prose h4,.prose strong,.prose thead':
+    {
+      color: 'inherit',
+    },
+  '.prose .lead:hover,.prose a:hover,.prose a code:hover,.prose blockquote:hover,.prose figure figcaption:hover,.prose h1:hover,.prose h2:hover,.prose h3:hover,.prose h4:hover,.prose strong:hover,.prose thead:hover':
+    {
+      color: 'inherit',
+    },
   '.prose code': {
     background: 'hsla(var(--bc)/.2)',
     color: 'hsl(var(--bc))',

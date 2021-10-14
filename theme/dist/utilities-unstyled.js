@@ -91,7 +91,7 @@ module.exports = {
   '.btn-circle.btn-lg': { borderRadius: '9999px', height: '4rem', padding: '0', width: '4rem' },
   '.card-side': { alignItems: 'stretch', flexDirection: 'row' },
   '.card-side>figure': { height: '100%', maxWidth: 'none', width: 'auto' },
-  '.card-side>figure>*': { width: 'auto', maxWidth: 'none' },
+  '.card-side>figure>*:not(style)': { width: 'auto', maxWidth: 'none' },
   '.checkbox-xs': { height: '1rem', width: '1rem' },
   '.checkbox-sm': { height: '1.25rem', width: '1.25rem' },
   '.checkbox-md': { height: '1.5rem', width: '1.5rem' },
