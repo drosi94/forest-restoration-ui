@@ -2,16 +2,22 @@
     "name": "root",
     "private": true,
     "devDependencies": {
+        "autoprefixer": "10.0.4",
         "chromatic": "^5.9.2",
         "concurrently": "^6.2.1",
         "dotenv": "^10.0.0",
         "husky": "^7.0.1",
         "lerna": "^4.0.0",
+        "postcss": "8.3.9",
         "prettier": "^2.2.0",
         "tailwind-accent-color": "^1.0.2",
         "tailwindcss-hyphens": "^0.1.0",
+        "tailwindcss-filters": "^3.0.0",
+        "@tailwindcss/line-clamp": "^0.2.1",
+        "@tailwindcss/typography": "^0.4.1",
         "twin.macro": "2.7.0",
-        "wait-on": "^6.0.0"
+        "wait-on": "^6.0.0",
+        "tailwindcss": "^2.2.16"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
@@ -69,13 +75,5 @@
             "**/@firebase/rules-unit-testing",
             "**/@firebase/rules-unit-testing/**"
         ]
-    },
-    "dependencies": {
-        "@tailwindcss/line-clamp": "^0.2.1",
-        "@tailwindcss/typography": "^0.4.1",
-        "date-fns": "^2.24.0",
-        "postcss": "^8.3.6",
-        "react-use": "^17.2.4",
-        "tailwindcss": "^2.2.7"
     }
 }
