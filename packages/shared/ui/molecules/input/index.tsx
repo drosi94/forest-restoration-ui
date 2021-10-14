@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { HTMLInputTypeAttribute } from 'react'
 import tw, { theme } from 'twin.macro'
 import TextareaAutosize from 'react-textarea-autosize'
 import { Typography, Hint, Error } from '../../atoms'
@@ -11,7 +11,7 @@ export type InputProps = {
   /**
    * The id of the input
    */
-  type?: string
+  type?: HTMLInputTypeAttribute
   /**
    * The name of the input
    */
@@ -78,28 +78,6 @@ export type InputProps = {
   overrideErrorContainerStyles?: any
 }
 
-const styles = ({ error }) => ({
-  'input:focus ~ label,\n  input:not(:placeholder-shown) ~ label,\n  textarea:focus ~ label,\n  textarea:not(:placeholder-shown) ~ label': {
-    '--tw-translate-x': '0',
-    '--tw-translate-y': ['0', '-1.5rem'],
-    '--tw-rotate': '0',
-    '--tw-skew-x': '0',
-    '--tw-skew-y': '0',
-    transform:
-      'translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))\n      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))',
-    '--tw-scale-x': '0.75',
-    '--tw-scale-y': '0.75',
-  },
-  'input:focus ~ label,\n  textarea:focus ~ label': {
-    color: !error ? theme('colors.primary[400]') : theme('colors.red[300]'),
-    left: '0px',
-  },
-})
-
-const baseInputStyle = tw`p-3 block w-full px-1 mt-0 bg-transparent border-0 border-b-2 appearance-none 
-focus:outline-none focus:ring-0 focus:border-primary-400 border-gray-200
-`
-
 export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
   (
     {
@@ -140,7 +118,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
         <input
           {...sharedProps}
           type={type}
-          css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
+          css={[tw`input input-bordered`, error && tw`input-error`, overrideInputStyles]}
           ref={ref}
           {...rest}
         />
@@ -151,7 +129,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
           {...sharedProps}
           minRows={minRows}
           maxRows={maxRows}
-          css={[baseInputStyle, error && tw`border-red-500!`, overrideInputStyles]}
+          css={[tw`textarea textarea-bordered`, error && tw`textarea-error`, overrideInputStyles]}
           ref={ref}
           {...rest}
         />
@@ -159,17 +137,16 @@ export const Input: React.FC<InputProps> = React.forwardRef<any, InputProps>(
     }
 
     return (
-      <div
-        css={[
-          tw`relative z-0 w-full mb-5 text-textPrimary`,
-          styles({ error }),
-          overrideContainerStyles,
-        ]}
-      >
+      <div css={[tw`form-control`, overrideContainerStyles]}>
+        <div tw="flex gap-1">
+          <Typography as="label" htmlFor={id} tw="label">
+            {label}
+          </Typography>
+          {required && <Typography tw="text-error">*</Typography>}
+        </div>
+
         {Component}
-        <Typography as="label" htmlFor={id} tw="absolute duration-300 top-3 left-2 z-auto ">
-          {label} {required && <Typography tw="dark:text-red-300 text-red-500">*</Typography>}
-        </Typography>
+
         {hint && <Hint overrideHintContainerStyles={overrideHintContainerStyles}>{hint}</Hint>}
         {error && (
           <Error overrideErrorContainerStyles={overrideErrorContainerStyles}>{error}</Error>

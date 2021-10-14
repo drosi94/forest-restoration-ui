@@ -2,11 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import tw from 'twin.macro'
-import { Typography, Logo } from '../../../shared'
-import { ToggleTheme } from '../../shared/components/toggleTheme'
+import { Typography, Logo } from '@forest-restoration/shared'
 
-import logoImage from '../../public/icon-384x384.png'
-import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
+import logoImage from 'public/icon-384x384.png'
+
+import { ToggleTheme } from 'shared/components/toggleTheme'
+import { getServerSideTranslations } from 'shared/utils/serverSideTranslations'
 
 export default function Maintenance() {
   const { t } = useTranslation('maintenance')

@@ -1,9 +1,8 @@
-import tw from 'twin.macro'
+import 'twin.macro'
 import { useTranslation } from 'next-i18next'
 
-import { getServerSideTranslations } from '../../shared/utils/serverSideTranslations'
-
-import { AuthenticatedOnly } from '../../shared/components/authenticatedOnly'
+import { getServerSideTranslations } from 'shared/utils/serverSideTranslations'
+import { AuthenticatedOnly } from 'shared/components/authenticatedOnly'
 
 const options = [
   { label: 'Test1', value: 'test1' },

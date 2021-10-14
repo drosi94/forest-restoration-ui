@@ -20,12 +20,7 @@ export const Pill: React.FC<PillProps> = ({
   onRemove,
 }) => {
   return (
-    <span
-      css={[
-        tw`flex w-[fit-content] justify-center items-center m-1 font-medium  py-2 px-2 rounded-full text-textPrimary bg-bgSecondary border border-textPrimary border-opacity-70`,
-        getColorStyles(color as Color),
-      ]}
-    >
+    <span css={[tw`badge md:badge-lg`, getColorStyles(color as Color)]}>
       {icon && (
         <span>
           <span

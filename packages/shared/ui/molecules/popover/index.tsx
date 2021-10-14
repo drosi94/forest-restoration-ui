@@ -17,6 +17,7 @@ export type PopoverProps = {
   placement?: Placement
   children: React.ReactNode
   overrideButtonStyles?: any
+  [key: string]: any
 }
 
 export const Popover: React.FC<PopoverProps> = ({
@@ -64,16 +65,16 @@ export const Popover: React.FC<PopoverProps> = ({
             ref={setReferenceElement}
             css={[
               tw`
-                px-3 py-2 inline-flex items-center hover:text-opacity-100 focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-white focus-visible:ring-opacity-75`,
+                px-3 py-2 inline-flex items-center hover:text-opacity-100 focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`,
               !open && tw`text-opacity-90`,
               overrideButtonStyles,
             ]}
           >
-            <Typography css={[tw`dark:text-textPrimary text-textSecondary`]}>{label}</Typography>
+            <Typography css={[tw`text-base-content`]}>{label}</Typography>
             <ChevronDownIcon
               css={[
                 tw`
-              ml-2 h-5 w-5 dark:text-textPrimary text-textSecondary group-hover:text-opacity-80 transition ease-in-out duration-150`,
+              ml-2 h-5 w-5 text-base-content group-hover:text-opacity-80 transition ease-in-out duration-150`,
                 !open && tw`text-opacity-70`,
               ]}
               aria-hidden="true"
@@ -95,3 +96,5 @@ export const Popover: React.FC<PopoverProps> = ({
     </BasePopover>
   )
 }
+
+export { BasePopover }

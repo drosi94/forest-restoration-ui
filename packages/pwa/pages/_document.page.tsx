@@ -1,5 +1,6 @@
-import 'twin.macro'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+import '../firebase/clientApp'
 
 class PWADocument extends Document {
   render() {
@@ -27,7 +28,7 @@ class PWADocument extends Document {
           )}
           <script src="/scripts/themeToggle.js" defer />
         </Head>
-        <body tw="bg-bgPrimary text-white">
+        <body>
           <Main />
           <NextScript />
         </body>

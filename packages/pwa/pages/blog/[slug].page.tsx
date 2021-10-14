@@ -51,30 +51,34 @@ export default function Post({ data }) {
         <meta name="twitter:description" content={postAbstract} />
         <meta name="twitter:image" content={imageProps?.src} />
       </Head>
-      <Breadcrumbs />
-      <article tw="p-8 md:p-24 flex flex-col gap-4 items-center justify-center">
-        <div tw="flex flex-col">
-          <Typography as="h1" variant="heading" tw="text-4xl">
-            {postTitle}
-          </Typography>
-          <div tw="text-center">
-            <Typography italic>{formatDate(new Date(createdAt), 'yyyy-MM-dd HH:mm:ss')}</Typography>
+      <div tw="p-4 md:p-12 flex flex-col gap-4">
+        <Breadcrumbs />
+        <article tw="flex flex-col gap-4 items-center justify-center">
+          <div tw="flex flex-col">
+            <Typography as="h1" variant="heading" tw="text-4xl">
+              {postTitle}
+            </Typography>
+            <div tw="text-center">
+              <Typography italic>
+                {formatDate(new Date(createdAt), 'yyyy-MM-dd HH:mm:ss')}
+              </Typography>
+            </div>
           </div>
-        </div>
 
-        <Image {...imageProps} alt={postTitle} layout="intrinsic" width={600} height={400} />
+          <Image {...imageProps} alt={postTitle} layout="intrinsic" width={600} height={400} />
 
-        <div tw="flex flex-col gap-4 max-w-3xl">
-          <Typography variant="body" color="primary">
-            TL;DR
-          </Typography>
-          <Typography as="p" variant="body">
-            {postAbstract}
-          </Typography>
-          <hr />
-          <PortableText blocks={postBody}></PortableText>
-        </div>
-      </article>
+          <div tw="flex flex-col gap-4 max-w-3xl">
+            <Typography variant="body" color="primary">
+              TL;DR
+            </Typography>
+            <Typography as="p" variant="body">
+              {postAbstract}
+            </Typography>
+            <hr />
+            <PortableText blocks={postBody}></PortableText>
+          </div>
+        </article>
+      </div>
     </>
   )
 }
@@ -114,7 +118,7 @@ export async function getStaticProps({ locale, params }) {
 
   return {
     props: {
-      ...await getServerSideTranslations(locale, ['blog']),
+      ...(await getServerSideTranslations(locale, ['blog'])),
       data: { post },
     },
   }

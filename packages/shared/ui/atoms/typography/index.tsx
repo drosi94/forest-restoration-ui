@@ -16,7 +16,7 @@ export type TypographyProps = {
   /**
    * The font size of the text
    */
-  fontSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
+  fontSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | '3xlarge' | '4xlarge'
   /**
    * The font family of the text
    */
@@ -52,9 +52,9 @@ export type TypographyProps = {
 }
 
 const variantStyles = {
-  heading: [tw`font-notoSerif dark:text-primary-400 text-primary-900 text-xl`],
-  body: [tw`font-sans text-base text-textPrimary`],
-  body2: [tw`font-sans text-lg text-textPrimary`],
+  heading: [tw`font-notoSerif dark:text-primary text-primary-focus text-xl`],
+  body: [tw`font-sans text-base text-base-content`],
+  body2: [tw`font-sans text-lg text-base-content`],
 }
 
 const fontSizeStyles = {
@@ -64,6 +64,8 @@ const fontSizeStyles = {
   large: [tw`text-lg`],
   xlarge: [tw`text-xl`],
   xxlarge: [tw`text-2xl`],
+  '3xlarge': [tw`text-3xl`],
+  '4xlarge': [tw`text-4xl`],
 }
 
 const fontFamilyStyles = {
@@ -98,10 +100,10 @@ export const Typography: React.FC<TypographyProps> = styled.span(
     underlined,
     italic,
   }) => [
-    color === 'textPrimary' && tw`text-textPrimary`,
-    color === 'textSecondary' && tw`text-textSecondary`,
-    color === 'primary' && tw`dark:text-primary-500 text-primary-900`,
-    color === 'secondary' && tw`dark:text-secondary-500 text-secondary-900`,
+    color === 'textPrimary' && tw`text-base-content`,
+    color === 'textSecondary' && tw`text-base-100`,
+    color === 'primary' && tw`text-primary`,
+    color === 'secondary' && tw`text-secondary`,
     ...fontSizeStyles[fontSize],
     ...fontFamilyStyles[fontFamily],
     ...fontWeightStyles[fontWeight],

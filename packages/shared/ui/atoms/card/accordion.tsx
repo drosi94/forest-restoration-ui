@@ -22,7 +22,7 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
   const [isOpen, setIsOpen] = useState(false)
   return (
     <BaseCard
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={!isOpen ? () => setIsOpen(true) : undefined}
       color={color}
       rounded={rounded}
       noShadow={noShadow}
@@ -31,23 +31,29 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({
     >
       <Disclosure defaultOpen={isOpen}>
         <>
-          <Disclosure.Button
-            css={[tw`flex w-full justify-between focus:ring-2 ring-primary-500 ring-offset-2`]}
-          >
-            {typeof title === 'string' ? (
-              <div css={[overrideTitleContainerStyles]}>
-                <Typography variant="heading">{title}</Typography>
-              </div>
-            ) : (
-              { title }
-            )}
-            <ChevronUpIcon
-              css={[tw`w-5 h-5 text-textPrimary`, !isOpen && tw`transform rotate-180`]}
-            />
+          {/* @ts-ignore */}
+          <Disclosure.Button as="div">
+            <button
+              css={[tw`flex w-full justify-between focus:ring-2 ring-primary ring-offset-2`]}
+              onClick={() => setIsOpen(false)}
+            >
+              {typeof title === 'string' ? (
+                <div css={[overrideTitleContainerStyles]}>
+                  <Typography variant="heading" tw="card-title ">
+                    {title}
+                  </Typography>
+                </div>
+              ) : (
+                { title }
+              )}
+              <ChevronUpIcon
+                css={[tw`w-5 h-5 text-base-content`, !isOpen && tw`transform rotate-180`]}
+              />
+            </button>
           </Disclosure.Button>
 
           {isOpen && (
-            <Disclosure.Panel css={[tw`my-4`, overrideBodyContainerStyles]} static>
+            <Disclosure.Panel css={[tw`my-2`, overrideBodyContainerStyles]} static>
               {children}
             </Disclosure.Panel>
           )}

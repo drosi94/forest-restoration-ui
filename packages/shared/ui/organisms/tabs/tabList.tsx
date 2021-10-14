@@ -33,7 +33,7 @@ export const TabList: React.FC<TabListProps> = ({
   overrideTabIconStyles,
 }) => {
   return (
-    <Tab.List css={[tw`flex p-1 space-x-1 bg-bgSecondary/20 rounded-xl`, overrideContainerStyles]}>
+    <Tab.List css={[tw`flex p-1 space-x-1 bg-base-200/20 rounded-xl`, overrideContainerStyles]}>
       {tabs.map((tab) => {
         const tabId = getItem(tab, 'id')
         const tabLabel = getItem(tab, 'label')
@@ -44,9 +44,9 @@ export const TabList: React.FC<TabListProps> = ({
               return (
                 <button
                   css={[
-                    tw`w-full flex gap-2 justify-center items-center py-2.5 text-sm leading-5 rounded-lg text-textPrimary`,
-                    tw`hover:bg-bgPrimary/5 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-primary-400 ring-white ring-opacity-60`,
-                    selected && [tw`bg-bgPrimary/5 shadow`, overrideTabSelectedButtonStyles],
+                    tw`w-full flex gap-2 justify-center items-center py-2.5 text-sm leading-5 rounded-lg text-base-content`,
+                    tw`hover:bg-base-100/5 focus:outline-none focus:ring-2 ring-offset-2 ring-base-200 ring-opacity-60`,
+                    selected && [tw`bg-base-100/5 shadow`, overrideTabSelectedButtonStyles],
                     overrideTabButtonStyles,
                   ]}
                 >

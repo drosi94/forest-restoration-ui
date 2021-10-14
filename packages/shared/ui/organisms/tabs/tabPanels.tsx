@@ -33,7 +33,7 @@ export const TabPanels: React.FC<TabPanelsProps> = ({
           fullWidth={true}
           overrideStyles={[
             tw`w-full border-0 rounded-xl p-3`,
-            tw`focus:outline-none focus:ring-2 ring-offset-2 ring-primary-400 ring-white ring-opacity-60`,
+            tw`focus:outline-none focus:ring-2 ring-offset-2 ring-white ring-opacity-60`,
             overridePanelContainerStyles,
           ]}
         >

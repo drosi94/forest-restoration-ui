@@ -177,7 +177,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
         {...getMenuProps({ ref: setPopperElement })}
         style={isOpen && inputItems.length > 0 ? styles.popper : { display: 'none' }}
         css={[
-          tw`width[inherit] overflow-auto text-base bg-bgSecondary rounded-md shadow-lg max-h-60 ring-1 ring-primary-300 ring-opacity-5 focus:outline-none sm:text-sm z-50`,
+          tw`width[inherit] overflow-auto text-base bg-base-200 rounded-md shadow-lg max-h-60 ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-sm z-50`,
         ]}
         {...attributes.popper}
       >
@@ -187,7 +187,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
               key={getItem(item, optionLabelItem) || index.toString()}
               css={[
                 tw`cursor-pointer select-none relative py-2 pl-10 pr-4`,
-                highlightedIndex === index && tw`bg-primary-400 rounded-md`,
+                highlightedIndex === index && tw`bg-primary rounded-md`,
               ]}
               {...getItemProps({ item, index, key: getItem(item, optionValueItem) })}
             >

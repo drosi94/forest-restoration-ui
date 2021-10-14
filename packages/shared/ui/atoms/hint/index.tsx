@@ -12,7 +12,7 @@ export const Hint: React.FC<HintProps> = ({ children, overrideHintContainerStyle
   return (
     <div css={[tw`mt-0.5`, overrideHintContainerStyles]}>
       {typeof children === 'string' ? (
-        <Typography italic fontSize="small">
+        <Typography italic fontSize="small" tw="label-text-alt">
           {children}
         </Typography>
       ) : (

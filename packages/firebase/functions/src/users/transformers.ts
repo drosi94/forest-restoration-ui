@@ -9,6 +9,7 @@ export const transformUserAuthToUserDocument = (user: auth.UserRecord): UserDocu
     email,
     photoURL,
     username: "",
-    birthDate: null
+    birthDate: null,
+    hasCompleteProfile: false,
   };
 };

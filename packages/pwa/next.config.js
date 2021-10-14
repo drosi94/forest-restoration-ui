@@ -5,23 +5,28 @@ const withImages = require('next-images')
 const { i18n } = require('./next-i18next.config')
 
 const STUDIO_REWRITE = {
-  source: "/studio/:path*",
+  source: '/studio/:path*',
   destination:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3333/studio/:path*"
-      : "https://forestrestoration.sanity.studio/:path*",
-};
-
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3333/studio/:path*'
+      : 'https://forestrestoration.sanity.studio/:path*',
+}
 
 module.exports = withPlugins(
   [
     withPWA({
       webpack: (config) => {
-        config.resolve.fallback = { fs: false, module: false, path: false, os: false, stream: false,};
-        return config;
+        config.resolve.fallback = {
+          fs: false,
+          module: false,
+          path: false,
+          os: false,
+          stream: false,
+        }
+        return config
       },
       pwa: {
-        dest: "public",
+        dest: 'public',
         register: true,
         skipWaiting: true,
       },
@@ -30,20 +35,25 @@ module.exports = withPlugins(
     withTM(),
   ],
   {
-    pageExtensions: ["page.js", "page.tsx", "page.ts"],
+    pageExtensions: ['page.js', 'page.tsx', 'page.ts'],
     reactStrictMode: true,
     images: {},
     i18n,
     redirects() {
       return [
-        process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true"
-          ? { source: "/((?!maintenance)(?!_next)(?!static|(?!image))(?!favicon-16x16.png)(?!favicon-32x32.png)(?!icon-192x192.png)(?!manifest.json)(?!themeToggle.js).*)", destination: "/maintenance", permanent: false }
+        process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true'
+          ? {
+              source:
+                '/((?!maintenance)(?!_next)(?!static|(?!image))(?!favicon-16x16.png)(?!favicon-32x32.png)(?!icon-192x192.png)(?!manifest.json)(?!themeToggle.js).*)',
+              destination: '/maintenance',
+              permanent: false,
+            }
           : null,
-      ].filter(Boolean);
+      ].filter(Boolean)
     },
     rewrites: () => [STUDIO_REWRITE],
     images: {
-      domains: ['cdn.sanity.io']
-    }
+      domains: ['cdn.sanity.io'],
+    },
   }
 )

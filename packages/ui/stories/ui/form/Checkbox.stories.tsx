@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { Checkbox, CheckboxProps, Typography } from '@forest-restoration/shared'
+import { Checkbox, CheckboxProps } from '@forest-restoration/shared'
 
 export default {
   title: 'Shared/UI/Form/Checkbox',

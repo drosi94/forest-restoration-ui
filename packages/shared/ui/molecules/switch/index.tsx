@@ -2,7 +2,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Switch as BaseSwitch } from '@headlessui/react'
 import { Typography, Hint, Error } from '../../atoms'
-import { getColorStyles, Color } from '../../utils'
+import { getColorStyles, Color, getBackgroundColorStyles } from '../../utils'
 
 type LabelPosition = 'left' | 'right' | 'top' | 'bottom' | 'hidden'
 
@@ -30,7 +30,7 @@ export type SwitchProps = {
   /**
    * The color of the caret
    */
-  caretColor?: Color
+  caretColor?: Color | 'white'
   /**
    * The color of the switch in checked state
    */
@@ -78,7 +78,7 @@ const getLabelPositionStyles = (labelPosition: LabelPosition) => {
 
 const switchBaseStyles = tw`
 relative inline-flex items-center h-6 rounded-full w-11 
-transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
+transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-focus
 `
 
 export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
@@ -89,9 +89,9 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
       checked,
       disabled,
       onChange,
-      caretColor = 'textPrimary',
+      caretColor = 'white',
       checkedColor = 'primary',
-      notCheckedColor = 'secondary',
+      notCheckedColor = 'primary',
       error,
       hint,
       overrideLabelStyles,
@@ -103,11 +103,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
     const Label = () => (
       <BaseSwitch.Label
         as={Typography}
-        css={[
-          disabled && tw`cursor-not-allowed`,
-          error && tw`dark:text-error-300 text-error-500`,
-          overrideLabelStyles,
-        ]}
+        css={[disabled && tw`cursor-not-allowed`, error && tw`text-error`, overrideLabelStyles]}
       >
         {label}
       </BaseSwitch.Label>
@@ -121,10 +117,10 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
             onChange={onChange}
             css={[
               switchBaseStyles,
-              checked && getColorStyles(checkedColor),
-              !checked && getColorStyles(notCheckedColor),
+              checked && getBackgroundColorStyles(checkedColor),
+              !checked && getBackgroundColorStyles(notCheckedColor),
               disabled && tw`bg-opacity-40 cursor-not-allowed`,
-              error && tw`bg-error-500!`,
+              error && tw`bg-error!`,
             ]}
           >
             <label tw="sr-only">{label}</label>
@@ -132,7 +128,7 @@ export const Switch: React.FC<SwitchProps> = React.forwardRef<any, SwitchProps>(
               ref={ref}
               css={[
                 tw`inline-block w-4 h-4 transform transition ease-in-out duration-200  rounded-full`,
-                getColorStyles(caretColor),
+                getBackgroundColorStyles(caretColor),
                 checked && tw`translate-x-6`,
                 !checked && tw`translate-x-1`,
                 disabled && tw`bg-opacity-30`,

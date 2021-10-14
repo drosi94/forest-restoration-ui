@@ -7,7 +7,7 @@ export type SpinnerProps = {
 
 const styles = {
   div: {
-    borderTopColor: theme('colors.primary[500]'),
+    borderTopColor: theme('colors.primary'),
     animation: 'spinner 1.5s linear infinite',
   },
   '@-webkit-keyframes spinner': {
@@ -30,7 +30,7 @@ const getSizeStyles = {
 
 export const Spinner: React.FC<SpinnerProps> = ({ size = 'medium' }) => {
   return (
-    <div css={[styles, tw`flex justify-center items-center border-headerText-500`]}>
+    <div css={[styles, tw`flex justify-center items-center border-primary`]}>
       <div css={[tw`ease-linear rounded-full border-gray-200`, getSizeStyles[size]]}></div>
     </div>
   )

@@ -40,7 +40,7 @@ Contained.args = {
 export const Outlined = Template.bind({})
 Outlined.args = {
   ...Primary.args,
-  variant: 'outlined',
+  variant: 'outline',
 }
 
 export const Text = Template.bind({})

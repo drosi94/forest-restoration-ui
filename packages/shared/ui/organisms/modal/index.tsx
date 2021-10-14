@@ -72,7 +72,7 @@ const DefaultChildren = ''
 
 const modalBaseStyles = tw`z-50 fixed overflow-y-auto text-white`
 const modalPositionStyles = tw`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-72`
-const modalBackgroundStyles = tw`bg-bgSecondary shadow-xl`
+const modalBackgroundStyles = tw`bg-base-200 shadow-xl`
 
 export const Modal: React.FC<ModalProps> = ({
   isOpen = false,

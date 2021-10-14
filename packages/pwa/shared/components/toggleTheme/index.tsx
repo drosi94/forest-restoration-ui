@@ -10,9 +10,11 @@ export const ToggleTheme = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove('light')
       document.documentElement.classList.add('dark')
+      document.documentElement.setAttribute('data-theme', 'forest')
     } else {
       document.documentElement.classList.remove('dark')
       document.documentElement.classList.add('light')
+      document.documentElement.setAttribute('data-theme', 'emerald')
     }
   }, [isDarkMode])
 

@@ -19,7 +19,7 @@ export const Primary = Template.bind({})
 Primary.args = {
   label: 'Popover',
   children: (
-    <div tw="relative bg-bgSecondary text-white p-4 w-full">
+    <div tw="relative bg-base-200 text-white p-4 w-full">
       <span>Here I am</span>
     </div>
   ),

@@ -30,8 +30,8 @@ export const LinearIndicator: React.FC<LinearIndicatorProps> = ({ color = 'prima
     <div
       css={[
         tw`relative w-full rounded-full`,
-        color == 'primary' && tw`bg-primary-500`,
-        color == 'secondary' && tw`bg-secondary-500`,
+        color == 'primary' && tw`bg-primary`,
+        color == 'secondary' && tw`bg-secondary`,
       ]}
     >
       <div css={styles}>

@@ -5,4 +5,5 @@ export type UserDocument = {
   displayName?: string;
   photoURL?: string;
   birthDate?: number | null;
+  hasCompleteProfile?: boolean;
 };
