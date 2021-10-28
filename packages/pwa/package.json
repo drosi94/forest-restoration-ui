@@ -45,7 +45,7 @@
         "next-pwa": "^5.3.1",
         "next-sanity": "^0.4.0",
         "next-sanity-image": "^3.1.6",
-        "next-transpile-modules": "^8.0.0",
+        "next-transpile-modules": "^9.0.0",
         "next-use-contextual-routing": "^2.1.0",
         "nextjs-breadcrumbs": "^1.1.9",
         "react": "17.0.2",
