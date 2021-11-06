@@ -15,7 +15,7 @@
         "tailwindcss-filters": "^3.0.0",
         "@tailwindcss/line-clamp": "^0.2.1",
         "@tailwindcss/typography": "^0.4.1",
-        "twin.macro": "2.7.0",
+        "twin.macro": "2.8.1",
         "wait-on": "^6.0.0",
         "tailwindcss": "^2.2.16"
     },
