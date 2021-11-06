@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
           </main>
 
-          <footer tw="flex justify-center items-end p-2">
+          <footer tw="flex justify-center items-end p-2 sticky bottom-0">
             <a
               target="_blank"
               rel="noreferrer"
