@@ -55,5 +55,6 @@ module.exports = withPlugins(
     images: {
       domains: ['cdn.sanity.io'],
     },
+    experimental: { esmExternals: false },
   }
 )
