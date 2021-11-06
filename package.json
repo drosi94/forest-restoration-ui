@@ -8,7 +8,7 @@
         "dotenv": "^10.0.0",
         "husky": "^7.0.1",
         "lerna": "^4.0.0",
-        "postcss": "8.1.10",
+        "postcss": "8.2.10",
         "prettier": "^2.2.0",
         "tailwind-accent-color": "^1.0.2",
         "tailwindcss-hyphens": "^0.1.0",
