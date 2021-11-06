@@ -2,7 +2,7 @@
     "name": "root",
     "private": true,
     "devDependencies": {
-        "autoprefixer": "10.0.4",
+        "autoprefixer": "10.4.0",
         "chromatic": "^5.9.2",
         "concurrently": "^6.2.1",
         "dotenv": "^10.0.0",
