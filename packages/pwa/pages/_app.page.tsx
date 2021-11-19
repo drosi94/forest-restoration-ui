@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
       <Toast darkMode={isDarkMode} duration={4000} marginTop="2.5rem" />
       <Head>
         <title>Forest Restoration</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
       {route !== '/maintenance' && <Navigation />}
       <div css={[tw`flex flex-col`, route === '/maintenance' && tw`h-[calc(100 * var(--vh))]`]}>
