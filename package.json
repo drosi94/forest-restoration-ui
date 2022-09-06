@@ -3,7 +3,7 @@
     "private": true,
     "devDependencies": {
         "autoprefixer": "10.4.0",
-        "chromatic": "^5.9.2",
+        "chromatic": "^6.9.0",
         "concurrently": "^6.2.1",
         "dotenv": "^10.0.0",
         "husky": "^7.0.1",
