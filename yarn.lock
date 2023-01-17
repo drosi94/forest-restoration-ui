@@ -18533,9 +18533,9 @@ react-helmet-async@^1.0.7:
     shallowequal "^1.1.0"
 
 react-hook-form@^7.16.0:
-  version "7.19.0"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.19.0.tgz#8549d33988be48157769d5d6788a05bef2d8ea07"
-  integrity sha512-imJZIjqaDo12CrcMctK88PdNvl9CweS2QAsH/aZqxzJc/JIpvaBpaoYFdnBVs58imGm8drQ9+cM0vRK+HglN3w==
+  version "7.42.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.42.1.tgz#c6396ca684716d89abc1c7e64343badfd30c56c6"
+  integrity sha512-2UIGqwMZksd5HS55crTT1ATLTr0rAI4jS7yVuqTaoRVDhY2Qc4IyjskCmpnmdYqUNOYFy04vW253tb2JRVh+IQ==
 
 react-hot-loader@^4.12.11:
   version "4.13.0"
